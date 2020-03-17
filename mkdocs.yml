@@ -1,0 +1,41 @@
+site_name: CCP4-ED
+site_author: Tarik Ronan Drevon
+
+docs_dir: 'docs'
+site_dir: 'site'
+
+theme: readthedocs
+markdown_extensions:
+    - wikilinks
+    - toc:
+        title: Table of Contents
+    - attr_list
+    - fenced_code
+    - mdx_math:
+        enable_dollar_delimiter: True
+
+extra_javascript:
+ - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML'
+ - 'mathjaxhelper.js'
+
+nav:
+- 'Index': 'index.md'
+- 'Projects':
+    - 'Overview' : 'projects/projects.md'
+    - 'Multislice' : 'projects/multislice_simulation.md'
+    - 'Wallpapers' : 'projects/wallpapers/index.md'
+    - 'NearBragg' : 'projects/nearBragg/index.md'
+    - 'Scattering' : 'projects/scattering.md'
+- 'Readings':
+    - 'Electron Crystallography, Zou, 2011' : 'readings/zou2011.md'
+    - 'Advanced TEM, Zuo, Spence, 2017' : 'readings/Spence2017.md'
+    - 'Advanced computing in EM, Kirkland, 2010' : 'readings/Kirkland2010.md'
+- 'Planning':
+    - 'Week progress' : 'planning/week_progress.md'
+    - 'Previous weeks' : 'planning/previous_weeks.md'
+    - 'Meetings' : 'planning/meetings.md'
+    - 'TODO' : 'planning/TODO.md'
+- 'Misc':
+    - 'Instruments' : 'misc/instruments.md'
+    - 'Useful cmds' : 'misc/useful.md'
+    - 'useful python' : 'misc/python.md'
