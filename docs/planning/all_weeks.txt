@@ -1,0 +1,154 @@
+## week 07
+
+Monday :
+
+- setup this readthedocs
+- compile,run and look at code of nearBragg program
+
+
+Tuesday :
+
+- summarize multislice, BPM, nearBragg, particle description approaches
+- document [multislice](/projects/multislice) method scope and benefits
+- induction list day 1
+
+
+Wednesday :
+
+- document [multislice](/projects/multislice) method scope and benefits
+- Started reading review [ClabbersAbrahams2018](/articles/ClabbersAbrahams2018.pdf)
+- seek understanding of origin of inelastic scattering in electron interaction : internal state/recoil(norm momentum exchange)
+- Learning how to build,distribute,install properly with the [PyPI](file:///home/ronan/Documents/github/packaging/python.md)
+
+Thursday :
+    - Cambridge
+
+Friday :
+    - Cambridge
+
+
+
+## week 08
+
+Monday :
+
+- RCaH inductions
+- File system broadcast through http : `python3 -m http.server 8001`
+- Set wiktionary firefox toolbar quick search : `wk [search]`
+- Read review [ClabbersAbrahams2018](/articles/ClabbersAbrahams2018.pdf)
+
+Tuesday :
+
+- learn to use pydocmd : generates markdown documentation based on code
+- Read review [ClabbersAbrahams2018](/articles/ClabbersAbrahams2018.pdf)
+- Development on FourierUtils for phase problem info
+- Read Zou2011 chap 12 on simu
+
+Wednesday :
+
+- read chap1 [Zou2011](/notes/zou2011.md)
+- 1D Fourier transform
+- Wallpaper space groups exercises
+
+Thurdsay:
+
+- NearBragg discussion
+- Experimenting on pyxtal and crystal python librairies
+- Tried to use Kali for wallpaper unsuccessful as too old java program
+- Good javascript tool [online](http://math.hws.edu/eck/js/symmetry/wallpaper.html)
+
+Friday :
+
+- wallpaper generator [script](/src/wallpaper.py)
+
+
+
+## week 09
+
+Monday :
+
+- Cleaned up a few things on my main folder
+- Explored opensource packages on nanoHub. Only few opensource but rather good for CNT band structure in graphene nanotubes.
+- Progress on wallpaper.py package
+
+Tuesday :
+
+- Progress on wallpaper.py package
+- Tuto Dorian linux & python3:basics,numpy
+
+Wednesday:
+
+- Completed [wallpaper](http://localhost:8001/src/wallpapers) with nice [doc](http://localhost:8002)
+- Tuto Dorian linux & python3:numpy,matplotlib
+
+Thursday :
+
+- Seminar Monte Carlo for Xray Fluorescent spectroscopy tom.schoonjans@diamond.ac.uk
+- Install new computer
+- Chap3 zou2100 (started and understand Born approximation)
+- Looked at python packages for physics : rebound(astrophysics particles),
+
+Friday :
+
+- report CCP4 Keith
+- Chap3 zou2100 (started and understand Born approximation)
+- resolution and detector distance
+
+## week 10
+Monday :
+
+- ED folder papers
+- NearBragg : [atomic scattering factors](/projects/nearBragg/dat/scattering_factors.py)
+
+Tuesday :
+
+- Bethe formula and works
+- Wrote on [scattering](/projects/scattering)
+
+Wednesday :
+
+- Scattering solution Electromagnetism + Green's functions Balanis Chap14
+- investigate 2 beams Bethe theory of diffraction
+
+Thursday :
+
+- Fire safety induction
+- Back on Cowley-Moodie
+- More investigation on multislice pkg TEMSIM,MULTEM,EDM,PRISM.
+
+Friday :
+
+- compiled TEMSIM succesfully linking with pthread and fftw3
+- tried compiling PRISM, checking UTF-8 encoding table(\uXXXX) and HDF
+- Investigated mutlislice package JMULTIS/ZMULT with Spence book from library
+- progress on Cowley-Moodie
+
+
+## week 11
+
+Monday :
+
+- Spence,AdvancedTEM Chap1,3
+
+Tuesday :
+
+- meeting with Eugene, David
+- Attempts on QSTEM(pyqstem)
+- Spence,AdvancedTEM Chap5.1
+
+Wednesday :
+
+- Thoughts on a general Transfer Matrix Method
+- Read on general relativity differential geometry
+
+Thursday :
+
+- Manual handling induction
+- Set up port and socket for registering static IP address
+- Run Kirkland example successfully
+- looked at ZuoSpence JMULTIS code (not straightforward)
+- Failed compiling PyPrismatic from pip,source,using gcc-4.8,...
+
+Friday :
+
+- Read Kirkland chap6
