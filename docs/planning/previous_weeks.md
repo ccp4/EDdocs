@@ -5,7 +5,7 @@ To see extra links served by the [file system](http://0.0.0.0:8001/) with : `cd 
 
 ## week 11
 - Readings :
-    - [Spence,Zuo,Advanced TEM](/readings/Spence2017) chap1,3,5.
+    - [Spence,Zuo, Advanced TEM](/readings/Spence2017) chap1,3,5.
     - [Kirkland, Advanced computing in electron microscopy](/readings/Kirkland2010) chap 6
 - Multislice :
     - Successful run of TEMSIM (Kirkland code)

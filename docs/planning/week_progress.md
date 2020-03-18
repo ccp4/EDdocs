@@ -6,7 +6,12 @@
 
 #Tuesday
 - Set up git on brno
-- Prepare meeting 
+- Prepare meeting
+- Completed mkdocs Kirkland book chap 6:Multislice formulation
 
+# Wednesday:
+- compare in simple SquareLattice case Bloch, Multislice, Bragg
+- mkdocs results from Kirkland, Multislice
+- compare nearBragg with Green functions integral
 
-- mkdocs Kirkland TEMSIM
+#plan

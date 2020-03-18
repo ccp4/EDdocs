@@ -1,7 +1,6 @@
 # Advanced computing in electron microscopy
 
 ## Chap 6 Theory
-
 Electron scattering is accounted for by solving Schrodinger's equation :
 \begin{equation}
   \Big\{ \frac{\hbar^2}{2m_0}\grad^2 + V(\bb r) \Big\}\Psi(\bb r) = E\Psi(\bb r)
@@ -11,9 +10,7 @@ which is only an approximation of Dirac's equation the electron spin is neglecte
 The magnetic field due to the lenses can be ignored since it affects the electron path over a $1mm$ distance despite being $\approx 1T$.
 
 
-
 ### ED modelling history
-
 Date      |Name              |Advance
 -----     |----              |---------                             
 1928      | Davisson,Bethe   | Electron diffraction exp,theory
@@ -26,7 +23,6 @@ Date      |Name              |Advance
 1983      | Kilaas           | Real space multislice
 
 ### Notes
-
 Prop                |Multislice     |Bloch
 -----               |----           |---------                             
 Number of beams $N$ | Fourier components at the FFT stage | Fourier components of the potential
@@ -37,7 +33,6 @@ computer time as    | $N\log_2(N)$  | $N^3$
 
 
 ### Bloch waves
-
 Assumptions :
 
 - Elastic scattering : $E$ is constant at the incident electron energy.
@@ -60,4 +55,34 @@ Using the boundary conditions that the incident wave is along $\bb G=\bb 0$ give
 
  where $\bb S=\bb C\bb e^{2i\pi\boldsymbol{\gamma}}\bb C^{-1}$ is known as the scattering matrix.
 
+### Fast electron wave equation
+Using constant high energy collimated electrons, i.e. $\Psi_f=\Psi(x,y,z)e^{jk_0z}$ and slow varying envelope, i.e. $\dP^2_{z}\ll 2ik_0\dP_z$ assumptions, Schrodinger's equation reduces to:
+
+\begin{equation}
+  \frac{\dP\Psi(x,y,z)}{\dP_z} =
+    \Big\{\frac{i\lambda}{4\pi}\grad^2_{xy} + i\sigma V(x,y,z)\Big\} \Psi(x,y,z)
+\end{equation}
+
+where $\sigma=2\pi me\lambda/h^2$.
+
 ### Howie Whelan
+Assuming period potential and looking for solutions $\Psi(\bb r)=\sum_{\bb G}\phi_{\bb G}(z)e^{i\bb G\cdot\bb r}$ reduces to the  system of differential equations :
+\begin{equation}
+  \frac{\dP\phi_{\bb G}(x)}{\dP_z} =
+      2\pi S_{\bb G}\phi_{\bb G}(z)
+      + i\sigma\sum_{\bb G^{'}}V_{\bb G-\bb G^{'}}\phi_{\bb G^{'}}(z)
+\end{equation}
+
+### Multislice
+The multislice approach attempts at solving the equation in real space :
+\begin{equation}
+  \Psi(z+\Delta z) = \Psi(z)e^{i\lambda/4\pi\Delta z\grad^2_{xy}
+      + i\sigma\nu_{\Delta z}(x,y,z)}
+\end{equation}
+where $\nu_{\Delta_z}=\int_z^{z+\Delta z}V(x,y,z^{'})dz^{'}$. Due to the exponentiation operator this must be approximated as :
+\begin{equation}
+  \Psi(z+\Delta z) = p(x,y,\Delta z)\star \Big(t(x,y,z)\Psi(z)\Big) +\mathcal O(\Delta z^2\nu_{\Delta z})
+\end{equation}
+
+where $t(x,y,z)=e^{i\sigma/4\pi\nu{\Delta z}}$ is the transmission function, $p(x,y,\Delta z)\star = e^{i\lambda/4\pi\Delta z\grad^2_{xy}}$ is the propagator operator, $p(x,y,\Delta z)=\frac{1}{i\lambda\Delta z}e^{2ik_0\frac{x^2+y^2}{\delta z}}$ is the propagator function which can be interpreted as the **Fresnel propagator** :
+![](/figures/Fresnel.gif)
