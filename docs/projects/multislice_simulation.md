@@ -10,6 +10,7 @@
   - [Kirkland,2010](/readings/Kirkland2010) :
     *Advanced computing in electron microscopy, 2010*
     is the main book reference for the implementation of the method available in the [TEMSIM](#https://github.com/jhgorse/kirkland/tree/master/temsim) package.
+  - [TEMSIM](/notes/temsim) source code walk through.
   - [opensource softwares](/notes/multislice_EM_softwares) :
     Other available opensource implementation of multislice.
 
@@ -21,6 +22,9 @@ the potential which is also denoted as *inelastic density function $\chi$*.
 - The sample is divided in a series of slices orthogonal to the electrons propagation direction.
 - Schrodinger's equation is solved by propagating the output wave function from one slice to the other using the **parabolic approximation(Fresnel diffraction)**.
 - The potential plays a similar role in Schrodinger's equation as the atomic susceptibility of a medium in response to an incident electromagnetic wave in Maxwell's equation.
+- Since typically $L/\lambda \approx 10^6$ with $L^3$ the crystal volume, it is impractical to attempt solving the wave equation with a
+standard beam propagation method(BPM) and even less with a eigen value
+solver.
 
 
 ## Method
@@ -34,16 +38,33 @@ where $\nu_{\Delta_z}=\int_z^{z+\Delta z}V(x,y,z^{'})dz^{'}$.
 
 Due to the exponentiation operator this must be approximated as :
 \begin{equation}
-  \Psi(z+\Delta z) = p(x,y,\Delta z)\star \Big(t(x,y,z)\Psi(z)\Big) +\mathcal O(\Delta z^2\nu_{\Delta z})
+  \Psi(z+\Delta z) = p(x,y,\Delta z)\ast \Big(t(x,y,z)\Psi(z)\Big) +\mathcal O(\Delta z^2\nu_{\Delta z})
 \end{equation}
 
-where $t(x,y,z)=e^{i\sigma/4\pi\nu{\Delta z}}$ is the transmission function, $p(x,y,\Delta z)\star = e^{i\lambda/4\pi\Delta z\grad^2_{xy}}$ is the propagator operator, $p(x,y,\Delta z)=\frac{1}{i\lambda\Delta z}e^{2ik_0\frac{x^2+y^2}{\delta z}}$ is the propagator function which can be interpreted as the **Fresnel propagator**.
+where $t(x,y,z)=e^{i\sigma/4\pi\nu_{\Delta z}}$ is the transmission function, $p(x,y,\Delta z)\ast = e^{i\lambda/4\pi\Delta z\grad^2_{xy}}$ is the propagator operator, $p(x,y,\Delta z)=\frac{1}{i\lambda\Delta z}e^{2ik_0\frac{x^2+y^2}{\delta z}}$ is the propagator function which can be interpreted as the **Fresnel propagator**.
 
 A great visual description of differences between Fresnel and Fraunhofer
 from  [Jacopo Bertolotti](https://twitter.com/j_bertolotti/status/1199661806538633216)
 ![](/figures/Fresnel.gif)
 
+## Limit case
 
+If the potential is small the exponential transmission function can be approximated as $t(x,y,z)\approx 1+i\sigma\nu_{\Delta z}$.
+Far from the slice, the convolution with the propagator reduces to
+$e^{ik_0(x^2+y^2)/2}\mathcal F_{\perp}$
+where $\mathcal F_{\perp}$ is the transverse Fourier transform.
+Using the whole sample for the slice thickness and
+$\Psi_0(\bb r')=e^{-j\bb k_0\cdot\bb r'}$
+gives the exit wave as :
+\begin{equation}
+  \Psi(x,y) = e^{ik_0(x^2+y^2)/2}
+    \left(\delta(\bb k_0) +
+      \mathcal F^{2D}_{k_0x,k_0y}\Big\{\int_0^t V(x',y',z')dz' \Big\}
+    \right)
+\end{equation}
+
+where $\mathcal F^{2D}_{k_0x,k_0y}\Big\{\int_0^t V(x',y',z')dz'\Big\}=\mathcal F^{3D}(k_x,k_y,0)$ from the [Fourier Projection Theorem](/books/kirkland2010/apxB-projectedPotential.pdf) therefore corresponding to the kinematic scattering limit case.
+The notion of projected potential being also mentioned in [zou,2011](/readings/zou2011/#chap-3-crystal-structure-factors-and-symmetry).
 
 ## Theory Cowley&Moodie
 The response to an incident wave of imediately after passing through
@@ -61,10 +82,10 @@ $(1+\varphi(x,y,z)/W_0)^{1/2}-1\approx \varphi(x,y,z)/2W_0$.
 The wave function in the plane of observation is :
 
 \begin{eqnarray}
-\Psi(x) =
-    \Bigg\{_N& &Q_N(-\frac{k_sx}{R})\star\Big\{_{N-1} ... \\
-       &\Big\{_2& Q_2(-\frac{k_sx}{R})\star
-          \big\{_1 Q_1(-\frac{k_sx}{R})\star Q_0(-\frac{k_sx}{R})e^{\frac{ik_sR_1x^2}{2R^2}}\big\}_1
+  \Psi(x) =
+    \Bigg\{_N& &Q_N(-\frac{k_sx}{R})\ast\Big\{_{N-1} ... \\
+       &\Big\{_2& Q_2(-\frac{k_sx}{R})\ast
+          \big\{_1 Q_1(-\frac{k_sx}{R})\ast Q_0(-\frac{k_sx}{R})e^{\frac{ik_sR_1x^2}{2R^2}}\big\}_1
        e^{\frac{ik_sR_2x^2}{2R^2}} \Big\}_2 \\
     &...&\Big\}_{N-1} e^{\frac{ik_sR_Nx^2}{2R^2}} \Bigg\}_N e^{\frac{-ik_sx^2}{2R}}
 \end{eqnarray}
@@ -106,5 +127,6 @@ $\left(\sum_{r=1}^{n} h_r, \sum_{r=1}^{n} k_r, \sum_{r=1}^{n} l_r\right)$.
     \left( \sum_{r=1}^{n} k_r/b \right)^2
     \Bigg\}-\sum_{r=1}^{n} \frac{l_r}{c} +\frac{h_r}{a}\alpha_x +\frac{k_r}{b}\alpha_y
 \end{equation}
+
 
 ## Application examples
