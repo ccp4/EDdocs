@@ -8,9 +8,13 @@
 - Glaeser&Downing1993 : multislice simu
 - web material [Bfactor](https://www-structmed.cimr.cam.ac.uk/course.html).
 
+
+- compare nearBragg with Green functions integral
+
+
 ## Codes
-- 2D Fourier transforms
-- 2D nearBragg with changes
+- 2D Fourier transforms : square,GaAs
+- 2D nearBragg : angle dependent scattering, multiple scattering
 - Multislice software :
     - compile QSTEM3,PyPrismatic,JMUTLIS
 
@@ -23,8 +27,3 @@
 - microscope program
 - Generalized transfer matrix method for special geometries
 - Read and summarize on spectroscopic techniques
-
-## induction
-- asbestos
-- DSE
-- Bytesize

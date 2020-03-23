@@ -2,6 +2,15 @@
 
 To see extra links served by the [file system](http://0.0.0.0:8001/) with : `cd $CCP4; python3 -m http.server 8001`
 
+## week 12
+- Readings :
+    - [Kirkland, Advanced computing in electron microscopy](/readings/Kirkland2010) complete 6 and documented
+- Simulation :
+    - 2D Fourier transforms and [Laue tables](/misc/tables)
+    - Started implemented Bloch wave
+- Misc :
+    - set up git back up and webserver on brno
+    - totara inductions
 
 ## week 11
 - Readings :
