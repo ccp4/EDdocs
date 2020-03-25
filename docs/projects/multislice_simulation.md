@@ -1,8 +1,10 @@
 # Multislice simulations
 
+## Overview
+
 **A method used to determine the exit wave function(exit image) of an incident electron beam by solving  Schrodinger's equation. The diffraction pattern is obtained as the Fourier transform of the exit image.**
 
-## Links
+### Links
   - [wiki](https://en.wikipedia.org/wiki/Multislice) :
     A general overview.
   - [Cowley&Moodie,1957](/articles/CowleyMoodie1957.pdf) :
@@ -10,11 +12,11 @@
   - [Kirkland,2010](/readings/Kirkland2010) :
     *Advanced computing in electron microscopy, 2010*
     is the main book reference for the implementation of the method available in the [TEMSIM](#https://github.com/jhgorse/kirkland/tree/master/temsim) package.
-  - [TEMSIM](/notes/temsim) source code walk through.
+  - [TEMSIM](/projects/multislice/temsim) source code walk through.
   - [opensource softwares](/notes/multislice_EM_softwares) :
-    Other available opensource implementation of multislice.
+    Other available opensource implementations of multislice.
 
-## Assumptions and features
+### Assumptions and features
 - Scattering is accounted for through the **interacting electronic potential $\varphi(x,y,z)$** so that the **electrons in the incident beam accelerated at potential $W_0$** have energies $W_0+\varphi$.
 - **Dynamical diffraction** is naturally account for with this approach.
 - **Inelastic scattering** is accounted for through the imaginary part of
@@ -47,7 +49,7 @@ A great visual description of differences between Fresnel and Fraunhofer
 from  [Jacopo Bertolotti](https://twitter.com/j_bertolotti/status/1199661806538633216)
 ![](/figures/Fresnel.gif)
 
-## Limit case
+### Limit case
 
 If the potential is small the exponential transmission function can be approximated as $t(x,y,z)\approx 1+i\sigma\nu_{\Delta z}$.
 Far from the slice, the convolution with the propagator reduces to
@@ -67,9 +69,8 @@ where $\mathcal F^{2D}_{k_0x,k_0y}\Big\{\int_0^t V(x',y',z')dz'\Big\}=\mathcal F
 The notion of projected potential being also mentioned in [zou,2011](/readings/zou2011/#chap-3-crystal-structure-factors-and-symmetry).
 
 ## Theory Cowley&Moodie
-The response to an incident wave of imediately after passing through
+The response to an incident wave of immediately after passing through
 slice $z_i$ is :
-
 \begin{equation}
     \Psi(x,y,z_i+dz) = \Psi(x,y,z_i)e^{i\sigma\varphi dz}
 \end{equation}

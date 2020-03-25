@@ -21,7 +21,7 @@ extra_javascript:
 nav:
  - 'Index': 'index.md'
  - 'Projects':
-     - 'Overview' : 'projects/projects.md'
+     - 'Overview' : 'projects/index.md'
      - 'Multislice' : 'projects/multislice_simulation.md'
      - 'Wallpapers' : 'projects/wallpapers/index.md'
      - 'NearBragg' : 'projects/nearBragg/index.md'
@@ -36,7 +36,7 @@ nav:
      - 'Meetings' : 'planning/meetings.md'
      - 'TODO' : 'planning/TODO.md'
  - 'Misc':
-     - 'Tables' : 'misc/tables.md'     
+     - 'Tables' : 'misc/tables.md'
      - 'Useful cmds' : 'misc/useful.md'
      - 'useful python' : 'misc/python.md'
      - 'Instruments' : 'misc/instruments.md'

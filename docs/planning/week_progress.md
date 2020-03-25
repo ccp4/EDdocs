@@ -1,7 +1,10 @@
 # week13
 ## Monday
-- 2D Fourier and potentials
-- mkdocs results from Kirkland, Multislice
+- Fourier projection theorem and Rotation of Fourier transform
+- 2D Fourier and potentials code walkthrough
+- mkdocs running temsim
 
 ## Tuesday
-- Bloch
+- Discovered great Berkeley [database](https://www.materialsproject.org/about)
+- Good for exploring [space group](http://img.chem.ucl.ac.uk/sgp/large/sgp.htm)
+- Document temsim atompot  

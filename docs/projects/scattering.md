@@ -109,42 +109,47 @@ to its values at the miller indices $F_{hkl}$ so that
 $\bb q\cdot\bb r_j=hx_j+ky_j+lz_j$.
 
 
-### Inelastic scattering
-
-Inelastic scattering occurs when a particle is created or one of the colliding
-particles gets excited to a higher state. From the point of view of
-the incident electron, this may be considered as inelastic if a fraction of its
-kinetic energy is given off to the deflecting particle.This would manifest by a
-recoil of the deflecting particle.
-This can be neglected when the mass electron is much smaller than the mass of the
-deflecting particle.
-
-
-
 
 ## Electron scattering
 
 In electron diffraction, scattering occurs via Coulomb forces.
 
+### Coulomb scattering
+
 Historically, it has been studied by [Rutherford](http://hyperphysics.phy-astr.gsu.edu/hbase/rutsca.html) using a [classical description](https://en.wikipedia.org/wiki/Rutherford_scattering) of charged particles.
 
-A quantum mechanical treatment reveals within the Born approximation shows that :
-$$
+### Inelastic scattering
 
-Using Poisson the electron scattering factors $f^e$ can be related to the X-ray atomic scattering factors $f^x$ :
+Inelastic scattering occurs when a particle is created or one of the colliding particles gets excited to a higher state. From the point of view of the incident electron, this may be considered as inelastic if a fraction of its kinetic energy is given off to the deflecting particle.This would manifest by a recoil of the deflecting particle.
+This can be neglected when the mass electron is much smaller than the mass of the deflecting particle.
+
+
+### quantum mechanics
+
+A quantum mechanical treatment within the Born approximation can be used to determine the scattering amplitude $f^x$ for X-ray (See
+[Motte](/articles/Mott1930_A.pdf) or [Egerton](/articles/Egerton2009.pdf)).
+In practice these are commonly fitted from experiment with Gaussian sums :
+\begin{equation}
+  f^x(q) = \sum_{i=1}^{4} a_i\exp\left(-b_i\left(\frac{q}{4\pi}\right)^2 \right) + c
+\end{equation}
+
+as shown [below](/figures/atomic_scattering_factors.svg) for $C,H,N,O,S,P$ :
+![](/figures/atomic_scattering_factors.svg)
+
+Using Poisson equation, the electron scattering factors $f^e$ can be related to the X-ray atomic scattering factors $f^x$, through the Mott-Bethe formula :
 \begin{equation}
   f^e \propto \frac{Z-f^x}{q^2}
 \end{equation}
-which is known as the Mott-Bethe formula.
 
-The electron atomic scattering factors are commonly fitted with Gaussian sums as :
+Those may be fitted with Gaussian and Lorentzian sums :
 \begin{equation}
-  f^e(q) = \sum_{i=1}^{4} a_i\exp\left(-b_i\left(\frac{q}{4\pi}\right)^2 \right) + c
+  f^e(q) = \sum_{i=1}^{3}\frac{a_i}{q^2+b_i} + c_ie^{-d_iq^2}
 \end{equation}
 
- of $C,H,N,O,S,P$ are shown
-[below](/figures/atomic_scattering_factors.svg):
-![](/figures/atomic_scattering_factors.svg)
+as shown [below](/figures/electron_atomic_scattering_factors.svg) for $C,H,N,O,S,P$ :
+![](/figures/electron_atomic_scattering_factors.svg)
+
+
 
 
 
@@ -158,13 +163,13 @@ The electron atomic scattering factors are commonly fitted with Gaussian sums as
 For X-ray the electric field of the incident photons interact with the electrons.
 This is known as Thomson scattering.
 From a classical point of view, the electrons oscillate along the electric field
-as $\mathbf p=q\mathbf x=q^2\mathbf E/m\omega^2$
+as $\mathbf p=q\mathbf x=e^2\mathbf E/m\omega^2$
 producing a Hertzian dipole radiation $P=\frac{\omega^4}{12\pi\epsilon_0 c^3}|\mathbf p|^2$
 leading to a Thomson scattering cross section
 $\sigma_{th}=\frac{P}{1/2\epsilon_0c|\mathbf E|^2}$ :
 
 \begin{equation}
-    \sigma_{th} = \frac{8\pi}{3}\left(\frac{q^2}{4\pi\epsilon_0 mc^2}\right)^2=\frac{8\pi}{3}r_e^2
+    \sigma_{th} = \frac{8\pi}{3}\left(\frac{e^2}{4\pi\epsilon_0 mc^2}\right)^2=\frac{8\pi}{3}r_e^2
 \end{equation}
 
 where $r_e=2.818~fm$ is the classical radius of the electron.
@@ -172,15 +177,11 @@ where $r_e=2.818~fm$ is the classical radius of the electron.
 
 ### Classical collision
 
-Scattering can be seen as collisions between particles through an interacting
-force.
-To some extent, those collisions are analogous to classical billard ball like
-collisions. The analogy is driven by the fact that in all those events, the
-energy and momentum of the whole system before and after interaction must be
-conserved.
+Scattering can be interpreted as collisions between particles through an interacting potential (or force).
+The most basic treatment of colliding particles is the classical billiard ball model which corresponds to the case where there is no interacting potential.
+The only constraint is that the energy and momentum of the whole system before and after collision must be conserved.
 
-For billard ball like particles of mass $m_1$, $m_2$ and initial speed $v_1$, $v_2$
-those conservation laws yield in 1D :
+For point-like particles of mass $m_1$, $m_2$ and initial speed $v_1$, $v_2$ the conservation laws yield in 1D :
 
 \begin{eqnarray}
     v_1^{'} &=& v_1 + \frac{2m_2}{m_1+m_2}(v_2-v_1) \\
@@ -196,20 +197,20 @@ those conservation laws yield in 1D :
 \end{eqnarray}
 
 Since the relations are symmetric for particle $1$ and $2$ we can only focus on
-the point of view of particle $1$.
+the point of view of particle $1$. Note that :
 
-Note if :
-
-- $m_1=m_2=m$ velocities are simply exchanged to ensure momemtum conservation.
 - $v_2=v_1=v$ there can not be any collision so $v_1^{'}=v_1$.
-- $m_2\gg m_1$, then $ v_1^{'} \approx v_2-v_1\underset{v_2=0}\rightarrow -v_1$ the particle is reflected.
-- $m_2\gg m_1$, $v_2=0$ then $\Delta E_c/E_c=-4m_1/m_2$ the fraction of energy lost in the collision.
-- $v_2\gt v_1\gt 0$ the energy goes from the fastest particle to the slowest one.
+- $m_1=m_2=m$ velocities are simply exchanged to ensure conservation of momentum.
+- $m_2\gg m_1$, $v_2=0$
+    - $ v_1^{'} \approx v_2-v_1\underset{v_2=0}\rightarrow -v_1$ the particle is reflected.
+    - $\Delta E_c/E_c=-4m_1/m_2$ the fraction of energy lost in the collision.
+- Energy exchange :
+    - $v_2\gt v_1\gt 0$ the energy goes from the fastest particle to the slowest one.
+    - $v_2>0>v_1$, the energy goes from the one with largest momentum to the lowest one.
 
 
 
-
-### Diffraction and resolution
+## Diffraction and resolution
 
 The resolution is determined by the number of pixels $N^2$ of the detector
 and the distance $D$ of the detector to the crystal.
