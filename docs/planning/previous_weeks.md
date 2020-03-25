@@ -44,7 +44,7 @@ To see extra links served by the [file system](http://0.0.0.0:8001/) with : `cd 
 
 ## week 07
 - Simulation approaches [summary](/projects/projects) multislice, BPM, nearBragg, particle description approaches
-- summary, detail, scope and benefits of [multislice](/projects/multislice_simulation)
+- summary, detail, scope and benefits of [multislice](/projects/multislice)
 - Familiarize with [nearBragg program](http://0.0.0.0:8001/src/nearBragg)
 - Started reading review [ClabbersAbrahams2018](http://0.0.0.0:8001/ressources/articles/ClabbersAbrahams2019.pdf)
 - Python packaging,distributing and virtual environment in [doc](/misc/python)

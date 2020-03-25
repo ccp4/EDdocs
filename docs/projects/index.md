@@ -11,7 +11,7 @@ here.
 
 ## Projects
 
-- [Multislice](/projects/multislice_simulation)
+- [Multislice](/projects/multislice)
     - It leverages the semi-analytical solution of Schrodinger's equation
 from physical optics principles, i.e. **parabolic approximation (Fresnel diffraction)**.
     - The **potential** $\rho(x,y,z)$ models the electronic density of the structure and has the periodicity of the crystal.

@@ -74,4 +74,4 @@ Assuming period potential and looking for solutions $\Psi(\bb r)=\sum_{\bb G}\ph
 \end{equation}
 
 ### Multislice
-See [multislice](/projects/multislice_simulation#Method)
+See [multislice](/projects/multislice/#method)

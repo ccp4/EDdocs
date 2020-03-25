@@ -9,7 +9,7 @@
     - [TODO](/planning/TODO)
 - [Projects](/projects/projects) :
     - nearBragg
-    - nultislice
+    - [multislice](/projects/multislice)
 - Literature :
     - Theories
     - Articles
