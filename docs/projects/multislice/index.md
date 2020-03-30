@@ -1,4 +1,4 @@
-# Multislice simulations
+# Multislice Simulation
 
 ## Overview
 
@@ -43,13 +43,9 @@ Due to the exponentiation operator this must be approximated as :
   \Psi(z+\Delta z) = p(x,y,\Delta z)\ast \Big(t(x,y,z)\Psi(z)\Big) +\mathcal O(\Delta z^2\nu_{\Delta z})
 \end{equation}
 
-where $t(x,y,z)=e^{i\sigma/4\pi\nu_{\Delta z}}$ is the transmission function, $p(x,y,\Delta z)\ast = e^{i\lambda/4\pi\Delta z\grad^2_{xy}}$ is the propagator operator, $p(x,y,\Delta z)=\frac{1}{i\lambda\Delta z}e^{2ik_0\frac{x^2+y^2}{\delta z}}$ is the propagator function which can be interpreted as the **Fresnel propagator**.
+where $t(x,y,z)=e^{i\sigma/4\pi\nu_{\Delta z}}$ is the transmission function, $p(x,y,\Delta z)\ast = e^{i\lambda/4\pi\Delta z\grad^2_{xy}}$ is the propagator operator, $p(x,y,\Delta z)=\frac{1}{i\lambda\Delta z}e^{ik_0\frac{x^2+y^2}{2\Delta z}}$ is the propagator function which can be interpreted as the **Fresnel propagator**.
 
-A great visual description of differences between Fresnel and Fraunhofer
-from  [Jacopo Bertolotti](https://twitter.com/j_bertolotti/status/1199661806538633216)
-![](/figures/Fresnel.gif)
-
-### Limit case
+### Kinematic limit
 
 If the potential is small the exponential transmission function can be approximated as $t(x,y,z)\approx 1+i\sigma\nu_{\Delta z}$.
 Far from the slice, the convolution with the propagator reduces to
@@ -67,6 +63,18 @@ gives the exit wave as :
 
 where $\mathcal F^{2D}_{k_0x,k_0y}\Big\{\int_0^t V(x',y',z')dz'\Big\}=\mathcal F^{3D}(k_x,k_y,0)$ from the [Fourier Projection Theorem](/books/kirkland2010/apxB-projectedPotential.pdf) therefore corresponding to the kinematic scattering limit case.
 The notion of projected potential being also mentioned in [zou,2011](/readings/zou2011/#chap-3-crystal-structure-factors-and-symmetry).
+
+A great visual comparison between Fresnel(used in multislice) and Fraunhofer(used in kinematic approximation) diffractions from
+[Jacopo Bertolotti](https://twitter.com/j_bertolotti/status/1199661806538633216)
+![](/figures/Fresnel.gif)
+
+[Here](/figures/ffvsfr.png) is a comparison with values that are relevant for electron diffraction :
+![](/figures/ffvsfr.png)
+
+
+<!-- ### Gaussian atomic scattering factor  
+For a Gaussian Gaussian atomic scattering factor the projected potential should also be Gaussian. The convolution operator will act as a complex Gaussian   -->
+
 
 ## Theory Cowley&Moodie
 The response to an incident wave of immediately after passing through
@@ -129,5 +137,21 @@ $\left(\sum_{r=1}^{n} h_r, \sum_{r=1}^{n} k_r, \sum_{r=1}^{n} l_r\right)$.
     \Bigg\}-\sum_{r=1}^{n} \frac{l_r}{c} +\frac{h_r}{a}\alpha_x +\frac{k_r}{b}\alpha_y
 \end{equation}
 
+## TEMSIM source code
+- [TEMSIM](/projects/multislice/temsim) source code walk through.
 
-## Application examples
+
+## Misc
+- Symmetrically bandwidth limited in reciprocal space
+![](/figures/BW_limited.png)
+
+- Aligning atoms at the beginning of the slices so that the potential has effect only over a small fraction $\Delta z_a$ of the slice allowing cascading of the propagator therefore reducing error on the order of $\Delta z_a$.
+![](/figures/align_atom_slice.png)
+
+
+- large slice thickness can produce artefacts
+- slice can not be arbitrarily small as they need to cover the full range of the atomic potential $\simeq 1A$ which might not be small enough for large atomic numbers of low voltages.
+    - Individual components of multislice approach are nearly exact when taken individually. The main source of errors comes from the combination of propagating(In Fresnel approximation) and transmitting (with the phase grating approximation).
+
+- The Fourier transform of bandwidth limited product of $\Psi(\bb x)$ with $t(\bb x)$ is a convolution inn reciprocal space equivalent to sliding the Fourier transform $\Psi(\bb k)\ast T(\bb k)$. This causes aliasing if the full bandwidth is used(left), the remedy is to set $BW=2/3k_{max}$ (right). As a result only about 1/3 of the Fourier coefficients are used in practise.
+![](/figures/slide.png)

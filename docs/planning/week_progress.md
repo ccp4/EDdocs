@@ -1,10 +1,5 @@
-# week13
-## Monday
-- Fourier projection theorem and Rotation of Fourier transform
-- 2D Fourier and potentials code walkthrough
-- mkdocs running temsim
+# week 14
 
-## Tuesday
-- Discovered great Berkeley [database](https://www.materialsproject.org/about)
-- Good for exploring [space group](http://img.chem.ucl.ac.uk/sgp/large/sgp.htm)
-- Document temsim atompot  
+## Monday
+- Kirkland scattering apx + document (cmp with Abrahams2019 treatment)
+- Cowley&Moodie paper

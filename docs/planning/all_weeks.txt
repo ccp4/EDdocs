@@ -118,3 +118,25 @@
 ## Friday
 - totara : asbestos,Bytesize
 - Added [tables](/misc/tables) Laue class symmetry groups
+
+# week13
+## Monday
+- Fourier projection theorem and Rotation of Fourier transform
+- 2D Fourier and potentials code walkthrough
+- mkdocs running temsim
+## Tuesday
+- Meeting
+- Discovered great Berkeley [database](https://www.materialsproject.org/about)
+- Good for exploring [space group](http://img.chem.ucl.ac.uk/sgp/large/sgp.htm)
+- Document temsim atompot and compute electron atomic scattering factor
+## Wednesday
+- Updated documentation with wallpapers and nearBragg
+- Selected [BN](https://www.materialsproject.org/materials/mp-984/) as 2D candidate
+## Thursday
+- Fourier transform of complex Gaussian (fft problematic, analytical ok)
+- Fresnel convolution ok
+## Friday
+- [temsim](/projects/multislice/temsim) atompot,mulslice
+- kirkland [FFT,aliasing,BW,slicing](/projects/multislice/#misc)
+- chap7 quantitative image matching
+- failed to compile slicview

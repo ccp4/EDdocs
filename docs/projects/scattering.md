@@ -126,9 +126,10 @@ This can be neglected when the mass electron is much smaller than the mass of th
 
 ### quantum mechanics
 
-A quantum mechanical treatment within the Born approximation can be used to determine the scattering amplitude $f^x$ for X-ray (See
-[Motte](/articles/Mott1930_A.pdf) or [Egerton](/articles/Egerton2009.pdf)).
-In practice these are commonly fitted from experiment with Gaussian sums :
+A quantum mechanical treatment within the Born approximation can be used to determine the X-ray atomic scattering amplitude $f^x$ (see
+[Mott](/articles/Mott1930_A.pdf) or [Egerton](/articles/Egerton2009.pdf)) as the Fourier transform of its electron density map.
+The latter comes from solving Relativistic Hartree-Fock numerical calculation except for Hydrogen and Helium.
+In practice, $f^x$ are commonly fitted using Gaussian sums :
 \begin{equation}
   f^x(q) = \sum_{i=1}^{4} a_i\exp\left(-b_i\left(\frac{q}{4\pi}\right)^2 \right) + c
 \end{equation}
@@ -138,7 +139,7 @@ as shown [below](/figures/atomic_scattering_factors.svg) for $C,H,N,O,S,P$ :
 
 Using Poisson equation, the electron scattering factors $f^e$ can be related to the X-ray atomic scattering factors $f^x$, through the Mott-Bethe formula :
 \begin{equation}
-  f^e \propto \frac{Z-f^x}{q^2}
+  f^e(q) = \frac{1}{2\pi^2 a_0}\frac{Z-f^x}{q^2}  
 \end{equation}
 
 Those may be fitted with Gaussian and Lorentzian sums :
