@@ -2,21 +2,20 @@
 
 ## Readings ED
 - Spence Advanced TEM : chap 4
-- Kirkland Advanced Computing EM : chap7
+- Kirkland Advanced Computing EM : chap3-5
 - Zou2011, Electron Crystallo : chap4-5,9-13+apx
 - review [ClabbersAbrahams2018](/articles/ClabbersAbrahams2018.pdf)
-- Glaeser&Downing1993 : multislice simu
+- multislice simus applications : Glaeser&Downing1993,...
 - web material [Bfactor](https://www-structmed.cimr.cam.ac.uk/course.html).
 
-
-- compare nearBragg with Green functions integral
-
-
 ## Codes
-- 2D Fourier transforms : square,GaAs
-- 2D nearBragg : angle dependent scattering, multiple scattering
-- Multislice software :
+- Multislice :
+    - Compute structure factors, ie potentials  
     - compile QSTEM3,PyPrismatic,JMUTLIS
+- Bloch
+- nearBragg :
+    - angle dependent scattering, multiple scattering
+    - compare with Green functions integral within Born approximation
 
 ## Methods :
 - Patterson method

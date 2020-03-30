@@ -4,14 +4,12 @@ To see extra links served by the [file system](http://0.0.0.0:8001/) with : `cd 
 
 ## week13
 - Simulation :
-    - Document [temsim](/projects/multislice/temsim) atompot,mulslice
+    - Document [temsim](/projects/multislice/temsim) atompot, mulslice
     - [Fresnel convolution](/projects/multislice/#kinematic-limit) : fft problematic but analytical exists
     - [Electron atomic scattering potentials](/projects/scattering/#electron-scattering)
     - failed to compile slicview
 - Readings :
-    - Sections kirkland [FFT,aliasing,BW,slicing](/projects/multislice/#misc)
-    - chap7 quantitative image matching
-
+    - Kirkland Sections  [FFT,aliasing,BW,slicing](/projects/multislice/#misc), quantitative image matching, apxC-scattering
 ## week 12
 - Readings :
     - [Kirkland, Advanced computing in electron microscopy](/readings/Kirkland2010) complete 6 and documented

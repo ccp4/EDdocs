@@ -129,13 +129,10 @@ This can be neglected when the mass electron is much smaller than the mass of th
 A quantum mechanical treatment within the Born approximation can be used to determine the X-ray atomic scattering amplitude $f^x$ (see
 [Mott](/articles/Mott1930_A.pdf) or [Egerton](/articles/Egerton2009.pdf)) as the Fourier transform of its electron density map.
 The latter comes from solving Relativistic Hartree-Fock numerical calculation except for Hydrogen and Helium.
-In practice, $f^x$ are commonly fitted using Gaussian sums :
+In practice, $f^x$ are commonly fitted using [Gaussian sums](https://it.iucr.org/Cb/ch6o1v0001/) :
 \begin{equation}
   f^x(q) = \sum_{i=1}^{4} a_i\exp\left(-b_i\left(\frac{q}{4\pi}\right)^2 \right) + c
 \end{equation}
-
-as shown [below](/figures/atomic_scattering_factors.svg) for $C,H,N,O,S,P$ :
-![](/figures/atomic_scattering_factors.svg)
 
 Using Poisson equation, the electron scattering factors $f^e$ can be related to the X-ray atomic scattering factors $f^x$, through the Mott-Bethe formula :
 \begin{equation}
@@ -147,8 +144,12 @@ Those may be fitted with Gaussian and Lorentzian sums :
   f^e(q) = \sum_{i=1}^{3}\frac{a_i}{q^2+b_i} + c_ie^{-d_iq^2}
 \end{equation}
 
-as shown [below](/figures/electron_atomic_scattering_factors.svg) for $C,H,N,O,S,P$ :
-![](/figures/electron_atomic_scattering_factors.svg)
+Both
+[x-ray](/figures/xray_atomic_scattering_factors.svg)
+and
+[electron](/figures/electron_atomic_scattering_factors.svg)
+atomic form factors are shown below for $C,H,N,O,S,P$ :
+![](/figures/atomic_form_factors.png)
 
 
 

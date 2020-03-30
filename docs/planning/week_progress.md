@@ -1,5 +1,6 @@
 # week 14
 
 ## Monday
-- Kirkland scattering apx + document (cmp with Abrahams2019 treatment)
+- scattering (cmp Lenz formula)
+- Real space potentials and structure factor 
 - Cowley&Moodie paper

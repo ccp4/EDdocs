@@ -1,6 +1,6 @@
 # Laue groups
 
-Patterson symmetry is the Laue class (or group) plus allowed centering.
+Patterson symmetry is the Laue class (or group) plus allowed centring.
 
 ##2D
 Laue class | Patterson symmetry  | plane groups  | count
@@ -20,3 +20,7 @@ Laue class | Patterson symmetry  | plane groups  | count
 # Structures
 - [Berkeley database](https://www.materialsproject.org/about)
 - [Space group](http://img.chem.ucl.ac.uk/sgp/large/sgp.htm)
+
+
+# Other links
+- web material [Bfactor](https://www-structmed.cimr.cam.ac.uk/course.html).
