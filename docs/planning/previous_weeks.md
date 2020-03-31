@@ -1,6 +1,7 @@
 # week summary
 
 To see extra links served by the [file system](http://0.0.0.0:8001/) with : `cd $CCP4; python3 -m http.server 8001`
+To update on brno server : `ssh brno "cd /home/tarik/Documents/git/ccp4 && git pull"`
 
 ## week13
 - Simulation :

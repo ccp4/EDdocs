@@ -124,22 +124,24 @@ Inelastic scattering occurs when a particle is created or one of the colliding p
 This can be neglected when the mass electron is much smaller than the mass of the deflecting particle.
 
 
-### quantum mechanics
+### Quantum mechanics
 
 A quantum mechanical treatment within the Born approximation can be used to determine the X-ray atomic scattering amplitude $f^x$ (see
 [Mott](/articles/Mott1930_A.pdf) or [Egerton](/articles/Egerton2009.pdf)) as the Fourier transform of its electron density map.
 The latter comes from solving Relativistic Hartree-Fock numerical calculation except for Hydrogen and Helium.
-In practice, $f^x$ are commonly fitted using [Gaussian sums](https://it.iucr.org/Cb/ch6o1v0001/) :
+
+In practice, $f^x$ are commonly fitted using [Gaussian sums](https://it.iucr.org/Cb/ch6o1v0001/) ($q=\sin(\theta)/\lambda$) :
 \begin{equation}
-  f^x(q) = \sum_{i=1}^{4} a_i\exp\left(-b_i\left(\frac{q}{4\pi}\right)^2 \right) + c
+  f^x(q) = \sum_{i=1}^{4} a_i\exp\left(-b_iq^2 \right) + c
 \end{equation}
 
 Using Poisson equation, the electron scattering factors $f^e$ can be related to the X-ray atomic scattering factors $f^x$, through the Mott-Bethe formula :
 \begin{equation}
-  f^e(q) = \frac{1}{2\pi^2 a_0}\frac{Z-f^x}{q^2}  
+  f^e(q) = \frac{1}{2\pi^2 a_0}\frac{Z-f^x(q)}{q^2}  
 \end{equation}
 
-Those may be fitted with Gaussian and Lorentzian sums :
+which may be fitted (see for comparison for [carbon](/figures/MottBethe.svg))
+with Gaussian and Lorentzian sums :
 \begin{equation}
   f^e(q) = \sum_{i=1}^{3}\frac{a_i}{q^2+b_i} + c_ie^{-d_iq^2}
 \end{equation}
@@ -227,7 +229,7 @@ position $X=(m,n)dp$ on the detector as $\sin\theta\approx\theta\approx X/D$.
 The resolution is then obtained from the size of the detector
 $dx\approx\lambda/\Delta\theta=\lambda D/Ndp$.
 
-For example for a 1D crystal with lattice constant $a=100A$, a 4Kx4K electron detector
+For example for a 1D crystal with lattice constant $a=100A$, a $4k\times 4k$ electron detector
 such as [DE16](http://www.directelectron.com/products/de-16/) with $dp=6.5\mu m$
 and a 300keV electron beam :
 
