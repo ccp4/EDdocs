@@ -1,13 +1,19 @@
 # CCP4-ED
-<center>
+<!-- <center>
 ![](figures/logo.png)
-</center>
+</center> -->
+
+## Questions
+- Rocking curve ? SubramanianSpence2015
+- REFMAC5 : EXDATA ELECTRON CRYSTALLOGRAPHY ?
+- Structure factor CCP4 : TRUNCATE program?
+- Structure solution from defects etc...?
 
 ## Latest
-- [temsim](/projects/multislice/temsim) atompot,mulslice
-- [Fresnel convolution](/projects/multislice/#kinematic-limit)
-- [Electron atomic scattering potentials](/projects/scattering/#electron-scattering)
-- [FFT, aliasing, BW, slicing](/projects/multislice/)
+
+- [Egerton2011](/projects/scattering/#electron-scattering) : Atomic scattering factors integral
+- [GaAs multislice](/projects/multislice/#application-examples)
+- [SubramanianSpence2015](/readings/papers/#subramanianspence2015)
 
 ## Navigation
 - Planning :

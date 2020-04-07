@@ -3,6 +3,15 @@
 To see extra links served by the [file system](http://0.0.0.0:8001/) with : `cd $CCP4; python3 -m http.server 8001`
 To update on brno server : `ssh brno "cd /home/tarik/Documents/git/ccp4 && git pull"`
 
+## week 14
+- Readings :
+    - [Mott-Bethe fit](/figures/MottBethe.svg) (where q=sin(theta/2)/lam where theta is the scattering angle)
+    - [Egerton2011](/projects/scattering/#electron-scattering) : Atomic scattering factors integral. Lenz model for which screening parameter accounts for electron cloud density which may be fitted to experiment.
+    - [GaAs multislice](/projects/multislice/#application-examples)
+    - [SubramanianSpence2015](/readings/papers/#subramanianspence2015)
+- Simulation :
+    - [Structure factor](/projects/scattering/#structure-factor)
+
 ## week13
 - Simulation :
     - Document [temsim](/projects/multislice/temsim) atompot, mulslice

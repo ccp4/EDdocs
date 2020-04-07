@@ -55,7 +55,7 @@ The scattering amplitude is related to the differential cross section as :
 For a crystal, the potential is periodic as :
 
 \begin{equation}
-    V(\bb r)=\varphi(\bb r)*\sum_{j}\delta(\bb r-\bb r_j)
+    V(\bb r)=\varphi(\bb r)* \sum_{j}\delta(\bb r-\bb r_j)
 \end{equation}
 
 where $r_j$ are the repeated positions of the origin of the unit cell and
@@ -85,18 +85,17 @@ which therefore define the reciprocal lattice.
 If the unit cell is made of a single atom, then $\varphi(\bb q)=f(\bb q)$ is
 the scattering amplitude of the atom which is called the **atomic form factor**.
 
-### Lattice with a basis
+### Structure factor
 
 If the unit cell is made of groups of $N$, located at fractional coordinates
 $\bb r_j(x_j,y_j,z_j)$ within the unit cell,
 they may arrange in a structure with additional symmetries known as the basis
 
 \begin{equation}
-    \phi(\bb r)=\sum_{j=1}^{N} \phi_j(\bb r-\bb r_j)
+    \varphi(\bb r)=\sum_{j=1}^{N} \varphi_j(\bb r-\bb r_j)
 \end{equation}
 
-In this case the $\varphi(\bb q)=F(\bb q)$ is known as the **structure factor**
-and expands as :
+In this case the reciprocal space potential $\varphi(\bb q)$ is known as the **structure factor** $F(\bb q)$ and expands as :
 
 \begin{equation}
     F(\bb q)=\sum_{j=1}^{N} f_j(\bb q) e^{-2\pi i\bb q\cdot\bb r_j}
@@ -107,7 +106,6 @@ where $f_j(\bb q)$ is the atomic form factor of each atom within the unit cell.
 Further applying the periodicity of the crystal restricts the structure factor
 to its values at the miller indices $F_{hkl}$ so that
 $\bb q\cdot\bb r_j=hx_j+ky_j+lz_j$.
-
 
 
 ## Electron scattering
@@ -152,7 +150,6 @@ and
 [electron](/figures/electron_atomic_scattering_factors.svg)
 atomic form factors are shown below for $C,H,N,O,S,P$ :
 ![](/figures/atomic_form_factors.png)
-
 
 
 

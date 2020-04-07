@@ -5,14 +5,14 @@
 **A method used to determine the exit wave function(exit image) of an incident electron beam by solving  Schrodinger's equation. The diffraction pattern is obtained as the Fourier transform of the exit image.**
 
 ### Links
-  - [wiki](https://en.wikipedia.org/wiki/Multislice) :
+  - [Wikipedia](https://en.wikipedia.org/wiki/Multislice) :
     A general overview.
-  - [Cowley&Moodie,1957](/articles/CowleyMoodie1957.pdf) :
+  - [Cowley&Moodie, 1957](/articles/CowleyMoodie1957.pdf) :
     original paper with in-depth analysis of the method.
-  - [Kirkland,2010](/readings/Kirkland2010) :
+  - [Kirkland, 2010](/readings/Kirkland2010) :
     *Advanced computing in electron microscopy, 2010*
-    is the main book reference for the implementation of the method available in the [TEMSIM](#https://github.com/jhgorse/kirkland/tree/master/temsim) package.
-  - [TEMSIM](/projects/multislice/temsim) source code walk through.
+    is the main book reference for the implementation of the method available in the [TEMSIM package](#https://github.com/jhgorse/kirkland/tree/master/temsim).
+  - [TEMSIM walk through](/projects/multislice/temsim) of the source code.
   - [opensource softwares](/notes/multislice_EM_softwares) :
     Other available opensource implementations of multislice.
 
@@ -36,18 +36,26 @@ The multislice approach solves the [fast electron Schrodinger's equation](/readi
   \Psi(z+\Delta z) = \Psi(z)e^{i\lambda/4\pi\Delta z\grad^2_{xy}
       + i\sigma\nu_{\Delta z}(x,y,z)}
 \end{equation}
-where $\nu_{\Delta_z}=\int_z^{z+\Delta z}V(x,y,z^{'})dz^{'}$.
+where $\nu_{\Delta_z}=\int_z^{z+\Delta z}V(x,y,z^{'})dz^{'}$ and $\sigma$ is the interaction parameter. Note that by neglecting the second order derivative of the envelope function, this equation assumes that the potential is small compared to the incident beam energy.
 
 Due to the exponentiation operator this must be approximated as :
 \begin{equation}
   \Psi(z+\Delta z) = p(x,y,\Delta z)\ast \Big(t(x,y,z)\Psi(z)\Big) +\mathcal O(\Delta z^2\nu_{\Delta z})
 \end{equation}
 
-where $t(x,y,z)=e^{i\sigma/4\pi\nu_{\Delta z}}$ is the transmission function, $p(x,y,\Delta z)\ast = e^{i\lambda/4\pi\Delta z\grad^2_{xy}}$ is the propagator operator, $p(x,y,\Delta z)=\frac{1}{i\lambda\Delta z}e^{ik_0\frac{x^2+y^2}{2\Delta z}}$ is the propagator function which can be interpreted as the **Fresnel propagator**.
+where $t(x,y,z)=e^{i\sigma/4\pi\nu_{\Delta z}}$ is the transmission function, $p(x,y,\Delta z)\ast = e^{i\lambda/4\pi\Delta z\grad^2_{xy}}$ is the propagator operator with $p(x,y,\Delta z)=\frac{1}{i\lambda\Delta z}e^{ik_0\frac{x^2+y^2}{2\Delta z}}$ the **Fresnel propagator** function.
+
+### Interaction parameter
+
+The interaction parameter $\sigma=2\pi me\lambda/h^2$ is expressed in $rad/kV.A$, where $\lambda$ is the incident wavelength, and $m=\gamma m_e$ is the relativistic mass with the Lorentz factor $\gamma=1+E_0/m_ec^2$ and $E_0$ the accelerating voltage energy.
+
+It depends on the electron wavelength only and tends to the non relativistic case $\sigma=\pi/\lambda_0E_0$ for small energy. This approximation is not valid at energies above $50keV$.
+
+[<img src="figures/scattering_param.svg" width="300" >](figures/scattering_param.svg)
 
 ### Kinematic limit
 
-If the potential is small the exponential transmission function can be approximated as $t(x,y,z)\approx 1+i\sigma\nu_{\Delta z}$.
+If the specimen thickness is small the exponential transmission function can be approximated as $t(x,y,z)\approx 1+i\sigma\nu_{\Delta z}$.
 Far from the slice, the convolution with the propagator reduces to
 $e^{ik_0(x^2+y^2)/2}\mathcal F_{\perp}$
 where $\mathcal F_{\perp}$ is the transverse Fourier transform.
@@ -62,96 +70,87 @@ gives the exit wave as :
 \end{equation}
 
 where $\mathcal F^{2D}_{k_0x,k_0y}\Big\{\int_0^t V(x',y',z')dz'\Big\}=\mathcal F^{3D}(k_x,k_y,0)$ from the [Fourier Projection Theorem](/books/kirkland2010/apxB-projectedPotential.pdf) therefore corresponding to the kinematic scattering limit case.
-The notion of projected potential being also mentioned in [zou,2011](/readings/zou2011/#chap-3-crystal-structure-factors-and-symmetry).
+The notion of projected potential being also mentioned in [zou, 2011](/readings/zou2011/#chap-3-crystal-structure-factors-and-symmetry).
 
-A great visual comparison between Fresnel(used in multislice) and Fraunhofer(used in kinematic approximation) diffractions from
-[Jacopo Bertolotti](https://twitter.com/j_bertolotti/status/1199661806538633216)
-![](/figures/Fresnel.gif)
+The kinematic limit for which the slices are not interacting with one another also corresponds to the [phase grating approximation](/readings/Kirkland2010/#chap5-thin-specimens) approximation.
 
-[Here](/figures/ffvsfr.png) is a comparison with values that are relevant for electron diffraction :
-![](/figures/ffvsfr.png)
+### Fresnel propagator vs Fraunhofer diffraction
+
+Below, a great visual comparison between Fresnel(used in multislice) and Fraunhofer(used in kinematic approximation) diffractions from
+[Jacopo Bertolotti](https://twitter.com/j_bertolotti/status/1199661806538633216) and a comparison with values that are relevant for electron diffraction.
+
+Fresnel vs Fraunhofer  | relevant values for ED
+---------------------- | ----
+[<img src="figures/ffvsfr.gif" width="400"/>](figures/ffvsfr.gif) | [<img src="figures/ffvsfr.png"  width="340" />](figures/ffvsfr.png)
 
 
-<!-- ### Gaussian atomic scattering factor  
-For a Gaussian Gaussian atomic scattering factor the projected potential should also be Gaussian. The convolution operator will act as a complex Gaussian   -->
 
+### Element of theory from Cowley & Moodie
 
-## Theory Cowley&Moodie
-The response to an incident wave of immediately after passing through
-slice $z_i$ is :
-\begin{equation}
-    \Psi(x,y,z_i+dz) = \Psi(x,y,z_i)e^{i\sigma\varphi dz}
-\end{equation}
-
-where $\sigma=\pi/\lambda_0W_0$ is a scattering parameter and
-$\lambda_0=h(2mW_0)^{-1}$ the unperturbed wavelength.
-The approximation $W\gg \varphi$ has been used to simplify
-$(1+\varphi(x,y,z)/W_0)^{1/2}-1\approx \varphi(x,y,z)/2W_0$.
-
-The wave function in the plane of observation is :
-
-\begin{eqnarray}
-  \Psi(x) =
-    \Bigg\{_N& &Q_N(-\frac{k_sx}{R})\ast\Big\{_{N-1} ... \\
-       &\Big\{_2& Q_2(-\frac{k_sx}{R})\ast
-          \big\{_1 Q_1(-\frac{k_sx}{R})\ast Q_0(-\frac{k_sx}{R})e^{\frac{ik_sR_1x^2}{2R^2}}\big\}_1
-       e^{\frac{ik_sR_2x^2}{2R^2}} \Big\}_2 \\
-    &...&\Big\}_{N-1} e^{\frac{ik_sR_Nx^2}{2R^2}} \Bigg\}_N e^{\frac{-ik_sx^2}{2R}}
-\end{eqnarray}
-
-where $Q_i$ are the planar Fourier transforms of the potential in each slice and
-$R_2=R_3=..=R_N=\Delta z$ and $x/R=2\theta$ where $2\theta$ is the scattering angle.
-We can also write $Q_n=i\Delta zE_n$ where $E_n$ is the 1D inverse Fourier transform
-of the $3D$ structure factor performed along $l$ direction evaluated at position $z_n$.
-
-For :
-
-- an incident plane wave with $\alpha$ the angle of incidence :
-    $E_0=\delta(\theta+\alpha)$
-- a perfect crystal
-    $Q_n(-2k_s\theta)=i\Delta z\sum_h E_n(h)\delta(\theta+h\lambda/a)$
-
-So :
-
-- $\{_1...\}_1=F_1(-2k_s(\theta+\alpha))$
-- $\{_2...\}_2=\sum_{h_1,h_2}F_1(h_1)F_2(h_2)e^{ik_s\Delta z(\theta+h_2\lambda/2a)^2}\delta(\theta+\alpha+\frac{(h_1+h_2)\lambda}{2a})$
-
-Using :
-\begin{equation}
-    \exp\Bigg\{
-        -2i\pi\sum_{n=1}^{N} z_n(\zeta_n-\zeta_{n-1})
-     \Bigg\}
-     =\exp\Bigg\{-2i\pi
-            \left(H\zeta_N - \Delta z \sum_{n=1}^{N}\zeta_n\right)
-      \Bigg\}
-\end{equation}
-
-where $\zeta_n$ represents the distance along the l-direction in reciprocal space
-of the paraboloid of reflection from the point
-$\left(\sum_{r=1}^{n} h_r, \sum_{r=1}^{n} k_r, \sum_{r=1}^{n} l_r\right)$.
-
-\begin{equation}
-\zeta_n=\lambda/2\Bigg\{
-    \left( \sum_{r=1}^{n} h_r/a \right)^2 +
-    \left( \sum_{r=1}^{n} k_r/b \right)^2
-    \Bigg\}-\sum_{r=1}^{n} \frac{l_r}{c} +\frac{h_r}{a}\alpha_x +\frac{k_r}{b}\alpha_y
-\end{equation}
+See paper summary of [Cowley&Moodie,1957](/readings/papers#CowleyMoodie1957).
 
 ## TEMSIM source code
-- [TEMSIM](/projects/multislice/temsim) source code walk through.
+- [TEMSIM source code walk through](/projects/multislice/temsim).
 
 
-## Misc
-- Symmetrically bandwidth limited in reciprocal space
-![](/figures/BW_limited.png)
+## Practical aspects
 
-- Aligning atoms at the beginning of the slices so that the potential has effect only over a small fraction $\Delta z_a$ of the slice allowing cascading of the propagator therefore reducing error on the order of $\Delta z_a$.
-![](/figures/align_atom_slice.png)
+- **Slicing** :
+    - The atoms should be aligned at the beginning of the slices so that the potential has effect only over a small fraction $\Delta z_a$ of the slice allowing cascading of the propagator therefore reducing error on the order of $\Delta z_a$ (**figure on the left**).
+    - Too large slice thickness can produce artefacts
+    - slice can not be arbitrarily small as they need to cover the full range of the atomic potential $\simeq 1A$ which might not be small enough for large atomic numbers of low voltages.
+- The potential must have rotational bandwidth limited symmetry in reciprocal space (**figure on the right**).
+
+<img src="figures/align_atom_slice.png" width="400"/>
+<img src="figures/BW_limited.png" width="250"/>
+
+- Individual components of the multislice approach are nearly exact when taken individually. The main source of errors comes from the combination of propagating (Fresnel approximation) and transmitting (phase grating approximation).
+
+- The Fourier transform of bandwidth limited product of $\Psi(\bb x)$ with $t(\bb x)$ is a convolution inn reciprocal space equivalent to sliding the Fourier transform $\Psi(\bb k)\ast T(\bb k)$. This causes aliasing if the full bandwidth is used (**left fig**), the remedy is to set $BW=2/3k_{max}$ (**right fig**). As a result only about 1/3 of the Fourier coefficients are used in practise.
+![](figures/slide.png)
 
 
-- large slice thickness can produce artefacts
-- slice can not be arbitrarily small as they need to cover the full range of the atomic potential $\simeq 1A$ which might not be small enough for large atomic numbers of low voltages.
-    - Individual components of multislice approach are nearly exact when taken individually. The main source of errors comes from the combination of propagating(In Fresnel approximation) and transmitting (with the phase grating approximation).
 
-- The Fourier transform of bandwidth limited product of $\Psi(\bb x)$ with $t(\bb x)$ is a convolution inn reciprocal space equivalent to sliding the Fourier transform $\Psi(\bb k)\ast T(\bb k)$. This causes aliasing if the full bandwidth is used(left), the remedy is to set $BW=2/3k_{max}$ (right). As a result only about 1/3 of the Fourier coefficients are used in practise.
-![](/figures/slide.png)
+## Application examples
+
+<!-- Some info from
+[wikipedia](https://en.wikipedia.org/wiki/Silicon),
+[semiconductor database](http://www.ioffe.ru/SVA/NSM/Semicond/Si/basic.html) and
+[Berkeley database](https://www.materialsproject.org/materials/mp-149/)
+
+
+Parameters  | Values | Alternate value
+------------|--------|---
+structure   | Face-centred diamond-cubic $Fd\bar 3m$  | $F4_1/d\bar 3 2/m$
+point group | $O_h^7$ | $m\bar 3m$
+lattice parameters (A)   | $a=5.431$ | $a=3.868$, $\alpha=60^{\circ}$
+gif         | [structure](figures/diamond_cell.svg) |  [diffraction pattern](figures/Si111wikipattern.png) $[111]$
+
+<img src="figures/diamond_cubic_animation.gif" width="250" />
+<img src="figures/diamond_cell.svg" width="200" />
+<img src="figures/Si111wikipattern.png" width="200" /> -->
+
+### GaAs
+**Slicing**
+
+Cubic Face-centred zincblende structure with $a=5.65A$ lattice constant
+with slice unit cell $a_0\times b_0$ where $a_0=5.65/\sqrt 2=3.995A$, $b_0=a=5.65A$ and slices are $c_{z,j}=a\sqrt 2/4=1.998A$ thick each.
+
+Structure | Slices [110] | Coords
+----------|--------------|-------
+<img src="figures/diamond_cell.svg" width="150" /> | <img src="figures/gaas110.png" width="450" /> | <img src="figures/gaas110_coords.png" width="120" />
+
+**Sampling**
+
+- The number of Fourier components $N\times N$ (where $N=2^N_F$) controls the accuracy of the simulation. While $128\times 128$ components seems enough for $50A$ thickness, it must be increased to $512\times 512$ for $200A$ thickness.
+- The real space domain is represented by a supercell $A_0\times B_0$  composed of $N_a\times N_b$ unit cells such that $A_0=N_a a_0$, $N_b=N_b b_0$. The supercell size is increased to increase reciprocal space sampling $dq=1/max(A_0,B_0)$. The angular spacing $d\theta=\lambda dq\approx 1 mrad$ at $200keV$ and $A_0\approx 20A$.
+- Increasing the resolution comes at the cost of a reduced bandwidth $q_{max}=\frac{2}{3}\frac{N}{2}dq$
+
+**Dynamical scattering**
+
+- Dynamical scattering appears as oscillating intensities as a function of thickness.
+- $As$ atoms scatter more strongly which results in fainter signal at the exit image than $Ga$ atoms.
+
+$I_{00}(T)$   | $I(x,y)$ at $T=200A$  | effect of microscope
+----------    |--------------         |-------
+<img src="figures/gaas_Int00.png" width="250" /> | <img src="figures/gaas200A.png" width="220" /> | <img src="figures/gaas200_microscope.png" width="220" />

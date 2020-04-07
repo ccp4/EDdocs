@@ -30,13 +30,14 @@ nav:
      - 'Electron Crystallography, Zou, 2011' : 'readings/zou2011.md'
      - 'Advanced TEM, Zuo, Spence, 2017' : 'readings/Spence2017.md'
      - 'Advanced computing in EM, Kirkland, 2010' : 'readings/Kirkland2010.md'
+     - 'Papers' : 'readings/papers.md'
  - 'Planning':
      - 'Week progress' : 'planning/week_progress.md'
      - 'Previous weeks' : 'planning/previous_weeks.md'
      - 'Meetings' : 'planning/meetings.md'
      - 'TODO' : 'planning/TODO.md'
  - 'Misc':
-     - 'Tables' : 'misc/tables.md'
+     - 'Tables and useful links' : 'misc/tables.md'
      - 'Useful cmds' : 'misc/useful.md'
      - 'useful python' : 'misc/python.md'
      - 'Instruments' : 'misc/instruments.md'

@@ -1,4 +1,4 @@
-# All
+# All weeks
 
 # week 07
 ## Monday
@@ -140,3 +140,25 @@
 - kirkland [FFT,aliasing,BW,slicing](/projects/multislice/#misc)
 - chap7 quantitative image matching
 - failed to compile slicview
+
+
+# week 14
+##Monday
+- scattering:
+    - [Mott-Bethe fit](/figures/MottBethe.svg) (where q=sin(theta/2)/lam where theta is the scattering angle)
+    - scattering integrate and cmp Lenz formula
+- automatic pull on ssh brno
+##Tuesday
+- scattering:
+    - Egerton2011 atomic scattering factors Lenz model(integral almost exact but with the small angle approx on [0,pi]!!!)
+    - Article Tracey on Z^n(Z,q)
+- Meeting
+##Wednesday
+- Inverse Fourier 1D and 2D of potentials ($r_m\approx 2A$) : window function allows better resolution of potential,symmetry reduce imaginary part
+- Structure factor for projected potential
+##Thursday
+- Structure factors including potential of common wallpapers
+- Appraisal course
+##Friday
+- Document, analyse GaAs multislice
+- SubramanianSpence2015

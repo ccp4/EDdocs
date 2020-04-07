@@ -82,7 +82,7 @@ Computes the projected potential of a slice
   $\sum_{j} e^{i\bb k\cdot\bb r_j}$
 - `cpix` : projected potential of the slice
   $V(x,y)=\int_{Slice} V(x,y,z')dz'
-         =\mathcal F^{-1} \left(
+         =\mathcal F_{2D}^{-1} \left(
             \sum_{iz} f_{iz}^e(k^2)\sum_{j\in j(iz)}e^{i\bb k\cdot\bb r_j}\right)$
 
 ###Code
@@ -90,7 +90,8 @@ Computes the projected potential of a slice
 //atompot.cpp
 int main()
   //get parameters
-  k2max = 1.0 / (k2max * k2max);
+  k2max = 1.0 / max(2*ax/nx,2*by/ny)^2;
+  rx2 = (1.0/ax)^2;ry2 = (1.0/by)^2;
   scale = ( ((double)nx) * ((double)ny) ) /(ax * by);
   for( i=0; i<=n_atom_types; i++)
     ns = sscanf( cline, "%d", &iz);
@@ -100,17 +101,20 @@ int main()
     //projected potential contribution
     for( iy=0; iy<=iymid; iy++)
       ky2 = ky[iy] * ky[iy] * ry2;
-      for( ix=0; ix<nx; ix++)
-        k2 = kx[ix] * kx[ix] * rx2 + ky2;
-        fe = scale * featom( iz, k2 );
-        scamp( kx[ix], ky[iy], &scampr, &scampi ) ;
-        cpix(ix,iy) += scampr*fe;
+      for( ix=0; ix<nx; ix++)   
+        if(k2<k2max)
+          k2 = kx[ix] * kx[ix] * rx2 + ky2;
+          fe = scale * featom( iz, k2 );
+          scamp( kx[ix], ky[iy], &scampr, &scampi ) ;
+          cpix(ix,iy) += scampr*fe;
   cpix.ifft(); // inverse fourier transform
 ```
 ```C
 //
 void scamp( float kx, float ky, double scampr, double scampi ){
+  scalex = pi2*kx / ((double)nsx);scaley = pi2*ky / ((double)nsy);
   for( i=0; i<natom; i++){
+    phasexr=phasexi=0;
     w1 = pi2 * kx * x[i];
     for( ixc=0; ixc<nsx; ixc++){
         w = w1 + ixc * scalex;
@@ -119,6 +123,7 @@ void scamp( float kx, float ky, double scampr, double scampi ){
     }
     w1 = pi2 * ky * y[i];
     for( iyc=0; iyc<nsy; iyc++){
+        phaseyr=phaseyi=0;
         w = w1 + iyc * scaley;
         phaseyr += cos(w);
         phaseyi += sin(w);
