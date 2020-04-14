@@ -162,3 +162,18 @@
 ##Friday
 - Document, analyse GaAs multislice
 - SubramanianSpence2015
+
+
+# week 15
+## Monday
+- read [ClabbersGrueneAbrahams2017](/readings/papers/#clabbersgrueneabrahams2017)
+- kirkland2010 autoslic, chap5,
+## Tuesday
+- Completed first stage appraisal
+- Induction list
+- kirkland2010 chap7-SiN example
+## Wednesday
+- Silicon multislice + python import
+##Thursday
+- [2-beam](/projects/dynamical_diffraction/) theory analysis
+- Spence 3-beam theory

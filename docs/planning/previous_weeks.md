@@ -3,6 +3,15 @@
 To see extra links served by the [file system](http://0.0.0.0:8001/) with : `cd $CCP4; python3 -m http.server 8001`
 To update on brno server : `ssh brno "cd /home/tarik/Documents/git/ccp4 && git pull"`
 
+
+## week 15
+- Readings :
+    - read [ClabbersGrueneAbrahams2017](/readings/papers/#clabbersgrueneabrahams2017)
+    - kirkland2010 autoslic, chap5,chap7-Si3N4 example
+- Simulation :
+    - [2-beam](/projects/dynamical_diffraction/) theory analysis
+    - [multislice Silicon](/dynamical_diffraction/#silicon)
+
 ## week 14
 - Readings :
     - [Mott-Bethe fit](/figures/MottBethe.svg) (where q=sin(theta/2)/lam where theta is the scattering angle)

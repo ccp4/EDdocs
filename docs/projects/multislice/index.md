@@ -154,3 +154,13 @@ Structure | Slices [110] | Coords
 $I_{00}(T)$   | $I(x,y)$ at $T=200A$  | effect of microscope
 ----------    |--------------         |-------
 <img src="figures/gaas_Int00.png" width="250" /> | <img src="figures/gaas200A.png" width="220" /> | <img src="figures/gaas200_microscope.png" width="220" />
+
+
+###Silicon nitride
+
+$\beta-Si_3N_4$ hexagonal [structure](https://www.materialsproject.org/materials/mp-988/) with $a=7.606A$ lattice constant
+with 14 atoms per unit cell ($Si_6N_8$) with rectangular super unit cell $a_0\times b_0$ where $a_0=7.606A$ and $b_0=13.174A$ each with thickness $c_z=1.4545A$.
+
+Structure N(white), Si(black) | Slices [001] | Exit image magnitude
+------------------------------|--------------|----------------------
+[<img src="figures/Si3N4.png" width="400" />](figures/Si3N4.png) | [<img src="figures/Si3N4rect.png" width="200" />](figures/Si3N4rect.png) | [<img src="figures/Si3N4exit_mag.png" width="200" />](figures/Si3N4exit_mag.png)

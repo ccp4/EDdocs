@@ -1,13 +1,10 @@
 # Overview
 
-Electron diffraction is performed with a monochromatic beam of electrons
-with energy $E=100-300keV \approx 0.04-0.02A $. The methods aims at resolving
-macromolecular crystals of thickness $L=100-500nm$.
-The structure is usually given in a pdb format obtained from the
-[protein database](https://www.rcsb.org).
+Electron diffraction patterns are obtained from transmission electron microscope. A monochromatic beam of electrons is generated from an electron gun with energy $E=100-300keV \approx 0.04-0.02A $.
+Macromolecular crystal structures with thickness smaller than $500nm$ may be [solved](/notes/EDsolved.pdf) with this approach.
+The structures are registered in a pdb format into the [protein database](https://www.rcsb.org).
 
-Several approaches exist to model and predict diffraction patterns as outlined
-here.
+Several approaches exist to model and predict diffraction patterns as outlined here.
 
 ## Projects
 
