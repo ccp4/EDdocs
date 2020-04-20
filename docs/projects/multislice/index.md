@@ -113,23 +113,6 @@ See paper summary of [Cowley&Moodie,1957](/readings/papers#CowleyMoodie1957).
 
 ## Application examples
 
-<!-- Some info from
-[wikipedia](https://en.wikipedia.org/wiki/Silicon),
-[semiconductor database](http://www.ioffe.ru/SVA/NSM/Semicond/Si/basic.html) and
-[Berkeley database](https://www.materialsproject.org/materials/mp-149/)
-
-
-Parameters  | Values | Alternate value
-------------|--------|---
-structure   | Face-centred diamond-cubic $Fd\bar 3m$  | $F4_1/d\bar 3 2/m$
-point group | $O_h^7$ | $m\bar 3m$
-lattice parameters (A)   | $a=5.431$ | $a=3.868$, $\alpha=60^{\circ}$
-gif         | [structure](figures/diamond_cell.svg) |  [diffraction pattern](figures/Si111wikipattern.png) $[111]$
-
-<img src="figures/diamond_cubic_animation.gif" width="250" />
-<img src="figures/diamond_cell.svg" width="200" />
-<img src="figures/Si111wikipattern.png" width="200" /> -->
-
 ### GaAs
 **Slicing**
 
@@ -142,7 +125,7 @@ Structure | Slices [110] | Coords
 
 **Sampling**
 
-- The number of Fourier components $N\times N$ (where $N=2^N_F$) controls the accuracy of the simulation. While $128\times 128$ components seems enough for $50A$ thickness, it must be increased to $512\times 512$ for $200A$ thickness.
+- The number of Fourier components $N\times N$ (where $N=2^{N_F}$) controls the accuracy of the simulation. While $128\times 128$ components seems enough for $50A$ thickness, it must be increased to $512\times 512$ for $200A$ thickness.
 - The real space domain is represented by a supercell $A_0\times B_0$  composed of $N_a\times N_b$ unit cells such that $A_0=N_a a_0$, $N_b=N_b b_0$. The supercell size is increased to increase reciprocal space sampling $dq=1/max(A_0,B_0)$. The angular spacing $d\theta=\lambda dq\approx 1 mrad$ at $200keV$ and $A_0\approx 20A$.
 - Increasing the resolution comes at the cost of a reduced bandwidth $q_{max}=\frac{2}{3}\frac{N}{2}dq$
 

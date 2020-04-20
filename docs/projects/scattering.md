@@ -1,10 +1,7 @@
 # Scattering
 
-
 ## Theory of scattering
-
 ### Quantum mechanical theory
-
 The quantum mechanical theory of scattering is developed by expanding the general solutions of Schrodinger's equation using Green's functions formalism. This results in the
 [Lippmann-Schwinger](https://en.wikipedia.org/wiki/Lippmann_Schwinger_equation)
 equation :
@@ -37,22 +34,17 @@ In the Born approximation the far field diffraction pattern is therefore proport
 
 
 
-
+<!-- ##########################Crystals############################## -->
 ## Scattering in crystals
-
 ### Perfect lattice
-
 For a crystal, the potential is periodic as :
-
 \begin{equation}
     V(\bb r)=\varphi(\bb r)* \sum_{j}\delta(\bb r-\bb r_j)
 \end{equation}
 
 where $r_j$ are the repeated positions of the origin of the unit cell and
-$\varphi$ is the potential wihtin the unit cell.
-Using the Born approximation (the diffraction pattern should be proportinal
-to the Fourier transform of the potential) results in :
-
+$\varphi$ is the potential within the unit cell.
+Using the Born approximation (the diffraction pattern should be proportional to the Fourier transform of the potential) results in :
 \begin{equation}
     \Psi(\bb q)=\varphi(\bb q)\sum_{j}\exp^{-i\bb q\cdot\bb R_j}
 \end{equation}
@@ -63,7 +55,7 @@ this condition is obtained for $\bb q=\bb K=\sum h_i\bb a_i^{\star}$ with
 $\bb a_i^{\star}\cdot\bb a_j=2\pi$ when $i=j$ and
 $\bb a_i^{\star}\cdot\bb a_j=0$ when $i\neq j$.
 
-In 3D, this is guaranteed with the following vectors
+In 3D, this is guaranteed with the following vectors :
 \begin{equation}
     \bb a_1^{\star}=2\pi\frac{\bb a_2\times\bb a_3}{\bb a_1\cdot (\bb a_2\times\bb a_3)},
     \bb a_2^{\star}=2\pi\frac{\bb a_3\times\bb a_1}{\bb a_2\cdot (\bb a_3\times\bb a_1)},
@@ -71,63 +63,52 @@ In 3D, this is guaranteed with the following vectors
 \end{equation}
 
 which therefore define the reciprocal lattice.
-
-If the unit cell is made of a single atom, then $\varphi(\bb q)=f(\bb q)$ is
-the scattering amplitude of the atom which is called the **atomic form factor**.
+If the unit cell is made of a single atom, then $\varphi(\bb q)=f(\bb q)$ is the scattering amplitude of the atom which is called the **atomic form factor**.
 
 ### Structure factor
-
-If the unit cell is made of groups of $N$, located at fractional coordinates
-$\bb r_j(x_j,y_j,z_j)$ within the unit cell,
-they may arrange in a structure with additional symmetries known as the basis
-
+If the unit cell is made of groups of $N$, located at fractional coordinates $\bb r_j(x_j,y_j,z_j)$ within the unit cell,
+they may arrange in a structure with additional symmetries known as the basis :
 \begin{equation}
     \varphi(\bb r)=\sum_{j=1}^{N} \varphi_j(\bb r-\bb r_j)
 \end{equation}
 
 In this case the reciprocal space potential $\varphi(\bb q)$ is known as the **structure factor** $F(\bb q)$ and expands as :
-
 \begin{equation}
     F(\bb q)=\sum_{j=1}^{N} f_j(\bb q) e^{-2\pi i\bb q\cdot\bb r_j}
 \end{equation}
 
 where $f_j(\bb q)$ is the atomic form factor of each atom within the unit cell.
 
-Further applying the periodicity of the crystal restricts the structure factor
-to its values at the miller indices $F_{hkl}$ so that
+Further applying the periodicity of the crystal restricts the structure factor to its values at the miller indices $F_{hkl}$ so that
 $\bb q\cdot\bb r_j=hx_j+ky_j+lz_j$.
 
 
-
+<!-- #######################
+Scattering
+############################### -->
 ## Electron scattering
 In electron diffraction, scattering occurs via Coulomb forces. The nucleus of atoms dominates at large angle scattering angles which corresponds to [Rutherford scattering](/misc/particle_scattering/#coulomb-scattering).
 
-### Inelastic scattering
-Inelastic scattering occurs when a particle is created or one of the colliding particles gets excited to a higher state. From the point of view of the incident electron, this may be considered as inelastic if a fraction of its kinetic energy is given off to the deflecting particle.This would manifest by a recoil of the deflecting particle.
-This can be neglected when the mass electron is much smaller than the mass of the deflecting particle.
+The electrostatic potential is determined from the Coulomb potential of the atomic nucleus shielded by the electron density cloud.
+The latter is determined by solving Dirac's equation using the **Relativistic Hartree-Fock** numerical procedure (For Hydrogen and Helium, Schrodinger's equation can also be used instead).
+
 
 ### Atomic form factors
-A quantum mechanical treatment within the Born approximation can be used to determine the X-ray atomic scattering amplitude $f^x$ (see
+Using the Born approximation, the X-ray atomic scattering amplitude $f^x$ can be expressed from the electron density map (see
 [Mott](/articles/Mott1930_A.pdf) or
 [Egerton](/articles/Egerton2009.pdf))
-as the Fourier transform of its electron density map.
-The latter comes from solving **Relativistic Hartree-Fock** numerical calculation except for Hydrogen and Helium.
-
-In practice, $f^x$ are commonly fitted using
-[Gaussian sums](https://it.iucr.org/Cb/ch6o1v0001/) ($q=\sin(\theta)/\lambda$) :
-\begin{equation}
-  f^x(q) = \sum_{i=1}^{4} a_i\exp\left(-b_iq^2 \right) + c
-\end{equation}
-
-Using Poisson equation, the electron scattering factors $f^e$ can be related to the X-ray atomic scattering factors $f^x$, through the **Mott-Bethe formula** :
+as its Fourier transform.
+Using then Poisson equation, the electron scattering factors $f^e$ can be related to the X-ray atomic scattering factors $f^x$, through the **Mott-Bethe formula** :
 \begin{equation}
   f^e(q) = \frac{1}{2\pi^2 a_0}\frac{Z-f^x(q)}{q^2}  
 \end{equation}
 
-which may be fitted (see for comparison for
-[carbon](/figures/MottBethe.svg))
-with Gaussian and Lorentzian sums :
+
+In practice, $f^x$ and $f^e$ are commonly fitted using
+[Gaussian sums](https://it.iucr.org/Cb/ch6o1v0001/) ($q=\sin(\theta)/\lambda$) and Gaussian-Lorentzian sums (see comparison with Mott-Bethe for [carbon](/figures/MottBethe.svg)) :
 \begin{equation}
+  f^x(q) = \sum_{i=1}^{4} a_i^{(x)}\exp\left(-b_i^{(x)}q^2 \right) + c^{(x)}
+~~\mbox{,}~~~~~~~
   f^e(q) = \sum_{i=1}^{3}\frac{a_i}{q^2+b_i} + c_ie^{-d_iq^2}
 \end{equation}
 
@@ -137,9 +118,34 @@ X-ray  | Electron
 -------|-----------
 [<img src="/figures/xray_atomic_scattering_factors.svg" width="360"/>](/figures/xray_atomic_scattering_factors.svg) | [<img src="/figures/electron_atomic_scattering_factors.svg" width="360"/>](/figures/electron_atomic_scattering_factors.svg)
 
+### Real space potential
+The real space potential may be useful and computed from analytical inverse Fourier transform of the fitted atomic form factors :
+\begin{equation}
+  V_a(r) =
+    2\pi^2a_0e\sum_{i=1}^{3}\frac{a_i}{r}e^{2\pi r\sqrt{b_i}}+         
+    2\pi^{5/2}a_0e\sum_{i=1}^{3}c_id_i^{-/2}e^{-\pi^2r^2/d_i}
+\end{equation}
+
+The projected potential along a given Cartesian axis $z$ may then be approximated by :
+\begin{equation}
+  V_z(x,y) =
+    4\pi^2a_0e\sum_{i=1}^{3}a_iK_0\left(2\pi r\sqrt{b_i}\right)+         
+    2\pi^2a_0e\sum_{i=1}^{3}\frac{c_i}{d_i}e^{-\pi^2r^2/d_i}
+\end{equation}
+
+where $a_0$ is the Bohr radius and $K_0$ is the first order Bessel function of the second kind.
+
+Electron density $r^2\rho(r)$ | 3D potential $V(r)$ | Projected potential $\nu_z(r)$
+------| ------| -----
+[<img src="/readings/kirkland2010/5_density.png" width="220">](/readings/kirkland2010/5_density.png) | [<img src="/readings/kirkland2010/5_potential.png" width="220">](/readings/kirkland2010/5_potential.png) | [<img src="/readings/kirkland2010/5_projected_potential.png" width="220">](/readings/kirkland2010/5_projected_potential.png)
+
+### Inelastic scattering
+Inelastic scattering occurs when a particle is created or one of the colliding particles gets excited to a higher state. From the point of view of the incident electron, this may be considered as inelastic if a fraction of its kinetic energy is given off to the deflecting particle.This would manifest by a recoil of the deflecting particle.
+This can be neglected when the mass electron is much smaller than the mass of the deflecting particle.
 
 
 
+<!-- ###### Resolution considerations ################### -->
 ## Diffraction and resolution
 
 The resolution is determined by the number of pixels $N^2$ of the detector and the distance $D$ of the detector to the crystal.

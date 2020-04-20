@@ -6,9 +6,8 @@
 ## Questions
 - Structure solution from defects etc...?
 ## Latest
-
-- [2-beam](/projects/dynamical_diffraction/) theory analysis
-- [multislice Silicon](/dynamical_diffraction/#silicon)
+- Run [vatom,vzatom,vzatomLUT](/projects/dynamical_diffraction/#silicon) temsim functions with a binary
+- temsim spline interpolation [walk through](/projects/multislice/temsim/#real-space-atomic-projected-potential)
 
 ## Navigation
 - Planning :

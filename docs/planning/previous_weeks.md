@@ -3,6 +3,12 @@
 To see extra links served by the [file system](http://0.0.0.0:8001/) with : `cd $CCP4; python3 -m http.server 8001`
 To update on brno server : `ssh brno "cd /home/tarik/Documents/git/ccp4 && git pull"`
 
+## week 16
+- multislice :  
+    - Python posprocessing $I_{hk}(T)$,$I_g(w)$
+    - [multislice Silicon](/projects/dynamical_diffraction/#silicon) [110] and [100]
+    - Run [vatom,vzatom,vzatomLUT](/projects/dynamical_diffraction/#silicon) temsim functions with a binary
+    - temsim spline interpolation [walk through](/projects/multislice/temsim/#real-space-atomic-projected-potential)
 
 ## week 15
 - Readings :
@@ -10,7 +16,7 @@ To update on brno server : `ssh brno "cd /home/tarik/Documents/git/ccp4 && git p
     - kirkland2010 autoslic, chap5,chap7-Si3N4 example
 - Simulation :
     - [2-beam](/projects/dynamical_diffraction/) theory analysis
-    - [multislice Silicon](/dynamical_diffraction/#silicon)
+    - [multislice Silicon](/projects/dynamical_diffraction/#silicon)
 
 ## week 14
 - Readings :

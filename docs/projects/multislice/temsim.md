@@ -4,7 +4,9 @@
 - [Code](#code-walk-through)
     - [atompot](#atompot)
     - [mulslice](#mulslice)
-
+    - [autoslice](#autoslice)
+    - [propagator](#propagator)
+- [other programs](#other-programs)    
 ## Usage
 The whole deck can be executed with `./simuSrTiO3.sh`
 
@@ -62,13 +64,6 @@ Finally the slice files **srta.dat** and **srtb.dat** read :
   1.0000 0.0000 0.5000    #   edge of the cell
 ```
 
-### other programs
-- non periodic specimen : `cat dat.xyz | temsim/autoslic`
-- image formation effects (defocus,aberration,...) : `temsmim/image`
-- STEM(scanning => incident probe) : `temsim/stemlic`
-- STEM non periodic : `temsim/autostem`
-
-
 ## Code walk through
 
 ## atompot
@@ -88,7 +83,7 @@ Computes the projected potential of a slice
 ###Code
 ```C
 //atompot.cpp
-int main()
+int main(){
   //get parameters
   k2max = 1.0 / max(2*ax/nx,2*by/ny)^2;
   rx2 = (1.0/ax)^2;ry2 = (1.0/by)^2;
@@ -108,9 +103,11 @@ int main()
           scamp( kx[ix], ky[iy], &scampr, &scampi ) ;
           cpix(ix,iy) += scampr*fe;
   cpix.ifft(); // inverse fourier transform
+}
 ```
+
 ```C
-//
+//atompot.cpp
 void scamp( float kx, float ky, double scampr, double scampi ){
   scalex = pi2*kx / ((double)nsx);scaley = pi2*ky / ((double)nsy);
   for( i=0; i<natom; i++){
@@ -236,11 +233,114 @@ for( islice=0; islice<nslice; islice++ ){
   sum = abs(wave)^2.sum()/(nx * ny)
   printf("layer = %c, integrated intensity = %f\n",cname[ilayer], sum );
 }
+```
+
+
+
+## autoslice
+
+The program autoslic performs multislice simulation on non periodic structures.
+
+###Parsing simulation setup
+```C
+//autosliccmd.cpp
+int main()
+  autoslic aslice();
+  cfpix pix,wave0,beams;
+  aslice.lbeams = askYN("Do you want to record the (real,imag) value of selected beams vs. thickness");
+  mm0 = 1.0F + v0/511.0F;
+  wavlen = (float) wavelength( v0 );
+  natom = ReadXYZcoord( filein.c_str(), ncellx, ncelly, ncellz,
+    &ax, &by, &cz, &Znum, &x, &y, &z, &occ, &wobble,description );
+  aslice.calculate(pix,wave0,natom,beams);
+  if (lbeams)
+    fp1.open(filebeam);
+    fp1 << " (h,k) = " << hbeam[ib] << endl;
+    fp1 << islice << beams.re(ib,islice) << beams.im(ib,islice) << endl;
+```
+
+###Running the multislice simulation
+```C
+//autoslic.cpp
+void autoslic::calculate(cfpix &pix,cfpix &wave0, cfpix &depthpix,
+                    natom, cfpix &beams,hbeam,kbeam)
+  scale=1/(nx*ny);
+  while (zlice<zmax)
+    trlayer(trans);
+    wave *= trans;
+    wave.fft(); //reciprocal space
+    if( (lbeams== 1) ) {
+      beams.re(ib,islice-1) = scale*wave.re(hbeam[ib],kbeam[ib] );
+      beams.im(ib,islice-1) = scale*wave.im(hbeam[ib],kbeam[ib] );
+    }
+    propagate(wave,propxr,propyr,propxi,propyi);
+    wave.ifft();
+    /*save intermediate intensities*/
+    if (lcross){
+      depthpix = wave.re*wave.re+wave.im*wave.im;
+    }
+    /*Return exit wave*/
+    pix = wave;
+```
+###Transmission function from projected potential
+```C
+void autoslic::trlayer( const float x[], const float y[], const float occ[],const int Znum[], const int natom, const float ax, const float by,const float kev, cfpix &trans, const int nx, const int ny,const floatkx2[], const float ky2[],double *phirms, int *nbeams, const float k2max)
+  scale = sigma(kev)/1000.0;scalex=ax/nx;scaley=by/ny;//sigma rad/V-A
+//pragma omp parallel
+  for( i=0; i<natom; i++)
+    for( ix=nx1; ix<=nx2; ix++)
+       rx = x[i] - ((double)ix) * scalex;
+       for( iy=ny1; iy<=ny2; iy++)
+          ry = y[i] - ((double)iy) * scaley;
+          rsq = rx**2 + ry**2;
+          vz += occ[i] * vzatomLUT( Znum[i], rsq );
+  trans = exp(1J*scale*vz);
+  /* bandwidth limit the transmission function */
+  trans.fft();
+  trans[k2<k2max] = 0;
+  trans.ifft();
+```
+###Real space atomic projected potential
+**Computing projected atomic potential from cubic spline interpolation using look up table coefficients**.
+
+- `splinx,spliny` : Data projected atomic potential for spline interpolation
+- `splinb,splinc,splind` : spline coefficients
+```C
+//slicelib.cpp
+double vzatomLUT(int Z, double rsq)
+  /*  generate a set of logarithmic r values */
+  if (!spline_init)
+    dlnr = log(RMAX/RMIN)/(NRMAX-1);
+    for( i=0; i<NRMAX; i++)
+        splinx[i] = (RMIN * exp( i * dlnr ) )^2;
+  /* generate the spline coefficients from analytical projected potential expression */
+  if (!nspline[iz]) //if this atomic number has not been called before do it once and for all
+    for( i=0; i<NRMAX; i++)
+        spliny[iz][i] = vzatom( Z, sqrt(splinx[i]));
+    splinh( splinx, spliny[iz], splinb[iz],splinc[iz], splind[iz], NRMAX);
+  /* now that everything is set up find the scattering factor by interpolation in the table   */
+  vz = seval( splinx, spliny[iz], splinb[iz],
+            splinc[iz], splind[iz], nspline[iz], rsq );
+
+double vzatom( int Z, double r )
+  const double al=150.4121417, ag=266.5985798;
+  nfe = ReadfeTable(fparams);
+  x = 2.0*pi*r;
+  for( i=0; i<2*nl; i+=2 )
+       suml += fparams[Z][i]* bessk0( x*sqrt(fparams[Z][i+1]) );
+  x = (pi*r)**2;
+  for( i=2*nl; i<2*(nl+ng); i+=2 )
+      sumg += fparams[Z][i]*exp(-x/fparams[Z][i+1]) / fparams[Z][i+1];
+  return( al*suml + ag*sumg );
+//Compute
+
+```
+
+## propagator
+```C
 /*  multiplied by the propagator function */
 //slicelib.cpp
-void propagate( cfpix &wave,
-    float* propxr, float* propxi, float* propyr, float* propyi,
-    float* kx2, float* ky2, float k2max, int nx, int ny )
+void propagate(cfpix &wave,float* propxr, float* propxi, float* propyr, float* propyi,float* kx2, float* ky2, float k2max, int nx, int ny ){
   for( ix=0; ix<nx; ix++){
     if( kx2[ix] < k2max ){
       pxr = propxr[ix];
@@ -259,7 +359,14 @@ void propagate( cfpix &wave,
       }
     }
   }
+}
 ```
 
-## results
-![](/projects/multislice/figures/srtrmul-0.png)
+
+## other programs
+- image formation effects (defocus,aberration,...) : `temsmim/image`
+- STEM(scanning => incident probe) : `temsim/stemlic`
+- STEM non periodic : `temsim/autostem`
+
+<!-- ## results
+![](/projects/multislice/figures/srtrmul-0.png) -->

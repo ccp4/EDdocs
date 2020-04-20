@@ -24,7 +24,20 @@ put several images in same .png :
 `montage *.png -tile 4x1 -geometry +0+0 out.png`
 
 
-### command line unicode UTF-8 encoded characters
+### unicode UTF-8
+command line  encoded characters :
 See [greek](https://en.wikipedia.org/wiki/List_of_Unicode_characters) or [arabic](https://en.wikipedia.org/wiki/Arabic_script_in_Unicode) unicode tables :
 
 `printf "\u0637" `
+
+
+### Code analysis
+cloc is a program to check the number of blank, comments and code lines.
+
+`cloc .`
+
+## Linux keyboard mapping  
+- To see event related keys : `xev`
+- To assign shiftR to the 'Pause' key  : `xmodmap "key 62 = Pause"`
+
+Since xev shows that key 62 is associated with the ShiftR key.

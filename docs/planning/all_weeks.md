@@ -177,3 +177,19 @@
 ##Thursday
 - [2-beam](/projects/dynamical_diffraction/) theory analysis
 - Spence 3-beam theory
+
+
+#week 16
+##Tuesday
+- [multislice Silicon](/projects/dynamical_diffraction/#silicon)
+##Wednesday
+- multislice silicon $I_{20}$ seems exact 2-beam approx.
+- autoslic : record beam Intensity + autoslic code walkthrough.
+##Thursday
+- multislice silicon $I_{hk}(T)$,$I_g(w)$ :
+    - autoslic si110 : [vatom,vzatom,vzatomLUT](/projects/scattering/#real-space-potential) + spline walk through doc
+##Friday
+- slicing exercise of Body centred Fe, primitive CsCl + 2D mulslice
+- [Si structure factors](/misc/compounds/#diamond)
+- [Common structures](/misc/compounds)
+- group theory

@@ -20,7 +20,7 @@ Laue class | Patterson symmetry  | plane groups  | count
 # Structures
 - [Berkeley database](https://www.materialsproject.org/about)
 - [Space group](http://img.chem.ucl.ac.uk/sgp/large/sgp.htm)
-- [point groups](http://img.chem.ucl.ac.uk/sgp/misc/pointgrp.htm)
-
+- [Point groups](http://img.chem.ucl.ac.uk/sgp/misc/pointgrp.htm)
+- [Crystal structures periodic table](https://en.wikipedia.org/wiki/Periodic_table_(crystal_structure))
 # Other links
 - web material [Bfactor](https://www-structmed.cimr.cam.ac.uk/course.html).

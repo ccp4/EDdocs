@@ -1,4 +1,7 @@
-#week 16
-
+#week 17
+##Monday
+- multislice :
+    - Orientation conversion indices check intensities
 ##Tuesday
-- [multislice Silicon](/dynamical_diffraction/#silicon)
+- multislice :
+    - $I_{20}$ check pendullosung thickness.
