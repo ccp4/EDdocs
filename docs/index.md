@@ -1,22 +1,15 @@
 # CCP4-ED
-<!-- <center>
-![](figures/logo.png)
-</center> -->
+
+## Latest
+- [python deck generation](/projects/multislice/temsim/#deck-generation) to setup simulation
+- [python structure factor](/projects/multislice/temsim/#utilities) calculation and [results](/projects/dynamical_diffraction/#si-structure-factor)
+- [Si110 analysis](/projects/dynamical_diffraction/#si110-simulation) :  fixed inconsistencies
 
 ## Questions
-- Structure solution from defects etc...?
-## Latest
-- Run [vatom,vzatom,vzatomLUT](/projects/dynamical_diffraction/#silicon) temsim functions with a binary
-- temsim spline interpolation [walk through](/projects/multislice/temsim/#real-space-atomic-projected-potential)
+- {==Structure solution from defects etc...?==}
 
 ## Navigation
 - Planning :
-    - [Weekly progression](/planning/previous_weeks)
-    - [Week planning](/planning/week_progress)
-    - [TODO](/planning/TODO)
-- [Projects](/projects/projects) :
-    - [multislice](/projects/multislice)
-- Literature :
-    - Theories
-    - Articles
-    - Books
+    - [X] [Weekly progression](/planning/previous_weeks)
+    - [ ] [Week planning](/planning/week_progress)
+    - [x] [TODO](/planning/TODO)

@@ -1,50 +1,90 @@
 # TEMSIM
 
-- [Usage](#usage)
+<!-- - [Usage](#usage)
 - [Code](#code-walk-through)
     - [atompot](#atompot)
     - [mulslice](#mulslice)
     - [autoslice](#autoslice)
     - [propagator](#propagator)
-- [other programs](#other-programs)    
+- [other programs](#other-programs)     -->
+
 ## Usage
-The whole deck can be executed with `./simuSrTiO3.sh`
 
-which is decomposed as followed :
+The package is made of several programs which can be run (for example in the case of Silicon with incident beam in the $[110]$ direction) with the following commands :
 
-- Compute the projected atomic potential : `cat pot.in | temsim/atompot`
-- Perform a multislice simulation : `cat mul.in | temsim/mulslice`
-- Visualize result of simulation : `eog srtrmul.tif`
+- `cat Si110A.in | temsim/atompot`
+- `cat Si100_mulslice.in | temsim/mulslice`
+- `cat Si100_autoslic.in | temsim/autoslic`
 
-where the file **atompot.in** contains parameters :
+where :
+
+Program  | Input | Output | Description
+-------  | ----- | ------ | -----------
+[atompot](#atompot)   | [*slice*.dat](#slice-file) [*slice*.in](#input-deck)          | *slice*.tif          | computes the projected potential $V_z(x,y)$
+[mulslice](#mulslice) | *slice*.tif [*name*.in](#input-deck_1)                        | *name*\_mulslice.tif | periodic multislice simulation
+[autoslic](#autoslic) | [*coords*.xyz](#coordinates-file)  [*name*.in](#input-deck_2) | *name*\_autoslic.tif | non periodic multislice simulation
+
+
+
+## Python interface
+A simple [Python interface](/projects/multislice/pyMultislice) can generate the input decks (\*.in), run temsim and postprocess the results.
+Type `python3 -c "from multislice import Multislice; help(Multislice)"` for command line help.
+
+###deck generation
+The following example generates the decks for an **autoslic** simulation located in relative path *Silicon/Si110* which would contain the coordinates file _*.xyz_.
+The simulation is setup with $6\times 6$ transverse unit cells repeated $N_z=40$ times along beam direction (which results in a total thickness $T=c_zN_z$), a sampling $512\times 512$ and a slice thickness $\Delta z=1.3575A$.
+```python
+from multislice import Multislice
+multi=Multislice('Silicon/Si110',mulslice=False,
+                repeat=[6,6,40],slice_thick=1.3575,NxNy=[512,512])
+```
+
+###running a simulation
+The simulation can then be run and monitored using the generated input decks or directly through the interface with :
+```python
+multi.run()
+multi.print_log()
+```
+
+###post process
+
+###utilities
+The library scattering can be used to compute the scattering factor and structure factor. This can be useful for analysing the results.
+Here for example the structure factor of Silicon is calculated as :
+```python
+from scattering.structure_factor import *
+from crystals import Crystal
+N,sym = 4,False
+Si,Z = Crystal.from_database('Si'),14                               # get info for Silicon from crystals library
+
+lat_vec   = Si.reciprocal_vectors                                   # get reciprocal lattice vectors
+rj        = np.array([a.coords_fractional for a in Si.atoms])       # get fractional coordinates in an array
+pattern   = np.concatenate((rj,Z*np.ones((rj.shape[0],1))),axis=1)  # concatenate the atomic number for silicon to the pattern data type
+hkl,Fhkl  = structure_factor3D(pattern,lat_vec,hklMax=N,sym=sym)    # compute structure factor up to 4th order in each direction
+Shkl      = np.abs(Fhkl)**2                                         # Compute intensities
+plot_structure3D(hkl,Fhkl)                                          # plot in 3D
+```
+
+
+##atompot
+Computes the projected potential of a slice.
+
+### Input deck
+Contains the parameters :
 ```bash
-'''pot.in'''
+#pot.in
 srta.dat      # structure file (for SrTiO3 here)
 srtapot.tif   # output image file(to feed to multislice)
 512 512       # real space pixel Nx,Ny
 8 8 1         # replicate unit cell
 n             # no thermal displacement
 ```
-and  **mul.in** contains multislice simulation parameters :
-```bash
-'''mul.in'''
-12(ab)      # stacking sequence
-srtapot.tif # projected potential file a
-srtbpot.tif # projected potential file b
-srtrmul.tif # out binary file diffraction pattern
-n           # include partial coherence
-n           # resume from previous run
-400         # incident beam energy in keV
-0 0         # crystal tilt
-0 0         # beam tilt
-n           # record as a function of thickness
-```
-
-Finally the slice files **srta.dat** and **srtb.dat** read :
+### Slice file
+where the files describing the slices **srta.dat** and **srtb.dat** read :
 ```
 ################# Slices for SrTiO3 ###################
 #######################################################
-# stra.dat
+# Si110A.dat
   3.9051 3.9051 1.9525    #lattice constants ax,bx and slice thickness cz
 0                         #no symmetry operation
 38                        # Strontium Z=38
@@ -64,11 +104,7 @@ Finally the slice files **srta.dat** and **srtb.dat** read :
   1.0000 0.0000 0.5000    #   edge of the cell
 ```
 
-## Code walk through
-
-## atompot
-Computes the projected potential of a slice
-###variables
+###Variables
 - `iz` : atomic number
 - `nsx,nsy` : $(N_x,N_y)$ cell to replicate
 - `featom` : [atomic scattering factor](/projects/scattering/#electron-scattering) of atom `iz` from Gaussian+Lorentzian fits at $k^2$,
@@ -83,11 +119,11 @@ Computes the projected potential of a slice
 ###Code
 ```C
 //atompot.cpp
-int main(){
+int main()
   //get parameters
   k2max = 1.0 / max(2*ax/nx,2*by/ny)^2;
   rx2 = (1.0/ax)^2;ry2 = (1.0/by)^2;
-  scale = ( ((double)nx) * ((double)ny) ) /(ax * by);
+  scale = ( ((double)nx)*((double)ny) ) /(ax*by);
   for( i=0; i<=n_atom_types; i++)
     ns = sscanf( cline, "%d", &iz);
     while( ReadLine( fp, cline, NCMAX, filein ) > 2)
@@ -95,39 +131,34 @@ int main(){
       natom++;    
     //projected potential contribution
     for( iy=0; iy<=iymid; iy++)
-      ky2 = ky[iy] * ky[iy] * ry2;
+      ky2 = ky[iy]*ky[iy]*ry2;
       for( ix=0; ix<nx; ix++)   
         if(k2<k2max)
-          k2 = kx[ix] * kx[ix] * rx2 + ky2;
+          k2 = kx[ix] * kx[ix]*rx2 + ky2;
           fe = scale * featom( iz, k2 );
           scamp( kx[ix], ky[iy], &scampr, &scampi ) ;
           cpix(ix,iy) += scampr*fe;
   cpix.ifft(); // inverse fourier transform
-}
 ```
 
 ```C
 //atompot.cpp
-void scamp( float kx, float ky, double scampr, double scampi ){
+void scamp( float kx, float ky, double scampr, double scampi )
   scalex = pi2*kx / ((double)nsx);scaley = pi2*ky / ((double)nsy);
-  for( i=0; i<natom; i++){
+  for( i=0; i<natom; i++)
     phasexr=phasexi=0;
     w1 = pi2 * kx * x[i];
     for( ixc=0; ixc<nsx; ixc++){
         w = w1 + ixc * scalex;
         phasexr += cos(w);
         phasexi += sin(w);
-    }
     w1 = pi2 * ky * y[i];
-    for( iyc=0; iyc<nsy; iyc++){
+    for( iyc=0; iyc<nsy; iyc++)
         phaseyr=phaseyi=0;
         w = w1 + iyc * scaley;
         phaseyr += cos(w);
         phaseyi += sin(w);
-    }
     scampr += ( phasexr * phaseyr - phasexi * phaseyi ) * occ[i];
-  }
-}
 //slice.cpp
 double featom( int Z, double k2 )
 {
@@ -143,7 +174,25 @@ double featom( int Z, double k2 )
 ```
 
 
+
 ## mulslice
+### Input deck
+**Si110_mulslice.in** contains multislice simulation parameters :
+
+```bash
+#mul.in
+12(ab)      # stacking sequence
+srtapot.tif # projected potential file a
+srtbpot.tif # projected potential file b
+srtrmul.tif # out binary file diffraction pattern
+n           # include partial coherence
+n           # resume from previous run
+400         # incident beam energy in keV
+0 0         # crystal tilt
+0 0         # beam tilt
+n           # record as a function of thickness
+```
+
 ### variables
 - `wave` :  Transverse wave function $\Psi(x,y)$
 - `trans[j]` : Transmission function of layer $j$, $e^{i\sigma v_{z,j}}$
@@ -152,7 +201,8 @@ $e^{-i\pi\lambda\Delta z_j k^2}$
 - `vz[j]` : Projected potential of layer $j$, $v_{z,j}=\int_{z_j}^{z_j+\Delta z_j} V(x,y,z')dz'$
 - `cz[j]` : Thickness of layer $j$, $\Delta z_j$
 
-### parsing parameter
+### Code
+####parsing parameter
 ```C
 ns = scanf("%s", filein[ilayer] );
 lstart = askYN("Do you want to start from previous result");
@@ -210,7 +260,7 @@ for( iy=0; iy<ny; iy++) {
 }
 ```
 
-### propagate
+#### propagate
 Propagation is performed as  :
 \begin{equation}
   \Psi_{n+1}(x,y)=FT^{-1}\Bigg\{
@@ -237,11 +287,17 @@ for( islice=0; islice<nslice; islice++ ){
 
 
 
-## autoslice
 
+
+
+## autoslic
 The program autoslic performs multislice simulation on non periodic structures.
 
-###Parsing simulation setup
+### Coordinates file
+### Input deck
+
+###Code
+#### Parsing simulation setup
 ```C
 //autosliccmd.cpp
 int main()
@@ -258,8 +314,7 @@ int main()
     fp1 << " (h,k) = " << hbeam[ib] << endl;
     fp1 << islice << beams.re(ib,islice) << beams.im(ib,islice) << endl;
 ```
-
-###Running the multislice simulation
+#### Running the multislice simulation
 ```C
 //autoslic.cpp
 void autoslic::calculate(cfpix &pix,cfpix &wave0, cfpix &depthpix,
@@ -282,7 +337,7 @@ void autoslic::calculate(cfpix &pix,cfpix &wave0, cfpix &depthpix,
     /*Return exit wave*/
     pix = wave;
 ```
-###Transmission function from projected potential
+####Transmission function from projected potential
 ```C
 void autoslic::trlayer( const float x[], const float y[], const float occ[],const int Znum[], const int natom, const float ax, const float by,const float kev, cfpix &trans, const int nx, const int ny,const floatkx2[], const float ky2[],double *phirms, int *nbeams, const float k2max)
   scale = sigma(kev)/1000.0;scalex=ax/nx;scaley=by/ny;//sigma rad/V-A
@@ -300,7 +355,7 @@ void autoslic::trlayer( const float x[], const float y[], const float occ[],cons
   trans[k2<k2max] = 0;
   trans.ifft();
 ```
-###Real space atomic projected potential
+####Real space atomic projected potential
 **Computing projected atomic potential from cubic spline interpolation using look up table coefficients**.
 
 - `splinx,spliny` : Data projected atomic potential for spline interpolation
@@ -336,17 +391,17 @@ double vzatom( int Z, double r )
 
 ```
 
-## propagator
+####propagator
 ```C
 /*  multiplied by the propagator function */
 //slicelib.cpp
-void propagate(cfpix &wave,float* propxr, float* propxi, float* propyr, float* propyi,float* kx2, float* ky2, float k2max, int nx, int ny ){
-  for( ix=0; ix<nx; ix++){
-    if( kx2[ix] < k2max ){
+void propagate(cfpix &wave,float* propxr, float* propxi, float* propyr, float* propyi,float* kx2, float* ky2, float k2max, int nx, int ny )
+  for( ix=0; ix<nx; ix++)
+    if( kx2[ix] < k2max )
       pxr = propxr[ix];
       pxi = propxi[ix];
-      for( iy=0; iy<ny; iy++) {
-        if( (kx2[ix] + ky2[iy]) < k2max ) {
+      for( iy=0; iy<ny; iy++)
+        if( (kx2[ix] + ky2[iy]) < k2max )
           pyr = propyr[iy];
           pyi = propyi[iy];
           wr = wave.re(ix,iy);   // real
@@ -355,18 +410,9 @@ void propagate(cfpix &wave,float* propxr, float* propxi, float* propyr, float* p
           ti = wr*pyi + wi*pyr;
           wave.re(ix,iy) = tr*pxr - ti*pxi;
           wave.im(ix,iy) = tr*pxi + ti*pxr;
-        }
-      }
-    }
-  }
-}
 ```
 
-
-## other programs
+## Other programs
 - image formation effects (defocus,aberration,...) : `temsmim/image`
 - STEM(scanning => incident probe) : `temsim/stemlic`
 - STEM non periodic : `temsim/autostem`
-
-<!-- ## results
-![](/projects/multislice/figures/srtrmul-0.png) -->

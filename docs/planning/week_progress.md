@@ -1,7 +1,6 @@
-#week 17
+#week 18
 ##Monday
-- multislice :
-    - Orientation conversion indices check intensities
-##Tuesday
-- multislice :
-    - $I_{20}$ check pendullosung thickness.
+- multislice:
+    - structure_factor library + documentation 
+    - Change lattice constants Si110 autoslic
+    - check $I_{hk}$ pendullosung thickness value

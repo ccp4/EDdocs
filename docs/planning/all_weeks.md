@@ -193,3 +193,25 @@
 - [Si structure factors](/misc/compounds/#diamond)
 - [Common structures](/misc/compounds)
 - group theory
+
+#week 17
+##Monday
+- multislice :
+    - Orientation conversion indices check intensities
+##Tuesday
+- multislice :
+    - Fix high order beam intensities issue
+##Wednesday
+- multislice:
+    - [python interface](/projects/multislice/temsim/#python-interface) to setup simulation
+##Thursday
+- multislice:
+    - testing python interface
+- misc : markdown extensions for
+    - {==critic=>highlight==},
+    - [x] tasklists
+    - TOC for table of contents
+##Friday
+- misc : [protein space groups](/misc/tables/#protein-space-groups)
+- multislice:
+    - py_structure_factor of Silicon

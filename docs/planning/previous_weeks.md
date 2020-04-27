@@ -1,7 +1,12 @@
 # week summary
 
-To see extra links served by the [file system](http://0.0.0.0:8001/) with : `cd $CCP4; python3 -m http.server 8001`
-To update on brno server : `ssh brno "cd /home/tarik/Documents/git/ccp4 && git pull"`
+## week 17
+- multislice:
+    - [python interface](/projects/multislice/temsim/#python-interface) to setup simulation
+    - [python structure factor](/projects/scattering/structure_factor)
+    - [Si110 analysis](/projects/dynamical_diffraction/#si110-simulation) :  fixed inconsistencies
+    - change parameters : lattice constant, sampling, slice_thick
+- misc : markdown extensions such as critic, highlight, tasklist, TOC
 
 ## week 16
 - multislice :  

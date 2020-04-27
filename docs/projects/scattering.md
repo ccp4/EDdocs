@@ -34,53 +34,6 @@ In the Born approximation the far field diffraction pattern is therefore proport
 
 
 
-<!-- ##########################Crystals############################## -->
-## Scattering in crystals
-### Perfect lattice
-For a crystal, the potential is periodic as :
-\begin{equation}
-    V(\bb r)=\varphi(\bb r)* \sum_{j}\delta(\bb r-\bb r_j)
-\end{equation}
-
-where $r_j$ are the repeated positions of the origin of the unit cell and
-$\varphi$ is the potential within the unit cell.
-Using the Born approximation (the diffraction pattern should be proportional to the Fourier transform of the potential) results in :
-\begin{equation}
-    \Psi(\bb q)=\varphi(\bb q)\sum_{j}\exp^{-i\bb q\cdot\bb R_j}
-\end{equation}
-
-which, if the sum is infinite, has non negligible values for $\bb q$ when
-$\bb q\cdot\bb R_j=2m\pi$. Considering $\bb a_i$ as the lattice vectors,
-this condition is obtained for $\bb q=\bb K=\sum h_i\bb a_i^{\star}$ with
-$\bb a_i^{\star}\cdot\bb a_j=2\pi$ when $i=j$ and
-$\bb a_i^{\star}\cdot\bb a_j=0$ when $i\neq j$.
-
-In 3D, this is guaranteed with the following vectors :
-\begin{equation}
-    \bb a_1^{\star}=2\pi\frac{\bb a_2\times\bb a_3}{\bb a_1\cdot (\bb a_2\times\bb a_3)},
-    \bb a_2^{\star}=2\pi\frac{\bb a_3\times\bb a_1}{\bb a_2\cdot (\bb a_3\times\bb a_1)},
-    \bb a_3^{\star}=2\pi\frac{\bb a_1\times\bb a_2}{\bb a_3\cdot (\bb a_1\times\bb a_2)}
-\end{equation}
-
-which therefore define the reciprocal lattice.
-If the unit cell is made of a single atom, then $\varphi(\bb q)=f(\bb q)$ is the scattering amplitude of the atom which is called the **atomic form factor**.
-
-### Structure factor
-If the unit cell is made of groups of $N$, located at fractional coordinates $\bb r_j(x_j,y_j,z_j)$ within the unit cell,
-they may arrange in a structure with additional symmetries known as the basis :
-\begin{equation}
-    \varphi(\bb r)=\sum_{j=1}^{N} \varphi_j(\bb r-\bb r_j)
-\end{equation}
-
-In this case the reciprocal space potential $\varphi(\bb q)$ is known as the **structure factor** $F(\bb q)$ and expands as :
-\begin{equation}
-    F(\bb q)=\sum_{j=1}^{N} f_j(\bb q) e^{-2\pi i\bb q\cdot\bb r_j}
-\end{equation}
-
-where $f_j(\bb q)$ is the atomic form factor of each atom within the unit cell.
-
-Further applying the periodicity of the crystal restricts the structure factor to its values at the miller indices $F_{hkl}$ so that
-$\bb q\cdot\bb r_j=hx_j+ky_j+lz_j$.
 
 
 <!-- #######################
@@ -143,6 +96,55 @@ Electron density $r^2\rho(r)$ | 3D potential $V(r)$ | Projected potential $\nu_z
 Inelastic scattering occurs when a particle is created or one of the colliding particles gets excited to a higher state. From the point of view of the incident electron, this may be considered as inelastic if a fraction of its kinetic energy is given off to the deflecting particle.This would manifest by a recoil of the deflecting particle.
 This can be neglected when the mass electron is much smaller than the mass of the deflecting particle.
 
+
+
+<!-- ##########################Crystals############################## -->
+## Scattering in crystals
+### Perfect lattice
+For a crystal, the potential is periodic as :
+\begin{equation}
+    V(\bb r)=\varphi(\bb r)* \sum_{j}\delta(\bb r-\bb r_j)
+\end{equation}
+
+where $r_j$ are the repeated positions of the origin of the unit cell and
+$\varphi$ is the potential within the unit cell.
+Using the Born approximation (the diffraction pattern should be proportional to the Fourier transform of the potential) results in :
+\begin{equation}
+    \Psi(\bb q)=\varphi(\bb q)\sum_{j}\exp^{-i\bb q\cdot\bb R_j}
+\end{equation}
+
+which, if the sum is infinite, has non negligible values for $\bb q$ when
+$\bb q\cdot\bb R_j=2m\pi$. Considering $\bb a_i$ as the lattice vectors,
+this condition is obtained for $\bb q=\bb K=\sum h_i\bb a_i^{\star}$ with
+$\bb a_i^{\star}\cdot\bb a_j=2\pi$ when $i=j$ and
+$\bb a_i^{\star}\cdot\bb a_j=0$ when $i\neq j$.
+
+In 3D, this is guaranteed with the following vectors :
+\begin{equation}
+    \bb a_1^{\star}=2\pi\frac{\bb a_2\times\bb a_3}{\bb a_1\cdot (\bb a_2\times\bb a_3)},
+    \bb a_2^{\star}=2\pi\frac{\bb a_3\times\bb a_1}{\bb a_2\cdot (\bb a_3\times\bb a_1)},
+    \bb a_3^{\star}=2\pi\frac{\bb a_1\times\bb a_2}{\bb a_3\cdot (\bb a_1\times\bb a_2)}
+\end{equation}
+
+which therefore define the reciprocal lattice.
+If the unit cell is made of a single atom, then $\varphi(\bb q)=f(\bb q)$ is the scattering amplitude of the atom which is called the **atomic form factor**.
+
+### Structure factor
+If the unit cell is made of groups of $N$, located at fractional coordinates $\bb r_j(x_j,y_j,z_j)$ within the unit cell,
+they may arrange in a structure with additional symmetries known as the basis :
+\begin{equation}
+    \varphi(\bb r)=\sum_{j=1}^{N} \varphi_j(\bb r-\bb r_j)
+\end{equation}
+
+In this case the reciprocal space potential $\varphi(\bb q)$ is known as the **structure factor** $F(\bb q)$ and expands as :
+\begin{equation}
+    F(\bb q)=\sum_{j=1}^{N} f_j(\bb q) e^{-2\pi i\bb q\cdot\bb r_j}
+\end{equation}
+
+where $f_j(\bb q)$ is the atomic form factor of each atom within the unit cell.
+
+Further applying the periodicity of the crystal restricts the structure factor to its values at the miller indices $F_{hkl}$ so that
+$\bb q\cdot\bb r_j=hx_j+ky_j+lz_j$.
 
 
 <!-- ###### Resolution considerations ################### -->

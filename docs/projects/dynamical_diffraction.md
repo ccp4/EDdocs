@@ -53,16 +53,20 @@ Some info from
 - point group $O_h^7$ $m\bar 3m$
 - lattice parameters(A) $a=5.431$ or $a=3.868$, $\alpha=60^{\circ}$
 
-**Silicon atom potential using slicelib**
+#### Silicon atom potential
+Using slicelib
 
  Si Fourier coefficients $U_g$ | Si atomic potential | Si Projected potential
 ------------------------------ | ------------------- | -------------------
 [<img src="/projects/multislice/figures/Si_vg.svg" width="250" />](/projects/multislice/figures/Si_vg.svg) | [<img src="/projects/multislice/figures/Si_va.svg" width="250" />](/projects/multislice/figures/Si_va.svg) | [<img src="/projects/multislice/figures/Si_vz.svg" width="250" />](/projects/multislice/figures/Si_vz.svg)
 
 
-**Structure factor using atompot**
+#### Si Structure factor
 
 Relative Structure factor and intensities [should be](/misc/compounds/#diamond) :
+
+- mixed parity : **0**  
+- same parity (all odd or all even) :
 \begin{equation}
   F_{hkl} = \left\{
     \begin{array}{cc}
@@ -80,20 +84,28 @@ Relative Structure factor and intensities [should be](/misc/compounds/#diamond) 
 \end{equation}
 hence the normalized intensities :
 
-$h+k+l$     | Normalized intensity value
------------ | --------------------------
-$0,4,8,12$  | Equal to the normalized form factor.
-$1,3,5,7,9$ | Twice as small as the normalized form factor
-$2,6,10$    | Cancels out
+$h,k,l$           | $h+k+l$     | Normalized intensity value
+----------------- | ----------- | --------------------------
+**mixed parity**  |  irrelevant | Cancels out
+**same parity**   | $0,4,8,12$  | Equal to the normalized form factor
+                  | $1,3,5,7,9$ | Twice as small as the normalized form factor
+                  | $2,6,10$    | Cancels out
 
-Simulation setup [110] | 2D Intensities (-h,-h,k) |  1D intensities(-h,-h,0)
+Which is shown in 3D and for [100],[110] plane cuts (where the color indicate $log_{10}(S_{hkl}+1)$):
+
+3D structure factor   | 2D Intensities [100] (0,h,k) | 2D intensities[1-10] (h,h,k)
 ---------------------- | ------------------------ | -------------------
-[<img src="/projects/multislice/figures/orientation.png" width="250" />](/projects/multislice/figures/orientation.png) | [<img src="/projects/multislice/figures/si110_S_2D.png" width="250" />](/projects/multislice/figures/si110_S_2D.png) | [<img src="/projects/multislice/figures/si110_S_1D.svg" width="250" />](/projects/multislice/figures/si110_S_1D.svg) |
+[<img src="/projects/multislice/figures/Si_Shkl.png" width="250" />](/projects/multislice/figures/Si_Shkl.png) | [<img src="/projects/multislice/figures/Si_S100.png" width="250" />](/projects/multislice/figures/Si_S100.png) | [<img src="/projects/multislice/figures/Si_S110.png" width="250" />](/projects/multislice/figures/Si_S110.png)
+
+#### Si110 Simulation
+Simulation setup [110] | Beam intensities
+---------------------- | -----------------
+[<img src="/projects/multislice/figures/orientation.png" width="250" />](/projects/multislice/figures/orientation.png) | [<img src="/projects/multislice/figures/Si110_Ihk.svg" width="400" />](/projects/multislice/figures/Si110_Ihk.svg)
+
+<!-- Simulation setup [110] | 2D Intensities (-h,-h,k) |  1D intensities(-h,-h,0)
+---------------------- | ------------------------ | -------------------
+[<img src="/projects/multislice/figures/orientation.png" width="250" />](/projects/multislice/figures/orientation.png) | [<img src="/projects/multislice/figures/si110_S_2D.png" width="250" />](/projects/multislice/figures/si110_S_2D.png) | [<img src="/projects/multislice/figures/si110_S_1D.svg" width="250" />](/projects/multislice/figures/si110_S_1D.svg) -->
 
 **Pendulossung Thickness**
 
-Using $200keV$ corresponds to $K=100A$ and therefore the pendullosung thickness for the pair $[000]$, $[002]$ should then be $\xi=100A$.
-
-Beam intensities
-
-[<img src="/projects/multislice/figures/si100_Ihk.svg" width="250" />](/projects/multislice/figures/si100_Ihk.svg)
+<!-- Using $200keV$ corresponds to $K=100A$ and therefore the pendullosung thickness for the pair $[000]$, $[002]$ should then be $\xi=100A$. -->

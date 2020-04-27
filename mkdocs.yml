@@ -10,7 +10,10 @@ markdown_extensions:
     - toc:
         title: Table of Contents
     - attr_list
-    - fenced_code
+    #- fenced_code
+    - pymdownx.highlight
+    - pymdownx.critic
+    - pymdownx.tasklist
     - mdx_math:
         enable_dollar_delimiter: True
 
@@ -22,12 +25,13 @@ nav:
  - Index: 'index.md'
  - Projects:
      #- 'Overview' : 'projects/index.md'
-     - 'Multislice' : 'projects/multislice/index.md'
-     - 'Wallpapers' : 'projects/wallpapers/index.md'
+     - 'Temsim' : 'projects/multislice/temsim.md'
      - 'NearBragg' : 'projects/nearBragg/index.md'
+     - 'Wallpapers' : 'projects/wallpapers/index.md'
  - Theory:
      - 'Scattering' : 'projects/scattering.md'
      - 'Dynamical diffraction' : 'projects/dynamical_diffraction.md'
+     - 'Multislice' : 'projects/multislice/index.md'
  - Readings:
      - 'Electron Crystallography, Zou, 2011' : 'readings/zou2011.md'
      - 'Advanced TEM, Zuo, Spence, 2017' : 'readings/Spence2017.md'
