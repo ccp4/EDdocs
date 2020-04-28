@@ -108,4 +108,4 @@ Simulation setup [110] | Beam intensities
 
 **Pendulossung Thickness**
 
-<!-- Using $200keV$ corresponds to $K=100A$ and therefore the pendullosung thickness for the pair $[000]$, $[002]$ should then be $\xi=100A$. -->
+Using $200keV$ electrons (corresponding to $K\approx 40A^{-1}$), considering a 2-beam theory for the pair $[000]$, $[111]$ where $U_{111}=32f_{Si}^2(1/c_z)/\cc V_{cell}\underset{cz=5.431}= 0.115A^{-2}$, the Pendullosung thickness should then be around $\xi=345A$.
