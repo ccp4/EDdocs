@@ -1,15 +1,23 @@
 # CCP4-ED
 
 ## Latest
-- [python deck generation](/projects/multislice/temsim/#deck-generation) to setup simulation
-- [python structure factor](/projects/multislice/temsim/#utilities) calculation and [results](/projects/dynamical_diffraction/#si-structure-factor)
-- [Si110 analysis](/projects/dynamical_diffraction/#si110-simulation) :  fixed inconsistencies
+### look ahead
+- [ ] predict runtimes multislice
+- [ ] ion scattering potential
+- [ ] look at intermediate molecule like biotin, paracetamol
 
-## Questions
-- {==Structure solution from defects etc...?==}
+### latest
+- multislice:
+    - python run temsim, check_progress+[doc](/projects/multislice/pyMultislice)
+    - python structure factor and pendullosung [utilities](/projects/multislice/temsim/#utilities)
+    - [Si100 autoslic](/projects/dynamical_diffraction/#si100-simulation)
+    - [Si110 mulslice](/projects/dynamical_diffraction/#si110-simulation)
 
-## Navigation
-- Planning :
-    - [X] [Weekly progression](/planning/previous_weeks)
-    - [ ] [Week planning](/planning/week_progress)
-    - [x] [TODO](/planning/TODO)
+### questions
+- {==Solving structure from defects etc...?==}
+
+##Site Navigation
+- [X] Planning :
+    - [Weekly progression](/planning/previous_weeks)
+    - [Week planning](/planning/week_progress)
+    - [TODO](/planning/TODO)

@@ -43,10 +43,14 @@ multi=Multislice('Silicon/Si110',mulslice=False,
 The simulation can then be run and monitored using the generated input decks or directly through the interface with :
 ```python
 multi.run()
+multi.check_simu_state()
 multi.print_log()
 ```
-
+Once the simulation is over, post-process and plot the beam intensities as function of thickness with :
 ###post process
+```python
+multi.beam_vs_thickness(bOpt='f')
+```
 
 ###utilities
 The library scattering can be used to compute the scattering factor and structure factor. This can be useful for analysing the results.
@@ -55,14 +59,14 @@ Here for example the structure factor of Silicon is calculated as :
 from scattering.structure_factor import *
 from crystals import Crystal
 N,sym = 4,False
-Si,Z = Crystal.from_database('Si'),14                               # get info for Silicon from crystals library
-
+#
+# get info for Silicon from crystals library
+Si,Z = Crystal.from_database('Si'),14                               
 lat_vec   = Si.reciprocal_vectors                                   # get reciprocal lattice vectors
-rj        = np.array([a.coords_fractional for a in Si.atoms])       # get fractional coordinates in an array
-pattern   = np.concatenate((rj,Z*np.ones((rj.shape[0],1))),axis=1)  # concatenate the atomic number for silicon to the pattern data type
+pattern   = np.array([list(a.coords_fractional)+[a.atomic_number] for a in crys.atoms])
 hkl,Fhkl  = structure_factor3D(pattern,lat_vec,hklMax=N,sym=sym)    # compute structure factor up to 4th order in each direction
 Shkl      = np.abs(Fhkl)**2                                         # Compute intensities
-plot_structure3D(hkl,Fhkl)                                          # plot in 3D
+plot_structure3D(hkl,Shkl)                                          # plot in 3D
 ```
 
 

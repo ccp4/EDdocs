@@ -97,10 +97,17 @@ Which is shown in 3D and for [100],[110] plane cuts (where the color indicate $l
 ---------------------- | ------------------------ | -------------------
 [<img src="/projects/multislice/figures/Si_Shkl.png" width="250" />](/projects/multislice/figures/Si_Shkl.png) | [<img src="/projects/multislice/figures/Si_S100.png" width="250" />](/projects/multislice/figures/Si_S100.png) | [<img src="/projects/multislice/figures/Si_S110.png" width="250" />](/projects/multislice/figures/Si_S110.png)
 
-#### Si110 Simulation
-Simulation setup [110] | Beam intensities
+#### Si100 simulation
+
+Beam intensities       | Beam $I_{022}$
 ---------------------- | -----------------
-[<img src="/projects/multislice/figures/orientation.png" width="250" />](/projects/multislice/figures/orientation.png) | [<img src="/projects/multislice/figures/Si110_Ihk.svg" width="400" />](/projects/multislice/figures/Si110_Ihk.svg)
+[<img src="/projects/multislice/figures/Si100_Ihk.svg" width="300" />](/projects/multislice/figures/Si100_Ihk.svg) | [<img src="/projects/multislice/figures/Si100_I22.svg" width="300" />](/projects/multislice/figures/Si100_I22.svg)
+
+
+#### Si110 Simulation
+Simulation setup [110] | Intensities autoslic | mulslice
+---------------------- | -------------------- | --------
+[<img src="/projects/multislice/figures/orientation.png" width="250" />](/projects/multislice/figures/orientation.png) | [<img src="/projects/multislice/figures/Si110_Ihk.svg" width="250" />](/projects/multislice/figures/Si110_Ihk.svg) | [<img src="/projects/multislice/figures/Si110_Ihk_mulslice.svg" width="250" />](/projects/multislice/figures/Si110_Ihk_mulslice.svg)
 
 <!-- Simulation setup [110] | 2D Intensities (-h,-h,k) |  1D intensities(-h,-h,0)
 ---------------------- | ------------------------ | -------------------

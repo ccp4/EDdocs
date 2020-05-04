@@ -215,3 +215,25 @@
 - misc : [protein space groups](/misc/tables/#protein-space-groups)
 - multislice:
     - py_structure_factor of Silicon
+
+
+#week 18
+##Monday
+- multislice:
+    - structure_factor library + documentation   
+    - check $I_{hk}$ pendullosung thickness value (close but no cigar)
+##Tuesday
+- multislice:
+    - Python postprocess
+##Wednesday
+- multislice:
+    - python run,check_progress  
+    - sweep a few slice_thickness Si110 autoslic
+##Thursday
+- multislice:
+    - [Si100 autoslic](/projects/dynamical_diffraction/#si100-simulation)
+      - clean slice
+      - perfect 2-beam though pendullosung not quite right
+##Friday
+- multislice:
+    - [Si110 mulslice](/projects/dynamical_diffraction/#si110-simulation)

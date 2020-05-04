@@ -1,5 +1,12 @@
 # week summary
 
+## week 18
+- multislice:
+    - python run temsim, check_progress+[doc](/projects/multislice/pyMultislice)
+    - python structure factor and pendullosung [utilities](/projects/multislice/temsim/#utilities)
+    - [Si100 autoslic](/projects/dynamical_diffraction/#si100-simulation)
+    - [Si110 mulslice](/projects/dynamical_diffraction/#si110-simulation)
+
 ## week 17
 - multislice:
     - [python interface](/projects/multislice/temsim/#python-interface) to setup simulation

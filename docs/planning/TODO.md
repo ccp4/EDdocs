@@ -7,7 +7,8 @@
     - [ ] mosaicity, thermal vibration, defects on protein and compare with data from Gruene
     - [ ] Compare multislice with N-beam Bloch, nearBragg
 
-# Misc
+
+# Secondary   
 ## Codes
 - Multislice :
     - compile QSTEM3, PyPrismatic, JMUTLIS
@@ -23,7 +24,6 @@
 - Zou2011, Electron Crystallo : chap4-5,9-13+apx
 - multislice simus applications : Glaeser&Downing1993
 - web material [Bfactor](https://www-structmed.cimr.cam.ac.uk/course.html).
-
 
 ## Explore
 - Experimental small molecule resolution
