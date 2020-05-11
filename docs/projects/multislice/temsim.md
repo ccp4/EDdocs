@@ -28,7 +28,18 @@ Program  | Input | Output | Description
 
 ## Python interface
 A simple [Python interface](/projects/multislice/pyMultislice) can generate the input decks (\*.in), run temsim and postprocess the results.
-Type `python3 -c "from multislice import Multislice; help(Multislice)"` for command line help.
+Type `python3 -c "from multislice import Multislice; help(Multislice)"` for command line help. The doc is built with : `make multislice_doc`.
+
+###datafile generation
+The **.xyz** coordinate file can be automatically generated from a structure file (pdb,cif,built-in,... imported with crystals library) using `make_xyz`. The orientation is controlled by providing the incident beam direction `n` in lattice coordinates :
+```python
+make_xyz(name='dat/Lithium',compound='Li',n=[1,1,1],fmt='%.4f')
+```
+
+BCC[001] | BCC[110] | BCC[111]
+-------- | -------- | --------
+[<img src="/projects/multislice/figures/orient_crystal001.png" width="250" />](/projects/multislice/figures/orient_crystal001.png) | [<img src="/projects/multislice/figures/orient_crystal110.png" width="250" />](/projects/multislice/figures/orient_crystal110.png) | [<img src="/projects/multislice/figures/orient_crystal111.png" width="250" />](/projects/multislice/figures/orient_crystal111.png)
+
 
 ###deck generation
 The following example generates the decks for an **autoslic** simulation located in relative path *Silicon/Si110* which would contain the coordinates file _*.xyz_.
@@ -40,16 +51,19 @@ multi=Multislice('Silicon/Si110',mulslice=False,
 ```
 
 ###running a simulation
-The simulation can then be run and monitored using the generated input decks or directly through the interface with :
+The simulation can then be run(remotely if `ssh` provided) and monitored using the generated input decks or directly through the interface with :
 ```python
-multi.run()
-multi.check_simu_state()
+multi.run(ssh='')
+multi.check_simu_state(ssh='')
 multi.print_log()
 ```
-Once the simulation is over, post-process and plot the beam intensities as function of thickness with :
+
 ###post process
+Once the simulation is over, post-process can be performed.
+Plotting the beam intensities as function of thickness and displaying the diffraction pattern as :
 ```python
-multi.beam_vs_thickness(bOpt='f')
+multi.beam_vs_thickness(bOpt='f') #force re postprocess
+multi.pattern()                   #diffraction pattern
 ```
 
 ###utilities
@@ -420,3 +434,9 @@ void propagate(cfpix &wave,float* propxr, float* propxi, float* propyr, float* p
 - image formation effects (defocus,aberration,...) : `temsmim/image`
 - STEM(scanning => incident probe) : `temsim/stemlic`
 - STEM non periodic : `temsim/autostem`
+
+## walltime
+
+Kirkland | time per slice | time per slice per core
+---------------------- | -------------------- | --------
+[<img src="/readings/kirkland2010/cpuBlochMultislice.png" width="350">](/readings/kirkland2010/cpuBlochMultislice.png)| [<img src="/projects/multislice/figures/autoslic_cputime_pslice_log.svg" width="250" />](/projects/multislice/figures/autoslic_cputime_pslice_log.svg) | [<img src="/projects/multislice/figures/autoslic_cputime_pcore_pslice_log.svg" width="250" />](/projects/multislice/figures/autoslic_cputime_pcore_pslice_log.svg)

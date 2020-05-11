@@ -1,23 +1,15 @@
 # CCP4-ED
 
+
+## Look ahead
+- [x] [diffraction patterns](/projects/multislice/applications/#si-diffraction-patterns)
+- [x] [predict walltimes](/projects/multislice/temsim/#walltime)
+- [ ] simulate medium molecule (use gemmi for processing file) like biotin, paracetamol, progesterone...
+  - [auto coords](/projects/multislice/temsim/#datafile-generation)
+
 ## Latest
-### look ahead
-- [ ] predict runtimes multislice
-- [ ] ion scattering potential
-- [ ] look at intermediate molecule like biotin, paracetamol
 
-### latest
-- multislice:
-    - python run temsim, check_progress+[doc](/projects/multislice/pyMultislice)
-    - python structure factor and pendullosung [utilities](/projects/multislice/temsim/#utilities)
-    - [Si100 autoslic](/projects/dynamical_diffraction/#si100-simulation)
-    - [Si110 mulslice](/projects/dynamical_diffraction/#si110-simulation)
 
-### questions
+## Questions
+- diffraction images format?
 - {==Solving structure from defects etc...?==}
-
-##Site Navigation
-- [X] Planning :
-    - [Weekly progression](/planning/previous_weeks)
-    - [Week planning](/planning/week_progress)
-    - [TODO](/planning/TODO)

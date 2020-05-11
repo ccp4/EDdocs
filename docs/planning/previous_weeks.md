@@ -1,5 +1,10 @@
 # week summary
 
+##week 19
+- multislice:
+    - [diffraction pattern](/projects/multislice/applications/#si-diffraction-patterns)
+    - [walltime](/projects/multislice/temsim/#walltime)
+
 ## week 18
 - multislice:
     - python run temsim, check_progress+[doc](/projects/multislice/pyMultislice)
@@ -39,7 +44,7 @@
 - Simulation :
     - [Structure factor](/projects/scattering/#structure-factor)
 
-## week13
+## week 13
 - Simulation :
     - Document [temsim](/projects/multislice/temsim) atompot, mulslice
     - [Fresnel convolution](/projects/multislice/#kinematic-limit) : fft problematic but analytical exists
@@ -47,6 +52,7 @@
     - failed to compile slicview
 - Readings :
     - Kirkland Sections  [FFT,aliasing,BW,slicing](/projects/multislice/#misc), quantitative image matching, apxC-scattering
+
 ## week 12
 - Readings :
     - [Kirkland, Advanced computing in electron microscopy](/readings/Kirkland2010) complete 6 and documented

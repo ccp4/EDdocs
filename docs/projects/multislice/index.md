@@ -60,16 +60,17 @@ Far from the slice, the convolution with the propagator reduces to
 $e^{ik_0(x^2+y^2)/2}\mathcal F_{\perp}$
 where $\mathcal F_{\perp}$ is the transverse Fourier transform.
 Using the whole sample for the slice thickness and
-$\Psi_0(\bb r')=e^{-j\bb k_0\cdot\bb r'}$
-gives the exit wave as :
+$\Psi_0(x,y,z)=\Psi_0e^{-ik_0z}\underset{z=0}{=}\Psi_0$
+gives the diffraction pattern as :
 \begin{equation}
-  \Psi(x,y) = e^{ik_0(x^2+y^2)/2}
-    \left(\delta(\bb k_0) +
+  \Psi(x,y) = \Psi_0\frac{e^{ik_0\frac{x^2+y^2}{2\Delta z}}}{i\lambda\Delta z}
+    \left(\delta(0,0) + i\sigma
       \mathcal F^{2D}_{k_0x,k_0y}\Big\{\int_0^t V(x',y',z')dz' \Big\}
     \right)
 \end{equation}
 
-where $\mathcal F^{2D}_{k_0x,k_0y}\Big\{\int_0^t V(x',y',z')dz'\Big\}=\mathcal F^{3D}(k_x,k_y,0)$ from the [Fourier Projection Theorem](/books/kirkland2010/apxB-projectedPotential.pdf) therefore corresponding to the kinematic scattering limit case.
+where $\mathcal F^{2D}_{k_0x,k_0y}\Big\{\int_0^t V(x',y',z')dz'\Big\}=\mathcal F^{3D}(k_x,k_y,0)$ from the [Fourier Projection Theorem](/books/kirkland2010/apxB-projectedPotential.pdf).
+therefore corresponding to the kinematic scattering limit case.
 The notion of projected potential being also mentioned in [zou, 2011](/readings/zou2011/#chap-3-crystal-structure-factors-and-symmetry).
 
 The kinematic limit for which the slices are not interacting with one another also corresponds to the [phase grating approximation](/readings/Kirkland2010/#chap5-thin-specimens) approximation.
@@ -89,26 +90,32 @@ Fresnel vs Fraunhofer  | relevant values for ED
 
 See paper summary of [Cowley&Moodie,1957](/readings/papers#CowleyMoodie1957).
 
-## TEMSIM source code
-- [TEMSIM source code walk through](/projects/multislice/temsim).
 
 
 ## Practical aspects
 
-- **Slicing** :
-    - The atoms should be aligned at the beginning of the slices so that the potential has effect only over a small fraction $\Delta z_a$ of the slice allowing cascading of the propagator therefore reducing error on the order of $\Delta z_a$ (**figure on the left**).
-    - Too large slice thickness can produce artefacts
-    - slice can not be arbitrarily small as they need to cover the full range of the atomic potential $\simeq 1A$ which might not be small enough for large atomic numbers of low voltages.
-- The potential must have rotational bandwidth limited symmetry in reciprocal space (**figure on the right**).
+### Slicing
 
 <img src="figures/align_atom_slice.png" width="400"/>
+
+- The atoms should be aligned at the beginning of the slices so that the potential has effect only over a small fraction $\Delta z_a$ of the slice allowing cascading of the propagator therefore reducing error on the order of $\Delta z_a$
+<!-- (**figure on the left**). -->
+- Too large slice thickness can produce artefacts
+- Slice can not be arbitrarily small as they need to cover the full range of the atomic potential $\simeq 1A$ which might not be small enough for large atomic numbers of low voltages.
+
+### Bandwidth
+- The potential must have rotational bandwidth-limited symmetry in reciprocal space.
+ <!-- (**figure on the right**). -->
 <img src="figures/BW_limited.png" width="250"/>
 
 - Individual components of the multislice approach are nearly exact when taken individually. The main source of errors comes from the combination of propagating (Fresnel approximation) and transmitting (phase grating approximation).
+- The Fourier transform of bandwidth limited product of $\Psi(\bb x)$ with $t(\bb x)$ is a convolution in reciprocal space $\Psi(\bb k)\ast T(\bb k)$. This is equivalent to successively sliding the Fourier transform of the transmission function $T(\bb k)$ along the fourier transform of the wave function $\Psi(\bb k)$. This causes aliasing if the full bandwidth is used (**left fig**). The remedy is to set $BW=2/3k_{max}$ (**right fig**). As a result only about 1/3 of the Fourier coefficients are used in practice.
 
-- The Fourier transform of bandwidth limited product of $\Psi(\bb x)$ with $t(\bb x)$ is a convolution inn reciprocal space equivalent to sliding the Fourier transform $\Psi(\bb k)\ast T(\bb k)$. This causes aliasing if the full bandwidth is used (**left fig**), the remedy is to set $BW=2/3k_{max}$ (**right fig**). As a result only about 1/3 of the Fourier coefficients are used in practise.
 ![](figures/slide.png)
 
+
+### TEMSIM source code
+- [TEMSIM source code walk through](/projects/multislice/temsim).
 
 
 ## Application examples

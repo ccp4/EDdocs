@@ -237,3 +237,26 @@
 ##Friday
 - multislice:
     - [Si110 mulslice](/projects/dynamical_diffraction/#si110-simulation)
+
+
+#week 19
+##Monday
+- Multislice :
+    - wall time prediction : Install on asus,dell,brno and run temsim
+##Tuesday
+- Multislice :
+    - walltime prediction :  Run batch and postprocess
+    - Paracetamol model with crystals and triecd d gemmi
+##Wednesday
+- Kirchoff theory and FFT dimensionality aspect
+##Thursday  
+- Multislice :
+    - [diffraction pattern](/projects/applications/#si-diffraction-patterns)
+##Friday
+- Multislice :
+    - walltime : Adapt paths,scripts to run and monitor for remote
+##Saturday
+- Multislice :
+    - git and commit temsim
+    - walltime : perform walltime analysis on all
+    - get mulslice working on remote + commit mulslice

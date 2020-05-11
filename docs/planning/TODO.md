@@ -4,6 +4,8 @@
     - [ ] review on multislice small molecule
 - Simulation :
     - [ ] simulate rotating crystal
+    - [ ] Background scattering from solvent  
+    - [ ] ion scattering potential
     - [ ] mosaicity, thermal vibration, defects on protein and compare with data from Gruene
     - [ ] Compare multislice with N-beam Bloch, nearBragg
 

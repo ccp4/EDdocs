@@ -25,9 +25,10 @@ nav:
  - Index: 'index.md'
  - Projects:
      #- 'Overview' : 'projects/index.md'
+     - 'Applications' : 'projects/multislice/applications.md'
      - 'Temsim' : 'projects/multislice/temsim.md'
      - 'NearBragg' : 'projects/nearBragg/index.md'
-     - 'Wallpapers' : 'projects/wallpapers/index.md'
+     #- 'Wallpapers' : 'projects/wallpapers/index.md'
  - Theory:
      - 'Scattering' : 'projects/scattering.md'
      - 'Dynamical diffraction' : 'projects/dynamical_diffraction.md'
@@ -40,7 +41,7 @@ nav:
  - 'Planning':
      - 'Week progress' : 'planning/week_progress.md'
      - 'Previous weeks' : 'planning/previous_weeks.md'
-     - 'Meetings' : 'planning/meetings.md'
+     #- 'Meetings' : 'planning/meetings.md'
      - 'TODO' : 'planning/TODO.md'
  - 'Crystallography':
      - 'Tables and useful links' : 'misc/tables.md'
@@ -49,4 +50,4 @@ nav:
  - 'Misc':
      - 'Commands' : 'misc/useful.md'
      - 'Python' : 'misc/python.md'
-     - 'Scattering particles' : 'misc/particle_scattering.md'
+     #- 'Scattering particles' : 'misc/particle_scattering.md'
