@@ -1,5 +1,8 @@
 # weekly meeting
 
+##week 19 Questions
+- diffraction images format? .smv
+
 ##week 17 look ahead
 - predict runtimes multislice
 - ion scattering potential

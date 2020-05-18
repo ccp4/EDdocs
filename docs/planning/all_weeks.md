@@ -260,3 +260,30 @@
     - git and commit temsim
     - walltime : perform walltime analysis on all
     - get mulslice working on remote + commit mulslice
+
+
+#week20
+##Monday
+- Multislice :
+    - [auto coords](/projects/multislice/temsim/#datafile-generation)
+##Tuesday
+- Multislice :
+    - postprocess routine
+    - [gif patterns](/projects/multislice/applications/#diffraction-patterns)
+##Wednesday
+- Multislice :
+    - [lattice constant effect](/projects/multislice/applications/#lattice-constant-effect)  BCC autoslic
+    - [finite size effect article](/articles/Rodriguez2010_SimulaTEM_Multislice_simulations_for_general_objects.pdf)
+#Thursday
+- Multislice :
+    - Paracetamol : visualize unit_cell, slice001
+- misc : logs on standardDisplay
+    - 3d step rotation arrow keys callback + view[0..6]
+    - xylims consistent in 3d
+    - ticks, tick_labels and minor ticks enable single float and array parsing
+    - 3d remove perspective effect
+##Friday
+- Multislice :
+    - Paracetamol :
+        - add trihedron, chose rotation axis(b => z=a..c..-a b,a)
+        - [show xyz figs](/projects/multislice/applications/#paracetamol)

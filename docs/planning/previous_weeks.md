@@ -1,4 +1,11 @@
 # week summary
+##week20
+- multislice:
+    - [auto coords](/projects/multislice/temsim/#datafile-generation)
+    - [gif patterns](/projects/multislice/applications/#diffraction-patterns)
+    - [lattice constant effect](/projects/multislice/applications/#lattice-constant-effect)  BCC autoslic
+    - [finite size effect article](/articles/Rodriguez2010_SimulaTEM_Multislice_simulations_for_general_objects.pdf)
+    - Paracetamol slices [figs](/projects/multislice/applications/#paracetamol)
 
 ##week 19
 - multislice:
