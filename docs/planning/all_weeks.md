@@ -287,3 +287,17 @@
     - Paracetamol :
         - add trihedron, chose rotation axis(b => z=a..c..-a b,a)
         - [show xyz figs](/projects/multislice/applications/#paracetamol)
+
+#week21
+##Monday
+- multislice
+    - fix orient make_xyz
+##Tuesday
+- multislice
+    - Adapt show_cell for all lattices
+##Wednesday
+- Paracetamol : orientation issue
+    - could not solve it
+    - in other papers : bR is orthorombic(Abrahmas,Glaeser altough 120deg from pdb reference + not full) and P4_32_12(Spence)
+##Thursday
+##Friday

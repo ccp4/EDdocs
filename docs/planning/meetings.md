@@ -1,5 +1,12 @@
 # weekly meeting
 
+##week 20 APR with SLM
+- proteindiffraction.org
+- CCP4/DIALS+MPI workshop and tutorial for next year training
+- ask for Journal papers
+- compulsory trainings done
+- make contact with Zou,Homsvoller
+
 ##week 19 Questions
 - diffraction images format? .smv
 

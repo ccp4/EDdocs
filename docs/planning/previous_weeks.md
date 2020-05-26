@@ -1,4 +1,9 @@
 # week summary
+#week21
+- multislice : 
+    - fix orient make_xyz
+    - Adapt show_cell for all lattices
+    - orthorhombic lattice pb (SubramanianSpence2015 and LatychevskaiaAbrahams2019 use orthorombic)
 ##week20
 - multislice:
     - [auto coords](/projects/multislice/temsim/#datafile-generation)
