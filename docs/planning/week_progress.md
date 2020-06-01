@@ -1,9 +1,12 @@
-#week22
-##Tuesday
+#week23
+##Monday
 multislice :
     - [ ] Slice orientation pb in the ebook kirkland version + reference in section 6.7
     - Look at another molecule
     - wobble and long range disorders
+nearBragg :
+    - attempt 2 layer diffraction
+
 
 #TODO
 - Multislice :

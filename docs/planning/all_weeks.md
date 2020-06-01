@@ -300,4 +300,18 @@
     - could not solve it
     - in other papers : bR is orthorombic(Abrahmas,Glaeser altough 120deg from pdb reference + not full) and P4_32_12(Spence)
 ##Thursday
+  - tmm
 ##Friday
+  - tmm
+  
+#week22
+##Monday
+  - tmm
+##Tuesday    
+  - tmm
+##Wednesday
+  - tmm
+##Thursday
+  - tmm
+##Friday
+  - tmm

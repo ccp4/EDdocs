@@ -1,6 +1,8 @@
 # week summary
+#week22
+
 #week21
-- multislice : 
+- multislice :
     - fix orient make_xyz
     - Adapt show_cell for all lattices
     - orthorhombic lattice pb (SubramanianSpence2015 and LatychevskaiaAbrahams2019 use orthorombic)
