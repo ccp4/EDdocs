@@ -1,5 +1,19 @@
 # weekly meeting
 
+## Quantum computer for chemistry 2/06
+papers :
+
+- lloyd science 273
+- Qphase estimatation algo LLoyd
+- Eiegen solver Peruzzo nat commun 5
+
+Hamiltonian :
+
+- for molecules vs DFT
+- second quantisation integrals
+- H2 Dimer McArdle RMP92
+
+
 ##week 20 APR with SLM
 - proteindiffraction.org
 - CCP4/DIALS+MPI workshop and tutorial for next year training

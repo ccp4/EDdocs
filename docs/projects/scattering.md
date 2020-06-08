@@ -147,6 +147,54 @@ Further applying the periodicity of the crystal restricts the structure factor t
 $\bb q\cdot\bb r_j=hx_j+ky_j+lz_j$.
 
 
+
+
+
+## Thermal effects
+At non zero temperature, atoms experience thermal vibrations(phonons).
+Vibration frequencies are about $1-10THz$.
+At $100 keV$, electrons travel at $0.55$ the speed of light and
+go through a sample $5000A$ thick in about a few $fs$ ($\Delta t=3fs$).
+As a result, for travelling electrons the atoms appear frozen in random phase of their oscillation cycle.
+
+$T$   | $E\approx k_BT/2$ | $\nu=E/h$ | $T_{ph}=1/\nu$
+----- | ----------------- | --------- | --------------
+77  K | 3.3 meV | 0.8 THz | 1.2 ps
+300 K | 13  meV | 3.1 THz | 320 fs
+
+
+The primary effect is to create a background in the diffraction pattern.
+
+patttern | intensities
+-------- | ----------
+[<img src="/figures/TDS_Si111_ED.png" width=300 >](/figures/TDS_Si111_ED.png) | [<img src="/figures/TDS_effect.png" width=400 >](/figures/TDS_effect.png)
+
+
+### B-factor
+
+The [B-factor](https://en.wikipedia.org/wiki/Debye%E2%80%93Waller_factor)
+is considered in protein crystallography and related to the mean square displacement $\langle u^2\rangle$ of the atoms due to vibrational disorders :
+\begin{equation}
+    B = \frac{8\pi^2}{3}\langle u^2\rangle
+\end{equation}
+
+The Debye-Waller factor is also commonly used in crystallography as $T(\bb q)=e^{-\langle |\bb q\cdot\bb u|^2\rangle}$ which under isotropic assumption reduces to $T=e^{-q^2\langle u^2\rangle/3}$.
+
+The structure factor is then written with thermal displacement as :
+\begin{equation}
+  F(\bb q) = \sum_k n_k f_k(\bb q)T_k(\bb q) e^{-i\bb q\cdot\bb x_{k_0} }
+\end{equation}
+
+hence the definition of the [B-factor](https://www-structmed.cimr.cam.ac.uk/Course/Convolution/convolution.html#bfac).
+
+
+
+
+
+
+
+
+
 <!-- ###### Resolution considerations ################### -->
 ## Diffraction and resolution
 

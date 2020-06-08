@@ -27,8 +27,12 @@ Program  | Input | Output | Description
 
 
 ## Python interface
-A simple [Python interface](/projects/multislice/pyMultislice) can generate the input decks (\*.in), run temsim and postprocess the results.
+A simple Python interface can generate the input decks (\*.in), run temsim and postprocess the results.
 Type `python3 -c "from multislice import Multislice; help(Multislice)"` for command line help. The doc is built with : `make multislice_doc`.
+
+- [Documentation](/projects/multislice/pyMultislice)
+- [Version log](/projects/multislice/TODO)
+
 
 ###datafile generation
 The **.xyz** coordinate file can be automatically generated from a structure file (pdb,cif,built-in,... imported with crystals library) using `make_xyz`. The orientation is controlled by providing the incident beam direction `n` in lattice coordinates :

@@ -1,5 +1,15 @@
 # week summary
+
+#week23
+- Papers : read Takanori2020 paper
+- Multislice :
+    - biotin single run
+    - misc : diffraction pattern file formats 
+
 #week22
+- multislice :
+    - [Doc](/projects/multislice/scattering/#thermal-effects) + implementation for wobble and long range disorders
+    - [Application](/projects/multislice/applications/#wobble-effect)
 
 #week21
 - multislice :

@@ -303,7 +303,7 @@
   - tmm
 ##Friday
   - tmm
-  
+
 #week22
 ##Monday
   - tmm
@@ -315,3 +315,19 @@
   - tmm
 ##Friday
   - tmm
+
+
+#week23
+##Monday
+- multislice :
+    - [Doc](/projects/multislice/scattering/#thermal-effects) + implementation for wobble and long range disorders
+    - [Application](/projects/multislice/applications/#wobble-effect)
+##Tuesday
+##Wednesday
+##Thursday
+- misc :
+    - Bfactor
+    - Takanori paper
+##Friday
+- multislice :
+    - biotin 001.xyz + storage file into npy patterns(npy with pickle as light as pd and just as heavy as binary double file without compression)

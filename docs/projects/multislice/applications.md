@@ -1,6 +1,26 @@
 # Applications
 
-## Test structure
+
+[<img src="/projects/multislice/figures/biotin_vesta.png" style="float: right;" width="250" /> ](/projects/multislice/figures/biotin_vesta.png)
+## Biotin
+Main info :
+
+- Structure : $P2_12_12_1$
+- Lattice constants : $a=5.24A$, $b=10.35A$, $c=21.04A$
+- Angle : $\alpha=90^{\circ},\beta=90^{\circ},\gamma=90^{\circ}$
+- Unit cell volume : $1141.41A^3$
+- Chemical formula : $C_{10}H_{16}N_2O_3S$
+- Composition :
+    - $H:50$%
+    - $C:31$%
+    - $O:10$%
+    - $N:6$%
+    - $S:3$%
+- Atoms per unit cell : 128
+
+
+
+## BCC-Li test structure
 The test structure is Cubic Body Centred with Lithium atoms and the beam  direction is along $[001]$ axis.
 
 ### Diffraction patterns
@@ -16,12 +36,26 @@ Only one transverse cell is used but the number of longitudinal cells are adjust
 
 Beam $1,1$ | Beam $2,0$ | Beam $4,0$
 ------ | ------ | -------
-[<img src="/projects/multislice/figures/lattice_effect0.svg" width="250" />](/projects/multislice/figures/lattice_effect0.svg) | [<img src="/projects/multislice/figures/lattice_effect1.svg" width="250" />](/projects/multislice/figures/lattice_effect1.svg) | [<img src="/projects/multislice/figures/lattice_effect2.svg" width="250" />](/projects/multislice/figures/lattice_effect2.svg)
+[<img src="/projects/multislice/figures/lattice_effect0.svg" width="250" >](/projects/multislice/figures/lattice_effect0.svg) | [<img src="/projects/multislice/figures/lattice_effect1.svg" width="250" />](/projects/multislice/figures/lattice_effect1.svg) | [<img src="/projects/multislice/figures/lattice_effect2.svg" width="250" />](/projects/multislice/figures/lattice_effect2.svg)
 
 The Pendullosung thickness seems to depend linearly on the lattice constant but larger lattice constants result in higher intensity maxima and larger Pendullosung thickness.
 <!-- Note that the most prominent beams are not in the same order for the different structures since their Pendullosung phase are different. -->
 
 
+### Wobble effect
+
+The wobble parameter is the RMS of the random displacement of atoms in the frozen phonon approximation.
+Several runs are needed to provide an accurate picture of thermal effects.
+Below the average azimuthal intensity is plotted for different amount of wobble. All simulation took 15 runs.
+
+pattern 0 | pattern 2 | avg Intensity
+--------- | --------- | -------------
+[<img src="/projects/multislice/figures/wobble_effect0.png" width="250" />](/projects/multislice/figures/wobble_effect0.png) | [<img src="/projects/multislice/figures/wobble_effect2.png" width="250" />](/projects/multislice/figures/wobble_effect2.png) | [<img src="/projects/multislice/figures/wobble_effectIavg.svg" width="250" />](/projects/multislice/figures/wobble_effectIavg.svg) |
+
+
+<!-- ###############################################################
+                            Silicon
+#################################################################### -->
 ## Silicon
 Some info from
 [wikipedia](https://en.wikipedia.org/wiki/Silicon),
@@ -107,7 +141,7 @@ Using $200keV$ electrons (corresponding to $K\approx 40A^{-1}$), considering a 2
 
 
 
-## Paracetamol
+<!-- ## Paracetamol
 ### orientation [100]
 transverse to the beam | along the beam | 3D
 ---------------------- | -------------- | ---
@@ -116,4 +150,4 @@ transverse to the beam | along the beam | 3D
 ### orientation [001]
 transverse to the beam | along the beam | 3D
 ---------------------- | -------------- | ---
-[<img src="/projects/multislice/figures/APAP001_xy.png" width="250" />](/projects/multislice/figures/APAP001_xy.png) | [<img src="/projects/multislice/figures/APAP001_xz.png" width="250" />](/projects/multislice/figures/APAP001_xz.png) | [<img src="/projects/multislice/figures/APAP001_3D.png" width="250" />](/projects/multislice/figures/APAP01_3D.png)
+[<img src="/projects/multislice/figures/APAP001_xy.png" width="250" />](/projects/multislice/figures/APAP001_xy.png) | [<img src="/projects/multislice/figures/APAP001_xz.png" width="250" />](/projects/multislice/figures/APAP001_xz.png) | [<img src="/projects/multislice/figures/APAP001_3D.png" width="250" />](/projects/multislice/figures/APAP01_3D.png) -->
