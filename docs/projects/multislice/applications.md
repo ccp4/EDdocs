@@ -6,7 +6,7 @@
 Main info :
 
 - Structure : $P2_12_12_1$
-- Lattice constants : $a=5.24A$, $b=10.35A$, $c=21.04A$
+- Lattice constants : $a=5.24A$, $b=10.35A$, $c=21.04A$ (change to 20.960)
 - Angle : $\alpha=90^{\circ},\beta=90^{\circ},\gamma=90^{\circ}$
 - Unit cell volume : $1141.41A^3$
 - Chemical formula : $C_{10}H_{16}N_2O_3S$
@@ -17,6 +17,17 @@ Main info :
     - $N:6$%
     - $S:3$%
 - Atoms per unit cell : 128
+- discrete angles :[ 0.          7.12501635 14.03624347 26.56505118 36.86989765 45. 56.30993247 63.43494882 71.56505118 80.53767779]
+
+
+### Full rotational study
+102=07.12deg | 201=26.56deg | 801=56.30deg
+------------- | ------------ | ------------
+[<img src="/projects/multislice/figures/biotin102.png" width="250" />](/projects/multislice/figures/biotin102.png) | [<img src="/projects/multislice/figures/biotin201.png" width="250" />](/projects/multislice/figures/biotin201.png) | [<img src="/projects/multislice/figures/biotin801.png" width="250" />](/projects/multislice/figures/biotin801.png)
+
+102=07.12deg | 201=26.56deg | 801=56.30deg
+------------- | ------------ | ------------
+[<img src="/projects/multislice/figures/biotin_0_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin_0_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin_1_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin_1_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin_2_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin_2_autoslic_pattern.png)
 
 
 
@@ -48,9 +59,9 @@ The wobble parameter is the RMS of the random displacement of atoms in the froze
 Several runs are needed to provide an accurate picture of thermal effects.
 Below the average azimuthal intensity is plotted for different amount of wobble. All simulation took 15 runs.
 
-pattern 0 | pattern 2 | avg Intensity
+pattern 0 | pattern 1 | avg Intensity
 --------- | --------- | -------------
-[<img src="/projects/multislice/figures/wobble_effect0.png" width="250" />](/projects/multislice/figures/wobble_effect0.png) | [<img src="/projects/multislice/figures/wobble_effect2.png" width="250" />](/projects/multislice/figures/wobble_effect2.png) | [<img src="/projects/multislice/figures/wobble_effectIavg.svg" width="250" />](/projects/multislice/figures/wobble_effectIavg.svg) |
+[<img src="/projects/multislice/figures/wobble_effect0.png" width="250" />](/projects/multislice/figures/wobble_effect0.png) | [<img src="/projects/multislice/figures/wobble_effect1.png" width="250" />](/projects/multislice/figures/wobble_effect1.png) | [<img src="/projects/multislice/figures/wobble_effectIavg.svg" width="250" />](/projects/multislice/figures/wobble_effectIavg.svg) |
 
 
 <!-- ###############################################################

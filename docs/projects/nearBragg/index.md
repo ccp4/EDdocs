@@ -1,6 +1,7 @@
 # Near bragg
 
-An algorithm computing the interference patterns of an assembly of scatterers based
+
+An [algorithm](https://bl831.als.lbl.gov/~jamesh/nearBragg/) computing the interference patterns of an assembly of scatterers based
 on their path difference to a detector.
 
 Source file format : x,y,z, O,B,P
@@ -42,3 +43,16 @@ Mutliple and inelastic scattering :
 - Stochasticly using the theoretical scattering rate.
 - The differential scattering cross section can be used for more accurately account for the scattering factor of individual atoms.
 - Inelastic scattering loss of coherency and spectral broadening can be represented through rigorous bookeeping.
+
+
+
+## mosaicity
+[nanobragg]https://bl831.als.lbl.gov/~jamesh/nanoBragg/)
+
+According to [wiki](https://en.wikipedia.org/wiki/Mosaicity), dynamical diffraction is often negligible when high level of mosaicity is involved.
+
+- `mosaic_spread=argv[-mosaic]/RadToDeg` : isotropic mosaic spread in degrees (use 90 for powder)
+- `mosaic_domains=argv[-mosaic_dom]` : number of randomly-oriented mosaic domains to render
+- `mosaic_seed=argv[mosaic_seed]` : random-number seed for mosaic domain generation (default: 1234567)
+- `mosaic_umats` : rotation matrix
+- `mosaic_missets` and `missets_seeds`

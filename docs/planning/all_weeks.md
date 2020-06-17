@@ -331,3 +331,17 @@
 ##Friday
 - multislice :
     - biotin 001.xyz + storage file into npy patterns(npy with pickle as light as pd and just as heavy as binary double file without compression)
+
+#week 24
+## Monday
+- multislice :
+    - multiple orientation biotin
+    - Slice orientation pb reference in section 6.7+literature research
+##Tuesday  
+- mosaicity : nearBragg+wiki
+##Wednesday
+- day off
+## Thursday
+- Blochwave coding attempt
+## Friday
+- readings : multislice tilt papers

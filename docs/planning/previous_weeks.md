@@ -1,10 +1,14 @@
 # week summary
 
+#week24
+- readings : [multislice literature](/readings/multislice) especially DyckChen1997
+- multislice : started simulations with tilt
+
 #week23
 - Papers : read Takanori2020 paper
 - Multislice :
     - biotin single run
-    - misc : diffraction pattern file formats 
+    - misc : diffraction pattern file formats
 
 #week22
 - multislice :

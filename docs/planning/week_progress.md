@@ -1,13 +1,22 @@
-#week 24
+#week 25
 ## Monday
-- multislice :
-    - Slice orientation pb in the ebook Kirkland version + reference in section 6.7
-- nearBragg :
-    - attempt 2 layer diffraction
-    - look at nanobragg for mosaicity
+- Multislice:
+    - [x] change lattice constant slightly
+    - [x] Generate 8 rotations biotin xyz
+    - run and compare 100+10, 101
+- readings :
+    - small molecule paper
+    - ChenDyck1997
+- nearBragg : attempt 2 layer diffraction
+- multislice 2D
+- TDS get wobble parameters
+- propagation green's func + cascaded Fresnel convolution on real pb
+
+- Ronan : badB
+- cloud
+#Tuesday
 
 
-- misc : small molecule paper
 
 #TODO
 - Multislice :

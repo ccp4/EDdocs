@@ -1,17 +1,15 @@
 # CCP4-ED
 
 ## Latest
-
-
-## Look ahead
 - nanobragg for mosaicity
 - simulate biotin (using gemmi)
+- Non ortho grid : reference in section 6.7 (book 1984)
+    - Kirkland last edition
+
+## Look ahead
 - **1 thread per simulation flag**
     - [ ] Implement multithreads access to fftw
     - [ ] Force 1 thread on splines?
-- **Non ortho grid**
-    - [ ] kirkland last edition + reference in section 6.7
-- .smv format
 - integration may increase spot broadening
 - convert to flux taking Poisson distribution
 - Detector modelling projected intensity at larger angles
@@ -27,3 +25,4 @@
 
 ## Questions
 - {==Solving structure from defects etc...?==}
+- difference maps : indicates potential sites where atoms might be missing

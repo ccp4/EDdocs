@@ -417,6 +417,16 @@ double vzatom( int Z, double r )
 ```C
 /*  multiplied by the propagator function */
 //slicelib.cpp
+void calculate()
+  scale = pi*deltaz
+  tctx = (float) (2.0 * tan(ctiltx));
+  tcty = (float) (2.0 * tan(ctiltx));
+  propxr[ix] = cos(scale*kx2*wavlen - kx[ix]*tctx)
+  propxi[ix] = sin(scale*kx2*wavlen - kx[ix]*tctx)
+  propyr[ix] = cos(scale*ky2*wavlen - ky[iy]*tcty)
+  propyi[ix] = sin(scale*ky2*wavlen - ky[iy]*tcty)
+
+
 void propagate(cfpix &wave,float* propxr, float* propxi, float* propyr, float* propyi,float* kx2, float* ky2, float k2max, int nx, int ny )
   for( ix=0; ix<nx; ix++)
     if( kx2[ix] < k2max )
