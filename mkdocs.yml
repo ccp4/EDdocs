@@ -38,6 +38,7 @@ nav:
      - 'Advanced TEM, Zuo, Spence, 2017' : 'readings/Spence2017.md'
      - 'Advanced computing in EM, Kirkland, 2010' : 'readings/Kirkland2010.md'
      - 'Papers' : 'readings/papers.md'
+     - 'Multislice Literature' : 'readings/multislice.md'
  - 'Planning':
      - 'Week progress' : 'planning/week_progress.md'
      - 'Previous weeks' : 'planning/previous_weeks.md'

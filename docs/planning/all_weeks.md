@@ -345,3 +345,20 @@
 - Blochwave coding attempt
 ## Friday
 - readings : multislice tilt papers
+
+#week 25
+## Monday
+- Multislice:
+    - change lattice constant slightly
+    - Generate 8 rotations biotin xyz
+    - run [7deg,45deg,90deg]
+## Tuesday
+- multislice
+## Wednesday
+- multislice
+    - multislice 2D
+    - fft1D and ifft1D solved HF issue with symmetric signal
+## Thursday
+- multislice 2D
+## Friday
+- multislice 2D cmp with Fresnel convolution =>PB

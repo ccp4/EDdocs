@@ -1,21 +1,15 @@
-#week 25
+#week 26
 ## Monday
-- Multislice:
-    - [x] change lattice constant slightly
-    - [x] Generate 8 rotations biotin xyz
+- nearBragg : attempt 2 layer diffraction
+- latychevskaia2019 : analytical for elastic scattering only 
+
+- multislice:
     - run and compare 100+10, 101
+    - TDS get wobble parameters
 - readings :
     - small molecule paper
-    - ChenDyck1997
-- nearBragg : attempt 2 layer diffraction
-- multislice 2D
-- TDS get wobble parameters
+    - finish ChenDyck1997
 - propagation green's func + cascaded Fresnel convolution on real pb
-
-- Ronan : badB
-- cloud
-#Tuesday
-
 
 
 #TODO

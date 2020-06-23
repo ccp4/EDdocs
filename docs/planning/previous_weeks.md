@@ -1,5 +1,10 @@
 # week summary
 
+#week25
+- Multislice:
+    - 2D solver
+    - [0,45,90] orientations runs for biotin 
+
 #week24
 - readings : [multislice literature](/readings/multislice) especially DyckChen1997
 - multislice : started simulations with tilt
