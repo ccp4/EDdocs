@@ -1,8 +1,9 @@
 #week 26
 ## Monday
 - nearBragg : attempt 2 layer diffraction
-- latychevskaia2019 : analytical for elastic scattering only 
+- latychevskaia2019 : analytical for elastic scattering only
 
+## Tuesday
 - multislice:
     - run and compare 100+10, 101
     - TDS get wobble parameters
@@ -24,3 +25,10 @@
     - Sweep bcc :
         - wobble and long range disorders
         - sampling vs supercell
+## misc
+- **1 thread per simulation flag**
+    - Implement multithreads access to fftw
+    - Force 1 thread on splines?
+- integration/spot broadening
+- flux taking Poisson distribution
+- Detector modelling projected intensity at larger angles

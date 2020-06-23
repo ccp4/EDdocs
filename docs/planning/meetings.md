@@ -1,5 +1,9 @@
 # weekly meeting
 
+##week23 
+- difference maps : indicates potential sites where atoms might be missing
+
+
 ## Quantum computer for chemistry 2/06
 papers :
 
