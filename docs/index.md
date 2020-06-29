@@ -1,9 +1,19 @@
 # CCP4-ED
 
+## Goals
+Contribute to the CCP4 Advanced integrated approaches to macromolecular structure determination.
+
+### WP4 BBSRC grant
+- Use or develop electron diffraction simulation tools
+- Simulate multiple scattering in macromolecular crystals including effects such as mosaicity and disorder
+- Identify corrections opportunities at the scaling stage in DIALS
+
+
+
 ## Latest
 - multislice vs Fresnel convolution
 - nearBragg attempt
-- poisson distribution
+- Collision approach : [ poisson distribution](/projects/dynamical_diffraction/#collision-approach)
 
 ## Look ahead
 

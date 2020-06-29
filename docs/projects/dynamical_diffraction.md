@@ -38,3 +38,31 @@ Taking the arbitrary values $K=100A^{-1}$, $U_g=0.1A^{-2}$ gives a Pendullosung 
 I(0) kin vs dyn 2-beam $\xi_g=1000 A$ | I(w) kin vs dyn 2-beam
 -----------------------|-----------------------
 [<img src="/figures/kin_dyn0.svg" width="350" /> ](/figures/kin_dyn0.svg) | [<img src="/figures/kin_dyn.svg" width="350" />](/figures/kin_dyn.svg)
+
+
+
+## Collision approach
+The probabilities of an electron to undergo $m$ elastic collisions and $n$ inelastic collisions of mean free path $l_i$ after going through a specimen of length $z$ follows the Poisson distribution :
+\begin{equation}
+  P_{mn}(z) =
+    \frac{1}{m!}\left(\frac{z}{l_e}\right)^me^{-z/l_e}
+    \frac{1}{n!}\left(\frac{z}{l_i}\right)^ne^{-z/l_i}
+\end{equation}
+where
+
+- $l_e=1/\sigma_e\rho$ is the average elastic collision mean free path, $\sigma_e=|f^{(e)}_a|^2$ being the interaction cross section and $f^{(e)}_a$ the atomic elastic scattering factor.
+- $l_i=1/\sigma_i\rho$ is the average inelastic collision mean free path.
+- $\rho$ is the number of atoms per volume area.
+
+[Latychevskaiaabrahams2019](/readings/papers/#latychevskaiaabrahams2019) followed a similar approach where the order of the collisions is considered to determine which sequence of events contribute to Bragg spots. A simplification of her equations considering only 0,1 and more than 1 elastic collisions reads :
+\begin{eqnarray}
+  P_{coh}(z+dz) &=& (1-P_e(dz))P_{coh}(z) \\
+  P_{kin}(z+dz) &=& (1-P_e(dz))P_{kin}+P_e(dz)P_{coh}(z) \\
+  P_{dyn}(z+dz) &=& P_{dyn}(z) + P_e(z)P_{kin} \\
+\end{eqnarray}
+
+which analytical solutions are the Poisson distribution above. The program [nearBragg](/projects/nearBragg) should follow this statistics. Taking for protein $\rho=106$ atoms per $nm^3$ and $\sigma_e=0.001-0.005A^2$ which covers beam energies $E=100-1000keV$ and protein average scattering powers give mean free paths ranging $l_e=200-1000nm$.
+
+small $\sigma_e$ | medium $\sigma_e$ | large $\sigma_e$
+---------------- |------------------ | ----------------
+[<img src="/projects/nearBragg/figures/Pcoh_kin_dyn0.svg" width="350" /> ](/projects/nearBragg/figures/Pcoh_kin_dyn0.svg) | [<img src="/projects/nearBragg/figures/Pcoh_kin_dyn1.svg" width="350" /> ](/projects/nearBragg/figures/Pcoh_kin_dyn1.svg) | [<img src="/projects/nearBragg/figures/Pcoh_kin_dyn2.svg" width="350" /> ](/projects/nearBragg/figures/Pcoh_kin_dyn2.svg)

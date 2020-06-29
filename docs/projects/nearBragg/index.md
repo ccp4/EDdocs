@@ -8,13 +8,13 @@ Source file format : x,y,z, O,B,P
 
 ## Parameters
 
-Type                | parameters
------ --------------|-----------
-**detector**        |distance
-                    |detsize,detpixels,pixel
-**beam spectral**   |lambda,dispersion,dispteps
-**beam spatial**    |divergence,divsteps,hdivrange,vdivrange,hdivsteps,vdivsteps
-                    |source_distance,source_depth,depthstep
+Type                | parameters | default (m)
+----- --------------|----------- | ----------
+**detector**        |distance | 0.1
+                    |detsize,detpixels,pixel | 0.1, 0.1e-3
+**beam spectral**   |lambda,dispersion,dispteps | 1e-10, 0,-1
+**beam spatial**    |divergence,divsteps,hdivrange,vdivrange,hdivsteps,vdivsteps | -1
+                    |source_distance,source_depth,depthstep | 10,0,-1
 **misc**            |oversample,curvedet,point_pixel, Xbeam,Ybeam
 **features**        |coherent, nopolar + occ, bfactor, phase-shift through file parsing
 **io**              |file,cosfile,sinfile,floatfile,intifle

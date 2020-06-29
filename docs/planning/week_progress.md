@@ -4,14 +4,27 @@
 - latychevskaia2019 : analytical for elastic scattering only
 
 ## Tuesday
+- propagation green's func + cascaded Fresnel convolution on real pb
+
+##Wednesday
+- multi_2D seems to work
+
+##Thursday
+- multi_2D python class
+
+##Friday
+- multi_2D
+    - tilt implement and tests
+    - unbound projected potential with varying thickness  
+    - compare Bloch
+    - compare BPM
+
 - multislice:
     - run and compare 100+10, 101
     - TDS get wobble parameters
 - readings :
     - small molecule paper
     - finish ChenDyck1997
-- propagation green's func + cascaded Fresnel convolution on real pb
-
 
 #TODO
 - Multislice :

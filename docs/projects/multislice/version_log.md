@@ -1,9 +1,21 @@
-# TODO
-## Features
+# Version log
 
-## Version log
-- [ ] embedded C multislice 
+## multi_2D
 
+### 0.2
+- [ ] tilt
+- [ ] variable thickness
+
+### 0.1
+- [x] basic implementation tested
+
+
+
+## multislice.py
+- [ ] embedded C multislice
+
+### 1.2
+- [x] Include tilt
 ### 1.1
 - [x] Include thermal vibrations
 

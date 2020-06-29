@@ -43,7 +43,7 @@ Due to the exponentiation operator this must be approximated as :
   \Psi(z+\Delta z) = p(x,y,\Delta z)\ast \Big(t(x,y,z)\Psi(z)\Big) +\mathcal O(\Delta z^2\nu_{\Delta z})
 \end{equation}
 
-where $t(x,y,z)=e^{i\sigma/4\pi\nu_{\Delta z}}$ is the transmission function, $p(x,y,\Delta z)\ast = e^{i\lambda/4\pi\Delta z\grad^2_{xy}}$ is the propagator operator with $p(x,y,\Delta z)=\frac{1}{i\lambda\Delta z}e^{ik_0\frac{x^2+y^2}{2\Delta z}}$ the **Fresnel propagator** function.
+where $t(x,y,z)=e^{i\sigma\nu_{\Delta z}}$ is the transmission function, $p(x,y,\Delta z)\ast = e^{i\lambda/4\pi\Delta z\grad^2_{xy}}$ is the propagator operator with $p(x,y,\Delta z)=\frac{1}{i\lambda\Delta z}e^{ik_0\frac{x^2+y^2}{2\Delta z}}$ the **Fresnel propagator** function.
 
 ### Interaction parameter
 
