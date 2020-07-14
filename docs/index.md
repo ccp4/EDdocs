@@ -11,16 +11,19 @@ Contribute to the CCP4 Advanced integrated approaches to macromolecular structur
 [Slides 2020-06-29.odp](/planning/2020-01-29_WP2.odp)
 
 ## Latest
+- multislice :
+    - [tilts run](/projects/multislice/applications#tilts-run)
+    - [angle run](/projects/multislice/applications#full-rotational-study)
 - multislice vs Fresnel convolution
-- nearBragg attempt
-- Collision approach : [ poisson distribution](/projects/dynamical_diffraction/#collision-approach)
 
 ## Look ahead
+- CCP4 training
+- Scaling algorithm
+- presentation RAL Friday 
 
 ## Last week
-- nanobragg for mosaicity
-- simulate biotin (using gemmi)
-- Non ortho grid : reference in section 6.7 (book 1984)
-    - Kirkland last edition
+- Collision approach : [ poisson distribution](/projects/dynamical_diffraction/#collision-approach)
+- nearBragg  2nd path length attempt
+
 
 ## Questions

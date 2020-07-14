@@ -362,3 +362,16 @@
 - multislice 2D
 ## Friday
 - multislice 2D cmp with Fresnel convolution =>PB
+
+#week 26
+## Monday
+- nearBragg : attempt 2 layer diffraction
+- latychevskaia2019 : analytical for elastic scattering only
+## Tuesday
+- propagation green's func + cascaded Fresnel convolution on real pb
+##Wednesday
+- multi_2D seems to work
+##Thursday
+- multi_2D python class
+##Friday
+- multi_2D : unbound projected potential with varying thickness  

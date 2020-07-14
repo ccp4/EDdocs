@@ -4,7 +4,7 @@
 
 ### 0.2
 - [ ] tilt
-- [ ] variable thickness
+- [x] variable thickness
 
 ### 0.1
 - [x] basic implementation tested
@@ -15,6 +15,7 @@
 - [ ] embedded C multislice
 
 ### 1.2
+- [x] ssh to cluster 
 - [x] Include tilt
 ### 1.1
 - [x] Include thermal vibrations

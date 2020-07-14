@@ -19,16 +19,38 @@ Main info :
 - Atoms per unit cell : 128
 - discrete angles :[ 0.          7.12501635 14.03624347 26.56505118 36.86989765 45. 56.30993247 63.43494882 71.56505118 80.53767779]
 
+<!-- [<img src="/projects/multislice/figures/biotin/biotin_m0_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/biotin_m0_autoslic_pattern.png) |  -->
+
 
 ### Full rotational study
-102=07.12deg | 201=26.56deg | 801=56.30deg
-------------- | ------------ | ------------
-[<img src="/projects/multislice/figures/biotin102.png" width="250" />](/projects/multislice/figures/biotin102.png) | [<img src="/projects/multislice/figures/biotin201.png" width="250" />](/projects/multislice/figures/biotin201.png) | [<img src="/projects/multislice/figures/biotin801.png" width="250" />](/projects/multislice/figures/biotin801.png)
+$07^{\circ}$ |$14^{\circ}$ |$26^{\circ}$
+------------ |------------ |------------
+[<img src="/projects/multislice/figures/biotin/biotin102.png" width="250" />](/projects/multislice/figures/biotin102.png) | [<img src="/projects/multislice/figures/biotin/biotin101.png" width="250" />](/projects/multislice/figures/biotin/biotin101.png) | [<img src="/projects/multislice/figures/biotin/biotin201.png" width="250" />](/projects/multislice/figures/biotin201.png)
+[<img src="/projects/multislice/figures/biotin/biotin_m1_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/biotin_m1_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/biotin_m2_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/biotin_m2_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/biotin_m3_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/biotin_m3_autoslic_pattern.png)
 
-102=07.12deg | 201=26.56deg | 801=56.30deg
-------------- | ------------ | ------------
-[<img src="/projects/multislice/figures/biotin_0_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin_0_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin_1_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin_1_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin_2_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin_2_autoslic_pattern.png)
+$36^{\circ}$ | $45^{\circ}$ | $56^{\circ}$
+------------ | ------------ | ------------
+[<img src="/projects/multislice/figures/biotin/biotin301.png" width="250" />](/projects/multislice/figures/biotin/biotin301.png) | [<img src="/projects/multislice/figures/biotin/biotin401.png" width="250" />](/projects/multislice/figures/biotin/biotin401.png) | [<img src="/projects/multislice/figures/biotin/biotin601.png" width="250" />](/projects/multislice/figures/biotin/biotin601.png)
+[<img src="/projects/multislice/figures/biotin/biotin_m4_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/biotin_m4_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/biotin_m5_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/biotin_m5_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/biotin_m6_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/biotin_m6_autoslic_pattern.png)
 
+$63^{\circ}$ | $71^{\circ}$ | $80^{\circ}$
+------------ | ------------ | ------------
+[<img src="/projects/multislice/figures/biotin/biotin801.png" width="250" />](/projects/multislice/figures/biotin/biotin801.png) | [<img src="/projects/multislice/figures/biotin/biotin1201.png" width="250" />](/projects/multislice/figures/biotin/biotin1201.png) | [<img src="/projects/multislice/figures/biotin/biotin2401.png" width="250" />](/projects/multislice/figures/biotin/biotin2401.png)
+[<img src="/projects/multislice/figures/biotin/biotin_m7_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/biotin_m7_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/biotin_m8_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/biotin_m8_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/biotin_m9_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/biotin_m9_autoslic_pattern.png)
+
+
+
+### tilts run
+The tilt parameter can be used to simulate small crystal tilt [below $10^{\circ}$](/readings/multislice/#chendyck1997).
+Below, 10 simulations in the $[001]$ configuration with a tilt step of $1^{\circ}$.
+
+0 |1 |2 |3 |4
+--|--|--|--|--
+[<img src="/projects/multislice/figures/biotin/tilts_tilt0_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt0_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt1_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt1_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt2_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt2_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt3_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt3_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt4_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt4_autoslic_pattern.png)
+
+5 |6 |7 |8 |9
+--|--|--|--|--
+[<img src="/projects/multislice/figures/biotin/tilts_tilt5_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt5_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt6_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt6_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt7_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt7_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt8_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt8_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt9_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt9_autoslic_pattern.png)
 
 
 ## BCC-Li test structure

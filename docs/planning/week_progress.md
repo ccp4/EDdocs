@@ -1,33 +1,24 @@
-#week 26
+#week 29
 ## Monday
-- nearBragg : attempt 2 layer diffraction
-- latychevskaia2019 : analytical for elastic scattering only
+- multislice : [tilts run](/projects/multislice/applications#tilts-run)
 
 ## Tuesday
-- propagation green's func + cascaded Fresnel convolution on real pb
+- multislice : [angle run](/projects/multislice/applications#full-rotational-study)
 
-##Wednesday
-- multi_2D seems to work
 
-##Thursday
-- multi_2D python class
-
-##Friday
-- multi_2D
-    - tilt implement and tests
-    - unbound projected potential with varying thickness  
-    - compare Bloch
-    - compare BPM
-
-- multislice:
-    - run and compare 100+10, 101
-    - TDS get wobble parameters
+## TODO
 - readings :
     - small molecule paper
     - finish ChenDyck1997
 
-#TODO
+- multi_2D
+    - compare Bloch
+    - compare BPM
+
 - Multislice :
+    - biotin
+        - run and compare 100+10, 101
+        - TDS get wobble parameters
     - Development
         - Proper tests
         - Documentation with sphinx

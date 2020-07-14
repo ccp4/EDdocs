@@ -1,9 +1,21 @@
 # week summary
 
+#week28
+- OFF
+
+#week27
+- presentation + meetings
+- OFF from Thursday
+
+#week26
+- nearBragg : attempt 2 layer diffraction
+- latychevskaia2019 : analytical for elastic scattering only
+- multi_2D + unbound projected potential with varying thickness  
+
 #week25
 - Multislice:
     - 2D solver
-    - [0,45,90] orientations runs for biotin 
+    - [0,45,90] orientations runs for biotin
 
 #week24
 - readings : [multislice literature](/readings/multislice) especially DyckChen1997
