@@ -375,3 +375,21 @@
 - multi_2D python class
 ##Friday
 - multi_2D : unbound projected potential with varying thickness  
+
+#week 29
+## Monday
+- multislice : [tilts run](/projects/multislice/applications#tilts-run)
+## Tuesday
+- multislice : [angle run](/projects/multislice/applications#full-rotational-study)
+## Wednesday
+- [Abstract](/planning/abstract.pdf) and presentation script
+- Charge flipping algo [Chapuis](https://www.epfl.ch/schools/sb/research/iphys/teaching/crystallography/charge-flipping/) and [SUPERFLIP](/articles/chapuis_superflip.pdf) from physicsToday2017
+## Thursday
+- SCD prepare Friday presentation
+## Friday
+- Presentation SCD pre-coffee talk
+- probation checklist
+- Confidentiality training
+- GDPR training : General Data Protection Regulation
+- HomeSecurity training
+- CyberAwarness training

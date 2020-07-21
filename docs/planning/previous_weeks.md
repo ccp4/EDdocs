@@ -1,4 +1,10 @@
 # week summary
+#week29
+- multislice
+    - [tilts run](/projects/multislice/applications#tilts-run)
+    - [angle run](/projects/multislice/applications#full-rotational-study)
+- [Abstract](/planning/abstract.pdf) and presentation script.
+- Charge flipping algo [Chapuis](https://www.epfl.ch/schools/sb/research/iphys/teaching/crystallography/charge-flipping/) and [SUPERFLIP](/articles/chapuis_superflip.pdf) from physicsToday2017
 
 #week28
 - OFF

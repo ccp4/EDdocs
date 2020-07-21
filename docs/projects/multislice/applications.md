@@ -1,7 +1,7 @@
 # Applications
 
 
-[<img src="/projects/multislice/figures/biotin_vesta.png" style="float: right;" width="250" /> ](/projects/multislice/figures/biotin_vesta.png)
+[<img src="/projects/multislice/figures/biotin/biotin_vesta.png" style="float: right;" width="250" /> ](/projects/multislice/figures/biotin_vesta.png)
 ## Biotin
 Main info :
 

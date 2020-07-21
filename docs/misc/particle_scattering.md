@@ -20,6 +20,18 @@ $\sigma_{th}=\frac{P}{1/2\epsilon_0c|\mathbf E|^2}$ :
 
 where $r_e=2.818~fm$ is the classical radius of the electron.
 
+<!-- \begin{equation}
+    \sigma_{th} = \frac{8\pi}{3}r_e^2 = 66fm^2
+\end{equation} -->
+
+\begin{equation}
+    \sigma_{th} \approx 1.87\times10^6Z^{4/3}(c/v)^2 = 5\times 10^7 fm^2
+\end{equation}
+
+<!--
+\begin{equation}
+P_{scattered} = \sigma\phi_{incident}
+\end{equation} -->
 
 ## Classical collision
 

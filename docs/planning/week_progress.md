@@ -1,19 +1,16 @@
-#week 29
+#week30
 ## Monday
-- multislice : [tilts run](/projects/multislice/applications#tilts-run)
-
-## Tuesday
-- multislice : [angle run](/projects/multislice/applications#full-rotational-study)
-
+- Literature review structure solved with microED
+- QtBloch
 
 ## TODO
 - readings :
     - small molecule paper
     - finish ChenDyck1997
-
 - multi_2D
     - compare Bloch
     - compare BPM
+    - FD library
 
 - Multislice :
     - biotin
