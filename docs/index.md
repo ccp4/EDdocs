@@ -1,6 +1,5 @@
 # CCP4-ED
 
-
 ## Goals
 Contribute to the CCP4 Advanced integrated approaches to macromolecular structure determination.
 
@@ -11,23 +10,28 @@ Contribute to the CCP4 Advanced integrated approaches to macromolecular structur
 
 - [Abstract](/planning/abstract.pdf)
 - [Presentation 2020-06-29.pdf](/planning/2020-01-29_WP2.pdf) and [Slides](/planning/2020-01-29_WP2.odp)
+- [2020-07-17.pdf](/planning/2020-07_RALFT.pdf)
 
 ## Latest
-- multislice :
-    - [tilts run](/projects/multislice/applications#tilts-run)
-    - [angle run](/projects/multislice/applications#full-rotational-study)
-- multislice vs Fresnel convolution
-- [multi_2D](/projects/multislice/#multislice-2d)
+
 
 ## Look ahead
+- compare nearBragg with multislice : where does nanobragg fit in ?  
+- reasonable accuracy in the corrections
+- lyzozyme protein
+- mosaicity papers + microED paper sizes
+- smv format : convert data to smv with nearBragg  
+contains intensities, viewer does linear scale mapping  
+- continuous rotation integration over steps
+
+
+## Last week
 - CCP4 training : 28/07
 - Scaling algorithm
 - presentation RAL Friday
-
-## Last week
-- Collision approach : [ poisson distribution](/projects/dynamical_diffraction/#collision-approach)
-- nearBragg  2nd path length attempt
-
+- multislice vs Fresnel convolution
+- FD
+- palatinus charge flip :PEDT (no gonyometre) traditional moving towards    
 
 ## Questions
 - molecular replacement : model comes from different space group  

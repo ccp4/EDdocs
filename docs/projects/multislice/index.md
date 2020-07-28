@@ -156,4 +156,14 @@ Structure N(white), Si(black) | Slices [001] | Exit image magnitude
 [<img src="figures/Si3N4.png" width="400" />](figures/Si3N4.png) | [<img src="figures/Si3N4rect.png" width="200" />](figures/Si3N4rect.png) | [<img src="figures/Si3N4exit_mag.png" width="200" />](figures/Si3N4exit_mag.png)
 
 
-## multislice 2D 
+## multislice 2D
+Performing the convolution by direct integration, using the small angle approximation :
+\begin{equation}
+  \Psi(x,z_0+\Delta z) = \int_{-\delta x}^{\delta x} p(X,\Delta z) t(x-X,z_0)\Psi(X,z_0) dX
+\end{equation}
+
+where $\delta x=\Delta z\theta$ with $\theta=0.1rad$ small angle and the Fresnel propagator $p(x,y,\Delta z)=\frac{1}{i\lambda\Delta z}e^{ik_0\frac{x^2}{2\Delta z}}$, with $k_0=200keV$ and $\Delta z=25A$
+
+transmission | propagator | $\Psi(x,z_0+\Delta z)$
+------------ | ---------- | ----------------------
+[<img src="figures/fresnelT.svg" width="400" />](figures/fresnelT.svg) | [<img src="figures/fresnelP.svg" width="400" />](figures/fresnelP.svg) | [<img src="figures/fresnelX.svg" width="400" />](figures/fresnelX.svg)

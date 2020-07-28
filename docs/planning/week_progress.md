@@ -1,16 +1,37 @@
 #week30
 ## Monday
 - Literature review structure solved with microED
-- QtBloch
+
+## Tuesday
+- qutip Bloch complicated
+- started course on TEM coursera
+
+## Wednesday
+## Thursday
+## Friday
+- Electrical safety certificate
+
+#week31
+#Monday
+- [comparison Holton](/projects/nearBragg/#comparison-with-holton) minor differences : solid_angle, pixel offset, X/Z reverse
+- pyNearBragg [green vs Fresnel vs Fraunhofer](/projects/nearBragg/#path-length-estimate)
+- pyNearBragg_fraunhofer vs multi2D
+- convolution
 
 ## TODO
 - readings :
-    - small molecule paper
-    - finish ChenDyck1997
+    - [ ] small molecule paper
+    - [ ] finish ChenDyck1997
+    - [ ] mosaicity
 - multi_2D
-    - compare Bloch
-    - compare BPM
-    - FD library
+    - [ ] Bloch
+    - [ ] BPM/FD with periodic boundary conditions
+    - [ ] nearBragg (nanoBragg difference)
+    - [ ] tilt
+    - [ ] real convolution
+- multislice
+    - [ ] lyzozyme
+    - [ ] smv format
 
 - Multislice :
     - biotin
@@ -26,6 +47,7 @@
     - Sweep bcc :
         - wobble and long range disorders
         - sampling vs supercell
+
 ## misc
 - **1 thread per simulation flag**
     - Implement multithreads access to fftw

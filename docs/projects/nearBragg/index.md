@@ -6,7 +6,9 @@ on their path difference to a detector.
 
 Source file format : x,y,z, O,B,P
 
-## Parameters
+## Holton
+
+### Parameters
 
 Type                | parameters | default (m)
 ----- --------------|----------- | ----------
@@ -21,8 +23,7 @@ Type                | parameters | default (m)
                     |scale, roi
 **print**           |noprogress, printout, accumulate
 
-## Code structure
-
+### Code structure
 
 ```
 double fluence = 1.25932015286227e+29;//incident flux in particles/m^2 */
@@ -36,7 +37,7 @@ double omega_Rsqr_pixel = pixel*pixel*distance/airpath;//m^2
 floatimage[j] += I/steps*omega_Rsqr_pixel*fluence*r_e_sqr;
 ```
 
-## Monte-Carlo style
+### Monte-Carlo style
 
 Mutliple and inelastic scattering :
 
@@ -46,7 +47,7 @@ Mutliple and inelastic scattering :
 
 
 
-## mosaicity
+### mosaicity
 [nanobragg]https://bl831.als.lbl.gov/~jamesh/nanoBragg/)
 
 According to [wiki](https://en.wikipedia.org/wiki/Mosaicity), dynamical diffraction is often negligible when high level of mosaicity is involved.
@@ -56,3 +57,33 @@ According to [wiki](https://en.wikipedia.org/wiki/Mosaicity), dynamical diffract
 - `mosaic_seed=argv[mosaic_seed]` : random-number seed for mosaic domain generation (default: 1234567)
 - `mosaic_umats` : rotation matrix
 - `mosaic_missets` and `missets_seeds`
+
+
+
+## pyCode
+### Comparison with Holton
+- solid_angle detector
+- pixel offset
+- X/Z reverse
+- no scattering form factor
+
+pattern | Intensity
+------- | ---------
+[<img src="/projects/nearBragg/figures/comparisonHoltonPattern.svg" width="350" /> ](/projects/nearBragg/figures/comparisonHoltonPattern.svg) | [<img src="/projects/nearBragg/figures/comparisonHolton.svg" width="350" /> ](/projects/nearBragg/figures/comparisonHolton.svg)
+
+### Path length estimate
+The path length may be computed with the following increasing level of approximations:
+
+\begin{eqnarray}
+R_{ij}
+      &\underset{Greens}{=}& \sqrt{\left(x-x_0\right)^2+\left(z-z_0\right)^2} \\
+       &\underset{Fresnel}{\approx}&     \left(z_0-z\right) + \frac{\left(x-x_0\right)^2}{2\left(z_0-z\right)} \\
+       &\underset{Fraunhofer}{\approx}&  \left(z_0-z\right) + \frac{x_0^2}{2\left(z_0-z\right)} - \frac{xx_0}{\left(z_0-z|\right)} \approx \\
+\end{eqnarray}
+
+Note that the path length from the source the to atom is $z$ for planar illumination.
+
+
+comparison | error
+---------- | ---------
+[<img src="/projects/nearBragg/figures/path_length.svg" width="350" /> ](/projects/nearBragg/figures/path_length.svg) | [<img src="/projects/nearBragg/figures/path_length_diff.svg" width="350" /> ](/projects/nearBragg/figures/path_length_diff.svg)
