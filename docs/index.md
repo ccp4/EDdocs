@@ -13,7 +13,8 @@ Contribute to the CCP4 Advanced integrated approaches to macromolecular structur
 - [2020-07-17.pdf](/planning/2020-07_RALFT.pdf)
 
 ## Latest
-
+- [comparison Holton](/projects/nearBragg/#comparison-with-holton) minor differences : solid_angle, pixel offset, X/Z reverse
+- pyNearBragg [green vs Fresnel vs Fraunhofer](/projects/nearBragg/#path-length-estimate)
 
 ## Look ahead
 - compare nearBragg with multislice : where does nanobragg fit in ?  

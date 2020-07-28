@@ -393,3 +393,14 @@
 - GDPR training : General Data Protection Regulation
 - HomeSecurity training
 - CyberAwarness training
+
+#week30
+## Monday
+- Literature review structure solved with microED
+## Tuesday
+- qutip Bloch complicated
+- started course on TEM coursera
+## Wednesday
+## Thursday
+## Friday
+- Electrical safety certificate

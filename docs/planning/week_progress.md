@@ -1,16 +1,3 @@
-#week30
-## Monday
-- Literature review structure solved with microED
-
-## Tuesday
-- qutip Bloch complicated
-- started course on TEM coursera
-
-## Wednesday
-## Thursday
-## Friday
-- Electrical safety certificate
-
 #week31
 #Monday
 - [comparison Holton](/projects/nearBragg/#comparison-with-holton) minor differences : solid_angle, pixel offset, X/Z reverse

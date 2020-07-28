@@ -1,4 +1,11 @@
 # week summary
+
+#week30
+- started course on TEM coursera
+- qutip Bloch complicated
+- [comparison Holton](/projects/nearBragg/#comparison-with-holton) minor differences : solid_angle, pixel offset, X/Z reverse
+- pyNearBragg [green vs Fresnel vs Fraunhofer](/projects/nearBragg/#path-length-estimate)
+
 #week29
 - multislice
     - [tilts run](/projects/multislice/applications#tilts-run)
