@@ -39,6 +39,7 @@ nav:
      - 'Advanced computing in EM, Kirkland, 2010' : 'readings/Kirkland2010.md'
      - 'Papers' : 'readings/papers.md'
      - 'Multislice Literature' : 'readings/multislice.md'
+     - 'CowleyMoodie1957' : 'readings/CowleyMoodie1957.md'
  - 'Planning':
      - 'Week progress' : 'planning/week_progress.md'
      - 'Previous weeks' : 'planning/previous_weeks.md'

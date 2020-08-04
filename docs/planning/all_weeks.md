@@ -404,3 +404,17 @@
 ## Thursday
 ## Friday
 - Electrical safety certificate
+
+#week31
+#Monday
+- [comparison Holton](/projects/nearBragg/#comparison-with-holton) minor differences : solid_angle, pixel offset, X/Z reverse
+- pyNearBragg [green vs Fresnel vs Fraunhofer](/projects/nearBragg/#path-length-estimate)
+- pyNearBragg_fraunhofer vs multi2D
+- convolution
+# Wednesday
+- multi2D thickness with overlap
+# Thursday
+- Cowley Moodie paper
+- WG2
+# Friday
+- Coursera week3

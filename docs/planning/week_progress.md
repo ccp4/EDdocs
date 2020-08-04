@@ -1,9 +1,8 @@
-#week31
+#week32
 #Monday
-- [comparison Holton](/projects/nearBragg/#comparison-with-holton) minor differences : solid_angle, pixel offset, X/Z reverse
-- pyNearBragg [green vs Fresnel vs Fraunhofer](/projects/nearBragg/#path-length-estimate)
-- pyNearBragg_fraunhofer vs multi2D
-- convolution
+- coursera week 4
+
+
 
 ## TODO
 - readings :

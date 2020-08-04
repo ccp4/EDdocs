@@ -1,6 +1,19 @@
 # weekly meeting
+##week28 notes 
+- molecular replacement : model comes from different space group  
+- defects : affects dynamical diffraction more  
+- Experimental ED for proteins established ? (100 PDB ED data):
+    - yonekura membrane ED (not as good as X-ray but even then solved with ED )
+    - technology not as advanced as X-ray
+- Theoretical:
+    - broad effect of dynamical diffraction can be corrected for improving structure determination
+    - mosaicity ruled out
+    - lattice bending (no systematic)
+    - radiation damage
+    - biotin(no solvent)
+- eBIC : real data for biotin
 
-##week23 
+##week23
 - difference maps : indicates potential sites where atoms might be missing
 
 

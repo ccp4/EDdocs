@@ -3,7 +3,7 @@
 - [ClabbersGrueneAbrahams2017](clabbersgrueneabrahams2017) : Protein structure determination by ED of 3D nanocrystal using Molecular Replacement and standard X-ray protein crystallography software.
 - [LatychevskaiaAbrahams2019](#latychevskaiaabrahams2019) : Inelastic scattering and solvent scattering significantly mitigate the effect of dynamical diffraction.
 - [SubrimanianSpence2015](#subramanianspence2015) : Simulation predicts dynamical diffraction too strong at thickness above 100-200nm.
-- [CowleyMoodie1957](#cowleymoodie1957) : Original paper on multislice.
+- [CowleyMoodie1957](/readings/CowleyMoodie1957) : Original [paper](/articles/CowleyMoodie1957.pdf) on multislice.
 
 ##ClabbersGrueneAbrahams2017
 **Protein structure determination by ED of 3D nanocrystal(Experimental) : dimeric polymorph hen egg-white lyzozyme (Diffracting volume $0.14\mu m^3$) using Molecular Replacement from monomeric polylalanine model and standard X-ray protein crystallography software.**
@@ -60,6 +60,8 @@ Multislice details (ZMULT package) :
 <img src="/readings/subramanian2015/intensity.png" width="250" /> | <img src="/readings/subramanian2015/density.png" width="150" /> | <img src="/readings/subramanian2015/max_error.png" width="140" /> | <img src="/readings/subramanian2015/thickness_limit.png" width="200" />
 
 ##CowleyMoodie1957
+
+
 The response to an incident wave of immediately after passing through
 slice $z_i$ is in the non relativistic case :
 \begin{equation}

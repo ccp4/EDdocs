@@ -1,4 +1,9 @@
 # week summary
+#week 31
+- coursera week2,3,4
+- CowleyMoodie1957 reread after 6 months
+- WG2 meeting
+- pyNearBragg_fraunhofer vs multi2D (strenght of potential through form factors hence no curvature)
 
 #week30
 - started course on TEM coursera
