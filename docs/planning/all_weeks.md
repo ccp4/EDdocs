@@ -418,3 +418,16 @@
 - WG2
 # Friday
 - Coursera week3
+
+#week32
+##Monday
+- coursera week 4
+##Tuesday
+- coursera week 5
+##Wednesday
+- coursera week 6
+##Thursday
+- coursera week 7
+- dials session
+##Friday
+- coursera week 8

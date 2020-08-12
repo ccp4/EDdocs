@@ -1,8 +1,5 @@
-#week32
-#Monday
-- coursera week 4
-
-
+#week33
+## Monday 
 
 ## TODO
 - readings :

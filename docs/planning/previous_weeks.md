@@ -1,4 +1,7 @@
 # week summary
+#week 32
+- coursera finished course
+
 #week 31
 - coursera week2,3,4
 - CowleyMoodie1957 reread after 6 months
