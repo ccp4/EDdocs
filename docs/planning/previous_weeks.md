@@ -1,4 +1,9 @@
 # week summary
+#week 33
+- nearBragg Fraunhofer vs multi_2D beam intensities  
+- Near Bragg direct beam intensity prediction
+- kinematic multi_2D ewald sphere
+
 #week 32
 - coursera finished course
 
