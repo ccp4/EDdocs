@@ -78,7 +78,7 @@ The path length may be computed with the following increasing level of approxima
 R_{ij}
       &\underset{Greens}{=}& \sqrt{\left(x-x_0\right)^2+\left(z-z_0\right)^2} \\
        &\underset{Fresnel}{\approx}&     \left(z_0-z\right) + \frac{\left(x-x_0\right)^2}{2\left(z_0-z\right)} \\
-       &\underset{Fraunhofer}{\approx}&  \left(z_0-z\right) + \frac{x_0^2}{2\left(z_0-z\right)} - \frac{xx_0}{\left(z_0-z|\right)} \approx \\
+       &\underset{Fraunhofer}{\approx}&  \left(z_0-z\right) + \frac{x_0^2}{2\left(z_0-z\right)} - \frac{xx_0}{\left(z_0-z\right)}  \\
 \end{eqnarray}
 
 Note that the path length from the source the to atom is $z$ for planar illumination.

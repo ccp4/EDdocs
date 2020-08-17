@@ -431,3 +431,14 @@
 - dials session
 ##Friday
 - coursera week 8
+
+#week33
+## Monday
+- multi_vs_nearBragg Fraunhofer kind of agree
+## Tuesday
+- multi nb experimenting
+## Wednesday
+## Thursday
+- Near Bragg direct beam intensity prediction
+## Friday
+- kinematic multi_2D

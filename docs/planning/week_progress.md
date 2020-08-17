@@ -1,5 +1,18 @@
 #week33
-## Monday 
+## Monday
+- multi_vs_nearBragg Fraunhofer kind of agree
+
+## Tuesday
+- multi nb experimenting
+
+## Wednesday
+- ??
+
+## Thursday
+- Near Bragg direct beam intensity prediction
+
+## Friday
+- kinematic multi_2D
 
 ## TODO
 - readings :
@@ -32,7 +45,7 @@
         - sampling vs supercell
 
 ## misc
-- **1 thread per simulation flag**
+- 1 thread per simulation flag
     - Implement multithreads access to fftw
     - Force 1 thread on splines?
 - integration/spot broadening
