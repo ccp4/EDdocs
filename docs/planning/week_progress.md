@@ -1,18 +1,12 @@
-#week33
+#week36
 ## Monday
-- multi_vs_nearBragg Fraunhofer kind of agree
-
+- off
 ## Tuesday
-- multi nb experimenting
-
+- off
 ## Wednesday
-- ??
-
+- off
 ## Thursday
-- Near Bragg direct beam intensity prediction
-
-## Friday
-- kinematic multi_2D
+- setup bodycentered simu for tilted runs
 
 ## TODO
 - readings :

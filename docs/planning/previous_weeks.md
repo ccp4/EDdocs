@@ -1,5 +1,10 @@
 # week summary
-#week 33
+#week35
+- meeting CCP9
+- fixed fig.show issue on tarik-CCP4 due to Qt5 installation pb
+- Run tilted simulation with Ewald sphere analysis
+
+#week 33/34
 - nearBragg Fraunhofer vs multi_2D beam intensities  
 - Near Bragg direct beam intensity prediction
 - kinematic multi_2D ewald sphere

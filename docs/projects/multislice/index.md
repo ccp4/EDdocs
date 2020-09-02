@@ -39,11 +39,12 @@ The multislice approach solves the [fast electron Schrodinger's equation](/readi
 where $\nu_{\Delta_z}=\int_z^{z+\Delta z}V(x,y,z^{'})dz^{'}$ and $\sigma$ is the interaction parameter. Note that by neglecting the second order derivative of the envelope function, this equation assumes that the potential is small compared to the incident beam energy.
 
 Due to the exponentiation operator this must be approximated as :
-\begin{equation}
-  \Psi(z+\Delta z) = p(x,y,\Delta z)\ast \Big(t(x,y,z)\Psi(z)\Big) +\mathcal O(\Delta z^2\nu_{\Delta z})
-\end{equation}
+\begin{eqnarray}
+  \Psi(z+\Delta z) &=& p(x,y,\Delta z)\ast \Big(t(x,y,z)\Psi(z)\Big) +\mathcal O(\Delta z^2\nu_{\Delta z}) \\
+  &\approx& FFT^{-1}\Bigg\{P(k_x,k_y;\Delta z) FFT\Big(t\Psi\Big) \Bigg\}
+\end{eqnarray}
 
-where $t(x,y,z)=e^{i\sigma\nu_{\Delta z}}$ is the transmission function, $p(x,y,\Delta z)\ast = e^{i\lambda/4\pi\Delta z\grad^2_{xy}}$ is the propagator operator with $p(x,y,\Delta z)=\frac{1}{i\lambda\Delta z}e^{ik_0\frac{x^2+y^2}{2\Delta z}}$ the **Fresnel propagator** function.
+where $t(x,y,z)=e^{i\sigma\nu_{\Delta z}}$ is the transmission function, $p(x,y,\Delta z)\ast = e^{i\lambda/4\pi\Delta z\grad^2_{xy}}$ is the propagator operator with $p(x,y,\Delta z)=\frac{1}{i\lambda\Delta z}e^{ik_0\frac{x^2+y^2}{2\Delta z}}$ the **Fresnel propagator** function and its Fourier transform $P(k_x,k_y;\Delta z)=e^{-i\pi\lambda\Delta z(k_x^2+k_y^2)}$.
 
 ### Interaction parameter
 
@@ -154,16 +155,3 @@ with 14 atoms per unit cell ($Si_6N_8$) with rectangular super unit cell $a_0\ti
 Structure N(white), Si(black) | Slices [001] | Exit image magnitude
 ------------------------------|--------------|----------------------
 [<img src="figures/Si3N4.png" width="400" />](figures/Si3N4.png) | [<img src="figures/Si3N4rect.png" width="200" />](figures/Si3N4rect.png) | [<img src="figures/Si3N4exit_mag.png" width="200" />](figures/Si3N4exit_mag.png)
-
-
-## multislice 2D
-Performing the convolution by direct integration, using the small angle approximation :
-\begin{equation}
-  \Psi(x,z_0+\Delta z) = \int_{-\delta x}^{\delta x} p(X,\Delta z) t(x-X,z_0)\Psi(X,z_0) dX
-\end{equation}
-
-where $\delta x=\Delta z\theta$ with $\theta=0.1rad$ small angle and the Fresnel propagator $p(x,y,\Delta z)=\frac{1}{i\lambda\Delta z}e^{ik_0\frac{x^2}{2\Delta z}}$, with $k_0=200keV$ and $\Delta z=25A$
-
-transmission | propagator | $\Psi(x,z_0+\Delta z)$
------------- | ---------- | ----------------------
-[<img src="figures/fresnelT.svg" width="400" />](figures/fresnelT.svg) | [<img src="figures/fresnelP.svg" width="400" />](figures/fresnelP.svg) | [<img src="figures/fresnelX.svg" width="400" />](figures/fresnelX.svg)
