@@ -443,6 +443,18 @@
 ## Friday
 - kinematic multi_2D
 
+#week34
+## Monday
+- 2 beam exact
+## Tuesday
+- multi2D tilt implemented
+## Wednesday
+- git rebase
+## Thursday
+- ?
+## Friday
+- ?
+
 #week35
 ## Monday
 - off
