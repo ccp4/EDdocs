@@ -1,6 +1,6 @@
 #Papers Multislice orientation
 
-- [chenDyck1997](#chendick1997) : Multislice Method for Large Beam Tilt with Application to HOLZ Effects in Triclinic and Monoclinic Crystals
+- [ChenDyck1997](#chendick1997) [paper](/articles/chenDyck1997.pdf) : Multislice Method for Large Beam Tilt with Application to HOLZ Effects in Triclinic and Monoclinic Crystals
 - [Ishizuka 1982](#multislice-formula-for-inclined-illumination) : Multislice Formula for Inclined Illumination  
 - [xHREM](https://www.hremresearch.com/index.html) with [manual](/books/xHREM_manual.pdf) and [p32](/books/xHREM_inclined.pdf) for inclined illumination implementation.
 
@@ -24,3 +24,13 @@ with beam-tilt
   \frac{\dP\varphi(x,y,z)}{\dP_z} =
     \Big\{\frac{i}{4\pi k_z}\grad^2_{xy} + \frac{k}{k_z}i\sigma V(x,y,z) + \frac{i\pi\bb K_u^2}{k_z} \Big\} \varphi(x,y,z)
 \end{equation}
+
+resulting in solution :
+\begin{equation}
+  \varphi_n^{\bb K_u}(x,y) \approx
+    \exp\Big\{\Delta z\left(
+      \frac{i}{4\pi k_z}\grad^2_{xy}
+      - \lambda\bb K_u\cdot\grad - \frac{i\pi\bb K_u^2}{k}
+    \right)\Big\}e^{i\sigma\nu_{z,n}(x,y)}\varphi^{\bb K_u}_{n-1}(x,y,z)
+\end{equation}
+where $\epsilon=$
