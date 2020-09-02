@@ -442,3 +442,18 @@
 - Near Bragg direct beam intensity prediction
 ## Friday
 - kinematic multi_2D
+
+#week35
+## Monday
+- off
+## Tuesday
+ - off
+## Wednesday
+- meeting
+- fixed fig.show issue on tarik-CCP4 due to Qt5 installation pb
+- Run tilted simulation with Ewald sphere analysis
+## Thursday
+- setup bodycentered simu for tilted runs
+- meeting ED department
+## Friday
+- Fresnel propagator fail
