@@ -27,6 +27,7 @@ nav:
      #- 'Overview' : 'projects/index.md'
      - 'Applications' : 'projects/multislice/applications.md'
      - 'Temsim' : 'projects/multislice/temsim.md'
+     - 'Mulitslice 2D' : 'projects/multislice/multi2D.md'
      - 'NearBragg' : 'projects/nearBragg/index.md'
      #- 'Wallpapers' : 'projects/wallpapers/index.md'
  - Theory:
