@@ -14,21 +14,10 @@ Contribute to the CCP4 Advanced integrated approaches to macromolecular structur
 - [slides WG2 2020-07-30](/planning/2020-07_WG2.pdf)
 
 ## Latest
-
+- [2 beam](/projects/multislice/multi2D/#2-beam-dynamical-diffraction) rocking curves with tilted runs (pendullosung thickness still an issue)  
 
 ## Look ahead
-- change the mathematical slides
-- parameter landscape
-
-- compare nearBragg with multislice : where does nanobragg fit in ?  
-- reasonable accuracy in the corrections
-- lyzozyme protein
-- mosaicity papers + microED paper sizes
-- smv format : convert data to smv with nearBragg  
-contains intensities, viewer does linear scale mapping  
-- continuous rotation integration over steps#
-
-
+- literature on microED and ED data
 
 ## Last week
 - [comparison Holton](/projects/nearBragg/#comparison-with-holton) minor differences : solid_angle, pixel offset, X/Z reverse
@@ -36,3 +25,9 @@ contains intensities, viewer does linear scale mapping
 
 ## Questions
 - libraries for bloch wave or FD simulator
+- compare nearBragg with multislice : where does nanobragg fit in ?  
+- reasonable accuracy in the corrections
+- lyzozyme protein
+- smv format : convert data to smv with nearBragg  
+contains intensities, viewer does linear scale mapping  
+- continuous rotation integration over steps#

@@ -14,13 +14,36 @@ transmission | propagator | $\Psi(x,z_0+\Delta z)$
 
 
 ## 2-beam dynamical diffraction
-### Simple square
-Structure is simple square with atom 2 oriented along the [10 1] axis. The configuration of the Ewald sphere and the beam intensities for $g=1$ and $g=2$ is shown below for weak potential and strong potential. In both cases, dynamical diffraction for the strongly excited beam is present but the kinematic regime is broken for lower crystal thickness for strong potential.
+### Setup
+The structure is simple primitive square lattice with unique atom $Z_a=2$.
+The crystal is oriented along the [10 1] direction as shown in fig1-a which requires simulating a 10x10 super cell. For this case, the accelerated voltage has been voluntary chosen $E=3.75keV$ to allow for more Ewald sphere curvature.
+The configuration of the Ewald sphere is shown in fig1-b where the blue dots correspond to the reciprocal lattice rotated by $0.1rad$ from the zone axis [1 0] and the black dots correspond to the reciprocal lattice of the super cell setup.
+The beam intensities for $g=1$ and $g=2$ as a function of crystal thickness is shown in fig1-c.
 
-Ewald configuration | weak potential | strong potential
-------------------- | -------------- | ----------------
-[<img src="/projects/multislice/figures/multi2D/fresnelT.svg" width="400" />](figures/multi2D/fresnelT.svg) | [<img src="/projects/multislice/figures/fresnelP.svg" width="400" />](figures/multi2D/fresnelP.svg) | [<img src="/projects/multislice/figures/multi2D/fresnelX.svg" width="400" />](figures/multi2D/fresnelX.svg)
+Potential | Ewald configuration | Diffraction pattern | Beams intensities
+--------- | ------------------- | ------------------- | -----------------
+[<img src="/projects/multislice/figures/multi2D/2_beam_fv.png" width="180" />](figures/multi2D/2_beam_fv.png) | [<img src="/projects/multislice/figures/multi2D/2_beam_E.svg" width="180" />](figures/multi2D/2_beam_E.svg) | [<img src="/projects/multislice/figures/multi2D/2_beam_Iq.svg" width="180" />](figures/multi2D/2_beam_Iq.svg) |   [<img src="/projects/multislice/figures/multi2D/2_beam_Iz.svg" width="180" />](figures/multi2D/2_beam_Iz.svg)
 
+### Extinction distance
+Below, the same simulation is run for different potential strengths.  
+Beam $g_1$ is not at the exact Bragg condition and its intensity with crystal thickness is mostly due to Ewald sphere curvature. Indeed, the oscillation period is independent of the potential strength and mostly depends on excitation error.
 
-### Centered square tilted
-Rocking curves are simulated by running many simulations by increasing tilt from 0 to 1 degree.
+On the other hand, the beam $g_2$ being close to the Bragg condition, its extinction distance is sensitive to the strength of the potential.
+For this strongly excited beam, dynamical diffraction is present at all potential strengths but the kinematic regime is extended to larger crystal thickness at weaker potential.
+
+$g_1$ | $g_2$ | $\zeta_g$
+----- | ----- | ---------
+[<img src="/projects/multislice/figures/multi2D/2_beam_I1.svg" width="400" />](figures/multi2D/2_beam_I1.svg) | [<img src="/projects/multislice/figures/multi2D/2_beam_I2.svg" width="400" />](figures/multi2D/2_beam_I2.svg) |  [<img src="/projects/multislice/figures/multi2D/2_beam_xi.svg" width="400" />](figures/multi2D/2_beam_xi.svg)
+
+### Rocking curve
+Rocking curves are simulated by running simulations with various beam tilt angles ranging from 0 to 0.08 degrees.
+
+The actual exact Bragg condition is satisfied for the $\theta_c=0.0385^{\circ}$.
+At this tilt angle, the Pendullosung thickness can be measured on the $I_b(z)$ giving $\zeta_g=293nm$.
+The [analytical](/projects/dynamical_diffraction/#2-beam-configuration) approach would give $\zeta_g=\pi/\sigma f_v(\theta_i,Z_a)$.
+
+The rocking curves around $\theta_c$ are characteristic of 2-beam theory and shown for $z=[0.25,0.5,0.75,1,1.25,1.5]\zeta_g$.
+
+Rocking curves | $I_g(z)$ at $\theta_c$
+-------------- | ----------------------
+[<img src="/projects/multislice/figures/multi2D/2_beam_rocking.svg" width="400" />](figures/multi2D/2_beam_rocking.svg) | [<img src="/projects/multislice/figures/multi2D/2_beam_Itheta_c.svg" width="400" />](figures/multi2D/2_beam_Itheta_c.svg)

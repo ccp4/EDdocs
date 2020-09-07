@@ -469,3 +469,16 @@
 - meeting ED department
 ## Friday
 - Fresnel propagator fail
+
+#week36
+## Monday
+- off
+## Tuesday
+- off
+## Wednesday
+- off
+## Thursday
+- 2 beam revisited and documented
+- 2 beam rocking curves with tilted runs (pendullosung thickness still an issue)  
+## Friday
+- 3-beam theory literature

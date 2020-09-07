@@ -13,7 +13,7 @@ where :
 - $\sigma$ the interaction parameter (in $rad/kVA$).
 - $v_g$ the Fourier components (in $V$).
 
-## 2-beam approximation
+## 2-beam configuration
 
 In [Bloch theory](/readings/Kirkland2010/#bloch-waves) using 2 beams approximation gives the intensity as :
 \begin{equation}

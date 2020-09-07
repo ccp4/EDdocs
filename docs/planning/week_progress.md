@@ -6,7 +6,13 @@
 ## Wednesday
 - off
 ## Thursday
+- 2 beam revisited and documented
+- 2 beam rocking curves with tilted runs (pendullosung thickness still an issue)  
+## Friday
 - setup bodycentered simu for tilted runs
+- 3-beam theory
+- defects vacancy, bending, TDS
+- solvent scattering
 
 ## TODO
 - readings :

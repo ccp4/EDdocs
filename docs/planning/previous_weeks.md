@@ -1,4 +1,7 @@
 # week summary
+#week36
+- [2 beam](/projects/multislice/multi2D/#2-beam-dynamical-diffraction) rocking curves with tilted runs (pendullosung thickness still an issue)  
+
 #week35
 - meeting CCP9
 - fixed fig.show issue on tarik-CCP4 due to Qt5 installation pb
