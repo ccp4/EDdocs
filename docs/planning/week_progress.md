@@ -1,18 +1,25 @@
-#week36
+#week 37
 ## Monday
-- off
+- write document summary  
+
 ## Tuesday
-- off
+- nearBragg vs Multi2D review
+
 ## Wednesday
-- off
-## Thursday
-- 2 beam revisited and documented
-- 2 beam rocking curves with tilted runs (pendullosung thickness still an issue)  
-## Friday
+- Finish 2-beam+potential_strength effect document summary  
+  - Redo 2-beam Iq at the exact Bragg condition.
+  - Redo rocking curves with proper label
+  - redo zeta_g, labels h=1,2
+- finish nearBragg doc
+- near bragg 2-layers
+- literature
+- meeting
+## Wednesday
+- solvent scattering
 - setup bodycentered simu for tilted runs
 - 3-beam theory
 - defects vacancy, bending, TDS
-- solvent scattering
+
 
 ## TODO
 - readings :
