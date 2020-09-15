@@ -2,11 +2,11 @@
 \newcommand{\path}{../../../mygit/_Latex/}
 \input{\path StdPack.tex}
 \usepackage{\path cmds}
+\usepackage{url}
+\newcommand{\bibTitle}[1]{``#1''}
 \graphicspath{{figures/}}
 
 \begin{document}
-
-
 \title{Simulation of Dynamical Scattering Effect in Macromolecular Electron Diffraction Patterns}
 \author{Tarik Drevon, David Waterman, Eugene Krissinel}
 
@@ -228,7 +228,7 @@ The rocking curves around $\theta_c$ are characteristic of 2-beam theory and sho
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \section{Near Bragg : Hydrid particle-wave approach}
-An alternative approach to the multislice algorithm consists in solving~\eqref{eq:FESE} approximately using an extension of the kinematic theory to multiple scattering.
+An alternative approach to the multislice algorithm consists in solving~\eqref{eq:FESE} approximately using an extension of the kinematic theory to multiple scattering. This method is called near-bragg (NB) and initially developed for X-rays~\cite{Holton}.
 
 Each atom scatter the incident electron beam according to its electron-atom scattering cross section. The path length of the incident beam is computed and interference at computed at selected pixels on a detector some distance away from the sample.
 
@@ -255,74 +255,160 @@ It is written with increasing level of approximations as :
 R_{ij}
       &\underset{Greens}{=}& \sqrt{\left(x-x_0\right)^2+\left(z-z_0\right)^2} \\
        &\underset{Fresnel}{\approx}&     \left(z_0-z\right) + \frac{\left(x-x_0\right)^2}{2\left(z_0-z\right)} \\
-       &\underset{Fraunhofer}{\approx}&  \left(z_0-z\right) + \frac{x_0^2}{2\left(z_0-z\right)} - \frac{xx_0}{\left(z_0-z\right)}  \\
+       &\underset{Fraunhofer}{\approx}&  \left(z_0-z\right) + \frac{x_0^2}{2z_0} - \frac{xx_0}{z_0}  \\
 \end{eqnarray}
+where $x_0,z_0$ are the pixel positions and $x,z$ are the atom position.
+For planar illumination, the path length from the source the to atom $j$ is $z$ and must be added to the path length.
 
-For planar illumination, the path length from the source the to atom $j$ is $z$ and must be added to the path length in the expo
+The angle of scattering is determined with $\sin(\theta)=|x-x_0|/|z-z_0|$ so the atomic form factor $f(k_0\sin(\theta))$ is used to apply the correct contribution to the scattering amplitude at that pixel.
+
+
+This is the kinematic implementation of the Near-Bragg algorithm.
+The validity of the kinematic approximation is established by comparing NB to MS with a simple square structure with lattice constants $a_x=10,b_z=5$ with $100\times100$ unit cells.
+The strenght of the potential is varied to observe the onset of dynamical diffraction.
+
+figure~\ref{fig:MSvsNBweak} shows a comparison between MS and NB for a weak potential $\eps=0.001$.
 
 
 \begin{figure}[h!]
-	\begin{subfigure}{\textwidth}
+	\begin{subfigure}{0.24\textwidth}
 		\centering
-		\begin{subfigure}{0.45\textwidth}
-			\centering
-      \def\svgwidth{\columnwidth}
-			\input{figures/2_beam_rocking.pdf_tex}
-			\caption{}\label{fig:2_beam_rocking}
-		\end{subfigure}
-		\begin{subfigure}{0.45\textwidth}
-			\centering
-      \def\svgwidth{\columnwidth}
-			\input{figures/2_beam_Itheta_c.pdf_tex}
-			\caption{}\label{fig:2_beam_Itheta_c}
-		\end{subfigure}
-  \end{subfigure}
-	\caption[2-beam extinction]{
-		\ref{fig:2_beam_rocking} Rocking curves obtained at sample thickness $z_{thick}=\left(0.25,0.5,0.75,1,1.25,1.5\right)\zeta_g$.
-		\ref{fig:2_beam_Itheta_c} Beam intensities for $h=0,1,2$ as function of sample thickness for crystal rotation $0.1+\theta_c$ where beam $h=2$ is at the exact Bragg condition.
-	}\label{fig:2_beam_rocking}
+    \def\svgwidth{\columnwidth}
+		\input{figures/MSvsNBweak_V.pdf_tex}
+		\caption{}\label{fig:MSvsNBweak_V}
+	\end{subfigure}
+	\begin{subfigure}{0.24\textwidth}
+		\centering
+    \def\svgwidth{\columnwidth}
+		\input{figures/MSvsNBweak_Iz.pdf_tex}
+		\caption{}\label{fig:MSvsNBweak_Iz}
+	\end{subfigure}
+  \begin{subfigure}{0.24\textwidth}
+		\centering
+    \def\svgwidth{\columnwidth}
+		\input{figures/MSvsNBweak_Bz.pdf_tex}
+		\caption{}\label{fig:MSvsNBweak_Bz}
+	\end{subfigure}
+	\begin{subfigure}{0.24\textwidth}
+		\centering
+    \def\svgwidth{\columnwidth}
+		\input{figures/MSvsNBweak_I.pdf_tex}
+		\caption{}\label{fig:MSvsNBweak_I}
+	\end{subfigure}
+
+	\caption[MS vs NB weak]{
+		\ref{fig:MSvsNBweak_V} weak potential strength $\eps=0.001$.
+		\ref{fig:MSvsNBweak_Iz} Evolution of diffraction pattern as function of thickness.
+		\ref{fig:MSvsNBweak_Bz} Evolution of major beam intensities as function of thickness.
+		\ref{fig:MSvsNBweak_I} comparison of diffraction patterns $t=50nm$ for NB and MS.
+	}\label{fig:MSvsNBweak}
+\end{figure}
+
+figure~\ref{fig:MSvsNBstrong} shows a comparison between MS and NB for a strong potential strength $\eps=0.1$.
+
+
+\begin{figure}[h!]
+	\begin{subfigure}{0.24\textwidth}
+		\centering
+    \def\svgwidth{\columnwidth}
+		\input{figures/MSvsNBstrong_V.pdf_tex}
+		\caption{}\label{fig:MSvsNBstrong_V}
+	\end{subfigure}
+	\begin{subfigure}{0.24\textwidth}
+		\centering
+    \def\svgwidth{\columnwidth}
+		\input{figures/MSvsNBstrong_Iz.pdf_tex}
+		\caption{}\label{fig:MSvsNBstrong_Iz}
+	\end{subfigure}
+  \begin{subfigure}{0.24\textwidth}
+		\centering
+    \def\svgwidth{\columnwidth}
+		\input{figures/MSvsNBstrong_Bz.pdf_tex}
+		\caption{}\label{fig:MSvsNBstrong_Bz}
+	\end{subfigure}
+	\begin{subfigure}{0.24\textwidth}
+		\centering
+    \def\svgwidth{\columnwidth}
+		\input{figures/MSvsNBstrong_I.pdf_tex}
+		\caption{}\label{fig:MSvsNBstrong_I}
+	\end{subfigure}
+
+	\caption[MS vs NB strong]{
+		\ref{fig:MSvsNBstrong_V} weak potential strength $\eps=0.5$.
+		\ref{fig:MSvsNBstrong_Iz} Evolution of diffraction pattern as function of thickness.
+		\ref{fig:MSvsNBstrong_Bz} Evolution of major beam intensities as function of thickness.
+		\ref{fig:MSvsNBstrong_I} comparison of diffraction patterns $t=50nm$ for NB and MS.
+	}\label{fig:MSvsNBstrong}
 \end{figure}
 
 
-% comparison | error
-% ---------- | ---------
-% [<img src="/projects/nearBragg/figures/path_length.svg" width="350" /> ](/projects/nearBragg/figures/path_length.svg) | [<img src="/projects/nearBragg/figures/path_length_diff.svg" width="350" /> ](/projects/nearBragg/figures/path_length_diff.svg)
+\subsection{Central beam calculation}
+The MS method computes the intensity of the central beam directly from the forward scattering and the unscattered beam. On the other hand, the NB method only computes the forward scattering contribution to the central beam.
+It is possible to use the concept of scattering cross section to determine the contribution of the unscattered beam.
+
+
+For example, in a continuous medium, the probability of an electron to undergo $m$ elastic collisions and $n$ inelastic collisions after going through a specimen of length $z$ follows the Poisson distribution~\cite{Latychevskaia2019}:
+\begin{equation}\label{eq:PoissonProba}
+  P_{mn}(z) =
+    \frac{1}{m!}\left(\frac{z}{l_e}\right)^me^{-z/l_e}
+    \frac{1}{n!}\left(\frac{z}{l_i}\right)^ne^{-z/l_i}
+\end{equation}
+where $l_e=1/\sigma_e\rho$ is the average elastic collision mean free path $\sigma_e=|f^{(e)}_a|^2$ being the interaction cross section and $f^{(e)}_a$ the atomic elastic scattering factor, $l_i$ the average inelastic collision mean free path and $\rho$ is the number of atoms per unit volume (per unit area in 2D).
+
+For a typical protein, $\rho=106$ atoms per $nm^3$, the average scattering cross section $\sigma_e=0.001-0.005A^2$ (within beam energy range $E=100-1000keV$)  resulting in mean free path on the order of $l_e=200-1000nm$. The corresponding probabilities~\eqref{eq:PoissonProba}are shown figure~\ref{fig:Pcoh_kin_dual_dyn}. It is apparent that for the low 
+
+  \begin{figure}[h!]
+  	\begin{subfigure}{0.32\textwidth}
+  		\centering
+      \def\svgwidth{\columnwidth}
+  		\input{figures/Pcoh_kin_dual_dyn0.pdf_tex}
+  		\caption{}\label{fig:Pcoh_kin_dual_dyn0}
+  	\end{subfigure}
+  	\begin{subfigure}{0.32\textwidth}
+  		\centering
+      \def\svgwidth{\columnwidth}
+  		\input{figures/Pcoh_kin_dual_dyn1.pdf_tex}
+  		\caption{}\label{fig:Pcoh_kin_dual_dyn1}
+  	\end{subfigure}
+    \begin{subfigure}{0.32\textwidth}
+  		\centering
+      \def\svgwidth{\columnwidth}
+  		\input{figures/Pcoh_kin_dual_dyn2.pdf_tex}
+  		\caption{}\label{fig:Pcoh_kin_dual_dyn2}
+  	\end{subfigure}
+
+  	\caption[protein multiple scattering and mean free path]{
+    Probability of no scattering(blue), single scattering, i.e. kinematic scattering(green), double scattering(orange) and multiple scattering(solid black) as a function of crystal thickness for a typical protein crystal with average cross section and mean free path
+  		\ref{fig:Pcoh_kin_dual_dyn0} $\sigma_e=0.001\ang^2$,$l_e=943nm$,
+  		\ref{fig:Pcoh_kin_dual_dyn1} $\sigma_e=0.003\ang^2$,$l_e=377nm$,
+  		\ref{fig:Pcoh_kin_dual_dyn2} $\sigma_e=0.005\ang^2$,$l_e=188nm$.
+  	}\label{fig:Pcoh_kin_dual_dyn}
+  \end{figure}
+
+
+For the simple case of primitive square, there is 1 atom per unit cell and the evolution of the central beam probability is obtained from slice $N$ to slice $N+1$ as :
+\begin{equation}
+  P^{(coh)}_{N+1} =
+    P^{(coh)}_{N}\left(1-\frac{dz}{l_e}\right) =
+    P^{(coh)}_{N}\left(1-\frac{\sigma_e}{a_x}\right)
+\end{equation}
+since $l_e=a_xb_z/\sigma_e$ and $dz=b_z$.
 
 
 
-% The probabilities of an electron to undergo $m$ elastic collisions and $n$ inelastic collisions of mean free path $l_i$ after going through a specimen of length $z$ follows the Poisson distribution :
-% \begin{equation}
-%   P_{mn}(z) =
-%     \frac{1}{m!}\left(\frac{z}{l_e}\right)^me^{-z/l_e}
-%     \frac{1}{n!}\left(\frac{z}{l_i}\right)^ne^{-z/l_i}
-% \end{equation}
-% where
-%
-% - $l_e=1/\sigma_e\rho$ is the average elastic collision mean free path, $\sigma_e=|f^{(e)}_a|^2$ being the interaction cross section and $f^{(e)}_a$ the atomic elastic scattering factor.
-% - $l_i=1/\sigma_i\rho$ is the average inelastic collision mean free path.
-% - $\rho$ is the number of atoms per volume area.
-%
-% [Latychevskaiaabrahams2019](/readings/papers/#latychevskaiaabrahams2019) followed a similar approach where the order of the collisions is considered to determine which sequence of events contribute to Bragg spots. A simplification of her equations considering only 0,1 and more than 1 elastic collisions reads :
-% \begin{eqnarray}
-%   P_{coh}(z+dz) &=& (1-P_e(dz))P_{coh}(z) \\
-%   P_{kin}(z+dz) &=& (1-P_e(dz))P_{kin}+P_e(dz)P_{coh}(z) \\
-%   P_{dyn}(z+dz) &=& P_{dyn}(z) + P_e(z)P_{kin} \\
-% \end{eqnarray}
-%
-% which analytical solutions are the Poisson distribution above. The program [nearBragg](/projects/nearBragg) should follow this statistics. Taking for protein $\rho=106$ atoms per $nm^3$ and $\sigma_e=0.001-0.005A^2$ which covers beam energies $E=100-1000keV$ and protein average scattering powers give mean free paths ranging $l_e=200-1000nm$.
-%
-% small $\sigma_e$ | medium $\sigma_e$ | large $\sigma_e$
-% ---------------- |------------------ | ----------------
-% [<img src="/projects/nearBragg/figures/Pcoh_kin_dyn0.svg" width="350" /> ](/projects/nearBragg/figures/Pcoh_kin_dyn0.svg) | [<img src="/projects/nearBragg/figures/Pcoh_kin_dyn1.svg" width="350" /> ](/projects/nearBragg/figures/Pcoh_kin_dyn1.svg) | [<img src="/projects/nearBragg/figures/Pcoh_kin_dyn2.svg" width="350" /> ](/projects/nearBragg/figures/Pcoh_kin_dyn2.svg)
+\subsection{Double scattering calculation}
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%% End Document
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% End Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
-% \thispagestyle{empty}
-% \mbox{}
-% \newpage
-\bibliographystyle{ieeetr}
 \bibliography{\path library}
+\bibliographystyle{ieeetr}
+	% \bibitem{Holton}
+	% 	J. Holton, \em{Near Bragg algorithm},
+  %   \url{https://bl831.als.lbl.gov/~jamesh/nearBragg/};
 \addcontentsline{toc}{section}{References}
 \end{document}
