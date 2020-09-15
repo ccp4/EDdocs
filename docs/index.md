@@ -4,9 +4,9 @@
 ## Goals
 Contribute to the CCP4 Advanced integrated approaches to macromolecular structure determination.
 ### WP4 BBSRC grant
-- [] Use or develop electron diffraction simulation tools
-- [] Simulate multiple scattering in macromolecular crystals including effects such as mosaicity and disorder
-- [] Identify corrections opportunities at the scaling stage in DIALS
+- [ ] Use or develop electron diffraction simulation tools
+- [ ] Simulate multiple scattering in macromolecular crystals including effects such as mosaicity and disorder
+- [ ] Identify corrections opportunities at the scaling stage in DIALS
 ### Resources
 - [main report](/documents/abstract.pdf)
 - [slides 2020-06-29](/documents/2020-01-29_WP2.pdf)
@@ -28,6 +28,7 @@ Contribute to the CCP4 Advanced integrated approaches to macromolecular structur
 ### Questions
 - Acta crystallographica template
 - Integrate intensity with thickness average rocking curve and crystal thicknesses.
+
 <!-- - libraries for bloch wave or FD simulator
 - compare nearBragg with multislice : where does nanobragg fit in ?  
 - reasonable accuracy in the corrections
