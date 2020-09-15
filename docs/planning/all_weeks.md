@@ -482,3 +482,19 @@
 - 2 beam rocking curves with tilted runs (pendullosung thickness still an issue)  
 ## Friday
 - 3-beam theory literature
+
+#week 37
+## Monday
+- write document summary  
+## Tuesday
+- nearBragg vs Multi2D review
+## Wednesday
+- Finish 2-beam+potential_strength effect document summary  
+- finish nearBragg doc
+- near bragg 2-layers
+- literature
+- meeting
+## Wednesday
+- 3-beam theory
+## Thursday
+## Friday

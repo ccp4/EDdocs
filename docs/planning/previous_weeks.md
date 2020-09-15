@@ -1,4 +1,7 @@
 # week summary
+- write document summary for 2-beam
+- complete implement NB-double scattering  
+
 #week36
 - [2 beam](/projects/multislice/multi2D/#2-beam-dynamical-diffraction) rocking curves with tilted runs (pendullosung thickness still an issue)  
 
