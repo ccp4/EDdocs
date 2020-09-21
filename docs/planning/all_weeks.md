@@ -498,3 +498,16 @@
 - 3-beam theory
 ## Thursday
 ## Friday
+
+#week 38
+## Monday
+- write central beam prediction
+- implement double scattering NB
+## Tuesday
+- investigate double scattering issue
+## Wednesday
+- Implement correction to double scattering and compare to MS
+## Thursday
+- Compare central beam in kinematic approx(issue with constructive interference term)
+## Friday
+- NB double scattering doc+impl

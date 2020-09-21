@@ -1,4 +1,10 @@
 src
 docs/books
 docs/articles
+
 reports/
+docs/documents/report/figures
+*.log
+*.aux
+*.toc
+*.blg

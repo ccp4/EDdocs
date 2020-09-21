@@ -39,6 +39,7 @@ nav:
      - 'Advanced TEM, Zuo, Spence, 2017' : 'readings/Spence2017.md'
      - 'Advanced computing in EM, Kirkland, 2010' : 'readings/Kirkland2010.md'
      - 'Papers' : 'readings/papers.md'
+     - 'Misc' : 'readings/misc_papers.md'
      - 'Multislice Literature' : 'readings/multislice.md'
      - 'CowleyMoodie1957' : 'readings/CowleyMoodie1957.md'
  - 'Planning':

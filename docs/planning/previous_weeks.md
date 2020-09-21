@@ -1,4 +1,9 @@
-# week summary
+#week 38
+- work on main [report](/documents/report.pdf)
+- nearBragg central beam calculation
+- nearBragg double scattering bookkeeping
+
+#week37
 - write document summary for 2-beam
 - complete implement NB-double scattering  
 

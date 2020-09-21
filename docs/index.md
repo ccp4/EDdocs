@@ -8,22 +8,19 @@ Contribute to the CCP4 Advanced integrated approaches to macromolecular structur
 - [ ] Simulate multiple scattering in macromolecular crystals including effects such as mosaicity and disorder
 - [ ] Identify corrections opportunities at the scaling stage in DIALS
 ### Resources
-- [main report](/documents/abstract.pdf)
+- [main report](/documents/report/report.pdf)
 - [slides 2020-06-29](/documents/2020-01-29_WP2.pdf)
 - [slides Pre-coffee talk 2020-07-17](/documents/2020-07_RALFT.pdf)
 - [slides WG2 2020-07-30](/documents/2020-07_WG2.pdf)
 
 ## News
 ### Latest
-- [main report update](/documents/abstract.pdf)
-- near-bragg double scattering
+- [main report update](/documents/report.pdf)
 
 ### Look ahead
-- fix near-bragg double scattering
-- literature on microED and ED data
+- fix near-bragg
 
 ### Last week
-- [2 beam](/projects/multislice/multi2D/#2-beam-dynamical-diffraction) rocking curves with tilted runs (pendullosung thickness still an issue)  
 
 ### Questions
 - Acta crystallographica template

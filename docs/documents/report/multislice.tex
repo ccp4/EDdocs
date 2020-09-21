@@ -1,0 +1,208 @@
+% \documentclass[a4paper,10pt]{article}
+% \newcommand{\path}{../../../../mygit/_Latex/}
+% \input{\path StdPack.tex}
+% \usepackage{\path cmds}
+% \usepackage{url}
+% \newcommand{\bibTitle}[1]{``#1''}
+% \graphicspath{{figures/}}
+% \begin{document}
+
+\section{Multislice algorithm}\label{chap:MS}
+
+The multislice approach solves Schrodinger's equation for the incident electron beam assuming its kinetic energy is far greater than the specimen potential. This results in the real space fast electron Schrodinger's equation \cite{Kirkland2019}:
+\begin{equation}\label{eq:FESE}
+  \frac{\dP\Psi(x,y,z)}{\dP_z} =
+    \Big\{\frac{i\lambda}{4\pi}\grad^2_{xy} + i\sigma V(x,y,z)\Big\} \Psi(x,y,z)
+\end{equation}
+where $\Psi$ is the elctron wavefunction,
+$V(x,y,z)$ the specimen potential and
+$\sigma=2\pi m_0e\lambda/h^2$($rad/kV\ang$) the interaction parameter, $\lambda$ being the relativistic electron wavelength, $m_0$ the electron rest mass, $e$ the elementary charge and $h$ plank's constant.
+
+A direct integration along the incident beam direction $z$ gives :
+\begin{equation}
+  \Psi(z+\Delta z) = \Psi(z)
+  \exp\left(i\lambda/4\pi\Delta z\grad^2_{xy}\right)
+  \exp\left(i\sigma\nu_{\Delta z}(x,y,z)\right)
+\end{equation}
+where $\nu_{\Delta_z}=\int_z^{z+\Delta z}V(x,y,z^{'})dz^{'}$
+is the projected potential.
+
+The exponentiation operator can be approximated as a propagator convolution :
+\begin{equation}\label{eq:MS_conv}
+  \Psi(x,y;z+\Delta z) = p(x,y;\Delta z)\ast\Big(t(x,y,z)\Psi(x,y;z)\Big)
+  +\mathcal O(\Delta z^2\nu_{\Delta z})
+\end{equation}
+where $t(x,y;z)=e^{i\sigma\nu_{\Delta z}}$ is the transmission function, and $p(x,y;\Delta z)=\frac{1}{i\lambda\Delta z}e^{ik_0\frac{x^2+y^2}{2\Delta z}}$ the Fresnel propagator.
+
+Since convolutions can be very efficiently computed using the Fourier transform convolution theorem, the multislice algorithm is performed in practice as :
+\begin{equation}\label{eq:MS_FFT}
+  \Psi(x,y;z+\Delta z) \approx FFT^{-1}\Bigg\{
+    P(k_x,k_y;\Delta z) FFT\Big(t(x,y;z)\Psi(x,y;z)\Big)
+  \Bigg\}
+\end{equation}
+where $P(k_x,k_y;\Delta z)=e^{-i\pi\lambda\Delta z(k_x^2+k_y^2)}$ is the Fresnel Propagator Fourier transform, $FFT$ and $FFT^{-1}$ being the Fourier transform and its inverse.
+
+In microED, the incident wave function is usually a plane wave which integrates to 1 over the transverse plane $(x,y)$.
+
+It is possible for reasonably small tilt angles $\theta_t\leq<5^{\circ}$\cite{ChenDyck1997} to simulate tilted crystals\cite{Ishizuka1982,ChenDyck1997} by using a propagator $P(k_x,k_y;\Delta z)=e^{-i\pi\lambda\Delta z(k_x^2+k_y^2)}$.
+
+
+
+\newpage
+\section{Application to 2-beam theory}\label{chap:2_beam_theory}
+The effect of dynamical diffraction can be demonstrated using the 2-beam configuration problem. In this configuration, 2 beams (a central beam $\bb o$ and a diffracted beam $\bb g$) are at the Bragg condition while all other beams are far from the Bragg condition hence very weakly excited.
+
+In 2 beam theory~\cite{ZuoSpence2016}, the intensity of the non central beam should be :
+\begin{equation}\label{eq:I_dyn2}
+  I_{dyn-2}(S_g;t,\xi_g) =
+    \frac{\sin^2\left(\frac{\pi t}{\xi_g}
+    \sqrt{1+S_g^2\xi_g^2}\right)}{1+S_g^2\xi_g^2}
+\end{equation}
+where $S_g$($\ang^{-1}$) is the excitation error i.e. the distance in reciprocal space between $q=\sin\theta/\lambda$ and the location of Bragg beam $\bb g$.
+$t$($\ang$) is the thickness,
+$\xi_g=k_0/U_g$ (in $\ang$) is the Pendellosung thickness .
+$k_0=1/\lambda$ (in $\ang$) the incident electron wave number ,
+$U_g=2me/h^2 v_g$(in $\ang^{-2}$) the structure factor and $v_g$ (in $V$) the electrostaic potential Fourier components of Bragg beam $\bb g$.
+
+In contrast, in the kinematic case :
+\begin{equation}\label{eq:I_kin}
+  I_{kin}(S_g;t,v_g) = \left(\sigma v_g t\right)^2\
+  \frac{\sin^2\left(\pi S_gt\right)}{\pi S_g t}
+\end{equation}
+where $\sigma v_g=\pi/\xi_g$ so that \eqref{eq:I_kin} is a limit case of \eqref{eq:I_dyn2} for large $\xi_g$ i.e. weak potential.
+
+
+
+
+
+\subsection{Simulation setup}
+
+For illustrative purposes, a simple 2D monoatomic primitive square lattice of side $a=2\AA$ is simulated with MS.
+The crystal is oriented along the $[10 1]$ axis. Due to periodic boundary conditions imposed by the MS algorithm, this requires simulating a $10\times10$ super cell as shown in the electrostatic potential map figure~\ref{fig:2_beam_V}.
+The accelerated voltage is voluntary chosen at $E=3.75keV$ to allow for  Ewald sphere curvature. The configuration of the Ewald sphere is shown figure~\ref{fig:2_beam_E} where the blue dots correspond to the original reciprocal lattice rotated by $0.1rad$ from the zone axis $[1 0]$ and the black dots correspond to the reciprocal lattice of the $10\times10$ super cell setup. The blue dots indicate miller indices $h=0,1,2$ where $h=0$ and $h=2$ are at the Bragg condition.
+
+\begin{figure}[h!]
+	\begin{subfigure}{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{2_beam_fv.png}
+		\caption{}\label{fig:2_beam_V}
+	\end{subfigure}
+	\begin{subfigure}{0.45\textwidth}
+		\centering
+    \def\svgwidth{\columnwidth}
+		\input{figures/2_beam_E.pdf_tex}
+		\caption{}\label{fig:2_beam_E}
+	\end{subfigure}
+
+	\caption[2-beam configuration]{
+		\ref{fig:2_beam_V} Electrostatic potential map for the $10\times10$ super cell (Blue area).
+		\ref{fig:2_beam_E} Ewald circle configuration with $E=3.75keV$. Original reciprocal lattice (blue dots) rotated by $0.1rad$ from the zone axis $[1 0]$ and reciprocal lattice of the $10x10$ super cell (black dots).
+	}\label{fig:2_beam_config}
+\end{figure}
+
+
+The diffraction pattern is shown~\ref{fig:2_beam_P} and the major beam intensities as a function of crystal thickness are shown in figure~\ref{fig:2_beam_B} where clear oscillations appear for the excited beam pair $h=0,2$.
+
+\begin{figure}[h!]
+  \begin{subfigure}{0.45\textwidth}
+    \centering
+    \def\svgwidth{\columnwidth}
+    \input{figures/2_beam_Iq.pdf_tex}
+    \caption{}\label{fig:2_beam_P}
+  \end{subfigure}
+  \begin{subfigure}{0.45\textwidth}
+    \centering
+    \def\svgwidth{\columnwidth}
+    \input{figures/2_beam_Iz.pdf_tex}
+    \caption{}\label{fig:2_beam_B}
+  \end{subfigure}
+\caption[2-beam diffraction]{
+  \ref{fig:2_beam_P} 2 beam diffraction pattern.
+  \ref{fig:2_beam_B} Beam intensity as function of sample thickness.
+}\label{fig:2_beam_diff}
+\end{figure}
+
+
+
+\subsection{Extinction distance}
+
+The same simulation is run for different potential strengths corresponding to different atoms. A very weak potential can also be used to mimic the X-ray diffraction pattern.
+
+In figure~\ref{fig:2_beam_I1} the Beam $g_1$ is not at the exact Bragg condition and its intensity with crystal thickness is mostly due to Ewald sphere curvature. Indeed, the oscillation period is independent of the potential strength and mostly depends on excitation error.
+
+On figure~\ref{fig:2_beam_I2}, on the other hand, the beam for $h=2$ is at the Bragg condition and its extinction distance is sensitive to the strength of the potential.
+For this strongly excited beam, dynamical diffraction is present at all potential strengths but the kinematic regime is extended to larger crystal thickness at weaker potential.
+
+\begin{figure}[h!]
+	\begin{subfigure}{\textwidth}
+		\centering
+		\begin{subfigure}{0.3\textwidth}
+			\centering
+      \def\svgwidth{\columnwidth}
+			\input{figures/2_beam_I1.pdf_tex}
+			\caption{}\label{fig:2_beam_I1}
+		\end{subfigure}
+		\begin{subfigure}{0.3\textwidth}
+			\centering
+      \def\svgwidth{\columnwidth}
+			\input{figures/2_beam_I2.pdf_tex}
+			\caption{}\label{fig:2_beam_I2}
+		\end{subfigure}
+		\begin{subfigure}{0.3\textwidth}
+			\centering
+      \def\svgwidth{\columnwidth}
+			\input{figures/2_beam_xi.pdf_tex}
+			\caption{}\label{fig:2_beam_xi}
+		\end{subfigure}
+  \end{subfigure}
+	\caption[2-beam extinction]{
+    Evolution of the
+		\ref{fig:2_beam_I1} In
+	}\label{fig:2_beam_zeta}
+\end{figure}
+
+
+\subsection{Rocking curve}
+Rocking curves are simulated by running simulations varying the beam tilt angles from 0 to 0.08 degrees.
+
+The actual exact Bragg condition is satisfied for the $\theta_c=0.0385^{\circ}$.
+At this tilt angle, the Pendullosung thickness can be measured on the $I_b(z)$ giving $\zeta_g=293nm$.
+The analytical approach would give $\zeta_g=\pi/\sigma f_v(\theta_i,Z_a)$.
+
+The rocking curves around $\theta_c$ are characteristic of 2-beam theory and shown for $z_{thick}=\left(0.25,0.5,0.75,1,1.25,1.5\right)\zeta_g$.
+
+\begin{figure}[h!]
+	\begin{subfigure}{\textwidth}
+		\centering
+		\begin{subfigure}{0.45\textwidth}
+			\centering
+      \def\svgwidth{\columnwidth}
+			\input{figures/2_beam_rocking.pdf_tex}
+			\caption{}\label{fig:2_beam_rocking}
+		\end{subfigure}
+		\begin{subfigure}{0.45\textwidth}
+			\centering
+      \def\svgwidth{\columnwidth}
+			\input{figures/2_beam_Itheta_c.pdf_tex}
+			\caption{}\label{fig:2_beam_Itheta_c}
+		\end{subfigure}
+  \end{subfigure}
+	\caption[2-beam extinction]{
+		\ref{fig:2_beam_rocking} Rocking curves obtained at sample thickness $z_{thick}=\left(0.25,0.5,0.75,1,1.25,1.5\right)\zeta_g$.
+		\ref{fig:2_beam_Itheta_c} Beam intensities for $h=0,1,2$ as function of sample thickness for crystal rotation $0.1+\theta_c$ where beam $h=2$ is at the exact Bragg condition.
+	}\label{fig:2_beam_rocking}
+\end{figure}
+
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % End Document
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \newpage
+% \bibliography{\path library}
+% \bibliographystyle{ieeetr}
+% 	% \bibitem{Holton}
+% 	% 	J. Holton, \em{Near Bragg algorithm},
+%   %   \url{https://bl831.als.lbl.gov/~jamesh/nearBragg/};
+% \addcontentsline{toc}{section}{References}
+% \end{document}

@@ -1,0 +1,39 @@
+\documentclass[a4paper,10pt]{article}
+\newcommand{\path}{../../../../mygit/_Latex/}
+\input{\path StdPack.tex}
+\usepackage{\path cmds}
+\usepackage{url}
+\newcommand{\bibTitle}[1]{``#1''}
+\graphicspath{{figures/}}
+
+\begin{document}
+\title{Simulation of Dynamical Scattering Effect in Macromolecular Electron Diffraction Patterns}
+\author{Tarik Drevon, David Waterman, Eugene Krissinel}
+
+\maketitle
+\addcontentsline{toc}{section}{Contents}
+\tableofcontents
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\input{abstract.tex}
+\newpage
+\input{multislice.tex}
+\newpage
+\input{nearBragg.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% End Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\bibliography{\path library}
+\bibliographystyle{ieeetr}
+	% \bibitem{Holton}
+	% 	J. Holton, \em{Near Bragg algorithm},
+  %   \url{https://bl831.als.lbl.gov/~jamesh/nearBragg/};
+\addcontentsline{toc}{section}{References}
+\end{document}

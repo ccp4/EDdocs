@@ -1,9 +1,8 @@
-#week 38
+#week 39
 ## Monday
-- write central beam prediction
-- implement double scattering NB
-## Tuesday
-- investigate double scattering issue 
+- hamid1990 conducting spheres
+- dynamical diffraction evolution
+- clean report, git version doc
 
 ## TODO
 - readings :
@@ -21,7 +20,7 @@
         - Documentation with sphinx
         - embedded C
         - smv format
-        - multithread fft, no openMP,  no --enable-float
+        - multithread fft, no openMP,  no--enable-float
         - solvent scattering
         - defects vacancy, bending, TDS
       - lyzozyme

@@ -1,0 +1,244 @@
+\documentclass[a4paper,10pt]{article}
+\newcommand{\path}{../../../../mygit/_Latex/}
+\input{\path StdPack.tex}
+\usepackage{\path cmds}
+\usepackage{url}
+\newcommand{\bibTitle}[1]{``#1''}
+\graphicspath{{figures/}}
+\begin{document}
+
+
+
+\section{Near Bragg : Hydrid particle-wave approach}
+An alternative approach to the multislice algorithm consists in solving~\eqref{eq:FESE} approximately using an extension of the kinematic theory to multiple scattering. This method is called near-bragg(NB) and initially developed for X-rays~\cite{Holton}.
+
+Each atom scatter the incident electron beam according to its electron-atom scattering cross section. The path length of the incident beam is computed and interference at computed at selected pixels on a detector some distance away from the sample.
+
+\subsection{Scattering by individual atoms}
+The first order approximation yields the kinematic theory of diffraction also known as first Born approximation. It is a perturbation treatment often used to allow for an analytical treatment. The incident state $\phi$ is used in place of $\Psi$ in the right hand side so that the scattering equation can readily be solved as :
+\begin{equation}
+    \Psi(\bb r)=e^{ikz} + f(\theta)\frac{e^{i\bb k\cdot\bb r}}{|\bb r|}
+\end{equation}
+where :
+\begin{equation}
+    f(\theta) = -\frac{2me}{h^2}\int d^3re^{i\bb q\cdot\bb r}V(r)
+~~\mbox{,     }~~
+    \frac{d\sigma}{d\Omega} = |f(\theta)|^2
+\end{equation}
+
+where $f(\theta)$ is the scattering amplitude, i.e. the Fourier transform of the electrostatic potential.
+In the first Born approximation the far field diffraction pattern is proportional to the square of the scattering amplitude which is known as the differential cross section $\sigma$.
+
+
+\subsection{Central beam calculation}
+With the MS method, the intensity of the central beam corresponds to the sum of the forward scattering beam and the incident coherent unscattered beam.
+On the other hand, NB is based on path length calculation to compute the scattered beams contribution to the diffraction pattern.
+The central unscattered beam and the central forward scattered beam are therefore computed separetely.
+Below, the scattering cross section is used to determine the amount of unscattered beam and will be subsequently used for proper bookeeping in the implementation of double scattering.
+
+\subsubsection{Cross section, mean free path and scattering probabilities}
+In a continuous medium, the probability of an electron to undergo $m$ elastic collisions and $n$ inelastic collisions after going through a specimen of length $z$ follows the Poisson distribution~\cite{Latychevskaia2019}:
+\begin{equation}\label{eq:PoissonProba}
+  P_{mn}(z) =
+    \frac{1}{m!}\left(\frac{z}{l_e}\right)^me^{-z/l_e}
+    \frac{1}{n!}\left(\frac{z}{l_i}\right)^ne^{-z/l_i}
+\end{equation}
+where $l_e=1/\sigma_e\rho$ is the average elastic collision mean free path $\sigma_e=|f^{(e)}_a|^2$ being the interaction cross section and $f^{(e)}_a$ the atomic elastic scattering factor, $l_i$ the average inelastic collision mean free path and $\rho$ is the number of atoms per unit volume (per unit area in 2D).
+
+For a typical protein, $\rho=106$ atoms per $nm^3$, the average scattering cross section $\sigma_e=0.001-0.005A^2$ (within beam energy range $E=100-1000keV$)  resulting in mean free path on the order of $l_e=200-1000nm$. The corresponding probabilities~\eqref{eq:PoissonProba}are shown figure~\ref{fig:Pcoh_kin_dual_dyn}. It is apparent that for the low
+
+  \begin{figure}[h!]
+  	\begin{subfigure}{0.32\textwidth}
+  		\centering
+      \def\svgwidth{\columnwidth}
+  		\input{figures/Pcoh_kin_dual_dyn0.pdf_tex}
+  		\caption{}\label{fig:Pcoh_kin_dual_dyn0}
+  	\end{subfigure}
+  	\begin{subfigure}{0.32\textwidth}
+  		\centering
+      \def\svgwidth{\columnwidth}
+  		\input{figures/Pcoh_kin_dual_dyn1.pdf_tex}
+  		\caption{}\label{fig:Pcoh_kin_dual_dyn1}
+  	\end{subfigure}
+    \begin{subfigure}{0.32\textwidth}
+  		\centering
+      \def\svgwidth{\columnwidth}
+  		\input{figures/Pcoh_kin_dual_dyn2.pdf_tex}
+  		\caption{}\label{fig:Pcoh_kin_dual_dyn2}
+  	\end{subfigure}
+
+  	\caption[protein multiple scattering and mean free path]{
+    Probability of no scattering(blue), single scattering, i.e. kinematic scattering(green), double scattering(orange) and multiple scattering(solid black) as a function of crystal thickness for a typical protein crystal with average cross section and mean free path
+  		\ref{fig:Pcoh_kin_dual_dyn0} $\sigma_e=0.001\ang^2$,$l_e=943nm$,
+  		\ref{fig:Pcoh_kin_dual_dyn1} $\sigma_e=0.003\ang^2$,$l_e=377nm$,
+  		\ref{fig:Pcoh_kin_dual_dyn2} $\sigma_e=0.005\ang^2$,$l_e=188nm$.
+  	}\label{fig:Pcoh_kin_dual_dyn}
+  \end{figure}
+
+
+\subsubsection{Application in Near Bragg}
+
+Considering a primitive orthorombic lattice with parameters $a_x$ $b_z$, a single atom per unit cell, with cross section $\sigma_e$ the probability of the unscattered beam is found at cell $N+1$ from cell $N$ as :
+\begin{equation}\label{eq:centralProbaRect}
+  P^{(coh)}_{N+1} =
+    P^{(coh)}_{N}\left(1-\frac{dz}{l_e}\right) =
+    P^{(coh)}_{N}\left(1-\frac{\sigma_e}{a_x}\right)
+\end{equation}
+where $l_e=a_xb_z/\sigma_e$ and $dz=b_z$. The solution of ~\eqref{eq:centralProbaRect} when $dz\rightarrow 0$ results in ~\eqref{eq:PoissonProba} for $m=0$.
+
+In MS, the intensity $I_0$ is normalized so it integrates to unity over the transverse plane and therefore represents the density of probability of the electron.
+For a structure with a basis and $N_x$ transverse unit cells, the atoms are arranged in slices of $n_k$ atoms.
+The incident plane wave intensity is therefore $I_0=1/N_xa_x$ and the probability of an electron of being unscattered is originally $P^{(coh)}_0=1$ and the other scattering probabilities $P^{(scat)}_0=0$.
+
+The fraction of electrons scattered per unit time by the array of atoms in slice $k$ is
+$P^{(scat)}_k=\sum_{j=1}^{n_k}\sigma_e(j)I_0$.
+The number of unscattered electrons per unit time left after going through the slice $k$ is $P^{(coh)}_{k+1}=P^{(coh)}_k-P^{(scat)}_k$
+and the unscattered intensity after going through the slice is
+$I_0=P^{(coh)}_{k+1}/N_xa_x$.
+The evolution of the probability of an electron for being unscattered at slice $k+1$ after going through slice $k$ is therefore :
+\begin{equation}\label{eq:centralProba}
+  P^{(coh)}_{k+1} = P^{(coh)}_{k}\left(1-\sum_{j=1}^{N_k}\frac{\sigma_e(j)}{N_xa_x}\right)
+\end{equation}
+
+
+
+\subsection{Kinematic calculation}
+In the kinematic approximation, every atom contributes once (single scattering) to the interference pattern at the detector.
+More precisely, the contribution of atom $j$ to the intensity value at detector pixel $i$ is given by the interference term $\exp(ik_0 R_{ij})/R_{ij}$ where  $R_{ij}$ is the path length from atom $j$ to pixel $i$.
+It is written with increasing level of approximations as :
+\begin{eqnarray}
+R_{ij}
+      &\underset{Greens}{=}& \sqrt{\left(x-x_0\right)^2+\left(z-z_0\right)^2} \\
+       &\underset{Fresnel}{\approx}&     \left(z_0-z\right) + \frac{\left(x-x_0\right)^2}{2\left(z_0-z\right)} \\
+       &\underset{Fraunhofer}{\approx}&  \left(z_0-z\right) + \frac{x_0^2}{2z_0} - \frac{xx_0}{z_0}  \\
+\end{eqnarray}
+where $x_0,z_0$ are the pixel positions and $x,z$ are the atom position.
+For planar illumination, the path length from the source the to atom $j$ is $z$ and must be added to the path length.
+
+The angle of scattering is determined with $\sin(\theta)=|x-x_0|/|z-z_0|$ so the atomic form factor $f(k_0\sin(\theta))$ is used to apply the correct contribution to the scattering amplitude at that pixel.
+
+
+The validity of the kinematic approximation is established by comparing NB to MS with a simple square structure with lattice constants $a_x=10,b_z=5$ with $100\times100$ unit cells.
+The strenght of the potential is varied to observe the onset of dynamical diffraction.
+
+Figure~\ref{fig:MSvsNBweak} shows a comparison between MS and NB for a weak potential $\eps=0.001$. In figure~\ref{fig:MSvsNBweak_I}, the agreement for a weak potential between the NB and MS diffraction patterns after $50nm$ propagation is good.
+
+\begin{figure}[h!]
+	\begin{subfigure}{0.24\textwidth}
+		\centering
+    \def\svgwidth{\columnwidth}
+		\input{figures/MSvsNBweak_V.pdf_tex}
+		\caption{}\label{fig:MSvsNBweak_V}
+	\end{subfigure}
+	\begin{subfigure}{0.24\textwidth}
+		\centering
+    \def\svgwidth{\columnwidth}
+		\input{figures/MSvsNBweak_Iz.pdf_tex}
+		\caption{}\label{fig:MSvsNBweak_Iz}
+	\end{subfigure}
+  \begin{subfigure}{0.24\textwidth}
+		\centering
+    \def\svgwidth{\columnwidth}
+		\input{figures/MSvsNBweak_Bz.pdf_tex}
+		\caption{}\label{fig:MSvsNBweak_Bz}
+	\end{subfigure}
+	\begin{subfigure}{0.24\textwidth}
+		\centering
+    \def\svgwidth{\columnwidth}
+		\input{figures/MSvsNBweak_I.pdf_tex}
+		\caption{}\label{fig:MSvsNBweak_I}
+	\end{subfigure}
+
+	\caption[MS vs NB weak]{
+		\ref{fig:MSvsNBweak_V} weak potential strength $\eps=0.001$.
+		\ref{fig:MSvsNBweak_Iz} Evolution of diffraction pattern as function of thickness.
+		\ref{fig:MSvsNBweak_Bz} Evolution of major beam intensities as function of thickness.
+		\ref{fig:MSvsNBweak_I} comparison of diffraction patterns $t=50nm$ for NB and MS.
+	}\label{fig:MSvsNBweak}
+\end{figure}
+
+Figure~\ref{fig:MSvsNBstrong} shows on the other hand, that for a stronger potential strength $\eps=0.5$, the NB kinematic approximation is not acceptable after $50nm$ propagation.
+
+\begin{figure}[h!]
+	\begin{subfigure}{0.24\textwidth}
+		\centering
+    \def\svgwidth{\columnwidth}
+		\input{figures/MSvsNBstrong_V.pdf_tex}
+		\caption{}\label{fig:MSvsNBstrong_V}
+	\end{subfigure}
+	\begin{subfigure}{0.24\textwidth}
+		\centering
+    \def\svgwidth{\columnwidth}
+		\input{figures/MSvsNBstrong_Iz.pdf_tex}
+		\caption{}\label{fig:MSvsNBstrong_Iz}
+	\end{subfigure}
+  \begin{subfigure}{0.24\textwidth}
+		\centering
+    \def\svgwidth{\columnwidth}
+		\input{figures/MSvsNBstrong_Bz.pdf_tex}
+		\caption{}\label{fig:MSvsNBstrong_Bz}
+	\end{subfigure}
+	\begin{subfigure}{0.24\textwidth}
+		\centering
+    \def\svgwidth{\columnwidth}
+		\input{figures/MSvsNBstrong_I.pdf_tex}
+		\caption{}\label{fig:MSvsNBstrong_I}
+	\end{subfigure}
+
+	\caption[MS vs NB strong]{
+		\ref{fig:MSvsNBstrong_V} strong potential strength $\eps=0.5$.
+		\ref{fig:MSvsNBstrong_Iz} Evolution of diffraction pattern as function of thickness.
+		\ref{fig:MSvsNBstrong_Bz} Evolution of major beam intensities as function of thickness.
+		\ref{fig:MSvsNBstrong_I} comparison of diffraction patterns $t=50nm$ for NB and MS.
+	}\label{fig:MSvsNBstrong}
+\end{figure}
+
+
+
+\subsection{Double scattering calculation}
+
+
+
+\begin{figure}[h!]
+	\begin{subfigure}{0.33\textwidth}
+		\centering
+    \def\svgwidth{\columnwidth}
+		\input{figures/NBproba.pdf_tex}
+		\caption{}\label{fig:NBproba}
+	\end{subfigure}
+	\begin{subfigure}{0.33\textwidth}
+		\centering
+    \def\svgwidth{\columnwidth}
+		\input{figures/NBsingle.pdf_tex}
+		\caption{}\label{fig:NBsingle}
+	\end{subfigure}
+  \begin{subfigure}{0.33\textwidth}
+		\centering
+    \def\svgwidth{\columnwidth}
+		\input{figures/NBdouble.pdf_tex}
+		\caption{}\label{fig:NBdouble}
+	\end{subfigure}
+
+	\caption[Near Bragg scattering probabilities]{
+  Scattering probabilities in the Near Bragg implementation
+		\ref{fig:NBproba} global,
+		\ref{fig:NBsingle} single scattering distribution  every 100 slices,
+    \ref{fig:NBdouble} same as~\ref{fig:NBsingle} double scattering.
+	}\label{fig:NBprobabilities}
+\end{figure}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% End Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\bibliography{\path library}
+\bibliographystyle{ieeetr}
+	% \bibitem{Holton}
+	% 	J. Holton, \em{Near Bragg algorithm},
+  %   \url{https://bl831.als.lbl.gov/~jamesh/nearBragg/};
+\addcontentsline{toc}{section}{References}
+\end{document}
