@@ -1,8 +1,9 @@
-#week 39
+#week 40
 ## Monday
-- hamid1990 conducting spheres
-- dynamical diffraction evolution
-- clean report, git version doc
+- KKR and mail Jerome
+- meep with potential like refractive index
+
+
 
 ## TODO
 - readings :

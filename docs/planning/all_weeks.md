@@ -511,3 +511,21 @@
 - Compare central beam in kinematic approx(issue with constructive interference term)
 ## Friday
 - NB double scattering doc+impl
+
+#week 39
+## Monday
+- hamid1990 conducting spheres
+- clean report, git version doc
+## Tuesday
+- dynamical diffraction evolution
+- png2line
+## Wednesday
+- hamid1990 get data for cross section : need all azimuth angles
+- Scattering from single PEC conducting sphere
+## Thursday
+- read Korringa theory
+- py_gmm lib for scattering by multiple spheres  
+- PyMieScatt library for Mie scattering by dielectric spheres
+- iplot4d script
+## Friday
+- GUI visualization

@@ -1,3 +1,6 @@
+#week 39
+- Korringa theory and scattering by multiple spheres
+
 #week 38
 - work on main [report](/documents/report.pdf)
 - nearBragg central beam calculation

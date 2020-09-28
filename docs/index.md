@@ -15,7 +15,7 @@ Contribute to the CCP4 Advanced integrated approaches to macromolecular structur
 
 ## News
 ### Latest
-- [main report update](/documents/report.pdf)
+- [main report update](/documents/report/report.pdf)
 
 ### Look ahead
 - fix near-bragg
