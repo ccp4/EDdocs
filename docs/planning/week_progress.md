@@ -3,7 +3,7 @@
 - KKR and mail Jerome
 - meep with potential like refractive index
 
-
+## Tuesday 
 
 ## TODO
 - readings :
