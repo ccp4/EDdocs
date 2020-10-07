@@ -1,9 +1,10 @@
-#week 40
+#week 41
 ## Monday
-- KKR and mail Jerome
-- meep with potential like refractive index
+- run simu SCcarbone
+- run simu biotin
 
-## Tuesday 
+##Tuesday
+
 
 ## TODO
 - readings :

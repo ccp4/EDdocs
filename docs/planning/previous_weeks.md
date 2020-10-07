@@ -1,3 +1,7 @@
+#week 40
+- .smv format dials import basic set for bcc  
+- Friedel pair symmetry violation mitigation by integrating small rotation angle
+
 #week 39
 - Korringa theory and scattering by multiple spheres
 

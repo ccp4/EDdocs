@@ -529,3 +529,19 @@
 - iplot4d script
 ## Friday
 - GUI visualization
+
+#week 40
+## Monday
+- KKR and mail Jerome
+- meep with potential like refractive index
+## Tuesday
+- literature review
+## Wednesday
+- .smv format dials import basic set for bcc  
+## Thursday
+- integrate simu
+## Friday
+- Friedel pair symmetry violation mitigation by integrating small rotation angle
+- Complete integration
+- mulsilce gif for beams
+- hand build strutures from crystals lib  
