@@ -545,3 +545,39 @@
 - Complete integration
 - mulsilce gif for beams
 - hand build strutures from crystals lib  
+
+#week 41
+## Monday
+- run simu SC_carbone
+- run simu biotin
+## Tuesday
+- change kinematic regime Kirkland
+- high order reflections
+
+#week 42
+- off
+
+#week43
+- off till Friday
+## Friday
+- APR
+
+#week 44
+## Monday
+- Some reading on Cowley Diffraction Physics
+- installing meep
+##Tuesday
+- meep
+  - scattering cone
+  - PyMieScatt dielectric sphere (ED regime for a/lam=50, nref=1.001)
+  - dielectric sphere vs theory (cross and diff cross section )
+  - dielectric array vs hamid1990 (cross section array vs single)
+## Wednesday
+- hamid1990_b dielectric sphere arrays + early implementation
+- complete .smv format
+- Plot expansion spherical decomposition of a plane wave
+##Thursday
+- comment APR
+- Plot expansion spherical decomposition of a plane wave
+## Friday
+- implement translational addition theorem scalar

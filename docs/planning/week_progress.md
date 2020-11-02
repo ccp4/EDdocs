@@ -1,9 +1,10 @@
-#week 41
+#week 45
 ## Monday
-- run simu SCcarbone
-- run simu biotin
-
-##Tuesday
+- implement translational addition theorem vector
+- vector spherical harmonics documentation found ref errors
+- hamid1990 solve system
+## Tuesday
+- compare RCS with single sphere
 
 
 ## TODO

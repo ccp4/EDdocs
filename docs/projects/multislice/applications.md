@@ -53,6 +53,13 @@ Below, 10 simulations in the $[001]$ configuration with a tilt step of $1^{\circ
 [<img src="/projects/multislice/figures/biotin/tilts_tilt5_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt5_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt6_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt6_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt7_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt7_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt8_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt8_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt9_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt9_autoslic_pattern.png)
 
 
+## Simple Cubic Carbone
+
+tilt | Iz | Iz int
+---- | ---------- | ----------
+[<img src="/projects/multislice/figures/SC_tilt.svg" width="250" />](/projects/multislice/figures/SC_tilt.svg) | [<img src="/projects/multislice/figures/SC_Iz.svg" width="250" />](/projects/multislice/figures/SC_Iz.svg) | [<img src="/projects/multislice/figures/SC_Iz_int.svg" width="250" />](/projects/multislice/figures/SC_Iz_int.svg)
+
+
 ## BCC-Li test structure
 The test structure is Cubic Body Centred with Lithium atoms and the beam  direction is along $[001]$ axis.
 

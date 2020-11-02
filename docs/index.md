@@ -15,16 +15,18 @@ Contribute to the CCP4 Advanced integrated approaches to macromolecular structur
 
 ## News
 ### Latest
+- [Simple Cubic Carbone integration](/projects/multislice/applications#simple-cubic-carbone)
+
+### Look ahead
+- fix near-bragg
+- more integration analysis 
+
+### Last week
 - [main report update](/documents/report/report.pdf)
 - Kinematic Ewald effect
     - Week 4 deviation from Bragg scattering [coursera](https://www.coursera.org/learn/microscopy/lecture/o920h/deviation-from-bragg-scattering)
     - [CowleyMoodie1957 p7](/articles/CowleyMoodie1957.pdf)
     - [SubramanianSpence2015](/articles/SubramanianSpence2015.pdf)
-
-### Look ahead
-- fix near-bragg
-
-### Last week
 
 ### Questions
 - Acta crystallographica template

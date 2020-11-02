@@ -1,3 +1,17 @@
+#week 44
+- linear array of EM PEC spheres
+- install meep
+
+#week 43
+- literature review on microED
+
+#week 42
+- off
+
+#week 41
+- run simu SC_carbone
+- run simu biotin
+
 #week 40
 - .smv format dials import basic set for bcc  
 - Friedel pair symmetry violation mitigation by integrating small rotation angle
