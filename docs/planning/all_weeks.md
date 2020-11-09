@@ -581,3 +581,37 @@
 - Plot expansion spherical decomposition of a plane wave
 ## Friday
 - implement translational addition theorem scalar
+
+
+#week 45
+## Monday
+- implement translational addition theorem vector
+- vector spherical harmonics documentation found ref errors
+- hamid1990 build/solve system
+## Tuesday
+- bi and mono RCS with single sphere
+## Wednesday
+- plot and fix vector spherical harmonics
+- adapt bi and mono RCS to built-in VSH
+## Thursday
+- [x] monoRCS, alpha=0,dp=0
+    - plot monoRCS with proper jn,hn definitions monoRCS(N=100 allows to go up to ka=60 a=10lambda)
+    - derive coeffs for sphere_array1 and compare with single sphere
+    - fixed plane $j^-n$ into $j^n$ consistent with hamid1990
+    - fixed error on built-in legendre poly for m>=3
+    - routine for computing total field
+    - routine for plotting N,M in legendre   
+## Friday
+- [x] monoRCS, alpha=0,dp=0
+    - [x] routine for plotting incident,scattering and total field
+    - [x] plot incident vector plane wave spherical expansion and check Ey=Ez=0 (not the case yet)
+## Saturday
+- [x] monoRCS, alpha=0,dp=0
+    - [x] check with built-in legendre poly => Pl1/sin(theta) too bad !!
+    - [x] fix plot incident vector plane wave spherical expansion and check Ez=0 but Ey!=0 (plane wave circularly polarized ?)
+## Sunday
+- [x] monoRCS, alpha=0,dp=0
+    - [x] check Et_theta(r=a)=Et_phi(r=a)=0 (coefficient sum along Et,Ep at r=a)
+    - [x] compute total RCS (good shape but too high needs deriving and checking why)
+    - [x] adapt doc PEC sphere
+    - [x] fix vector plane wave spherical expansion Ey=0 with Mo-jNe

@@ -1,10 +1,10 @@
-#week 45
+#week 46
 ## Monday
-- implement translational addition theorem vector
-- vector spherical harmonics documentation found ref errors
-- hamid1990 solve system
-## Tuesday
-- compare RCS with single sphere
+- [ ] monoRCS, alpha=0,dp>0
+    - [ ] check vectorial translational addition theorem (=>Amnlp are correct)
+- [ ] monoRCS, alpha>0,dp=0
+- plot matrix T
+- prepare presentation
 
 
 ## TODO
