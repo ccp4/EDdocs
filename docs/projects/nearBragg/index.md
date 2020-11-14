@@ -1,4 +1,4 @@
-# Near bragg
+# Near Bragg
 
 
 An [algorithm](https://bl831.als.lbl.gov/~jamesh/nearBragg/) computing the interference patterns of an assembly of scatterers based
@@ -83,7 +83,17 @@ R_{ij}
 
 Note that the path length from the source the to atom is $z$ for planar illumination.
 
+\begin{equation}
+I_l = \Big|\sum_{i=1}^{N} f(\theta_{il})e^{jkR_{il}} \Big|^2
+\end{equation}
 
 comparison | error
 ---------- | ---------
 [<img src="/projects/nearBragg/figures/path_length.svg" width="350" /> ](/projects/nearBragg/figures/path_length.svg) | [<img src="/projects/nearBragg/figures/path_length_diff.svg" width="350" /> ](/projects/nearBragg/figures/path_length_diff.svg)
+
+
+\begin{eqnarray}
+R_{il}
+      &\underset{Greens}{=}& \sqrt{\left(x_i-x_l\right)^2+\left(z_i-z_l\right)^2} \\
+       &\underset{Fraunhofer}{\approx}&  \left(z_l-z_i\right) + \frac{x_l^2}{2\left(z_l-z_i\right)} - \frac{x_ix_l}{\left(z_l-z_i\right)}  \\
+\end{eqnarray}

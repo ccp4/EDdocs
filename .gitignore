@@ -1,10 +1,13 @@
 src
 docs/books
 docs/articles
-
 reports/
+
+#duplicate figures
 docs/documents/report/figures
+docs/documents/report/eqs/
 *.log
 *.aux
 *.toc
 *.blg
+

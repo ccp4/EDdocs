@@ -1,5 +1,35 @@
-# weekly meeting
-##week28 notes 
+# meeting
+
+## Abrahams 11Nov2020
+- inelastic scattering
+    - electron contribute to the bragg spot
+    - thinner crystal for inelastic scattering loss of coherency : better crystal 
+- TDS
+- read ED dials
+- read Clabbers review
+- read dynamical scattering correction
+
+
+## Tim Gruene 10Nov2020
+- power of crystallo ED is we know where the spots should be
+- 77K less cracking !
+- 0.4A glycine. No positions H since contrast C-H?!
+- completeness pb : 90-140deg rotation and low symmetry space group
+    - twisted crystals
+    - nylon fibers to get 5 crystals to complete the data
+- sample preparation :
+    - too many crystals mixtures in Diffraction
+    - Brush sputter, slide grinder, suspension
+- cryo-tomography holder for sensitive samples
+- Instrumentations : CM200,
+- high coherence FEG is bad !!!
+- R values 20% in ED
+- radiation damage reduced with cooling, beam intensity
+- Lukas Palatinus dynamic scattering (scattering factors...)
+- direct method phasing 0.9A
+- defects
+
+## week28 notes
 - molecular replacement : model comes from different space group  
 - defects : affects dynamical diffraction more  
 - Experimental ED for proteins established ? (100 PDB ED data):

@@ -1,11 +1,12 @@
-#week 46
-## Monday
-- [ ] monoRCS, alpha=0,dp>0
-    - [ ] check vectorial translational addition theorem (=>Amnlp are correct)
-- [ ] monoRCS, alpha>0,dp=0
-- plot matrix T
-- prepare presentation
+##Saturday
+- [x] check Ey with phase shift [0.25,0.5]lambda and quiver $\bb E_{r,\theta,\phi}$
+- [ ] check vectorial translational addition theorem (=>Amnlp are correct)
+- [ ] local field at P from sphere Q
+## Sunday
+- [ ] read approximate hamid1990
+- [ ] near Bragg
 
+#week 47
 
 ## TODO
 - readings :

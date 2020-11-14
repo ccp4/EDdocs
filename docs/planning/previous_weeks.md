@@ -1,3 +1,7 @@
+#week 46
+- presentation James Holton
+- presentation Jan Peter Abrahams
+- hamid1990 progress 2PEC spheres
 #week 45
 - hamid1990 solve singlePECsphere mono_rcs,bi_rcs(still issues here) 3d fields, alpha=0,dp=0
 - incident vector plane wave using spherical expansion
@@ -5,7 +9,7 @@
 #week 44
 - linear array of EM PEC spheres
 - install meep
-- smv format 
+- smv format
 
 #week 43
 - literature review on microED

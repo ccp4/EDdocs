@@ -53,6 +53,22 @@ Below, 10 simulations in the $[001]$ configuration with a tilt step of $1^{\circ
 [<img src="/projects/multislice/figures/biotin/tilts_tilt5_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt5_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt6_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt6_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt7_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt7_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt8_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt8_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt9_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt9_autoslic_pattern.png)
 
 
+
+<!-- {% set tilts=/projects/multislice/figures/biotin/tilts_ %} -->
+
+<!-- 1 |2 |3
+--|--|--
+[<img src="/projects/multislice/figures/biotin/tilts_tilt1_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt1_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt2_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt2_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt3_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt3_autoslic_pattern.png)
+
+4 |5 |6
+--|--|--
+[<img src="/projects/multislice/figures/biotin/tilts_tilt4_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt4_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt5_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt5_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt6_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt6_autoslic_pattern.png)
+
+7 |8 |9
+--|--|--
+[<img src="/projects/multislice/figures/biotin/tilts_tilt7_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt7_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt8_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt8_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt9_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt9_autoslic_pattern.png) -->
+
+
 ## Simple Cubic Carbone
 
 tilt | Iz | Iz int

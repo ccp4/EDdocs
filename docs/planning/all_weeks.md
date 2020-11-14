@@ -615,3 +615,18 @@
     - [x] compute total RCS (good shape but too high needs deriving and checking why)
     - [x] adapt doc PEC sphere
     - [x] fix vector plane wave spherical expansion Ey=0 with Mo-jNe
+
+#week 46
+## Monday
+- [x] singlePEC, alpha=0,dp=0
+  - [x] compute total RCS (good shape but too high needs deriving and checking why)
+## Tuesday
+- prepare presentation
+## Wednesday
+- presentation
+- [x] plot matrix T
+## Thursday
+- tuto dorian
+- [x] monoRCS, alpha=0,dp>0 (correct but not only in sphere coordinates)
+## Friday
+- presentation James Holton
