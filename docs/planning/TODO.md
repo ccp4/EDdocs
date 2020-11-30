@@ -41,3 +41,45 @@
 - Generalized transfer matrix method for special geometries
 - Read and summarize on spectroscopic techniques
 - review [ClabbersAbrahams2018](/articles/ClabbersAbrahams2018.pdf)
+
+## other
+- multi_2D
+    - Bloch
+    - BPM/FD with periodic boundary conditions
+    - Redo 2-beam Iq at the exact Bragg condition.
+    - Redo rocking curves with proper label
+    - redo zeta_g, labels h=1,2
+- Multislice :
+    - biotin
+        - run and compare 100+10, 101
+        - TDS get wobble parameters
+    - Development
+        - Documentation with sphinx
+        - embedded C
+        - smv format
+        - multithread fft, no openMP,  no--enable-float
+        - solvent scattering
+        - defects vacancy, bending, TDS
+      - lyzozyme
+- misc
+  - 1 thread per simulation flag
+      - Implement multithreads access to fftw
+      - Force 1 thread on splines?
+  - integration/spot broadening
+  - flux taking Poisson distribution
+  - Detector modelling projected intensity at larger angles
+
+
+  - XDS + dials processing ireloh
+  - rfactor transmission with thickness optimization
+  - relative thickness dependent correction
+  - yana
+  - high absorption in X-ray
+  - integration rocking curves
+  - fft,clipper,bigFFT
+  - solvent not in small molecules
+
+  - relativistic mass nearBragg
+  - nearBragg brute force figure,pure N**2 with backward scattering
+  - phase shift
+  - multislice transmission function cmp to multislice run

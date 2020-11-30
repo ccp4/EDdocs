@@ -1,3 +1,13 @@
+#week 48
+- scalar endfired linear array of hard spheres(convergence)
+- approximate approach implemented but unsatisfactory
+- neat gui pyScatSpheres
+- single sphere constant potential implemented and documented 
+
+#week 47
+- approximate plane wave hamid990 vectorial
+- implement scalar endfired linear array of hard spheres (2 spheres success!!!)
+
 #week 46
 - presentation James Holton
 - presentation Jan Peter Abrahams

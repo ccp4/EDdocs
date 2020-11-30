@@ -630,3 +630,52 @@
 - [x] monoRCS, alpha=0,dp>0 (correct but not only in sphere coordinates)
 ## Friday
 - presentation James Holton
+##Saturday
+- [x] check Ey with phase shift [0.25,0.5]lambda and quiver $\bb E_{r,\theta,\phi}$
+- [x] almnp;in-out better than almnp;out-out far from source thx to Bessel instead of Hankel
+
+#week 47
+# Monday
+- [x] check vectorial translational addition theorem (=>Amnlp not are correct)
+#Tuesday
+- read new material - chap3 single-atom scattering:Mott-bethe=coulomb scattering
+- approximate hamid1990
+    - [x] read
+    - [x] implement (not quite working)
+## Wednesday
+- approximate hamid1990
+    - [x] document 2 spheres case
+    - [x] check code, seems ok though different
+## Thursday
+- approximate hamid1990  
+    - [x] complete documentation checked for 2 spheres case
+    - [x] code bistatic
+    - [x] compare fig3d0(remarkable close to it without even coupling)
+## Friday
+- [x] approximate hamid1990  : plot C1,C2 in plane changing kd and ap
+## Saturday
+- [x] implement scalar endfired linear array of hard spheres
+## Sunday
+- [x] single sphere scattering cross section curves and cp
+- [x] 2spheres integrated scattering cross sections vs kdp, few ka
+
+# week  48
+##Monday
+- [x] plot ref single sphere Cp0[ka] for small ka
+- [x] 2spheres differential scattering cross section
+- [x] implement approximate plane wave solution
+- [x] compare with exact different regimes (wrong, convergence test needed)
+## Tuesday
+- [x] convergence : increase order check change in f(theta) : ka,kd
+- [x] approx_cpl(copt=0) vs exact_cpl(copt=0) (rubbish but code seems ok now)
+## Wednesday
+- [x] plot approx cp(ka,kd) and compare to exact
+- [x] fix integrated cross section (should be)
+## Thursday
+- [x] hard spheres gui init
+## Friday
+- [x] hard spheres gui progress
+## Saturday
+- [x] hard spheres gui finish
+# Sunday
+- [x] single sphere constant potential well

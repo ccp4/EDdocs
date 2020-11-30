@@ -5,6 +5,12 @@
 - [SubrimanianSpence2015](#subramanianspence2015) : Simulation predicts dynamical diffraction too strong at thickness above 100-200nm.
 - [CowleyMoodie1957](/readings/CowleyMoodie1957) : Original [paper](/articles/CowleyMoodie1957.pdf) on multislice.
 
+##Cowley2010
+
+##Cowley1968
+
+##Chap3
+
 ##ClabbersGrueneAbrahams2017
 **Protein structure determination by ED of 3D nanocrystal(Experimental) : dimeric polymorph hen egg-white lyzozyme (Diffracting volume $0.14\mu m^3$) using Molecular Replacement from monomeric polylalanine model and standard X-ray protein crystallography software.**
 

@@ -1,37 +1,14 @@
-##Saturday
-- [x] check Ey with phase shift [0.25,0.5]lambda and quiver $\bb E_{r,\theta,\phi}$
-- [ ] check vectorial translational addition theorem (=>Amnlp are correct)
-- [ ] local field at P from sphere Q
-## Sunday
-- [ ] read approximate hamid1990
+# week  49
+## Monday
 - [ ] near Bragg
+- [ ] multislice
 
-#week 47
+- read new material
+    - cowley1968 summary:
+    - chap3 single-atom scattering:
+    - cowley2010 inelastic scattering
 
-## TODO
-- readings :
-- multi_2D
-    - Bloch
-    - BPM/FD with periodic boundary conditions
-    - Redo 2-beam Iq at the exact Bragg condition.
-    - Redo rocking curves with proper label
-    - redo zeta_g, labels h=1,2
-- Multislice :
-    - biotin
-        - run and compare 100+10, 101
-        - TDS get wobble parameters
-    - Development
-        - Documentation with sphinx
-        - embedded C
-        - smv format
-        - multithread fft, no openMP,  no--enable-float
-        - solvent scattering
-        - defects vacancy, bending, TDS
-      - lyzozyme
-- misc
-  - 1 thread per simulation flag
-      - Implement multithreads access to fftw
-      - Force 1 thread on splines?
-  - integration/spot broadening
-  - flux taking Poisson distribution
-  - Detector modelling projected intensity at larger angles
+
+<!--
+- [ ] balls collision thermo
+-->
