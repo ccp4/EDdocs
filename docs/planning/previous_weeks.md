@@ -1,8 +1,11 @@
+#week 49
+- Started comparing qdot to Born/multislice/near bragg
+
 #week 48
 - scalar endfired linear array of hard spheres(convergence)
 - approximate approach implemented but unsatisfactory
 - neat gui pyScatSpheres
-- single sphere constant potential implemented and documented 
+- single sphere constant potential implemented and documented
 
 #week 47
 - approximate plane wave hamid990 vectorial
