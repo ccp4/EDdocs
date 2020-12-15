@@ -1,3 +1,6 @@
+#week 50
+- complete full gui for hard,qdot with varying N
+
 #week 49
 - Started comparing qdot to Born/multislice/near bragg
 

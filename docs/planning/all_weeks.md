@@ -696,3 +696,18 @@
 - [x] single sphere find radius/pots such that multi shells fs approx Coulomb for Carbon (Born approx not good or too many shells needed)
 ## Friday
 - multislice linear arrray:implement 2 qdot spheres exact
+
+
+# week 50
+## Monday
+- [x] linear array qdot 2 spheres implemented and seems to be working.
+## Tuesday
+- [x] linear array qdot 2 :
+    - generate graphs s(ka,kd), f(ka,kd,nref)
+    - adapt gui
+## Wednesday
+- [x] multislice array
+## Thursday
+- complete gui
+## Friday
+- misc

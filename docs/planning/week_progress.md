@@ -1,12 +1,6 @@
-# week 50
+#week 51
 ## Monday
-- [x] linear array qdot 2 spheres implemented and seems to be working.
+- misc
 
 ## Tuesday
-- [x] linear array qdot 2 :
-    - generate graphs s(ka,kd), f(ka,kd,nref)
-    - adapt gui
-
-## Wednesday
-- [x] multislice array
-    - 2-qdot mutlislice3D
+- 2-qdot approx
