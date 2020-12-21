@@ -711,3 +711,15 @@
 - complete gui
 ## Friday
 - misc
+
+#week 51
+## Monday
+- misc
+## Tuesday
+- 2-qdot approx
+## Wednesday
+- distribute package pyScatSpheres
+## Thursday
+- conference JPA, Hongyi, LP
+## Friday
+- distribute package pyScatSpheres

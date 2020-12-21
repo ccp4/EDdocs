@@ -1,9 +1,17 @@
 # meeting
 
+## Conf 17Dec2020
+- JPA : plasmons emphasis
+- Zou,hongyi:
+  - Instamatic 2.0
+  - dynamical refinement
+  - SaR2lox
+- jana2006,2020
+
 ## Abrahams 11Nov2020
 - inelastic scattering
     - electron contribute to the bragg spot
-    - thinner crystal for inelastic scattering loss of coherency : better crystal 
+    - thinner crystal for inelastic scattering loss of coherency : better crystal
 - TDS
 - read ED dials
 - read Clabbers review

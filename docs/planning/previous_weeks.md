@@ -1,3 +1,6 @@
+#week 51
+- distribute package pyScatSpheres
+
 #week 50
 - complete full gui for hard,qdot with varying N
 

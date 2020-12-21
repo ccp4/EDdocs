@@ -1,6 +1,3 @@
-#week 51
+#week 52
 ## Monday
-- misc
-
-## Tuesday
-- 2-qdot approx
+- 2 slides for study weekend!!!! google slides
