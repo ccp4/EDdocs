@@ -21,3 +21,4 @@ Contribute to the CCP4 Advanced integrated approaches to macromolecular structur
 - pyScatSpheres available now ! see [package](https://pypi.org/project/pyScatSpheres/) and [documentation](https://pyscatspheres.readthedocs.io/en/latest/).
 
 ### Latest
+- ireloh and epicza
