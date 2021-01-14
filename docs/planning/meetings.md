@@ -1,5 +1,11 @@
 # meeting
 
+## 13 Jan 2021 Diffraction methods 
+- approximate inelastic scattering
+- density matrix approach
+- elena pascal : experience inelastic scattering
+- james parkhurst : multem
+
 ## Conf 17Dec2020
 - JPA : plasmons emphasis
 - Zou,hongyi:

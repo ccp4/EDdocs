@@ -10,13 +10,14 @@ Contribute to the CCP4 Advanced integrated approaches to macromolecular structur
 
 ### Resources
 - [main report](/documents/report/report.pdf)
-- [latest slides](/documents/2020-11-13_JH.pdf)
-- [jupyter notebook examples](http://127.0.0.1:8888/?token=c040d8214898e2df5c3dea81253397716cf3fe744e544540)
+- [latest slides](/documents/2021-01-13.pdf)
 
-A few available examples to run :
-
+<!-- - [jupyter notebook examples](http://127.0.0.1:8888/?token=c040d8214898e2df5c3dea81253397716cf3fe744e544540) -->
+<!-- A few available examples to run :
 - nearBragg :
-- multislice :
+- multislice : -->
 
 ## News
+- [pyScatSpheres](https://pypi.org/project/pyScatSpheres/) package available now!  
+
 ### Latest
