@@ -18,6 +18,6 @@ Contribute to the CCP4 Advanced integrated approaches to macromolecular structur
 - multislice : -->
 
 ## News
-- [pyScatSpheres](https://pypi.org/project/pyScatSpheres/) package available now!  
+- pyScatSpheres available now ! see [package](https://pypi.org/project/pyScatSpheres/) and [documentation](https://pyscatspheres.readthedocs.io/en/latest/).
 
 ### Latest
