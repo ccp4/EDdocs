@@ -3,7 +3,6 @@
 
 [<img src="/projects/multislice/figures/biotin/biotin_vesta.png" style="float: right;" width="250" /> ](/projects/multislice/figures/biotin_vesta.png)
 ## Biotin
-Main info :
 
 - Structure : $P2_12_12_1$
 - Lattice constants : $a=5.24A$, $b=10.35A$, $c=21.04A$ (change to 20.960)
@@ -17,7 +16,8 @@ Main info :
     - $N:6$%
     - $S:3$%
 - Atoms per unit cell : 128
-- discrete angles :[ 0.          7.12501635 14.03624347 26.56505118 36.86989765 45. 56.30993247 63.43494882 71.56505118 80.53767779]
+
+<!-- - discrete angles :[ 0.          7.12501635 14.03624347 26.56505118 36.86989765 45. 56.30993247 63.43494882 71.56505118 80.53767779] -->
 
 <!-- [<img src="/projects/multislice/figures/biotin/biotin_m0_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/biotin_m0_autoslic_pattern.png) |  -->
 
