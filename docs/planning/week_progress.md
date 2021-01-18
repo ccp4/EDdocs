@@ -1,18 +1,15 @@
-# week 02
-## Tuesday
-- presentation diffraction methods
+#week 03
+## Monday
+- ireloh
+  - [ ] run zone axis simu and get diff pattern P
+  - [ ] Ewald configuration
+  - [ ] test some orientations 
+- run toy simu showing the effect of
+  - [ ] lack of periodic boundary condition
+  - [ ] zero padding
+  - [ ]    
 
-## Wednesday
-- presentation
-- review 2sphere approx
 
-## Thursday
-- prepare epicza/ireloh simu :
-    - [x] load structure
-    - [x] compute structure factor F
-    - [ ] compute transmission function T
-    - [ ] run zone axis simu and get diff pattern P
-    - [ ] prepare fo vs fc plot for F,T,P
 
 - paper 2021
 - simulate 10 different thicknesses integrated by integration software
