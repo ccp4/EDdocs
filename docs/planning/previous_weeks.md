@@ -1,3 +1,7 @@
+#week 03
+- zero padding simus
+- Bloch completed and successfully tested for 2beam configurations
+
 # week 02
 - presentation at diffraction methods
 - prepare epicza/ireloh simus

@@ -21,8 +21,8 @@ extra_javascript:
  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML'
  - 'mathjaxhelper.js'
 
-# plugins:
-#   - macros
+plugins:
+  - macros
 
 
 nav:

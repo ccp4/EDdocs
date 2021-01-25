@@ -47,3 +47,40 @@ The rocking curves around $\theta_c$ are characteristic of 2-beam theory and sho
 Rocking curves | $I_g(z)$ at $\theta_c$
 -------------- | ----------------------
 [<img src="/projects/multislice/figures/multi2D/2_beam_rocking.svg" width="400" />](figures/multi2D/2_beam_rocking.svg) | [<img src="/projects/multislice/figures/multi2D/2_beam_Itheta_c.svg" width="400" />](figures/multi2D/2_beam_Itheta_c.svg)
+
+
+
+## Padding
+
+The purpose of this paragraph is to evaluate the effect of padding with zeros the potential
+of the sample in order to model finite size effects. The padding is expressed in units of number  of unit cells on each side of the sample.
+
+{% set figpad='/projects/multislice/figures/multi2D/pad' %}
+
+### Increasing padding for one periodic unit cell
+$n_{pad}$  | 0  | 5  | 10 | 30  
+---------- | -- | -- | -- | --
+$T$  | [<img src="{{figpad}}0_nx1Tz.svg" width="200" />]({{figpad}}0_nx1Tz.svg) | [<img src="{{figpad}}1_nx1Tz.svg" width="200" />]({{figpad}}1_nx1Tz.svg) | [<img src="{{figpad}}2_nx1Tz.svg" width="200" />]({{figpad}}2_nx1Tz.svg) | [<img src="{{figpad}}3_nx1Tz.svg" width="200" />]({{figpad}}3_nx1Tz.svg)
+$I$  | [<img src="{{figpad}}0_nx1Qz.svg" width="200" />]({{figpad}}0_nx1Qz.svg) | [<img src="{{figpad}}1_nx1Qz.svg" width="200" />]({{figpad}}1_nx1Qz.svg) | [<img src="{{figpad}}2_nx1Qz.svg" width="200" />]({{figpad}}2_nx1Qz.svg) | [<img src="{{figpad}}3_nx1Qz.svg" width="200" />]({{figpad}}3_nx1Qz.svg)
+
+In this set of figures there is only one unit cell. In this case, the amount of padding has the same effect as increasing the size of the unit cell.
+
+
+
+### Increasing padding for two periodic unit cells
+$n_{pad}$  | 0  | 5  | 10 | 30  
+---------- | -- | -- | -- | --
+$T$  | [<img src="{{figpad}}0_nx2Tz.svg" width="200" />]({{figpad}}0_nx2Tz.svg) | [<img src="{{figpad}}1_nx2Tz.svg" width="200" />]({{figpad}}1_nx2Tz.svg) | [<img src="{{figpad}}2_nx2Tz.svg" width="200" />]({{figpad}}2_nx2Tz.svg) | [<img src="{{figpad}}3_nx2Tz.svg" width="200" />]({{figpad}}3_nx2Tz.svg)
+$I$  | [<img src="{{figpad}}0_nx2Qz.svg" width="200" />]({{figpad}}0_nx2Qz.svg) | [<img src="{{figpad}}1_nx2Qz.svg" width="200" />]({{figpad}}1_nx2Qz.svg) | [<img src="{{figpad}}2_nx2Qz.svg" width="200" />]({{figpad}}2_nx2Qz.svg) | [<img src="{{figpad}}3_nx2Qz.svg" width="200" />]({{figpad}}3_nx2Qz.svg)
+
+In this set, 2 periodic unit cells are used.
+
+
+### Large padding with increasing number of unit cells
+
+$n_{cells}$ | 1  | 2  | 5  | 10  
+----------- | -- | -- | -- | --
+$T$  | [<img src="{{figpad}}nx1Tz.svg" width="200" />]({{figpad}}nx1Tz.svg) | [<img src="{{figpad}}nx2Tz.svg" width="200" />]({{figpad}}nx2Tz.svg) | [<img src="{{figpad}}nx3Tz.svg" width="200" />]({{figpad}}nx3Tz.svg) | [<img src="{{figpad}}nx4Tz.svg" width="200" />]({{figpad}}nx4Tz.svg)
+$I$  | [<img src="{{figpad}}nx1Qz.svg" width="200" />]({{figpad}}nx1Qz.svg) | [<img src="{{figpad}}nx2Qz.svg" width="200" />]({{figpad}}nx2Qz.svg) | [<img src="{{figpad}}nx3Qz.svg" width="200" />]({{figpad}}nx3Qz.svg) | [<img src="{{figpad}}nx4Qz.svg" width="200" />]({{figpad}}nx4Qz.svg)
+
+In this set, a padding of 20 unit cells is applied while the number of periodic unit cells is increased.

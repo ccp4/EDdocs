@@ -17,10 +17,6 @@
     - $S:3$%
 - Atoms per unit cell : 128
 
-<!-- - discrete angles :[ 0.          7.12501635 14.03624347 26.56505118 36.86989765 45. 56.30993247 63.43494882 71.56505118 80.53767779] -->
-
-<!-- [<img src="/projects/multislice/figures/biotin/biotin_m0_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/biotin_m0_autoslic_pattern.png) |  -->
-
 
 ### Full rotational study
 $07^{\circ}$ |$14^{\circ}$ |$26^{\circ}$
@@ -54,20 +50,6 @@ Below, 10 simulations in the $[001]$ configuration with a tilt step of $1^{\circ
 
 
 
-<!-- {% set tilts=/projects/multislice/figures/biotin/tilts_ %} -->
-
-<!-- 1 |2 |3
---|--|--
-[<img src="/projects/multislice/figures/biotin/tilts_tilt1_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt1_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt2_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt2_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt3_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt3_autoslic_pattern.png)
-
-4 |5 |6
---|--|--
-[<img src="/projects/multislice/figures/biotin/tilts_tilt4_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt4_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt5_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt5_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt6_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt6_autoslic_pattern.png)
-
-7 |8 |9
---|--|--
-[<img src="/projects/multislice/figures/biotin/tilts_tilt7_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt7_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt8_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt8_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt9_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt9_autoslic_pattern.png) -->
-
 
 ## Simple Cubic Carbone
 
@@ -95,7 +77,6 @@ Beam $1,1$ | Beam $2,0$ | Beam $4,0$
 [<img src="/projects/multislice/figures/lattice_effect0.svg" width="250" >](/projects/multislice/figures/lattice_effect0.svg) | [<img src="/projects/multislice/figures/lattice_effect1.svg" width="250" />](/projects/multislice/figures/lattice_effect1.svg) | [<img src="/projects/multislice/figures/lattice_effect2.svg" width="250" />](/projects/multislice/figures/lattice_effect2.svg)
 
 The Pendullosung thickness seems to depend linearly on the lattice constant but larger lattice constants result in higher intensity maxima and larger Pendullosung thickness.
-<!-- Note that the most prominent beams are not in the same order for the different structures since their Pendullosung phase are different. -->
 
 
 ### Wobble effect
