@@ -1,17 +1,26 @@
 # week 04
 ## Monday
-- [x] Bloch wave development
+- reading
+    - [x] Oleynikov2007 exp vs precessionED SAED with ms
+- multi2D :
+    - [x] fix fresnel integral (factor e(jpi/4) in real space propagator needed!)
+    - [ ] lack of periodic boundary condition
+    - [ ] redo the carbon integration study
+
+## Tuesday
+- reading
+    - [ ] VanDyck1995
 - ireloh  
     - [ ] test some other orientations
     - [ ] excitation errors on zone axis
 - multi2D :
     - [ ] lack of periodic boundary condition
-    - [ ] redo the carbone integration study
-- reading :
-    - some papers on 3 and N beam dynamical diffraction
+    - [ ] redo the carbon integration study
+
+- Bloch wave development : clean and compare to ms2d
 
 
 ##TODO
-- paper 2021
+
 - simulate 10 different thicknesses integrated by integration software
 normalize where the values with zero thickness (kinematic regime)

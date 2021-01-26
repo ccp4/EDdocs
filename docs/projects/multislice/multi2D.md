@@ -1,18 +1,5 @@
 # Multislice 2D
 
-## Convolution in 2D
-Performing the convolution by direct integration, using the small angle approximation :
-\begin{equation}
-  \Psi(x,z_0+\Delta z) = \int_{-\delta x}^{\delta x} p(X,\Delta z) t(x-X,z_0)\Psi(X,z_0) dX
-\end{equation}
-
-where $\delta x=\Delta z\theta$ with $\theta=0.1rad$ small angle and the Fresnel propagator $p(x,y,\Delta z)=\frac{1}{i\lambda\Delta z}e^{ik_0\frac{x^2}{2\Delta z}}$, with $k_0=200keV$ and $\Delta z=25A$
-
-transmission | propagator | $\Psi(x,z_0+\Delta z)$
------------- | ---------- | ----------------------
-[<img src="/projects/multislice/figures/fresnelT.svg" width="400" />](figures/fresnelT.svg) | [<img src="/projects/multislice/figures/fresnelP.svg" width="400" />](figures/fresnelP.svg) | [<img src="/projects/multislice/figures/fresnelX.svg" width="400" />](figures/fresnelX.svg)
-
-
 ## 2-beam dynamical diffraction
 ### Setup
 The structure is simple primitive square lattice with unique atom $Z_a=2$.
@@ -53,7 +40,7 @@ Rocking curves | $I_g(z)$ at $\theta_c$
 ## Padding
 
 The purpose of this paragraph is to evaluate the effect of padding with zeros the potential
-of the sample in order to model finite size effects. The padding is expressed in units of number  of unit cells on each side of the sample.
+of the sample in order to model finite size effects. The padding is expressed number of unit cells on each side of the sample.
 
 {% set figpad='/projects/multislice/figures/multi2D/pad' %}
 
@@ -84,3 +71,21 @@ $T$  | [<img src="{{figpad}}nx1Tz.svg" width="200" />]({{figpad}}nx1Tz.svg) | [<
 $I$  | [<img src="{{figpad}}nx1Qz.svg" width="200" />]({{figpad}}nx1Qz.svg) | [<img src="{{figpad}}nx2Qz.svg" width="200" />]({{figpad}}nx2Qz.svg) | [<img src="{{figpad}}nx3Qz.svg" width="200" />]({{figpad}}nx3Qz.svg) | [<img src="{{figpad}}nx4Qz.svg" width="200" />]({{figpad}}nx4Qz.svg)
 
 In this set, a padding of 20 unit cells is applied while the number of periodic unit cells is increased.
+
+
+
+
+## Real space convolution
+Performing the convolution by direct integration, using the small angle approximation :
+\begin{equation}
+  \Psi(x,z_0+\Delta z) = \int_{-\delta x}^{\delta x} p(X,\Delta z) t(x-X,z_0)\Psi(x-X,z_0) dX
+\end{equation}
+
+where $\delta x=\Delta z\theta$ with $\theta=0.1rad$ small angle and the Fresnel propagator $p(x,y,\Delta z)=\frac{e^{i\pi/4}}{i\lambda\Delta z}e^{ik_0\frac{x^2}{2\Delta z}}$, with $k_0=200keV$ and $\Delta z=5A$.
+
+Transmission | Propagator | $\Psi(x,z_0+\Delta z)$
+------------ | ---------- | ----------------------
+[<img src="/projects/multislice/figures/fresnelT.svg" width="400" />](figures/fresnelT.svg) | [<img src="/projects/multislice/figures/fresnelP.svg" width="400" />](figures/fresnelP.svg) | [<img src="/projects/multislice/figures/fresnelX.svg" width="400" />](figures/fresnelX.svg)
+
+
+Below the real space transmission function, propagator and convolution product using the above integral and the FFT based multislice approach. 
