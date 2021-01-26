@@ -32,7 +32,7 @@ Setup : padding is used for the transverse unit cells.
 ---- | ----- | -----
 [![]({{ireloh}}001_SC.png)]({{ireloh}}001_SC.png) |  [![]({{ireloh}}001_SC.png)]({{ireloh}}001_SC.png) | [![]({{ireloh}}001_SC.png)]({{ireloh}}001_SC.png)
 
-Typical simuated diffraction patterns after 100 unit cells $\approx 1770A$.
+Typical simulated diffraction patterns after 100 unit cells $\approx 1770A$.
 
 
 ## Biotin
