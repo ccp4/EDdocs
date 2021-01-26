@@ -35,9 +35,21 @@ Since $\sigma v_g=\pi/\xi_g$ one can see that for $S_G=0$ the 2-beam intensity r
 
 Taking the arbitrary values $K=100A^{-1}$, $U_g=0.1A^{-2}$ gives a Pendullosung thickness $\xi_g=1000 A$ with patterns illustrated below for $t=100 A$ and $t=500A$.
 
-I(0) kin vs dyn 2-beam $\xi_g=1000 A$ | I(w) kin vs dyn 2-beam
------------------------|-----------------------
+1  | 2
+-- | --
 [<img src="/figures/kin_dyn0.svg" width="350" /> ](/figures/kin_dyn0.svg) | [<img src="/figures/kin_dyn.svg" width="350" />](/figures/kin_dyn.svg)
+
+1) I(0) kin vs dyn 2-beam $\xi_g=1000 A$ and
+2) I(w) kin vs dyn 2-beam.
+
+
+ 1  | 2  
+--- | ------
+[![](/figures/Iint_kin_dynR.svg)](/figures/Iint_kin_dynR.svg) | [![](/figures/Iint_kin_dyn.svg)](/figures/Iint_kin_dyn.svg)
+
+1) 2-beam rocking curves as function of thickness and
+2) 2-beam(red) and kinematic(blue) integrated rocking curves as function of thickness. $\xi_g=500A$
+
 
 
 

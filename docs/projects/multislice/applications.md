@@ -1,8 +1,42 @@
 # Applications
 
 
-[<img src="/projects/multislice/figures/biotin/biotin_vesta.png" style="float: right;" width="250" /> ](/projects/multislice/figures/biotin_vesta.png)
+## IRELOH
+{% set ireloh='/projects/multislice/figures/ireloh/' %}
+
+
+
+a    | b     | c
+---- | ----- | -----
+[![]({{ireloh}}vestaA.png)]({{ireloh}}vestaA.png) |  [![]({{ireloh}}vestaB.png)]({{ireloh}}vestaB.png) | [![]({{ireloh}}vestaC.png)]({{ireloh}}vestaC.png)
+
+1 unit cell of IRELOH in 3 configurations.
+
+000  | 002   | 216
+---- | ----- | -----
+[![]({{ireloh}}exp_000.png)]({{ireloh}}exp_000.png) |  [![]({{ireloh}}exp_002.png)]({{ireloh}}exp_002.png) | [![]({{ireloh}}exp_216.png)]({{ireloh}}exp_216.png)
+
+Typical experimental diffraction patterns.
+
+
+### Simulation
+
+
+xy | zx | zy
+-- | -- | --
+[![]({{ireloh}}001_xy.png)]({{ireloh}}001_xy.png) |  [![]({{ireloh}}001_zx.png)]({{ireloh}}001_zx.png) | [![]({{ireloh}}001_zy.png)]({{ireloh}}001_zy.png)
+
+Setup : padding is used for the transverse unit cells.
+
+001  | 001   | 001
+---- | ----- | -----
+[![]({{ireloh}}001_SC.png)]({{ireloh}}001_SC.png) |  [![]({{ireloh}}001_SC.png)]({{ireloh}}001_SC.png) | [![]({{ireloh}}001_SC.png)]({{ireloh}}001_SC.png)
+
+Typical simuated diffraction patterns after 100 unit cells $\approx 1770A$.
+
+
 ## Biotin
+[<img src="/projects/multislice/figures/biotin/biotin_vesta.png" style="float: right;" width="250" /> ](/projects/multislice/figures/biotin_vesta.png)
 
 - Structure : $P2_12_12_1$
 - Lattice constants : $a=5.24A$, $b=10.35A$, $c=21.04A$ (change to 20.960)
@@ -16,6 +50,8 @@
     - $N:6$%
     - $S:3$%
 - Atoms per unit cell : 128
+
+Waiting for experimental data ...
 
 
 ### Full rotational study
@@ -36,7 +72,7 @@ $63^{\circ}$ | $71^{\circ}$ | $80^{\circ}$
 
 
 
-### tilts run
+### tilted simulations
 The tilt parameter can be used to simulate small crystal tilt [below $10^{\circ}$](/readings/multislice/#chendyck1997).
 Below, 10 simulations in the $[001]$ configuration with a tilt step of $1^{\circ}$.
 
@@ -51,43 +87,7 @@ Below, 10 simulations in the $[001]$ configuration with a tilt step of $1^{\circ
 
 
 
-## Simple Cubic Carbone
 
-tilt | Iz | Iz int
----- | ---------- | ----------
-[<img src="/projects/multislice/figures/SC_tilt.svg" width="250" />](/projects/multislice/figures/SC_tilt.svg) | [<img src="/projects/multislice/figures/SC_Iz.svg" width="250" />](/projects/multislice/figures/SC_Iz.svg) | [<img src="/projects/multislice/figures/SC_Iz_int.svg" width="250" />](/projects/multislice/figures/SC_Iz_int.svg)
-
-
-## BCC-Li test structure
-The test structure is Cubic Body Centred with Lithium atoms and the beam  direction is along $[001]$ axis.
-
-### Diffraction patterns
-first 5 slice | last slice | animation
-------------- | ---------- | ----------
-[<img src="/projects/multislice/figures/bcc_pattern00.png" width="250" />](/projects/multislice/figures/bcc_pattern00.png) | [<img src="/projects/multislice/figures/bcc_pattern19.png" width="250" />](/projects/multislice/figures/bcc_pattern19.png) | [<img src="/projects/multislice/figures/bcc_pattern.gif" width="250" />](/projects/multislice/figures/bcc_pattern.gif)
-
-
-### Lattice constant effect
-The lattice constant is artificially multiplied by a factor of
-$2^i, i=1..3$ i.e $a_x=3.4910A,6.9820A,13.9640A$ respectively.
-Only one transverse cell is used but the number of longitudinal cells are adjusted so all cases reach a thickness of $3500A$.
-
-Beam $1,1$ | Beam $2,0$ | Beam $4,0$
------- | ------ | -------
-[<img src="/projects/multislice/figures/lattice_effect0.svg" width="250" >](/projects/multislice/figures/lattice_effect0.svg) | [<img src="/projects/multislice/figures/lattice_effect1.svg" width="250" />](/projects/multislice/figures/lattice_effect1.svg) | [<img src="/projects/multislice/figures/lattice_effect2.svg" width="250" />](/projects/multislice/figures/lattice_effect2.svg)
-
-The Pendullosung thickness seems to depend linearly on the lattice constant but larger lattice constants result in higher intensity maxima and larger Pendullosung thickness.
-
-
-### Wobble effect
-
-The wobble parameter is the RMS of the random displacement of atoms in the frozen phonon approximation.
-Several runs are needed to provide an accurate picture of thermal effects.
-Below the average azimuthal intensity is plotted for different amount of wobble. All simulation took 15 runs.
-
-pattern 0 | pattern 1 | avg Intensity
---------- | --------- | -------------
-[<img src="/projects/multislice/figures/wobble_effect0.png" width="250" />](/projects/multislice/figures/wobble_effect0.png) | [<img src="/projects/multislice/figures/wobble_effect1.png" width="250" />](/projects/multislice/figures/wobble_effect1.png) | [<img src="/projects/multislice/figures/wobble_effectIavg.svg" width="250" />](/projects/multislice/figures/wobble_effectIavg.svg) |
 
 
 <!-- ###############################################################
@@ -167,24 +167,46 @@ Simulation setup [110] | Intensities autoslic | mulslice
 ---------------------- | -------------------- | --------
 [<img src="/projects/multislice/figures/orientation.png" width="250" />](/projects/multislice/figures/orientation.png) | [<img src="/projects/multislice/figures/Si110_Ihk.svg" width="250" />](/projects/multislice/figures/Si110_Ihk.svg) | [<img src="/projects/multislice/figures/Si110_Ihk_mulslice.svg" width="250" />](/projects/multislice/figures/Si110_Ihk_mulslice.svg)
 
-<!-- Simulation setup [110] | 2D Intensities (-h,-h,k) |  1D intensities(-h,-h,0)
----------------------- | ------------------------ | -------------------
-[<img src="/projects/multislice/figures/orientation.png" width="250" />](/projects/multislice/figures/orientation.png) | [<img src="/projects/multislice/figures/si110_S_2D.png" width="250" />](/projects/multislice/figures/si110_S_2D.png) | [<img src="/projects/multislice/figures/si110_S_1D.svg" width="250" />](/projects/multislice/figures/si110_S_1D.svg) -->
-
-<!-- **Pendulossung Thickness**
-Using $200keV$ electrons (corresponding to $K\approx 40A^{-1}$), considering a 2-beam theory for the pair $[000]$, $[111]$ where $U_{111}=32f_{Si}^2(1/c_z)/\cc V_{cell}\underset{cz=5.431}= 0.115A^{-2}$, the Pendullosung thickness should then be around $\xi=345A$. -->
 
 
 
 
 
-<!-- ## Paracetamol
-### orientation [100]
-transverse to the beam | along the beam | 3D
----------------------- | -------------- | ---
-[<img src="/projects/multislice/figures/APAP100_xy.png" width="250" />](/projects/multislice/figures/APAP100_xy.png) | [<img src="/projects/multislice/figures/APAP100_xz.png" width="250" />](/projects/multislice/figures/APAP100_xz.png) | [<img src="/projects/multislice/figures/APAP100_3D.png" width="250" />](/projects/multislice/figures/APAP100_3D.png)
 
-### orientation [001]
-transverse to the beam | along the beam | 3D
----------------------- | -------------- | ---
-[<img src="/projects/multislice/figures/APAP001_xy.png" width="250" />](/projects/multislice/figures/APAP001_xy.png) | [<img src="/projects/multislice/figures/APAP001_xz.png" width="250" />](/projects/multislice/figures/APAP001_xz.png) | [<img src="/projects/multislice/figures/APAP001_3D.png" width="250" />](/projects/multislice/figures/APAP01_3D.png) -->
+## Test structure
+The test structure is Cubic Body Centred with Lithium atoms and the beam  direction is along $[001]$ axis.
+
+### Diffraction patterns
+first 5 slice | last slice | animation
+------------- | ---------- | ----------
+[<img src="/projects/multislice/figures/bcc_pattern00.png" width="250" />](/projects/multislice/figures/bcc_pattern00.png) | [<img src="/projects/multislice/figures/bcc_pattern19.png" width="250" />](/projects/multislice/figures/bcc_pattern19.png) | [<img src="/projects/multislice/figures/bcc_pattern.gif" width="250" />](/projects/multislice/figures/bcc_pattern.gif)
+
+
+### Lattice constant effect
+The lattice constant is artificially multiplied by a factor of
+$2^i, i=1..3$ i.e $a_x=3.4910A,6.9820A,13.9640A$ respectively.
+Only one transverse cell is used but the number of longitudinal cells are adjusted so all cases reach a thickness of $3500A$.
+
+Beam $1,1$ | Beam $2,0$ | Beam $4,0$
+------ | ------ | -------
+[<img src="/projects/multislice/figures/lattice_effect0.svg" width="250" >](/projects/multislice/figures/lattice_effect0.svg) | [<img src="/projects/multislice/figures/lattice_effect1.svg" width="250" />](/projects/multislice/figures/lattice_effect1.svg) | [<img src="/projects/multislice/figures/lattice_effect2.svg" width="250" />](/projects/multislice/figures/lattice_effect2.svg)
+
+The Pendullosung thickness seems to depend linearly on the lattice constant but larger lattice constants result in higher intensity maxima and larger Pendullosung thickness.
+
+
+### Wobble effect
+
+The wobble parameter is the RMS of the random displacement of atoms in the frozen phonon approximation.
+Several runs are needed to provide an accurate picture of thermal effects.
+Below the average azimuthal intensity is plotted for different amount of wobble. All simulation took 15 runs.
+
+pattern 0 | pattern 1 | avg Intensity
+--------- | --------- | -------------
+[<img src="/projects/multislice/figures/wobble_effect0.png" width="250" />](/projects/multislice/figures/wobble_effect0.png) | [<img src="/projects/multislice/figures/wobble_effect1.png" width="250" />](/projects/multislice/figures/wobble_effect1.png) | [<img src="/projects/multislice/figures/wobble_effectIavg.svg" width="250" />](/projects/multislice/figures/wobble_effectIavg.svg) |
+
+
+### Simple Cubic Carbone
+
+tilt | Iz | Iz int
+---- | ---------- | ----------
+[<img src="/projects/multislice/figures/SC_tilt.svg" width="250" />](/projects/multislice/figures/SC_tilt.svg) | [<img src="/projects/multislice/figures/SC_Iz.svg" width="250" />](/projects/multislice/figures/SC_Iz.svg) | [<img src="/projects/multislice/figures/SC_Iz_int.svg" width="250" />](/projects/multislice/figures/SC_Iz_int.svg)

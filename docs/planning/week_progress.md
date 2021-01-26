@@ -3,9 +3,7 @@
 - reading
     - [x] Oleynikov2007 exp vs precessionED SAED with ms
 - multi2D :
-    - [x] fix fresnel integral (factor e(jpi/4) in real space propagator needed!)
-    - [ ] lack of periodic boundary condition
-    - [ ] redo the carbon integration study
+    - [x] fix Fresnel integral (factor e(jpi/4) in real space propagator needed!)
 
 ## Tuesday
 - reading
@@ -18,7 +16,6 @@
     - [ ] redo the carbon integration study
 
 - Bloch wave development : clean and compare to ms2d
-
 
 ##TODO
 

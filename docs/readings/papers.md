@@ -4,6 +4,7 @@
 - [LatychevskaiaAbrahams2019](#latychevskaiaabrahams2019) : Inelastic scattering and solvent scattering significantly mitigate the effect of dynamical diffraction.
 - [SubrimanianSpence2015](#subramanianspence2015) : Simulation predicts dynamical diffraction too strong at thickness above 100-200nm.
 - [CowleyMoodie1957](/readings/CowleyMoodie1957) : Original [paper](/articles/CowleyMoodie1957.pdf) on multislice.
+- [oleynikov2007](#oleynikov2007) : comparison of ms and exp for precessionED and SAED.
 
 ##ClabbersGrueneAbrahams2017
 **Protein structure determination by ED of 3D nanocrystal(Experimental) : dimeric polymorph hen egg-white lyzozyme (Diffracting volume $0.14\mu m^3$) using Molecular Replacement from monomeric polylalanine model and standard X-ray protein crystallography software.**
@@ -59,65 +60,16 @@ Multislice details (ZMULT package) :
 ----------|----------|---------- |----------
 <img src="/readings/subramanian2015/intensity.png" width="250" /> | <img src="/readings/subramanian2015/density.png" width="150" /> | <img src="/readings/subramanian2015/max_error.png" width="140" /> | <img src="/readings/subramanian2015/thickness_limit.png" width="200" />
 
-##CowleyMoodie1957
+#Oleynikov2007
+{% set oley2007='/readings/oleynikov2007/' %}
 
+Comparison of multislice and exp for precessionED and SAED.
 
-The response to an incident wave of immediately after passing through
-slice $z_i$ is in the non relativistic case :
-\begin{equation}
-    \Psi(x,y,z_j+dz) = \Psi(x,y,z_j)e^{i\sigma\varphi (x,y,z_j) dz}
-\end{equation}
-
-where $\sigma=\pi/\lambda_0W_0=2\pi me\lambda/h^2$ is a scattering parameter and
-$\lambda_0=h(2mW_0)^{-1}$ the unperturbed wavelength.
-The approximation $W_0\gg \varphi$ has been used to simplify
-$(1+\varphi(x,y,z)/W_0)^{1/2}-1\approx \varphi(x,y,z)/2W_0$.
-
-The wave function in the plane of observation is :
-
-\begin{eqnarray}
-  \Psi(x) =
-    \Bigg\{_N& &Q_N(-\frac{k_sx}{R})\ast\Big\{_{N-1} ... \\
-       &\Big\{_2& Q_2(-\frac{k_sx}{R})\ast
-          \big\{_1 Q_1(-\frac{k_sx}{R})\ast Q_0(-\frac{k_sx}{R})e^{\frac{ik_sR_1x^2}{2R^2}}\big\}_1
-       e^{\frac{ik_sR_2x^2}{2R^2}} \Big\}_2 \\
-    &...&\Big\}_{N-1} e^{\frac{ik_sR_Nx^2}{2R^2}} \Bigg\}_N e^{\frac{-ik_sx^2}{2R}}
-\end{eqnarray}
-
-where $Q_i$ are the planar Fourier transforms of the potential in each slice and
-$R_2=R_3=..=R_N=\Delta z$ and $x/R=2\theta$ where $2\theta$ is the scattering angle.
-We can also write $Q_n=i\Delta zE_n$ where $E_n$ is the 1D inverse Fourier transform
-of the $3D$ structure factor performed along $l$ direction evaluated at position $z_n$.
-
-For :
-
-- an incident plane wave with $\alpha$ the angle of incidence :
-    $E_0=\delta(\theta+\alpha)$
-- a perfect crystal
-    $Q_n(-2k_s\theta)=i\Delta z\sum_h E_n(h)\delta(\theta+h\lambda/a)$
-
-So :
-
-- $\{_1...\}_1=F_1(-2k_s(\theta+\alpha))$
-- $\{_2...\}_2=\sum_{h_1,h_2}F_1(h_1)F_2(h_2)e^{ik_s\Delta z(\theta+h_2\lambda/2a)^2}\delta(\theta+\alpha+\frac{(h_1+h_2)\lambda}{2a})$
-
-Using :
-\begin{equation}
-    \exp\Bigg\{
-        -2i\pi\sum_{n=1}^{N} z_n(\zeta_n-\zeta_{n-1})
-     \Bigg\}
-     =\exp\Bigg\{-2i\pi
-            \left(H\zeta_N - \Delta z \sum_{n=1}^{N}\zeta_n\right)
-      \Bigg\}
-\end{equation}
-
-where $\zeta_n$ represents the distance along the l-direction in reciprocal space
-of the paraboloid of reflection from the point
-$\left(\sum_{r=1}^{n} h_r, \sum_{r=1}^{n} k_r, \sum_{r=1}^{n} l_r\right)$.
-
-\begin{equation}
-\zeta_n=\lambda/2\Bigg\{
-    \left( \sum_{r=1}^{n} h_r/a \right)^2 +
-    \left( \sum_{r=1}^{n} k_r/b \right)^2
-    \Bigg\}-\sum_{r=1}^{n} \frac{l_r}{c} +\frac{h_r}{a}\alpha_x +\frac{k_r}{b}\alpha_y
-\end{equation}
+figures | description
+------- | -----------
+[![]({{oley2007}}2.png)]({{oley2007}}2.png)   | Ewald radii during precED. $R_{n,in/out}=\sqrt{K^2-(K_z-nD)^2}\mp K\sin\varphi$ are intersections with ZOLZ and HOLZ.
+[![]({{oley2007}}5.png)]({{oley2007}}5.png)   | Integration path of the excitation error during precession ED where $s_g=g^2/2K-g_{xy}\varphi\cos(\alpha-\omega)-g_z$ with $\omega$  azimuthal angle. Oscill is the kinematic rocking curve function $t^2 sinc^2(ts_g)/\xi_g$ where $\xi_g=K/V_g$
+[![]({{oley2007}}6.png)]({{oley2007}}6.png)   | integration correction factor $A_{corr}$ where $I_g^{prec}=I\int_o^{2\pi}oscill(s_g(\omega))d\omega=IA_{corr}$ for h=1..30
+[![]({{oley2007}}8a.png)]({{oley2007}}8a.png) | Reflections for azim=0  with forbidden reflections h00
+[![]({{oley2007}}8c.png)]({{oley2007}}8c.png) | Reflections for azim=90  with forbidden reflections 0k0
+[![]({{oley2007}}9.png)]({{oley2007}}9.png)   | Rfactor for precession ED and SAED run with multislice compared with experimental data in the [001] direction for $Cs_{0.44}Nb_{2.54}W_{2.46}O_{14}$. precED simus were run for 28 patterns with thickness in `range(60,600,20)` each of them made of 250 diffraction patterns.
