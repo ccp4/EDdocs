@@ -4,35 +4,70 @@
 ## IRELOH
 {% set ireloh='/projects/multislice/figures/ireloh/' %}
 
+Structure : $P2_12_12_1$
+
+Lattice parameters:
+
+- a=8.065Å, b=9.997Å, c=17.729Å
+- $\alpha$=90.000°, $\beta$=90.000°, $\gamma$=90.000°
+
+- reciprocal lattice parameters : 0.779Å, 0.629Å, 0.354Å
+
+Chemical composition:
+C: 41.026%
+H: 46.154%
+O: 12.821%
+
+
 
 
 a    | b     | c
 ---- | ----- | -----
 [![]({{ireloh}}vestaA.png)]({{ireloh}}vestaA.png) |  [![]({{ireloh}}vestaB.png)]({{ireloh}}vestaB.png) | [![]({{ireloh}}vestaC.png)]({{ireloh}}vestaC.png)
 
-1 unit cell of IRELOH in 3 configurations.
+1 unit cell of IRELOH in 3 configurations shown in the $(b,c)$, $(a,c)$ and $(a,b)$ planes.
 
+
+### Experiment
 000  | 002   | 216
 ---- | ----- | -----
 [![]({{ireloh}}exp_000.png)]({{ireloh}}exp_000.png) |  [![]({{ireloh}}exp_002.png)]({{ireloh}}exp_002.png) | [![]({{ireloh}}exp_216.png)]({{ireloh}}exp_216.png)
 
-Typical experimental diffraction patterns.
+Typical experimental diffraction patterns for images 000, 002, 216.
+
+data 1  | data 2   | data 3
+------- | -------- | --------
+[![]({{ireloh}}spot1_484.png)]({{ireloh}}spot1_484.png) |  [![]({{ireloh}}spot2_150.png)]({{ireloh}}spot2_150.png) | [![]({{ireloh}}spot3_484.png)]({{ireloh}}spot3_484.png)
+
+spot finding procedure for typical diffraction patterns for dataset 1,2 and 3.
+
+1  | 2  | 3
+-- | -- | --
+[![]({{ireloh}}dials_viewer1.png)]({{ireloh}}dials_viewer1.png) |  [![]({{ireloh}}dials_viewer3.png)]({{ireloh}}dials_viewer3.png) |  [![]({{ireloh}}dials_viewer2.png)]({{ireloh}}dials_viewer2.png)
+
+Reciprocal space configuration for 1) indexed reflections (116). 2) integrated reflections and 3) zoom around reciprocal unit cell.
+phi is the rotation axis and the other axis is the beam axis (z direction).
 
 
-### Simulation
-
+### Zone axis simulation
 
 xy | zx | zy
 -- | -- | --
 [![]({{ireloh}}001_xy.png)]({{ireloh}}001_xy.png) |  [![]({{ireloh}}001_zx.png)]({{ireloh}}001_zx.png) | [![]({{ireloh}}001_zy.png)]({{ireloh}}001_zy.png)
 
-Setup : padding is used for the transverse unit cells.
+Simulation domain : $8\times 8$ super cell with padding corresponding to the blue domain shown in the $(x,y)$, $(z,x)$ and $(z,y)$ planes.
 
 001  | 001   | 001
 ---- | ----- | -----
 [![]({{ireloh}}001_SC.png)]({{ireloh}}001_SC.png) |  [![]({{ireloh}}001_SC.png)]({{ireloh}}001_SC.png) | [![]({{ireloh}}001_SC.png)]({{ireloh}}001_SC.png)
 
-Typical simulated diffraction patterns after 100 unit cells $\approx 1770A$.
+Typical simulated diffraction patterns after propagating through 100 unit cells thick crystal $\approx 1770A$.
+
+
+### Comparison with experiment
+
+
+
 
 
 ## Biotin
