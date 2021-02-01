@@ -1,4 +1,8 @@
-#week 03
+# week 04
+- fix Fresnel integral pb
+- ireloh : orientation script
+
+# week 03
 - zero padding simus
 - Bloch completed and successfully tested for 2beam configurations
 

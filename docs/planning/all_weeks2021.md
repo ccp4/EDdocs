@@ -1,3 +1,22 @@
+# week 04
+## Monday
+- reading
+    - [x] Oleynikov2007 exp vs precessionED SAED with ms
+- multi2D :
+    - [x] fix Fresnel integral (factor exp(jpi/4) in real space propagator needed!)
+## Tuesday
+- website on serv7
+- document oleynikov
+## Wednesday
+- website
+- meeting
+- david's scripts
+## Thursday
+- ireloh  : gemmi orientation pb => doc not enough info
+## Friday
+- ireloh : start adapting orientation code
+
+
 #week 03
 ## Monday
 - run toy simu showing the effect of
