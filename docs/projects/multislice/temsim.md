@@ -1,6 +1,6 @@
 # TEMSIM
 
-{% set figs='/projects/multislice/figures/temsim/' %}
+{% set figs='/figures/multislice/temsim/' %}
 
 <!-- - [Usage](#usage)
 - [Code](#code-walk-through)

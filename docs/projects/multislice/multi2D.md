@@ -1,6 +1,6 @@
 # Multislice 2D
 
-{% set figs2D='/projects/multislice/figures/multi2D/' %}
+{% set figs2D='/figures/multislice/multi2D/' %}
 
 ## 2-beam dynamical diffraction
 ### Setup
@@ -44,7 +44,7 @@ Rocking curves | $I_g(z)$ at $\theta_c$
 The purpose of this paragraph is to evaluate the effect of padding with zeros the potential
 of the sample in order to model finite size effects. The padding is expressed number of unit cells on each side of the sample.
 
-{% set figpad='/projects/multislice/figures/multi2D/pad' %}
+{% set figpad='/figures/multislice/multi2D/pad' %}
 
 ### Increasing padding for one periodic unit cell
 $n_{pad}$  | 0  | 5  | 10 | 30  
