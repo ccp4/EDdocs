@@ -11,7 +11,7 @@ The beam intensities for $g=1$ and $g=2$ as a function of crystal thickness is s
 
 Potential | Ewald configuration | Diffraction pattern | Beams intensities
 --------- | ------------------- | ------------------- | -----------------
-[<img src="{{figs2D}}2_beam_fv.png" width="180" />](figures/multi2D/2_beam_fv.png) | [<img src="{{figs2D}}2_beam_E.svg" width="180" />](figures/multi2D/2_beam_E.svg) | [<img src="{{figs2D}}2_beam_Iq.svg" width="180" />](figures/multi2D/2_beam_Iq.svg) |   [<img src="{{figs2D}}2_beam_Iz.svg" width="180" />](figures/multi2D/2_beam_Iz.svg)
+[<img src="{{figs2D}}2_beam_fv.png" width="180" />]({{figs2D}}multi2D/2_beam_fv.png) | [<img src="{{figs2D}}2_beam_E.svg" width="180"  />]({{figs2D}}multi2D/2_beam_E.svg) | [<img src="{{figs2D}}2_beam_Iq.svg" width="180" />]({{figs2D}}multi2D/2_beam_Iq.svg) |   [<img src="{{figs2D}}2_beam_Iz.svg" width="180" />]({{figs2D}}multi2D/2_beam_Iz.svg)
 
 ### Extinction distance
 Below, the same simulation is run for different potential strengths.  
@@ -22,7 +22,7 @@ For this strongly excited beam, dynamical diffraction is present at all potentia
 
 $g_1$ | $g_2$ | $\zeta_g$
 ----- | ----- | ---------
-[<img src="{{figs2D}}2_beam_I1.svg" width="400" />](figures/multi2D/2_beam_I1.svg) | [<img src="{{figs2D}}2_beam_I2.svg" width="400" />](figures/multi2D/2_beam_I2.svg) |  [<img src="{{figs2D}}2_beam_xi.svg" width="400" />](figures/multi2D/2_beam_xi.svg)
+[<img src="{{figs2D}}2_beam_I1.svg" width="400" />]({{figs2D}}multi2D/2_beam_I1.svg) | [<img src="{{figs2D}}2_beam_I2.svg" width="400" />]({{figs2D}}multi2D/2_beam_I2.svg) |  [<img src="{{figs2D}}2_beam_xi.svg" width="400" />]({{figs2D}}multi2D/2_beam_xi.svg)
 
 ### Rocking curve
 Rocking curves are simulated by running simulations with various beam tilt angles ranging from 0 to 0.08 degrees.
@@ -35,7 +35,7 @@ The rocking curves around $\theta_c$ are characteristic of 2-beam theory and sho
 
 Rocking curves | $I_g(z)$ at $\theta_c$
 -------------- | ----------------------
-[<img src="{{figs2D}}2_beam_rocking.svg" width="400" />](figures/multi2D/2_beam_rocking.svg) | [<img src="{{figs2D}}2_beam_Itheta_c.svg" width="400" />](figures/multi2D/2_beam_Itheta_c.svg)
+[<img src="{{figs2D}}2_beam_rocking.svg" width="400" />]({{figs2D}}multi2D/2_beam_rocking.svg) | [<img src="{{figs2D}}2_beam_Itheta_c.svg" width="400" />]({{figs2D}}multi2D/2_beam_Itheta_c.svg)
 
 
 
