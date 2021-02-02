@@ -455,4 +455,4 @@ void propagate(cfpix &wave,float* propxr, float* propxi, float* propyr, float* p
 
 Kirkland | time per slice | time per slice per core
 ---------------------- | -------------------- | --------
-[<img src="/readings/kirkland2010/cpuBlochMultislice.png" width="350">](/readings/kirkland2010/cpuBlochMultislice.png)| [<img src="{{figs}}autoslic_cputime_pslice_log.svg" width="250" />]({{figs}}autoslic_cputime_pslice_log.svg) | [<img src="{{figs}}autoslic_cputime_pcore_pslice_log.svg" width="250" />]({{figs}}autoslic_cputime_pcore_pslice_log.svg)
+[<img src="/figures/readings/kirkland2010/cpuBlochMultislice.png" width="350">](/figures/readings/kirkland2010/cpuBlochMultislice.png)| [<img src="{{figs}}autoslic_cputime_pslice_log.svg" width="250" />]({{figs}}autoslic_cputime_pslice_log.svg) | [<img src="{{figs}}autoslic_cputime_pcore_pslice_log.svg" width="250" />]({{figs}}autoslic_cputime_pcore_pslice_log.svg)

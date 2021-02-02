@@ -1,6 +1,6 @@
 # Multislice Simulation
 
-{% set figs='/figures/multislice/' %}
+{% set figs='/figures/multislice/index/' %}
 
 ## Overview
 
@@ -156,4 +156,4 @@ with 14 atoms per unit cell ($Si_6N_8$) with rectangular super unit cell $a_0\ti
 
 Structure N(white), Si(black) | Slices [001] | Exit image magnitude
 ------------------------------|--------------|----------------------
-[<img src="{{figs}}Si3N4.png" width="400" />]({{figs}}Si3N4.png) | [<img src="{{figs}}Si3N4rect.png" width="200" />]({{figs}}Si3N4rect.png) | [<img src="{{figs}}Si3N4exit_mag.png" width="200" />]({{figs}}Si3N4exit_mag.png)
+[<img src="{{figs}}Si3N4.png" width="400" />]({{figs}}Si3N4.png) | [<img src="{{figs}}Si3N4rect.png" width="200" /> ]({{figs}}Si3N4rect.png) | [<img src="{{figs}}Si3N4exit_mag.png" width="200" />]({{figs}}Si3N4exit_mag.png)
