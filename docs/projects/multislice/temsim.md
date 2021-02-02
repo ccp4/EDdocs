@@ -1,5 +1,7 @@
 # TEMSIM
 
+{% set figs='/projects/multislice/figures/temsim/' %}
+
 <!-- - [Usage](#usage)
 - [Code](#code-walk-through)
     - [atompot](#atompot)
@@ -42,7 +44,7 @@ make_xyz(name='dat/Lithium',compound='Li',n=[1,1,1],fmt='%.4f')
 
 BCC[001] | BCC[110] | BCC[111]
 -------- | -------- | --------
-[<img src="/projects/multislice/figures/orient_crystal001.png" width="250" />](/projects/multislice/figures/orient_crystal001.png) | [<img src="/projects/multislice/figures/orient_crystal110.png" width="250" />](/projects/multislice/figures/orient_crystal110.png) | [<img src="/projects/multislice/figures/orient_crystal111.png" width="250" />](/projects/multislice/figures/orient_crystal111.png)
+[<img src="{{figs}}orient_crystal001.png" width="250" />]({{figs}}orient_crystal001.png) | [<img src="{{figs}}orient_crystal110.png" width="250" />]({{figs}}orient_crystal110.png) | [<img src="{{figs}}orient_crystal111.png" width="250" />]({{figs}}orient_crystal111.png)
 
 
 ###deck generation
@@ -453,4 +455,4 @@ void propagate(cfpix &wave,float* propxr, float* propxi, float* propyr, float* p
 
 Kirkland | time per slice | time per slice per core
 ---------------------- | -------------------- | --------
-[<img src="/readings/kirkland2010/cpuBlochMultislice.png" width="350">](/readings/kirkland2010/cpuBlochMultislice.png)| [<img src="/projects/multislice/figures/autoslic_cputime_pslice_log.svg" width="250" />](/projects/multislice/figures/autoslic_cputime_pslice_log.svg) | [<img src="/projects/multislice/figures/autoslic_cputime_pcore_pslice_log.svg" width="250" />](/projects/multislice/figures/autoslic_cputime_pcore_pslice_log.svg)
+[<img src="/readings/kirkland2010/cpuBlochMultislice.png" width="350">](/readings/kirkland2010/cpuBlochMultislice.png)| [<img src="{{figs}}autoslic_cputime_pslice_log.svg" width="250" />]({{figs}}autoslic_cputime_pslice_log.svg) | [<img src="{{figs}}autoslic_cputime_pcore_pslice_log.svg" width="250" />]({{figs}}autoslic_cputime_pcore_pslice_log.svg)

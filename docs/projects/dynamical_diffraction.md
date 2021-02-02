@@ -1,5 +1,8 @@
 # Theory of Dynamical Diffraction
 
+{% set figs='/figures/dynamical_diffraction/' %}
+
+
 ## kinematic approximation
 
 The intensity of a Bragg spot can be established as :
@@ -37,7 +40,7 @@ Taking the arbitrary values $K=100A^{-1}$, $U_g=0.1A^{-2}$ gives a Pendullosung 
 
 1  | 2
 -- | --
-[<img src="/figures/kin_dyn0.svg" width="350" /> ](/figures/kin_dyn0.svg) | [<img src="/figures/kin_dyn.svg" width="350" />](/figures/kin_dyn.svg)
+[<img src="{{figs}}kin_dyn0.svg" width="350" /> ]({{figs}}kin_dyn0.svg) | [<img src="{{figs}}kin_dyn.svg" width="350" />]({{figs}}kin_dyn.svg)
 
 1) I(0) kin vs dyn 2-beam $\xi_g=1000 A$ and
 2) I(w) kin vs dyn 2-beam.
@@ -45,7 +48,7 @@ Taking the arbitrary values $K=100A^{-1}$, $U_g=0.1A^{-2}$ gives a Pendullosung 
 
  1  | 2  
 --- | ------
-[![](/figures/Iint_kin_dynR.svg)](/figures/Iint_kin_dynR.svg) | [![](/figures/Iint_kin_dyn.svg)](/figures/Iint_kin_dyn.svg)
+[![]({{figs}}Iint_kin_dynR.svg)]({{figs}}Iint_kin_dynR.svg) | [![]({{figs}}Iint_kin_dyn.svg)]({{figs}}Iint_kin_dyn.svg)
 
 1) 2-beam rocking curves as function of thickness and
 2) 2-beam(red) and kinematic(blue) integrated rocking curves as function of thickness. $\xi_g=500A$
@@ -54,6 +57,8 @@ Taking the arbitrary values $K=100A^{-1}$, $U_g=0.1A^{-2}$ gives a Pendullosung 
 
 
 ## Collision approach
+{% set figsB='/figures/nearBragg/' %}
+
 The probabilities of an electron to undergo $m$ elastic collisions and $n$ inelastic collisions of mean free path $l_i$ after going through a specimen of length $z$ follows the Poisson distribution :
 \begin{equation}
   P_{mn}(z) =
@@ -77,4 +82,4 @@ which analytical solutions are the Poisson distribution above. The program [near
 
 small $\sigma_e$ | medium $\sigma_e$ | large $\sigma_e$
 ---------------- |------------------ | ----------------
-[<img src="/projects/nearBragg/figures/Pcoh_kin_dyn0.svg" width="350" /> ](/projects/nearBragg/figures/Pcoh_kin_dyn0.svg) | [<img src="/projects/nearBragg/figures/Pcoh_kin_dyn1.svg" width="350" /> ](/projects/nearBragg/figures/Pcoh_kin_dyn1.svg) | [<img src="/projects/nearBragg/figures/Pcoh_kin_dyn2.svg" width="350" /> ](/projects/nearBragg/figures/Pcoh_kin_dyn2.svg)
+[<img src="{{figsB}}Pcoh_kin_dyn0.svg" width="350" /> ]({{figsB}}Pcoh_kin_dyn0.svg) | [<img src="{{figsB}}Pcoh_kin_dyn1.svg" width="350" /> ]({{figsB}}Pcoh_kin_dyn1.svg) | [<img src="{{figsB}}Pcoh_kin_dyn2.svg" width="350" /> ]({{figsB}}Pcoh_kin_dyn2.svg)

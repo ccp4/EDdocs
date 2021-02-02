@@ -1,12 +1,18 @@
 #Papers summary
 
+{% set figs='/figures/readings/' %}
+
 - [ClabbersGrueneAbrahams2017](clabbersgrueneabrahams2017) : Protein structure determination by ED of 3D nanocrystal using Molecular Replacement and standard X-ray protein crystallography software.
 - [LatychevskaiaAbrahams2019](#latychevskaiaabrahams2019) : Inelastic scattering and solvent scattering significantly mitigate the effect of dynamical diffraction.
 - [SubrimanianSpence2015](#subramanianspence2015) : Simulation predicts dynamical diffraction too strong at thickness above 100-200nm.
 - [CowleyMoodie1957](/readings/CowleyMoodie1957) : Original [paper](/articles/CowleyMoodie1957.pdf) on multislice.
 - [oleynikov2007](#oleynikov2007) : comparison of ms and exp for precessionED and SAED.
 
+
+
 ##ClabbersGrueneAbrahams2017
+{% set clabbersGrueneAbrahams2017='/figures/readings/clabbersGrueneAbrahams2017/' %}
+
 **Protein structure determination by ED of 3D nanocrystal(Experimental) : dimeric polymorph hen egg-white lyzozyme (Diffracting volume $0.14\mu m^3$) using Molecular Replacement from monomeric polylalanine model and standard X-ray protein crystallography software.**
 
 The claim of a successful solution despite [subramanianspence2015](#subramanianspence2015) is due to **lack of inelastic modelling in multislice simulation**. This is backed up by the fact that Friedel pair symmetry is not more violated than for standard X-ray data.
@@ -34,17 +40,23 @@ FREERFLAG | unique test sets creation
 
 Micrograph (0.2x0.5x1.4nm)| Diffraction data | Fo vs Fc
 ------|-----|-------
-[<img src="/readings/clabbersGrueneAbrahams2017/lyzozyme_micrograph.png" width="250"/>](/readings/clabbersGrueneAbrahams2017/diffraction.png) |   [<img src="/readings/clabbersGrueneAbrahams2017/diffraction_data.png" width="250"/>](/readings/clabbersGrueneAbrahams2017/diffraction_data.png) | [<img src="/readings/clabbersGrueneAbrahams2017/FoFc.png" width="250"/>](/readings/clabbersGrueneAbrahams2017/FoFc.png)   
+[<img src="{{clabbersGrueneAbrahams2017}}lyzozyme_micrograph.png" width="250"/>]({{clabbersGrueneAbrahams2017}}lyzozyme_micrograph.png) |   [<img src="{{clabbersGrueneAbrahams2017}}diffraction_data.png" width="250"/>]({{clabbersGrueneAbrahams2017}}diffraction_data.png) | [<img src="{{clabbersGrueneAbrahams2017}}FoFc.png" width="250"/>]({{clabbersGrueneAbrahams2017}}FoFc.png)   
 
 
 ##LatychevskaiaAbrahams2019
+{% set latychevskaia2019='/figures/readings/latychevskaia2019/' %}
+
 **Inelastic scattering and solvent scattering significantly mitigate the effect of dynamical diffraction.**
 
 Probabilities of scattering events | Inelastic fraction of dynamical scattering | Friedel symmetry violation solvent scattering
 -------------------|---------------------|-------------------------
-[<img src="/readings/latychevskaia2019/dyna_lengths.png" width="350"/>](/readings/latychevskaia2019/dyna_lengths.png) | [<img src="/readings/latychevskaia2019/pdyn_ptot.png" width="250"/>](<img src="/readings/latychevskaia2019/pdyn_ptot) | [<img src="/readings/latychevskaia2019/Rfriedel.png" width="200"/>](/readings/latychevskaia2019/Rfriedel.png)
+[<img src="{{latychevskaia2019}}dyna_lengths.png" width="350"/>]({{latychevskaia2019}}dyna_lengths.png) | [<img src="{{latychevskaia2019}}pdyn_ptot.png" width="250"/>](<img src="{{latychevskaia2019}}pdyn_ptot) | [<img src="{{latychevskaia2019}}Rfriedel.png" width="200"/>]({{latychevskaia2019}}Rfriedel.png)
+
+
 
 ##SubramanianSpence2015
+{% set subramanian2015='/figures/readings/subramanian2015/' %}
+
 **Strong dynamical diffraction prevents single scattering approximation based techniques at crystal thickness above 100-200nm.**
 
 Multislice details (ZMULT package) :
@@ -56,12 +68,12 @@ Multislice details (ZMULT package) :
 - Structure factor from experimentally refined RHF Doyle-Turner data (H not included)
 - 90 beams at 200keV
 
-[Friedel symmetry violation](/readings/subramanian2015/intensity.png) $I_{-440}$ | [Omit density map](/readings/subramanian2015/density.png) : threshold error 37%  | MR distinguishable [error limit](/readings/subramanian2015/max_error.png) 34%  | [Thickness limit](/readings/subramanian2015/thickness_limit.png) $T_{R_f=0.3}\approx 100nm$
+[Friedel symmetry violation]({{subramanian2015}}intensity.png) $I_{-440}$ | [Omit density map]({{subramanian2015}}density.png) : threshold error 37%  | MR distinguishable [error limit]({{subramanian2015}}max_error.png) 34%  | [Thickness limit]({{subramanian2015}}thickness_limit.png) $T_{R_f=0.3}\approx 100nm$
 ----------|----------|---------- |----------
-<img src="/readings/subramanian2015/intensity.png" width="250" /> | <img src="/readings/subramanian2015/density.png" width="150" /> | <img src="/readings/subramanian2015/max_error.png" width="140" /> | <img src="/readings/subramanian2015/thickness_limit.png" width="200" />
+[<img src="{{subramanian2015}}intensity.png" width="250"        />]({{subramanian2015}}intensity.png)     | [<img src="{{subramanian2015}}density.png" width="150"          />]({{subramanian2015}}density.png)       | [<img src="{{subramanian2015}}max_error.png" width="140"        />]({{subramanian2015}}max_error.png)     | [<img src="{{subramanian2015}}thickness_limit.png" width="200"  />]({{subramanian2015}}thickness_limit.png)
 
-#Oleynikov2007
-{% set oley2007='/readings/oleynikov2007/' %}
+## Oleynikov2007
+{% set oley2007='/figures/readings/oleynikov2007/' %}
 
 Comparison of multislice and exp for precessionED and SAED.
 

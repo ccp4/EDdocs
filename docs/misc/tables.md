@@ -34,7 +34,7 @@ Laue class | Patterson symmetry  | plane groups  | count
 **6mm** | p6mm   | p3m1,p31m,p6mm                    | 3
 
 ## 3D
-![](/figures/lauegroup.png)
+![](/figures/misc/lauegroup.png)
 
 
 

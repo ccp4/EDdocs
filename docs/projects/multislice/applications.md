@@ -67,11 +67,11 @@ Typical simulated diffraction patterns after propagating through 100 unit cells 
 ### Comparison with experiment
 
 
-
+{% set figsBiotin='/projects/multislice/figures/biotin/' %}
 
 
 ## Biotin
-[<img src="/projects/multislice/figures/biotin/biotin_vesta.png" style="float: right;" width="250" /> ](/projects/multislice/figures/biotin_vesta.png)
+[<img src="{{figsBiotin}}biotin_vesta.png" style="float: right;" width="250" /> ]({{figsBiotin}}biotin_vesta.png)
 
 - Structure : $P2_12_12_1$
 - Lattice constants : $a=5.24A$, $b=10.35A$, $c=21.04A$ (change to 20.960)
@@ -92,18 +92,18 @@ Waiting for experimental data ...
 ### Full rotational study
 $07^{\circ}$ |$14^{\circ}$ |$26^{\circ}$
 ------------ |------------ |------------
-[<img src="/projects/multislice/figures/biotin/biotin102.png" width="250" />](/projects/multislice/figures/biotin102.png) | [<img src="/projects/multislice/figures/biotin/biotin101.png" width="250" />](/projects/multislice/figures/biotin/biotin101.png) | [<img src="/projects/multislice/figures/biotin/biotin201.png" width="250" />](/projects/multislice/figures/biotin201.png)
-[<img src="/projects/multislice/figures/biotin/biotin_m1_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/biotin_m1_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/biotin_m2_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/biotin_m2_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/biotin_m3_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/biotin_m3_autoslic_pattern.png)
+[<img src="{{figsBiotin}}biotin102.png" width="250" />]({{figsBiotin}}biotin102.png) | [<img src="{{figsBiotin}}biotin101.png" width="250" />]({{figsBiotin}}biotin101.png) | [<img src="{{figsBiotin}}biotin201.png" width="250" />]({{figsBiotin}}biotin201.png)
+[<img src="{{figsBiotin}}biotin_m1_autoslic_pattern.png" width="250" />]({{figsBiotin}}biotin_m1_autoslic_pattern.png) | [<img src="{{figsBiotin}}biotin_m2_autoslic_pattern.png" width="250" />]({{figsBiotin}}biotin_m2_autoslic_pattern.png) | [<img src="{{figsBiotin}}biotin_m3_autoslic_pattern.png" width="250" />]({{figsBiotin}}biotin_m3_autoslic_pattern.png)
 
 $36^{\circ}$ | $45^{\circ}$ | $56^{\circ}$
 ------------ | ------------ | ------------
-[<img src="/projects/multislice/figures/biotin/biotin301.png" width="250" />](/projects/multislice/figures/biotin/biotin301.png) | [<img src="/projects/multislice/figures/biotin/biotin401.png" width="250" />](/projects/multislice/figures/biotin/biotin401.png) | [<img src="/projects/multislice/figures/biotin/biotin601.png" width="250" />](/projects/multislice/figures/biotin/biotin601.png)
-[<img src="/projects/multislice/figures/biotin/biotin_m4_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/biotin_m4_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/biotin_m5_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/biotin_m5_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/biotin_m6_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/biotin_m6_autoslic_pattern.png)
+[<img src="{{figsBiotin}}biotin301.png" width="250" />]({{figsBiotin}}biotin301.png) | [<img src="{{figsBiotin}}biotin401.png" width="250" />]({{figsBiotin}}biotin401.png) | [<img src="{{figsBiotin}}biotin601.png" width="250" />]({{figsBiotin}}biotin601.png)
+[<img src="{{figsBiotin}}biotin_m4_autoslic_pattern.png" width="250" />]({{figsBiotin}}biotin_m4_autoslic_pattern.png) | [<img src="{{figsBiotin}}biotin_m5_autoslic_pattern.png" width="250" />]({{figsBiotin}}biotin_m5_autoslic_pattern.png) | [<img src="{{figsBiotin}}biotin_m6_autoslic_pattern.png" width="250" />]({{figsBiotin}}biotin_m6_autoslic_pattern.png)
 
 $63^{\circ}$ | $71^{\circ}$ | $80^{\circ}$
 ------------ | ------------ | ------------
-[<img src="/projects/multislice/figures/biotin/biotin801.png" width="250" />](/projects/multislice/figures/biotin/biotin801.png) | [<img src="/projects/multislice/figures/biotin/biotin1201.png" width="250" />](/projects/multislice/figures/biotin/biotin1201.png) | [<img src="/projects/multislice/figures/biotin/biotin2401.png" width="250" />](/projects/multislice/figures/biotin/biotin2401.png)
-[<img src="/projects/multislice/figures/biotin/biotin_m7_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/biotin_m7_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/biotin_m8_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/biotin_m8_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/biotin_m9_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/biotin_m9_autoslic_pattern.png)
+[<img src="{{figsBiotin}}biotin801.png" width="250" />]({{figsBiotin}}biotin801.png) | [<img src="{{figsBiotin}}biotin1201.png" width="250" />]({{figsBiotin}}biotin1201.png) | [<img src="{{figsBiotin}}biotin2401.png" width="250" />]({{figsBiotin}}biotin2401.png)
+[<img src="{{figsBiotin}}biotin_m7_autoslic_pattern.png" width="250" />]({{figsBiotin}}biotin_m7_autoslic_pattern.png) | [<img src="{{figsBiotin}}biotin_m8_autoslic_pattern.png" width="250" />]({{figsBiotin}}biotin_m8_autoslic_pattern.png) | [<img src="{{figsBiotin}}biotin_m9_autoslic_pattern.png" width="250" />]({{figsBiotin}}biotin_m9_autoslic_pattern.png)
 
 
 
@@ -113,11 +113,11 @@ Below, 10 simulations in the $[001]$ configuration with a tilt step of $1^{\circ
 
 0 |1 |2 |3 |4
 --|--|--|--|--
-[<img src="/projects/multislice/figures/biotin/tilts_tilt0_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt0_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt1_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt1_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt2_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt2_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt3_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt3_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt4_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt4_autoslic_pattern.png)
+[<img src="{{figsBiotin}}tilts_tilt0_autoslic_pattern.png" width="250" />]({{figsBiotin}}tilts_tilt0_autoslic_pattern.png) | [<img src="{{figsBiotin}}tilts_tilt1_autoslic_pattern.png" width="250" />]({{figsBiotin}}tilts_tilt1_autoslic_pattern.png) | [<img src="{{figsBiotin}}tilts_tilt2_autoslic_pattern.png" width="250" />]({{figsBiotin}}tilts_tilt2_autoslic_pattern.png) | [<img src="{{figsBiotin}}tilts_tilt3_autoslic_pattern.png" width="250" />]({{figsBiotin}}tilts_tilt3_autoslic_pattern.png) | [<img src="{{figsBiotin}}tilts_tilt4_autoslic_pattern.png" width="250" />]({{figsBiotin}}tilts_tilt4_autoslic_pattern.png)
 
 5 |6 |7 |8 |9
 --|--|--|--|--
-[<img src="/projects/multislice/figures/biotin/tilts_tilt5_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt5_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt6_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt6_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt7_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt7_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt8_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt8_autoslic_pattern.png) | [<img src="/projects/multislice/figures/biotin/tilts_tilt9_autoslic_pattern.png" width="250" />](/projects/multislice/figures/biotin/tilts_tilt9_autoslic_pattern.png)
+[<img src="{{figsBiotin}}tilts_tilt5_autoslic_pattern.png" width="250" />]({{figsBiotin}}tilts_tilt5_autoslic_pattern.png) | [<img src="{{figsBiotin}}tilts_tilt6_autoslic_pattern.png" width="250" />]({{figsBiotin}}tilts_tilt6_autoslic_pattern.png) | [<img src="{{figsBiotin}}tilts_tilt7_autoslic_pattern.png" width="250" />]({{figsBiotin}}tilts_tilt7_autoslic_pattern.png) | [<img src="{{figsBiotin}}tilts_tilt8_autoslic_pattern.png" width="250" />]({{figsBiotin}}tilts_tilt8_autoslic_pattern.png) | [<img src="{{figsBiotin}}tilts_tilt9_autoslic_pattern.png" width="250" />]({{figsBiotin}}tilts_tilt9_autoslic_pattern.png)
 
 
 
@@ -129,6 +129,9 @@ Below, 10 simulations in the $[001]$ configuration with a tilt step of $1^{\circ
                             Silicon
 #################################################################### -->
 ## Silicon
+
+{% set figsSi='/figures/multislice/Silicon/' %}
+
 Some info from
 [wikipedia](https://en.wikipedia.org/wiki/Silicon),
 [semiconductor database](http://www.ioffe.ru/SVA/NSM/Semicond/Si/basic.html) and
@@ -143,7 +146,7 @@ Using slicelib
 
  Si Fourier coefficients $U_g$ | Si atomic potential | Si Projected potential
 ------------------------------ | ------------------- | -------------------
-[<img src="/projects/multislice/figures/Si_vg.svg" width="250" />](/projects/multislice/figures/Si_vg.svg) | [<img src="/projects/multislice/figures/Si_va.svg" width="250" />](/projects/multislice/figures/Si_va.svg) | [<img src="/projects/multislice/figures/Si_vz.svg" width="250" />](/projects/multislice/figures/Si_vz.svg)
+[<img src="{{figsSi}}Si_vg.svg" width="250" />]({{figsSi}}Si_vg.svg) | [<img src="{{figsSi}}Si_va.svg" width="250" />]({{figsSi}}Si_va.svg) | [<img src="{{figsSi}}Si_vz.svg" width="250" />]({{figsSi}}Si_vz.svg)
 
 
 #### Si Structure factor
@@ -180,41 +183,47 @@ Which is shown in 3D and for [100],[110] plane cuts (where the color indicate $l
 
 3D structure factor   | 2D Intensities [100] (0,h,k) | 2D intensities[1-10] (h,h,k)
 ---------------------- | ------------------------ | -------------------
-[<img src="/projects/multislice/figures/Si_Shkl.png" width="250" />](/projects/multislice/figures/Si_Shkl.png) | [<img src="/projects/multislice/figures/Si_S100.png" width="250" />](/projects/multislice/figures/Si_S100.png) | [<img src="/projects/multislice/figures/Si_S110.png" width="250" />](/projects/multislice/figures/Si_S110.png)
+[<img src="{{figsSi}}Si_Shkl.png" width="250" />]({{figsSi}}Si_Shkl.png) | [<img src="{{figsSi}}Si_S100.png" width="250" />]({{figsSi}}Si_S100.png) | [<img src="{{figsSi}}Si_S110.png" width="250" />]({{figsSi}}Si_S110.png)
 
 
 
 #### Si Diffraction patterns
 Intensities [100] ($100A$) | Intensities [100] ($326A$) | 2D intensities[1-10] ($400A$)
 ------------------------- | ------------------------ | -------------------
-[<img src="/projects/multislice/figures/Si100_autoslic_pattern_109A.png" width="250" />](/projects/multislice/figures/Si100_autoslic_pattern_109A.png) | [<img src="/projects/multislice/figures/Si100_autoslic_pattern_326A.png" width="250" />](/projects/multislice/figures/Si100_autoslic_pattern_326A.png) | [<img src="/projects/multislice/figures/Si110_autoslic_pattern.png" width="250" />](/projects/multislice/figures/Si110_autoslic_pattern.png)
+[<img src="{{figsSi}}Si100_autoslic_pattern_109A.png" width="250" />]({{figsSi}}Si100_autoslic_pattern_109A.png) | [<img src="{{figsSi}}Si100_autoslic_pattern_326A.png" width="250" />]({{figsSi}}Si100_autoslic_pattern_326A.png) | [<img src="{{figsSi}}Si110_autoslic_pattern.png" width="250" />]({{figsSi}}Si110_autoslic_pattern.png)
 
 
 #### Si100 simulation
 
 Beam intensities       | Beam $I_{022}$
 ---------------------- | -----------------
-[<img src="/projects/multislice/figures/Si100_Ihk.svg" width="300" />](/projects/multislice/figures/Si100_Ihk.svg) | [<img src="/projects/multislice/figures/Si100_I22.svg" width="300" />](/projects/multislice/figures/Si100_I22.svg)
+[<img src="{{figsSi}}Si100_Ihk.svg" width="300" />]({{figsSi}}Si100_Ihk.svg) | [<img src="{{figsSi}}Si100_I22.svg" width="300" />]({{figsSi}}Si100_I22.svg)
 
 
 #### Si110 Simulation
 Simulation setup [110] | Intensities autoslic | mulslice
 ---------------------- | -------------------- | --------
-[<img src="/projects/multislice/figures/orientation.png" width="250" />](/projects/multislice/figures/orientation.png) | [<img src="/projects/multislice/figures/Si110_Ihk.svg" width="250" />](/projects/multislice/figures/Si110_Ihk.svg) | [<img src="/projects/multislice/figures/Si110_Ihk_mulslice.svg" width="250" />](/projects/multislice/figures/Si110_Ihk_mulslice.svg)
+[<img src="/figures/orientation.png" width="250" />](/figures/orientation.png) | [<img src="{{figsSi}}Si110_Ihk.svg" width="250" />]({{figsSi}}Si110_Ihk.svg) | [<img src="{{figsSi}}Si110_Ihk_mulslice.svg" width="250" />]({{figsSi}}Si110_Ihk_mulslice.svg)
 
 
 
 
 
 
-
+<!-- ###############################################################
+                            Test
+#################################################################### -->
 ## Test structure
+
+{% set figsTest='/figures/multislice/test/' %}
+
+
 The test structure is Cubic Body Centred with Lithium atoms and the beam  direction is along $[001]$ axis.
 
 ### Diffraction patterns
 first 5 slice | last slice | animation
 ------------- | ---------- | ----------
-[<img src="/projects/multislice/figures/bcc_pattern00.png" width="250" />](/projects/multislice/figures/bcc_pattern00.png) | [<img src="/projects/multislice/figures/bcc_pattern19.png" width="250" />](/projects/multislice/figures/bcc_pattern19.png) | [<img src="/projects/multislice/figures/bcc_pattern.gif" width="250" />](/projects/multislice/figures/bcc_pattern.gif)
+[<img src="{{figsTest}}bcc_pattern00.png" width="250" />]({{figsTest}}bcc_pattern00.png) | [<img src="{{figsTest}}bcc_pattern19.png" width="250" />]({{figsTest}}bcc_pattern19.png) | [<img src="{{figsTest}}bcc_pattern.gif" width="250" />]({{figsTest}}bcc_pattern.gif)
 
 
 ### Lattice constant effect
@@ -224,7 +233,7 @@ Only one transverse cell is used but the number of longitudinal cells are adjust
 
 Beam $1,1$ | Beam $2,0$ | Beam $4,0$
 ------ | ------ | -------
-[<img src="/projects/multislice/figures/lattice_effect0.svg" width="250" >](/projects/multislice/figures/lattice_effect0.svg) | [<img src="/projects/multislice/figures/lattice_effect1.svg" width="250" />](/projects/multislice/figures/lattice_effect1.svg) | [<img src="/projects/multislice/figures/lattice_effect2.svg" width="250" />](/projects/multislice/figures/lattice_effect2.svg)
+[<img src="{{figsTest}}lattice_effect0.svg" width="250" >]({{figsTest}}lattice_effect0.svg) | [<img src="{{figsTest}}lattice_effect1.svg" width="250" />]({{figsTest}}lattice_effect1.svg) | [<img src="{{figsTest}}lattice_effect2.svg" width="250" />]({{figsTest}}lattice_effect2.svg)
 
 The Pendullosung thickness seems to depend linearly on the lattice constant but larger lattice constants result in higher intensity maxima and larger Pendullosung thickness.
 
@@ -237,11 +246,11 @@ Below the average azimuthal intensity is plotted for different amount of wobble.
 
 pattern 0 | pattern 1 | avg Intensity
 --------- | --------- | -------------
-[<img src="/projects/multislice/figures/wobble_effect0.png" width="250" />](/projects/multislice/figures/wobble_effect0.png) | [<img src="/projects/multislice/figures/wobble_effect1.png" width="250" />](/projects/multislice/figures/wobble_effect1.png) | [<img src="/projects/multislice/figures/wobble_effectIavg.svg" width="250" />](/projects/multislice/figures/wobble_effectIavg.svg) |
+[<img src="{{figsTest}}wobble_effect0.png" width="250" />]({{figsTest}}wobble_effect0.png) | [<img src="{{figsTest}}wobble_effect1.png" width="250" />]({{figsTest}}wobble_effect1.png) | [<img src="{{figsTest}}wobble_effectIavg.svg" width="250" />]({{figsTest}}wobble_effectIavg.svg) |
 
 
 ### Simple Cubic Carbone
 
 tilt | Iz | Iz int
 ---- | ---------- | ----------
-[<img src="/projects/multislice/figures/SC_tilt.svg" width="250" />](/projects/multislice/figures/SC_tilt.svg) | [<img src="/projects/multislice/figures/SC_Iz.svg" width="250" />](/projects/multislice/figures/SC_Iz.svg) | [<img src="/projects/multislice/figures/SC_Iz_int.svg" width="250" />](/projects/multislice/figures/SC_Iz_int.svg)
+[<img src="{{figsTest}}SC_tilt.svg" width="250" />]({{figsTest}}SC_tilt.svg) | [<img src="{{figsTest}}SC_Iz.svg" width="250" />]({{figsTest}}SC_Iz.svg) | [<img src="{{figsTest}}SC_Iz_int.svg" width="250" />]({{figsTest}}SC_Iz_int.svg)

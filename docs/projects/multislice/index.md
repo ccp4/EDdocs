@@ -1,5 +1,7 @@
 # Multislice Simulation
 
+{% set figs='/figures/multislice/' %}
+
 ## Overview
 
 **A method used to determine the exit wave function(exit image) of an incident electron beam by solving  Schrodinger's equation. The diffraction pattern is obtained as the Fourier transform of the exit image.**
@@ -52,7 +54,7 @@ The interaction parameter $\sigma=2\pi me\lambda/h^2$ is expressed in $rad/kV.A$
 
 It depends on the electron wavelength only and tends to the non relativistic case $\sigma=\pi/\lambda_0E_0$ for small energy. This approximation is not valid at energies above $50keV$.
 
-[<img src="figures/scattering_param.svg" width="300" >](figures/scattering_param.svg)
+[<img src="{{figs}}scattering_param.svg" width="300" >]({{figs}}scattering_param.svg)
 
 ### Kinematic limit
 
@@ -83,7 +85,7 @@ Below, a great visual comparison between Fresnel(used in multislice) and Fraunho
 
 Fresnel vs Fraunhofer  | relevant values for ED
 ---------------------- | ----
-[<img src="figures/ffvsfr.gif" width="400"/>](figures/ffvsfr.gif) | [<img src="figures/ffvsfr.png"  width="340" />](figures/ffvsfr.png)
+[<img src="{{figs}}ffvsfr.gif" width="400"/>]({{figs}}ffvsfr.gif) | [<img src="{{figs}}ffvsfr.png"  width="340" />]({{figs}}ffvsfr.png)
 
 
 
@@ -97,7 +99,7 @@ See paper summary of [Cowley&Moodie,1957](/readings/papers#CowleyMoodie1957).
 
 ### Slicing
 
-<img src="figures/align_atom_slice.png" width="400"/>
+<img src="{{figs}}align_atom_slice.png" width="400"/>
 
 - The atoms should be aligned at the beginning of the slices so that the potential has effect only over a small fraction $\Delta z_a$ of the slice allowing cascading of the propagator therefore reducing error on the order of $\Delta z_a$
 <!-- (**figure on the left**). -->
@@ -107,12 +109,12 @@ See paper summary of [Cowley&Moodie,1957](/readings/papers#CowleyMoodie1957).
 ### Bandwidth
 - The potential must have rotational bandwidth-limited symmetry in reciprocal space.
  <!-- (**figure on the right**). -->
-<img src="figures/BW_limited.png" width="250"/>
+<img src="{{figs}}BW_limited.png" width="250"/>
 
 - Individual components of the multislice approach are nearly exact when taken individually. The main source of errors comes from the combination of propagating (Fresnel approximation) and transmitting (phase grating approximation).
 - The Fourier transform of bandwidth limited product of $\Psi(\bb x)$ with $t(\bb x)$ is a convolution in reciprocal space $\Psi(\bb k)\ast T(\bb k)$. This is equivalent to successively sliding the Fourier transform of the transmission function $T(\bb k)$ along the fourier transform of the wave function $\Psi(\bb k)$. This causes aliasing if the full bandwidth is used (**left fig**). The remedy is to set $BW=2/3k_{max}$ (**right fig**). As a result only about 1/3 of the Fourier coefficients are used in practice.
 
-![](figures/slide.png)
+![]({{figs}}slide.png)
 
 
 ### TEMSIM source code
@@ -129,7 +131,7 @@ with slice unit cell $a_0\times b_0$ where $a_0=5.65/\sqrt 2=3.995A$, $b_0=a=5.6
 
 Structure | Slices [110] | Coords
 ----------|--------------|-------
-<img src="figures/diamond_cell.svg" width="150" /> | <img src="figures/gaas110.png" width="450" /> | <img src="figures/gaas110_coords.png" width="120" />
+<img src="{{figs}}diamond_cell.svg" width="150" /> | <img src="{{figs}}gaas110.png" width="450" /> | <img src="{{figs}}gaas110_coords.png" width="120" />
 
 **Sampling**
 
@@ -144,7 +146,7 @@ Structure | Slices [110] | Coords
 
 $I_{00}(T)$   | $I(x,y)$ at $T=200A$  | effect of microscope
 ----------    |--------------         |-------
-<img src="figures/gaas_Int00.png" width="250" /> | <img src="figures/gaas200A.png" width="220" /> | <img src="figures/gaas200_microscope.png" width="220" />
+<img src="{{figs}}gaas_Int00.png" width="250" /> | <img src="{{figs}}gaas200A.png" width="220" /> | <img src="{{figs}}gaas200_microscope.png" width="220" />
 
 
 ###Silicon nitride
@@ -154,4 +156,4 @@ with 14 atoms per unit cell ($Si_6N_8$) with rectangular super unit cell $a_0\ti
 
 Structure N(white), Si(black) | Slices [001] | Exit image magnitude
 ------------------------------|--------------|----------------------
-[<img src="figures/Si3N4.png" width="400" />](figures/Si3N4.png) | [<img src="figures/Si3N4rect.png" width="200" />](figures/Si3N4rect.png) | [<img src="figures/Si3N4exit_mag.png" width="200" />](figures/Si3N4exit_mag.png)
+[<img src="{{figs}}Si3N4.png" width="400" />]({{figs}}Si3N4.png) | [<img src="{{figs}}Si3N4rect.png" width="200" />]({{figs}}Si3N4rect.png) | [<img src="{{figs}}Si3N4exit_mag.png" width="200" />]({{figs}}Si3N4exit_mag.png)
