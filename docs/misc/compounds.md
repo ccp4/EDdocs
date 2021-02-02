@@ -1,4 +1,7 @@
 # Crystal structures of famous compounds
+
+{% set figs='/figures/misc/' %}
+
 - [Primitive cubic](#simple-cubic) : $O_2,F_2$
 - [Body centred](#body-centred) : **metals**($Fe,Cr,Mo,W$), **alkalins** ($Li,Na,K,Cs$)
 - [Face centred](#face-centred) : **metals**($Al,Ni,Cu,Ag,Au$)
@@ -13,22 +16,22 @@
 
 Lattice                 | number | Space group  | Name   | Compounds              | view  
 ---------------         | ------ | ----------   |------- | ---------              | -------
-**Monoclinic**(1-2)     | 1      | $P1$         |        | $FeS_2$                |[<img src="/misc/fig/001_0.png" "width"=50>](fig/001.png)
-**Triclinic**(3-15)     | 12     | $C2m$        |        | $\alpha O_2$           |[<img src="/misc/fig/012_0.png" "width"=50>](fig/012.png)
-                        | 14     | $P2_1/c$     |        | $\alpha Se$            |[<img src="/misc/fig/014_0.png" "width"=50>](fig/014.png)
-**Orthorhombic**(16-74) | 58     | $Pnnm$       |        | $CaCl_2$,$Fe_2C$       |[<img src="/misc/fig/058_0.png" "width"=50>](fig/058.png)
-                        | 61     | $Pbca$       |        | $Be$,$CdSb$            |[<img src="/misc/fig/061_0.png" "width"=50>](fig/061.png)
-**Tetragonal**(75-142)  | 139    | $I4/mmm$     |        | $In$                   |[<img src="/misc/fig/139_0.png" "width"=50>](fig/139.png)
+**Monoclinic**(1-2)     | 1      | $P1$         |        | $FeS_2$                |[<img src="{{figs}}001_0.png" "width"=50>]({{figs}}001.png)
+**Triclinic**(3-15)     | 12     | $C2m$        |        | $\alpha O_2$           |[<img src="{{figs}}012_0.png" "width"=50>]({{figs}}012.png)
+                        | 14     | $P2_1/c$     |        | $\alpha Se$            |[<img src="{{figs}}014_0.png" "width"=50>]({{figs}}014.png)
+**Orthorhombic**(16-74) | 58     | $Pnnm$       |        | $CaCl_2$,$Fe_2C$       |[<img src="{{figs}}058_0.png" "width"=50>]({{figs}}058.png)
+                        | 61     | $Pbca$       |        | $Be$,$CdSb$            |[<img src="{{figs}}061_0.png" "width"=50>]({{figs}}061.png)
+**Tetragonal**(75-142)  | 139    | $I4/mmm$     |        | $In$                   |[<img src="{{figs}}139_0.png" "width"=50>]({{figs}}139.png)
 **Trigonal**(143-167)   | ?
-**Hexagonal**(168-194)  | 186    | $P6_3mc$     | [Wurtzite](#wurtzite) | $C_{buckled},GaN$ | [<img src="/misc/fig/186_0.png" "width"=50>](fig/186.png)
-                        | 191    | $P6_3/mmm$   | [HEX](#hex)     | $H,Li_3N$      | [<img src="/misc/fig/191_0.png" "width"=50>](fig/191.png)
-                        | 194    | $P6_3/mmc$   | [HCP](#hcp)     |$C_{graphite},Zn,Cd,Co,Ti$| [<img src="/misc/fig/194_0.png" "width"=50>](fig/194.png)
-**Cubic**(195-230)      | 216    | $F\bar{4}3m$ | [Zinblende](#zb) |$GaAs$        | [<img src="/misc/fig/216_0.png" "width"=50>](fig/216.png)
-                        | 220    | $I43d$       |              | $Li$             | [<img src="/misc/fig/220_0.png" "width"=50>](fig/220.png)
-                        | 221    | $Pm\bar{3}m$ | [PC](#cubic) | $CsCl$           | [<img src="/misc/fig/221_0.png" "width"=50>](fig/221.png)
-                        | 225    | $Fm\bar{3}m$ | [FCC](#fcc)  | $NaCl$           | [<img src="/misc/fig/225_0.png" "width"=50>](fig/225.png)
-                        | 227    | $Fd\bar{3}m$ | [Diamond](#diamond) | $C_{diamond},Si,Ge$ | [<img src="/misc/fig/227_0.png" "width"=50>](fig/227.png)
-                        | 229    | $Im\bar{3}m$ | [BCC](#bcc)  | $Fe$             | [<img src="/misc/fig/229_0.png" "width"=50>](fig/229.png)
+**Hexagonal**(168-194)  | 186    | $P6_3mc$     | [Wurtzite](#wurtzite) | $C_{buckled},GaN$ | [<img src="{{figs}}186_0.png" "width"=50>]({{figs}}186.png)
+                        | 191    | $P6_3/mmm$   | [HEX](#hex)     | $H,Li_3N$      | [<img src="{{figs}}191_0.png" "width"=50>]({{figs}}191.png)
+                        | 194    | $P6_3/mmc$   | [HCP](#hcp)     |$C_{graphite},Zn,Cd,Co,Ti$| [<img src="{{figs}}194_0.png" "width"=50>]({{figs}}194.png)
+**Cubic**(195-230)      | 216    | $F\bar{4}3m$ | [Zinblende](#zb) |$GaAs$        | [<img src="{{figs}}216_0.png" "width"=50>]({{figs}}216.png)
+                        | 220    | $I43d$       |              | $Li$             | [<img src="{{figs}}220_0.png" "width"=50>]({{figs}}220.png)
+                        | 221    | $Pm\bar{3}m$ | [PC](#cubic) | $CsCl$           | [<img src="{{figs}}221_0.png" "width"=50>]({{figs}}221.png)
+                        | 225    | $Fm\bar{3}m$ | [FCC](#fcc)  | $NaCl$           | [<img src="{{figs}}225_0.png" "width"=50>]({{figs}}225.png)
+                        | 227    | $Fd\bar{3}m$ | [Diamond](#diamond) | $C_{diamond},Si,Ge$ | [<img src="{{figs}}227_0.png" "width"=50>]({{figs}}227.png)
+                        | 229    | $Im\bar{3}m$ | [BCC](#bcc)  | $Fe$             | [<img src="{{figs}}229_0.png" "width"=50>]({{figs}}229.png)
 
 
 ## Structure factors

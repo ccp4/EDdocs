@@ -1,5 +1,6 @@
 # Near Bragg
 
+{% set figs='/figures/nearBragg/' %}
 
 An [algorithm](https://bl831.als.lbl.gov/~jamesh/nearBragg/) computing the interference patterns of an assembly of scatterers based
 on their path difference to a detector.
@@ -69,7 +70,7 @@ According to [wiki](https://en.wikipedia.org/wiki/Mosaicity), dynamical diffract
 
 pattern | Intensity
 ------- | ---------
-[<img src="/projects/nearBragg/figures/comparisonHoltonPattern.svg" width="350" /> ](/projects/nearBragg/figures/comparisonHoltonPattern.svg) | [<img src="/projects/nearBragg/figures/comparisonHolton.svg" width="350" /> ](/projects/nearBragg/figures/comparisonHolton.svg)
+[<img src="{{figs}}comparisonHoltonPattern.svg" width="350" /> ]({{figs}}comparisonHoltonPattern.svg) | [<img src="{{figs}}comparisonHolton.svg" width="350" /> ]({{figs}}comparisonHolton.svg)
 
 ### Path length estimate
 The path length may be computed with the following increasing level of approximations:
@@ -89,7 +90,7 @@ I_l = \Big|\sum_{i=1}^{N} f(\theta_{il})e^{jkR_{il}} \Big|^2
 
 comparison | error
 ---------- | ---------
-[<img src="/projects/nearBragg/figures/path_length.svg" width="350" /> ](/projects/nearBragg/figures/path_length.svg) | [<img src="/projects/nearBragg/figures/path_length_diff.svg" width="350" /> ](/projects/nearBragg/figures/path_length_diff.svg)
+[<img src="{{figs}}path_length.svg" width="350" /> ]({{figs}}path_length.svg) | [<img src="{{figs}}path_length_diff.svg" width="350" /> ]({{figs}}path_length_diff.svg)
 
 
 \begin{eqnarray}

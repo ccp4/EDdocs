@@ -1,5 +1,7 @@
 # Multislice 2D
 
+{% set figs2D='/projects/multislice/figures/multi2D/' %}
+
 ## 2-beam dynamical diffraction
 ### Setup
 The structure is simple primitive square lattice with unique atom $Z_a=2$.
@@ -9,7 +11,7 @@ The beam intensities for $g=1$ and $g=2$ as a function of crystal thickness is s
 
 Potential | Ewald configuration | Diffraction pattern | Beams intensities
 --------- | ------------------- | ------------------- | -----------------
-[<img src="/projects/multislice/figures/multi2D/2_beam_fv.png" width="180" />](figures/multi2D/2_beam_fv.png) | [<img src="/projects/multislice/figures/multi2D/2_beam_E.svg" width="180" />](figures/multi2D/2_beam_E.svg) | [<img src="/projects/multislice/figures/multi2D/2_beam_Iq.svg" width="180" />](figures/multi2D/2_beam_Iq.svg) |   [<img src="/projects/multislice/figures/multi2D/2_beam_Iz.svg" width="180" />](figures/multi2D/2_beam_Iz.svg)
+[<img src="{{figs2D}}2_beam_fv.png" width="180" />](figures/multi2D/2_beam_fv.png) | [<img src="{{figs2D}}2_beam_E.svg" width="180" />](figures/multi2D/2_beam_E.svg) | [<img src="{{figs2D}}2_beam_Iq.svg" width="180" />](figures/multi2D/2_beam_Iq.svg) |   [<img src="{{figs2D}}2_beam_Iz.svg" width="180" />](figures/multi2D/2_beam_Iz.svg)
 
 ### Extinction distance
 Below, the same simulation is run for different potential strengths.  
@@ -20,7 +22,7 @@ For this strongly excited beam, dynamical diffraction is present at all potentia
 
 $g_1$ | $g_2$ | $\zeta_g$
 ----- | ----- | ---------
-[<img src="/projects/multislice/figures/multi2D/2_beam_I1.svg" width="400" />](figures/multi2D/2_beam_I1.svg) | [<img src="/projects/multislice/figures/multi2D/2_beam_I2.svg" width="400" />](figures/multi2D/2_beam_I2.svg) |  [<img src="/projects/multislice/figures/multi2D/2_beam_xi.svg" width="400" />](figures/multi2D/2_beam_xi.svg)
+[<img src="{{figs2D}}2_beam_I1.svg" width="400" />](figures/multi2D/2_beam_I1.svg) | [<img src="{{figs2D}}2_beam_I2.svg" width="400" />](figures/multi2D/2_beam_I2.svg) |  [<img src="{{figs2D}}2_beam_xi.svg" width="400" />](figures/multi2D/2_beam_xi.svg)
 
 ### Rocking curve
 Rocking curves are simulated by running simulations with various beam tilt angles ranging from 0 to 0.08 degrees.
@@ -33,7 +35,7 @@ The rocking curves around $\theta_c$ are characteristic of 2-beam theory and sho
 
 Rocking curves | $I_g(z)$ at $\theta_c$
 -------------- | ----------------------
-[<img src="/projects/multislice/figures/multi2D/2_beam_rocking.svg" width="400" />](figures/multi2D/2_beam_rocking.svg) | [<img src="/projects/multislice/figures/multi2D/2_beam_Itheta_c.svg" width="400" />](figures/multi2D/2_beam_Itheta_c.svg)
+[<img src="{{figs2D}}2_beam_rocking.svg" width="400" />](figures/multi2D/2_beam_rocking.svg) | [<img src="{{figs2D}}2_beam_Itheta_c.svg" width="400" />](figures/multi2D/2_beam_Itheta_c.svg)
 
 
 
@@ -76,6 +78,8 @@ In this set, a padding of 20 unit cells is applied while the number of periodic 
 
 
 ## Real space convolution
+{% set figsFresnel='/figures/multislice/fresnel/' %}
+
 Performing the convolution by direct integration, using the small angle approximation :
 \begin{equation}
   \Psi(x,z_0+\Delta z) = \int_{-\delta x}^{\delta x} p(X,\Delta z) t(x-X,z_0)\Psi(x-X,z_0) dX
@@ -85,7 +89,7 @@ where $\delta x=\Delta z\theta$ with $\theta=0.1rad$ small angle and the Fresnel
 
 Transmission | Propagator | $\Psi(x,z_0+\Delta z)$
 ------------ | ---------- | ----------------------
-[<img src="/projects/multislice/figures/fresnelT.svg" width="400" />](figures/fresnelT.svg) | [<img src="/projects/multislice/figures/fresnelP.svg" width="400" />](figures/fresnelP.svg) | [<img src="/projects/multislice/figures/fresnelX.svg" width="400" />](figures/fresnelX.svg)
+[<img src="{{figsFresnel}}fresnelT.svg" width="400" />]({{figsFresnel}}fresnelT.svg) | [<img src="{{figsFresnel}}fresnelP.svg" width="400" />]({{figsFresnel}}fresnelP.svg) | [<img src="{{figsFresnel}}fresnelX.svg" width="400" />]({{figsFresnel}}fresnelX.svg)
 
 
-Below the real space transmission function, propagator and convolution product using the above integral and the FFT based multislice approach. 
+Below the real space transmission function, propagator and convolution product using the above integral and the FFT based multislice approach.

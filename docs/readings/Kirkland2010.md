@@ -1,4 +1,5 @@
 # Advanced computing in electron microscopy
+{% set figs='/figures/readings/kirkland2010/' %}
 
 ## Chap5 Thin specimens
 
@@ -12,7 +13,7 @@ However the potential exhibits a singularity in real space due to the atomic nuc
 
 electron density $r^2\rho(r)$ | 3D potential $V(r)$ | projected potential $\nu_z(r)$
 ------| ------| -----
-[<img src="/readings/kirkland2010/5_density.png" width="220">](kirkland2010/5_density.png) | [<img src="/readings/kirkland2010/5_potential.png" width="220">](kirkland2010/5_potential.png) | [<img src="/readings/kirkland2010/5_projected_potential.png" width="220">](kirkland2010/5_projected_potential.png)
+[<img src="{{figs}}5_density.png" width="220">]({{figs}}5_density.png) | [<img src="{{figs}}5_potential.png" width="220">]({{figs}}5_potential.png) | [<img src="{{figs}}5_projected_potential.png" width="220">]({{figs}}5_projected_potential.png)
 
 The [atomic scattering factor](/projects/scattering/#electron-scattering) can be calculated within the Born approximation which will be obtained from a simple Fourier transform. The projected potential can therefore conveniently be deduced using the Fourier projection theorem.
 
@@ -21,13 +22,13 @@ Applying the Born approximation for the atomic scattering amplitudes assumes tha
 
 Born approximation for C,Si,Cu,Au,U | Moliere vs Born approximation for Gold
 -------------------|--------------
-[<img src="/readings/kirkland2010/born_fq.png" width="300" />](/readings/kirkland2010/born_fq.png) | [<img src="/readings/kirkland2010/moliere_fq.png" width="300" />](/readings/kirkland2010/moliere_fq.png)
+[<img src="{{figs}}born_fq.png" width="300" />]({{figs}}born_fq.png) | [<img src="{{figs}}moliere_fq.png" width="300" />]({{figs}}moliere_fq.png)
 
 
 ### Image of thin specimens
 Projected atomic potentials | Image intensities
 ------------------          | --------------
-[<img src="/readings/kirkland2010/thin_specimen_real.png" width="300" />](/readings/kirkland2010/thin_specimen_real.png) | [<img src="/readings/kirkland2010/thin_specimen_image.png" width="300" />](/readings/kirkland2010/thin_specimen_image.png)
+[<img src="{{figs}}thin_specimen_real.png" width="300" />]({{figs}}thin_specimen_real.png) | [<img src="{{figs}}thin_specimen_image.png" width="300" />]({{figs}}thin_specimen_image.png)
 
 
 
@@ -64,7 +65,7 @@ Computer time as    | $N\log_2(N)$  | $N^3$
 
 Bloch(up) vs mutlislice(down) | CPU time
 -----               |----
-[<img src="/readings/kirkland2010/blochvsmult.png" width="350">](/readings/kirkland2010/blochvsmult.png) | [<img src="/readings/kirkland2010/cpuBlochMultislice.png" width="350">](/readings/kirkland2010/cpuBlochMultislice.png)
+[<img src="{{figs}}blochvsmult.png" width="350">]({{figs}}blochvsmult.png) | [<img src="{{figs}}cpuBlochMultislice.png" width="350">]({{figs}}cpuBlochMultislice.png)
 
 
 
@@ -90,7 +91,7 @@ Using the boundary conditions that the incident wave is a plane wave solely alon
 \end{equation}
 
  where $T$ is the thickness,
- $\bb S=\bb C\bb e^{2i\pi\boldsymbol{\gamma_j}T}\bb C^{-1}$ 
+ $\bb S=\bb C\bb e^{2i\pi\boldsymbol{\gamma_j}T}\bb C^{-1}$
  is the scattering matrix.
  The far field diffraction pattern is then obtained from standard Fourier transform since it corresponds to propagation in free space. As a result $S_{\bb G0}^2$ can readily be identified as the diffraction intensity of beam $\bb G$.  
 
@@ -124,7 +125,7 @@ see [multislice](/projects/multislice/#application-examples)
 ## Chap8 The programs
 atompot+mulslice | autoslic Si[100]
 ------|-------
-[<img src="/readings/kirkland2010/mulslice.png" width="200"/>](/readings/kirkland2010/mulslice.png) | [<img src="/readings/kirkland2010/autoslic.png" width="200"/>](/readings/kirkland2010/autoslic.png)
+[<img src="{{figs}}mulslice.png" width="200"/>]({{figs}}mulslice.png) | [<img src="{{figs}}autoslic.png" width="200"/>]({{figs}}autoslic.png)
 
 ### atompot and mulslic
 These codes are essentially described in [temsim](/projects/multislice/temsim)

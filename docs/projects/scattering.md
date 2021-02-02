@@ -1,5 +1,7 @@
 # Scattering
 
+{% set figs='/figures/scattering/' %}
+
 ## Theory of scattering
 ### Quantum mechanical theory
 The quantum mechanical theory of scattering is developed by expanding the general solutions of Schrodinger's equation using Green's functions formalism. This results in the
@@ -58,7 +60,7 @@ Using then Poisson equation, the electron scattering factors $f^e$ can be relate
 
 
 In practice, $f^x$ and $f^e$ are commonly fitted using
-[Gaussian sums](https://it.iucr.org/Cb/ch6o1v0001/) ($q=\sin(\theta)/\lambda$) and Gaussian-Lorentzian sums (see comparison with Mott-Bethe for [carbon](/figures/MottBethe.svg)) :
+[Gaussian sums](https://it.iucr.org/Cb/ch6o1v0001/) ($q=\sin(\theta)/\lambda$) and Gaussian-Lorentzian sums (see comparison with Mott-Bethe for [carbon]({{figs}}MottBethe.svg)) :
 \begin{equation}
   f^x(q) = \sum_{i=1}^{4} a_i^{(x)}\exp\left(-b_i^{(x)}q^2 \right) + c^{(x)}
 ~~\mbox{,}~~~~~~~
@@ -69,7 +71,7 @@ Atomic form factors are shown below for $C,H,N,O,S,P$ :
 
 X-ray  | Electron
 -------|-----------
-[<img src="/figures/xray_atomic_scattering_factors.svg" width="360"/>](/figures/xray_atomic_scattering_factors.svg) | [<img src="/figures/electron_atomic_scattering_factors.svg" width="360"/>](/figures/electron_atomic_scattering_factors.svg)
+[<img src="{{figs}}xray_atomic_scattering_factors.svg" width="360"/>]({{figs}}xray_atomic_scattering_factors.svg) | [<img src="{{figs}}electron_atomic_scattering_factors.svg" width="360"/>]({{figs}}electron_atomic_scattering_factors.svg)
 
 ### Real space potential
 The real space potential may be useful and computed from analytical inverse Fourier transform of the fitted atomic form factors :
@@ -88,9 +90,13 @@ The projected potential along a given Cartesian axis $z$ may then be approximate
 
 where $a_0$ is the Bohr radius and $K_0$ is the first order Bessel function of the second kind.
 
+
+
+{% set figsKK='/figures/readings/' %}
+
 Electron density $r^2\rho(r)$ | 3D potential $V(r)$ | Projected potential $\nu_z(r)$
 ------| ------| -----
-[<img src="/readings/kirkland2010/5_density.png" width="220">](/readings/kirkland2010/5_density.png) | [<img src="/readings/kirkland2010/5_potential.png" width="220">](/readings/kirkland2010/5_potential.png) | [<img src="/readings/kirkland2010/5_projected_potential.png" width="220">](/readings/kirkland2010/5_projected_potential.png)
+[<img src="{{figsKK}}kirkland2010/5_density.png" width="220">]({{figsKK}}kirkland2010/5_density.png) | [<img src="{{figsKK}}kirkland2010/5_potential.png" width="220">]({{figsKK}}kirkland2010/5_potential.png) | [<img src="{{figsKK}}kirkland2010/5_projected_potential.png" width="220">]({{figsKK}}kirkland2010/5_projected_potential.png)
 
 ### Inelastic scattering
 Inelastic scattering occurs when a particle is created or one of the colliding particles gets excited to a higher state. From the point of view of the incident electron, this may be considered as inelastic if a fraction of its kinetic energy is given off to the deflecting particle.This would manifest by a recoil of the deflecting particle.
@@ -167,7 +173,7 @@ The primary effect is to create a background in the diffraction pattern.
 
 patttern | intensities
 -------- | ----------
-[<img src="/figures/TDS_Si111_ED.png" width=300 >](/figures/TDS_Si111_ED.png) | [<img src="/figures/TDS_effect.png" width=400 >](/figures/TDS_effect.png)
+[<img src="{{figs}}TDS_Si111_ED.png" width=300 >]({{figs}}TDS_Si111_ED.png) | [<img src="{{figs}}TDS_effect.png" width=400 >]({{figs}}TDS_effect.png)
 
 
 ### B-factor
