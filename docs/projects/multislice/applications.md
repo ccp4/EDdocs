@@ -2,7 +2,7 @@
 
 
 ## IRELOH
-{% set ireloh='/projects/multislice/figures/ireloh/' %}
+{% set ireloh='/figures/multislice/ireloh/' %}
 
 Structure : $P2_12_12_1$
 
@@ -67,7 +67,7 @@ Typical simulated diffraction patterns after propagating through 100 unit cells 
 ### Comparison with experiment
 
 
-{% set figsBiotin='/projects/multislice/figures/biotin/' %}
+{% set figsBiotin='/figures/multislice/biotin/' %}
 
 
 ## Biotin
