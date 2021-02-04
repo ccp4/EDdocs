@@ -10,16 +10,11 @@ Lattice parameters:
 
 - a=8.065Å, b=9.997Å, c=17.729Å
 - $\alpha$=90.000°, $\beta$=90.000°, $\gamma$=90.000°
-
 - reciprocal lattice parameters : 0.779Å, 0.629Å, 0.354Å
-
-Chemical composition:
-C: 41.026%
-H: 46.154%
-O: 12.821%
-
-
-
+- Chemical composition: C(41.026%) H(46.154%) O(12.821%)
+- Chemical formula : $C_{16} H_{18} O_5$
+- atoms in a unit cell : $(16+5+26)\times 4 = 156$
+- atoms in a $15\times15\times15$ crystals : 526500
 
 a    | b     | c
 ---- | ----- | -----
@@ -48,6 +43,16 @@ spot finding procedure for typical diffraction patterns for dataset 1,2 and 3.
 Reciprocal space configuration for 1) indexed reflections (116). 2) integrated reflections and 3) zoom around reciprocal unit cell.
 phi is the rotation axis and the other axis is the beam axis (z direction).
 
+### Simulation and comparison
+
+The diffraction pattern 484 is simulated after retrieving the orientation using `dials.reciprocal_lattice_viewer`.
+
+a  | b  | c
+-- | -- | --
+[![]({{ireloh}}484_X.png)]({{ireloh}}484_X.png) |  [![]({{ireloh}}484_B.svg)]({{ireloh}}484_B.svg) | [![]({{ireloh}}484_I.png)]({{ireloh}}484_I.png)
+
+a) crystal setup in the $(x,z)$ plane where $z$ is the beam axis and the blue rectangle represents the simulation domain. b) Evolution of main beams with thickness. c) Diffraction pattern at thickness $z=309A$.
+
 
 ### Zone axis simulation
 
@@ -64,13 +69,16 @@ Simulation domain : $8\times 8$ super cell with padding corresponding to the blu
 Typical simulated diffraction patterns after propagating through 100 unit cells thick crystal $\approx 1770A$.
 
 
-### Comparison with experiment
 
 
+
+
+<!-- ###############################################################
+                            Silicon
+#################################################################### -->
+## Biotin
 {% set figsBiotin='/figures/multislice/biotin/' %}
 
-
-## Biotin
 [<img src="{{figsBiotin}}biotin_vesta.png" style="float: right;" width="250" /> ]({{figsBiotin}}biotin_vesta.png)
 
 - Structure : $P2_12_12_1$
