@@ -2,13 +2,11 @@
 
 {% set figs='/figures/readings/' %}
 
-- [ClabbersGrueneAbrahams2017](clabbersgrueneabrahams2017) : Protein structure determination by ED of 3D nanocrystal using Molecular Replacement and standard X-ray protein crystallography software.
-- [LatychevskaiaAbrahams2019](#latychevskaiaabrahams2019) : Inelastic scattering and solvent scattering significantly mitigate the effect of dynamical diffraction.
-- [SubrimanianSpence2015](#subramanianspence2015) : Simulation predicts dynamical diffraction too strong at thickness above 100-200nm.
-- [CowleyMoodie1957](/readings/CowleyMoodie1957) : Original [paper](/articles/CowleyMoodie1957.pdf) on multislice.
-- [oleynikov2007](#oleynikov2007) : comparison of ms and exp for precessionED and SAED.
-
-
+- [ClabbersGrueneAbrahams2017](clabbersgrueneabrahams2017) : **Clabbers, M. T. B., Genderen, E. Van, Wan, W., Wiegers, E. L., & Gruene, T. (2017). Protein structure determination by electron diffraction using a single three-dimensional nanocrystal. Acta Crystallographica Section D, 73, 738–748. [doi](https://doi.org/10.1107/S2059798317010348)
+- [LatychevskaiaAbrahams2019](#latychevskaiaabrahams2019) : Latychevskaia, T., & Abrahams, J. P. (2019). Inelastic scattering and solvent scattering reduce dynamical diffraction in biological crystals. Acta Crystallographica Section B: Structural Science, Crystal Engineering and Materials, 75, 523–531. [doi](https://doi.org/10.1107/S2052520619009661)
+- [SubrimanianSpence2015](#subramanianspence2015) : Latychevskaia, T., & Abrahams, J. P. (2019). Inelastic scattering and solvent scattering reduce dynamical diffraction in biological crystals. Acta Crystallographica Section B: Structural Science, Crystal Engineering and Materials, 75, 523–531. [doi](https://doi.org/10.1107/S2052520619009661)
+- [CowleyMoodie1957](/readings/CowleyMoodie1957) : Cowley, J. M., & Moodie, A. F. (1957). The scattering of electrons by atoms and crystals. I. A new theoretical approach. Acta Crystallographica, 10(10), 609–619. [doi](https://doi.org/10.1107/s0365110x57002194) This is the original [paper](/articles/CowleyMoodie1957.pdf) on the multislice method.
+- [oleynikov2007](#oleynikov2007) : Oleynikov, P., Hovmöller, S., & Zou, X. D. (2007). Precession electron diffraction: Observed and calculated intensities. Ultramicroscopy, 107(6–7), 523–533. [doi](https://doi.org/10.1016/j.ultramic.2006.04.032)
 
 ##ClabbersGrueneAbrahams2017
 {% set clabbersGrueneAbrahams2017='/figures/readings/clabbersGrueneAbrahams2017/' %}

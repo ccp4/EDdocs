@@ -70,30 +70,8 @@ Bloch(up) vs mutlislice(down) | CPU time
 
 
 ### Bloch waves
-Assumptions :
 
-- Elastic scattering : $E$ is constant at the incident electron energy.
-- High energy approximation of collimated incident beam : $k_0\approx|\bb k_j|\gg|\bb G|$ hence ignoring backscattering.
-- Continuity at the interface for individual beams : $\bb k_j=(k_0+\gamma_j)\bb e_z $.
-- Small angle approximation : $\gamma_j^2\ll 2\gamma_j(\bb k_0+\bb G)\cdot \bb e_z$
-
-Eigen value equation in $\gamma_j$ :
-\begin{eqnarray}
-  2k_0S_{\bb G}C_{j,\bb G} + \sum_{\bb G^{'}}V_{\bb G-\bb G^{'}}C_{j,\bb G^{'}} &=& 2k_0\gamma_jC_{j,\bb G} \\
-  S_{\bb G}C_{j,\bb G}     + \sum_{\bb G^{'}}\frac{V_{\bb G-\bb G^{'}}}{2k_0} C_{j,\bb G^{'}} &=& \gamma_jC_{j,\bb G}
-\end{eqnarray}
-
-where $2k_0S_{\bb G}=k_0^2-|\bb k_0+\bb G|^2=-2\bb k_0\cdot\bb G-|\bb G|^2\approx -2k_0G_z$ is the excitation error and $C_{j,\bb G}$ is the component of eigen vector $j$ related to the contribution of reciprocal lattice vector (or beam) $\bb G$.
-
-Using the boundary conditions that the incident wave is a plane wave solely along the $\bb G=\bb 0$ direction enables to compute the wave function at the other boundary through a transfer matrix formalism :
-\begin{equation}
-  \Psi(\bb r_{xy},T) = e^{2i\pi k_0T}\sum_{\bb G}\bb S_{\bb G,0}e^{2i\pi G_z T}e^{2i\pi\bb G_{xy}\cdot\bb r_{xy}}
-\end{equation}
-
- where $T$ is the thickness,
- $\bb S=\bb C\bb e^{2i\pi\boldsymbol{\gamma_j}T}\bb C^{-1}$
- is the scattering matrix.
- The far field diffraction pattern is then obtained from standard Fourier transform since it corresponds to propagation in free space. As a result $S_{\bb G0}^2$ can readily be identified as the diffraction intensity of beam $\bb G$.  
+see [Bloch wave](/projects/dynamical_diffraction).
 
 ### Fast electron wave equation
 Using constant high energy collimated electrons, i.e. $\Psi_f=\Psi(x,y,z)e^{ik_0z}$ and slow varying envelope, i.e. $\dP^2_{z}\ll 2ik_0\dP_z$ assumptions, Schrodinger's equation reduces to:

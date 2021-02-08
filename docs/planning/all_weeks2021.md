@@ -1,3 +1,20 @@
+#week 05
+## Monday
+- ireloh  : [x] crystals import in adapt orientation
+## Tuesday
+- [x] ireloh : test and commit crystals import in adapt orientation
+- [x] website
+## Wednesday
+- [x] ireloh : test the other orientations
+- [x] reading : spence 2020
+##Thursday
+- reading :
+    - [x] Document spence2020
+    - [x] shen1998 : 3-beam phase problem  
+    - [x] Refs in spence2020
+## Friday
+- [x] reading :Document allen1998,spence1998,spence2000 &others
+
 # week 04
 ## Monday
 - reading

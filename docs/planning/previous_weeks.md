@@ -1,3 +1,7 @@
+#week 05
+- ireloh orientation script fixed
+- inverse scattering problem readings
+
 # week 04
 - fix Fresnel integral pb
 - ireloh : orientation script

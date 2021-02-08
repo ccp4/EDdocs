@@ -1,19 +1,5 @@
-#week 05
+# week 06
 ## Monday
-- ireloh  
-    - [x] crystals import in adapt orientation
-## Tuesday
-- [x] ireloh : test and commit crystals import in adapt orientation
-- [x] website
-
-## Wednesday
-- [x] ireloh : test the other orientations
-- [x] reading : spence 2020
-
-##Thursday
-- reading :
-    - [ ] Document spence2020
-    - [ ] Refs in spence2020
 - [ ] clean website
 ireloh :
     - [ ] Check orientation axis with mupy code
@@ -23,6 +9,9 @@ ireloh :
     - [ ] redo the carbon integration study
 - Bloch wave development : clean and compare to ms2d
 - compare MULTEM with TEMSIM
+
+##Tuesday
+
 
 
 ##TODO

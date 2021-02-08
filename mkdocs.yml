@@ -46,6 +46,7 @@ nav:
      - 'Misc' : 'readings/misc_papers.md'
      - 'Multislice Literature' : 'readings/multislice.md'
      - 'CowleyMoodie1957' : 'readings/CowleyMoodie1957.md'
+     - 'inverse scattering problem' : 'readings/inverse_scattering.md'
  - Planning:
      - 'Week progress' : 'planning/week_progress.md'
      - 'Previous weeks' : 'planning/previous_weeks.md'

@@ -3,7 +3,50 @@
 {% set figs='/figures/dynamical_diffraction/' %}
 
 
-## kinematic approximation
+## Bloch wave
+Assumptions :
+
+- Elastic scattering : $E$ is constant at the incident electron energy.
+- High energy approximation of collimated incident beam : $k_0\approx|\bb k_j|\gg|\bb G|$ hence ignoring backscattering.
+- Continuity at the interface for individual beams : $\bb k_j=(k_0+\gamma_j)\bb e_z $.
+- Small angle approximation : $\gamma_j^2\ll 2\gamma_j(\bb k_0+\bb G)\cdot \bb e_z$
+
+Eigen value equation in $\gamma_j$ :
+\begin{eqnarray}
+  2k_0S_{\bb G}C_{j,\bb G} + \sum_{\bb G^{'}}V_{\bb G-\bb G^{'}}C_{j,\bb G^{'}} &=& 2k_0\gamma_jC_{j,\bb G} \\
+  S_{\bb G}C_{j,\bb G}     + \sum_{\bb G^{'}}\frac{V_{\bb G-\bb G^{'}}}{2k_0} C_{j,\bb G^{'}} &=& \gamma_jC_{j,\bb G}
+\end{eqnarray}
+
+where $2k_0S_{\bb G}=k_0^2-|\bb k_0+\bb G|^2=-2\bb k_0\cdot\bb G-|\bb G|^2\approx -2k_0G_z$ is the excitation error and $C_{j,\bb G}$ is the component of eigen vector $j$ related to the contribution of reciprocal lattice vector (or beam) $\bb G$.
+
+Using the boundary conditions that the incident wave is a plane wave solely along the $\bb G=\bb 0$ direction enables to compute the wave function at the other boundary through a transfer matrix formalism :
+\begin{equation}
+  \Psi(\bb r_{xy},T) = e^{2i\pi k_0T}\sum_{\bb G}\bb S_{\bb G,0}e^{2i\pi G_z T}e^{2i\pi\bb G_{xy}\cdot\bb r_{xy}}
+\end{equation}
+
+ where $T$ is the thickness,
+ $\bb S=\bb C\bb e^{2i\pi\boldsymbol{\gamma_j}T}\bb C^{-1}$
+ is the scattering matrix.
+ The far field diffraction pattern is then obtained from standard Fourier transform since it corresponds to propagation in free space. As a result $S_{\bb G0}^2$ can readily be identified as the diffraction intensity of beam $\bb G$.  
+
+
+
+
+## Applications
+### 2-beam configuration
+
+In [Bloch theory](/readings/Kirkland2010/#bloch-waves) using 2 beams approximation gives the intensity as :
+\begin{equation}
+  I_{dyn-2}(w_g;t,\xi_g) = \left(\frac{\pi t}{\xi_g}\right)^2
+    sinc^2\left(\frac{t}{\xi_g}\sqrt{1+w_g^2}\right)
+\end{equation}
+where :
+
+- $\xi_g=k_0/U_g$ is the Pendellosung thickness (in $A$) with $k_0=1/\lambda$ being the wave number.
+- $w_g=S_g\xi_g$ is the excitation error scaled by $\xi_g$.
+- $U_g=2me/h^2 v_g$ is the form factor Fourier component (in $A^{-2}$).
+
+### kinematic approximation
 
 The intensity of a Bragg spot can be established as :
 \begin{equation}
@@ -16,18 +59,7 @@ where :
 - $\sigma$ the interaction parameter (in $rad/kVA$).
 - $v_g$ the Fourier components (in $V$).
 
-## 2-beam configuration
-
-In [Bloch theory](/readings/Kirkland2010/#bloch-waves) using 2 beams approximation gives the intensity as :
-\begin{equation}
-  I_{dyn-2}(w_g;t,\xi_g) = \left(\frac{\pi t}{\xi_g}\right)^2
-    sinc^2\left(\frac{t}{\xi_g}\sqrt{1+w_g^2}\right)
-\end{equation}
-where :
-
-- $\xi_g=k_0/U_g$ is the Pendellosung thickness (in $A$) with $k_0=1/\lambda$ being the wave number.
-- $w_g=S_g\xi_g$ is the excitation error scaled by $\xi_g$.
-- $U_g=2me/h^2 v_g$ is the form factor Fourier component (in $A^{-2}$).
+### Comparison 2-beam vs kinematic
 
 Since $\sigma v_g=\pi/\xi_g$ one can see that for $S_G=0$ the 2-beam intensity reduces to kinematic limit case for small thickness :
 \begin{equation}
@@ -56,6 +88,13 @@ Taking the arbitrary values $K=100A^{-1}$, $U_g=0.1A^{-2}$ gives a Pendullosung 
 
 
 
+
+
+<!--
+#################################################################################
+                                      Collison
+#################################################################################
+ -->
 ## Collision approach
 {% set figsB='/figures/nearBragg/' %}
 
