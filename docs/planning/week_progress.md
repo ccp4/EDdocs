@@ -1,6 +1,7 @@
 # week 06
-## Monday
-- [ ] clean website
+## Monday 
+
+##Tuesday
 ireloh :
     - [ ] Check orientation axis with mupy code
     - [ ] excitation errors on zone axis
@@ -9,10 +10,7 @@ ireloh :
     - [ ] redo the carbon integration study
 - Bloch wave development : clean and compare to ms2d
 - compare MULTEM with TEMSIM
-
-##Tuesday
-
-
+- [ ] clean website
 
 ##TODO
 - simulate 10 different thicknesses integrated by integration software

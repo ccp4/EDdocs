@@ -1,6 +1,7 @@
 src
 docs/books
 docs/articles
+docs/projects/multislice/figures/ireloh/gif
 reports/
 
 #duplicate figures
@@ -10,4 +11,3 @@ docs/documents/report/eqs/
 *.aux
 *.toc
 *.blg
-

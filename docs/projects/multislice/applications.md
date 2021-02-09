@@ -40,18 +40,36 @@ spot finding procedure for typical diffraction patterns for dataset 1,2 and 3.
 -- | -- | --
 [![]({{ireloh}}dials_viewer1.png)]({{ireloh}}dials_viewer1.png) |  [![]({{ireloh}}dials_viewer3.png)]({{ireloh}}dials_viewer3.png) |  [![]({{ireloh}}dials_viewer2.png)]({{ireloh}}dials_viewer2.png)
 
-Reciprocal space configuration for 1) indexed reflections (116). 2) integrated reflections and 3) zoom around reciprocal unit cell.
-phi is the rotation axis and the other axis is the beam axis (z direction).
+Reciprocal space configuration using `dials.reciprocal_lattice_viewer` for 1) indexed reflections (116). 2) integrated reflections and 3) zoom around reciprocal unit cell.
+The rotation axis is `phi` and the other axis is the beam axis (z direction).
 
 ### Simulation and comparison
 
-The diffraction pattern 484 is simulated after retrieving the orientation using `dials.reciprocal_lattice_viewer`.
+a  | b  | c  | d
+-- | -- | -- | --   
+[![]({{ireloh}}1_xy.gif)]({{ireloh}}1_xy.gif) | [![]({{ireloh}}1_yz.gif)]({{ireloh}}1_yz.gif) | [![]({{ireloh}}1_xz.gif)]({{ireloh}}1_xz.gif) | [![]({{ireloh}}1_abc.gif)]({{ireloh}}1_abc.gif)
 
-a  | b  | c
--- | -- | --
-[![]({{ireloh}}484_X.png)]({{ireloh}}484_X.png) |  [![]({{ireloh}}484_B.svg)]({{ireloh}}484_B.svg) | [![]({{ireloh}}484_I.png)]({{ireloh}}484_I.png)
+Crystal rotation in real space  in a)$(x,y)$ and b)$(x,z)$ and c)$(y,z)$ planes.   
+b) Crystal rotation in reciprocal space.
 
-a) crystal setup in the $(x,z)$ plane where $z$ is the beam axis and the blue rectangle represents the simulation domain. b) Evolution of main beams with thickness. c) Diffraction pattern at thickness $z=309A$.
+image | a  | b  | c  | d
+----- | -- | -- | -- | --
+484 | [![]({{ireloh}}ireloh_rotated484xy.png)]({{ireloh}}ireloh_rotated484xy.png) | [![]({{ireloh}}ireloh_rotated484xz.png)]({{ireloh}}ireloh_rotated484xz.png) | [![]({{ireloh}}ireloh_rotated484yz.png)]({{ireloh}}ireloh_rotated484yz.png) | [![]({{ireloh}}spot1_484_viewer.png)]({{ireloh}}spot1_484_viewer.png)
+900 | [![]({{ireloh}}ireloh_rotated900xy.png)]({{ireloh}}ireloh_rotated900xy.png) | [![]({{ireloh}}ireloh_rotated900xz.png)]({{ireloh}}ireloh_rotated900xz.png) | [![]({{ireloh}}ireloh_rotated900yz.png)]({{ireloh}}ireloh_rotated900yz.png) | [![]({{ireloh}}spot1_900_viewer.png)]({{ireloh}}spot1_900_viewer.png)
+
+Crystal setup for images 484 and 900 in the a)$(x,y)$ and b)$(x,z)$ and c)$(y,z)$ planes.   $z$ is the beam axis and the blue rectangle represents the simulation domain.
+d) Experimental diffraction pattern with projection of the reciprocal lattice vectors.
+
+The diffraction patterns 484 and 900 are simulated and compared to experimental one.
+
+image | a  | b  | c  
+----- | -- | -- | --
+484 | [![]({{ireloh}}484_B.svg)]({{ireloh}}484_B.svg) | [![]({{ireloh}}484_I.png)]({{ireloh}}484_I.png) | [![]({{ireloh}}spot1_484_viewer.png)]({{ireloh}}spot1_484_viewer.png)
+900 | [![]({{ireloh}}900_B.svg)]({{ireloh}}900_B.svg) | [![]({{ireloh}}900_I.png)]({{ireloh}}900_I.png) | [![]({{ireloh}}spot1_900_viewer.png)]({{ireloh}}spot1_900_viewer.png)
+
+ a) Evolution of main beams with thickness.
+ b) Diffraction pattern at thickness $z=309A$.
+ c) Experimental diffraction pattern with projection of the reciprocal lattice vectors.
 
 
 ### Zone axis simulation
