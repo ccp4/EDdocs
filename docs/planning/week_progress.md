@@ -1,13 +1,17 @@
 # week 06
-## Monday 
+## Monday
 
 ##Tuesday
+ireloh : orientation and simu for image 900
+
+## Wednesday
 ireloh :
-    - [ ] Check orientation axis with mupy code
-    - [ ] excitation errors on zone axis
+  - [ ] Check orientation axis with mupy code and dials.frame_orientations
+  - [ ] fix miller indices
+  - [ ] excitation errors on zone axis
 - multi2D :
-    - [ ] no periodic boundary condition
-    - [ ] redo the carbon integration study
+  - [ ] no periodic boundary condition
+  - [ ] redo the carbon integration study
 - Bloch wave development : clean and compare to ms2d
 - compare MULTEM with TEMSIM
 - [ ] clean website

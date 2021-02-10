@@ -45,12 +45,23 @@ The rotation axis is `phi` and the other axis is the beam axis (z direction).
 
 ### Simulation and comparison
 
+
+a  | b  | c
+-- | -- | --
+[![]({{ireloh}}1_484_xyz.png)]({{ireloh}}1_484_xyz.png) | [![]({{ireloh}}1_484_rot.png)]({{ireloh}}1_484_rot.png) | [![]({{ireloh}}1_484_dav.png)]({{ireloh}}1_484_dav.png)
+
+a) Real space unit cell with the atoms inside. The beam orientation for image 484 is $[-1.52, -0.51, 0.65]$ as given by `uvw zone axis` using `dials.frame_orientations ` in the $[\bb a,\bb b,\bb c]$ base.
+b) Same as a) after re-orienting the crystal in such a way that the beam is coincidental with the $z$ axis as assumed by the multislice implementation.
+c) Reorientation using `scan_orientations.py` code.
+
+
 a  | b  | c  | d
 -- | -- | -- | --   
 [![]({{ireloh}}1_xy.gif)]({{ireloh}}1_xy.gif) | [![]({{ireloh}}1_yz.gif)]({{ireloh}}1_yz.gif) | [![]({{ireloh}}1_xz.gif)]({{ireloh}}1_xz.gif) | [![]({{ireloh}}1_abc.gif)]({{ireloh}}1_abc.gif)
 
-Crystal rotation in real space  in a)$(x,y)$ and b)$(x,z)$ and c)$(y,z)$ planes.   
-b) Crystal rotation in reciprocal space.
+The full $15\times 15\times 15$ crystal as it is rotated around the goniometer in real space.
+a)$(x,y)$ and b)$(x,z)$ and c)$(y,z)$ planes.   
+d) Crystal rotation in reciprocal space.
 
 image | a  | b  | c  | d
 ----- | -- | -- | -- | --
