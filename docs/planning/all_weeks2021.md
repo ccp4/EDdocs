@@ -1,3 +1,14 @@
+#week 06
+## Monday
+##Tuesday
+- [x] ireloh : orientation and simu for image 900
+## Wednesday
+- [x] ireloh : Check orientation axis with mupy code and dials.frame_orientations
+## Thursday
+ireloh :
+  - [x] ireloh : fix unconsistency
+## Friday
+
 #week 05
 ## Monday
 - ireloh  : [x] crystals import in adapt orientation

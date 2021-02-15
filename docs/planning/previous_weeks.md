@@ -1,3 +1,6 @@
+#week 06
+- ireloh : orientation and simu for image 900 + fix orientation inconsistency + dials.frame_orientations
+
 #week 05
 - ireloh orientation script fixed
 - inverse scattering problem readings

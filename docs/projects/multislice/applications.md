@@ -50,8 +50,8 @@ a  | b  | c
 -- | -- | --
 [![]({{ireloh}}1_484_xyz.png)]({{ireloh}}1_484_xyz.png) | [![]({{ireloh}}1_484_rot.png)]({{ireloh}}1_484_rot.png) | [![]({{ireloh}}1_484_dav.png)]({{ireloh}}1_484_dav.png)
 
-a) Real space unit cell with the atoms inside. The beam orientation for image 484 is $[-1.52, -0.51, 0.65]$ as given by `uvw zone axis` using `dials.frame_orientations ` in the $[\bb a,\bb b,\bb c]$ base.
-b) Same as a) after re-orienting the crystal in such a way that the beam is coincidental with the $z$ axis as assumed by the multislice implementation.
+a) Real space unit cell with the atoms inside. The beam orientation for image 484 is $[-1.52, -0.51, 0.65]$ as given by `uvw zone axis` using `dials.frame_orientations ` in the $[\bb x,\bb y,\bb z]$ base.
+b) Same as a) after re-orienting the crystal in such a way that the beam coincides with the $z$ axis as assumed by the multislice implementation.
 c) Reorientation using `scan_orientations.py` code.
 
 
