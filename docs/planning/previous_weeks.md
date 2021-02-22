@@ -1,3 +1,6 @@
+#week 07
+- getting familiar with dials code : how to get spots, reciprocal lattice points, miller indices ...
+
 #week 06
 - ireloh : orientation and simu for image 900 + fix orientation inconsistency + dials.frame_orientations
 

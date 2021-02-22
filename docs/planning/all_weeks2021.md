@@ -1,3 +1,19 @@
+# week 07
+## Monday
+ireloh :
+- [x] miller indices rsa_.dot(xh)? NO
+## Tuesday
+- [x] ireloh :
+  - compared rsa_ for image_viewer and reciprocal_lattice_viewer(frame is not the right one)
+  - extract reciprocal cell in correct frame but indexing not right
+## Wednesday
+- [x] ireloh : check code for find_spots and indexing
+## Thursday
+- [x] ireloh : check code for reciprocal lattice viewer, image_viewer
+## Friday
+- [x] ireloh : finally code the miller index once the spot are known (although do not understand the d matrix in get_lab_coords)
+
+
 #week 06
 ## Monday
 ##Tuesday
