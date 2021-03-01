@@ -1,3 +1,20 @@
+# week 08
+## Monday
+## Tuesday
+- ireloh :
+  - [x] create an experiment with dials
+
+## Wednesday
+- ireloh :
+  - [x] dials ipython
+  - [x] use find spots
+
+## Thursday
+-  [x] ireloh : try to identify miller indices
+
+## Friday
+-  [x] ireloh : identify miller indices
+
 # week 07
 ## Monday
 ireloh :

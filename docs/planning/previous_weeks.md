@@ -1,3 +1,11 @@
+# week 08
+- ireloh :
+  - create an experiment with dials
+  - dials ipython
+  - use find spots
+  - try to identify miller indices
+  - identify miller indices
+
 #week 07
 - getting familiar with dials code : how to get spots, reciprocal lattice points, miller indices ...
 

@@ -1,6 +1,11 @@
 # meeting
+# 23/02
+scale the highest values to the same as experiment
+d_matrix reciprocal lattice point to detector plane
+developer build
+libtbx.pip install
 
-## 13 Jan 2021 Diffraction methods 
+## 13 Jan 2021 Diffraction methods
 - approximate inelastic scattering
 - density matrix approach
 - elena pascal : experience inelastic scattering

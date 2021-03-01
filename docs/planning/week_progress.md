@@ -1,16 +1,10 @@
-# week 08
+# week 09
 ## Monday
-- ireloh :
-  - [ ] create an experiment with dials
-  - [ ] use find spots
-  - [ ] try to identify miller indices
-
-
-- [ ] run simulation 1935-1945 and tilt simulation
-- [ ] excitation errors on zone axis
+  - [ ] run simulation 1935-1945 and tilt simulation
+  - [ ] excitation errors on zone axis
 - multi2D :
-- [ ] no periodic boundary condition
-- [ ] redo the carbon integration study
+  - [ ] no periodic boundary condition
+  - [ ] redo the carbon integration study
 - Bloch wave development : clean and compare to ms2d
 - compare MULTEM with TEMSIM
 - [ ] clean website
