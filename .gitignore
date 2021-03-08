@@ -2,8 +2,11 @@ src
 docs/books
 docs/articles
 docs/projects/multislice/figures/ireloh/gif
+docs/projects/multislice/figures/ireloh/*sim.png
+docs/projects/multislice/figures/ireloh/*exp.png
+
 reports/
-dials/ 
+dials/
 #duplicate figures
 docs/documents/report/figures
 docs/documents/report/eqs/

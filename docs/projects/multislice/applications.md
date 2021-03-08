@@ -45,24 +45,47 @@ The rotation axis is `phi` and the other axis is the beam axis (z direction).
 
 ### Simulation and comparison
 
+Ireloh dataset 2
 
+a  | b  | c  | d
+-- | -- | -- | --
+[![]({{ireloh}}ireloh2_xy.gif)]({{ireloh}}ireloh2_xy.gif) | [![]({{ireloh}}ireloh2_yz.gif)]({{ireloh}}ireloh2_yz.gif) | [![]({{ireloh}}ireloh2_xz.gif)]({{ireloh}}ireloh2_xz.gif) | [![]({{ireloh}}ireloh2_abc.gif)]({{ireloh}}ireloh2_abc.gif)
+
+The full $15\times 15\times 15$ crystal as it is rotated around the goniometer in real space.
+a)$(x,y)$ and b)$(x,z)$ and c)$(y,z)$ planes.   
+d) Crystal rotation in reciprocal space.
+
+
+imag | 000 | 100 | 200 | 300 | 400 | 500  
+---- | --- | --- | --- | --- | --- | ---
+sim  | [![]({{ireloh}}ireloh2_0000sim.png)]({{ireloh}}ireloh2_0000sim.png) | [![]({{ireloh}}ireloh2_0100sim.png)]({{ireloh}}ireloh2_0100sim.png) | [![]({{ireloh}}ireloh2_0200sim.png)]({{ireloh}}ireloh2_0200sim.png) | [![]({{ireloh}}ireloh2_0300sim.png)]({{ireloh}}ireloh2_0300sim.png) | [![]({{ireloh}}ireloh2_0400sim.png)]({{ireloh}}ireloh2_0400sim.png) | [![]({{ireloh}}ireloh2_0500sim.png)]({{ireloh}}ireloh2_0500sim.png)
+=exp  |  [![]({{ireloh}}ireloh2_0000exp.png)]({{ireloh}}ireloh2_0000exp.png) | [![]({{ireloh}}ireloh2_0100exp.png)]({{ireloh}}ireloh2_0100exp.png) | [![]({{ireloh}}ireloh2_0200exp.png)]({{ireloh}}ireloh2_0200exp.png) | [![]({{ireloh}}ireloh2_0300exp.png)]({{ireloh}}ireloh2_0300exp.png) | [![]({{ireloh}}ireloh2_0400exp.png)]({{ireloh}}ireloh2_0400exp.png) | [![]({{ireloh}}ireloh2_0500exp.png)]({{ireloh}}ireloh2_0500exp.png)
+
+
+
+
+
+
+<!--
 a  | b  | c
 -- | -- | --
 [![]({{ireloh}}1_484_xyz.png)]({{ireloh}}1_484_xyz.png) | [![]({{ireloh}}1_484_rot.png)]({{ireloh}}1_484_rot.png) | [![]({{ireloh}}1_484_dav.png)]({{ireloh}}1_484_dav.png)
 
 a) Real space unit cell with the atoms inside. The beam orientation for image 484 is $[-1.52, -0.51, 0.65]$ as given by `uvw zone axis` using `dials.frame_orientations ` in the $[\bb x,\bb y,\bb z]$ base.
 b) Same as a) after re-orienting the crystal in such a way that the beam coincides with the $z$ axis as assumed by the multislice implementation.
-c) Reorientation using `scan_orientations.py` code.
+c) Reorientation using `scan_orientations.py` code. -->
 
+<!-- Ireloh dataset 01
 
 a  | b  | c  | d
 -- | -- | -- | --   
-[![]({{ireloh}}1_xy.gif)]({{ireloh}}1_xy.gif) | [![]({{ireloh}}1_yz.gif)]({{ireloh}}1_yz.gif) | [![]({{ireloh}}1_xz.gif)]({{ireloh}}1_xz.gif) | [![]({{ireloh}}1_abc.gif)]({{ireloh}}1_abc.gif)
+[![]({{ireloh}}ireloh1_xy.gif)]({{ireloh}}ireloh1_xy.gif) | [![]({{ireloh}}ireloh1_yz.gif)]({{ireloh}}ireloh1_yz.gif) | [![]({{ireloh}}ireloh1_xz.gif)]({{ireloh}}ireloh1_xz.gif) | [![]({{ireloh}}ireloh1_abc.gif)]({{ireloh}}ireloh1_abc.gif)
 
 The full $15\times 15\times 15$ crystal as it is rotated around the goniometer in real space.
 a)$(x,y)$ and b)$(x,z)$ and c)$(y,z)$ planes.   
-d) Crystal rotation in reciprocal space.
+d) Crystal rotation in reciprocal space. -->
 
+<!--
 image | a  | b  | c  | d
 ----- | -- | -- | -- | --
 484 | [![]({{ireloh}}ireloh_rotated484xy.png)]({{ireloh}}ireloh_rotated484xy.png) | [![]({{ireloh}}ireloh_rotated484xz.png)]({{ireloh}}ireloh_rotated484xz.png) | [![]({{ireloh}}ireloh_rotated484yz.png)]({{ireloh}}ireloh_rotated484yz.png) | [![]({{ireloh}}spot1_484_viewer.png)]({{ireloh}}spot1_484_viewer.png)
@@ -80,10 +103,10 @@ image | a  | b  | c
 
  a) Evolution of main beams with thickness.
  b) Diffraction pattern at thickness $z=309A$.
- c) Experimental diffraction pattern with projection of the reciprocal lattice vectors.
+ c) Experimental diffraction pattern with projection of the reciprocal lattice vectors. -->
 
 
-### Zone axis simulation
+<!-- ### Zone axis simulation
 
 xy | zx | zy
 -- | -- | --
@@ -95,7 +118,7 @@ Simulation domain : $8\times 8$ super cell with padding corresponding to the blu
 ---- | ----- | -----
 [![]({{ireloh}}001_SC.png)]({{ireloh}}001_SC.png) |  [![]({{ireloh}}001_SC.png)]({{ireloh}}001_SC.png) | [![]({{ireloh}}001_SC.png)]({{ireloh}}001_SC.png)
 
-Typical simulated diffraction patterns after propagating through 100 unit cells thick crystal $\approx 1770A$.
+Typical simulated diffraction patterns after propagating through 100 unit cells thick crystal $\approx 1770A$. -->
 
 
 

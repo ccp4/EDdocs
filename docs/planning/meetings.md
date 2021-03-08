@@ -1,4 +1,31 @@
 # meeting
+
+##2/03/2021
+projection
+interpolation
+integration : pixel all pixels - background
+profile form : better estimate for weak intensities
+merge : symmetry reflections brought to the same scale (unmerged )
+calculated Ro : refmac, no cycle, source mbelectr
+
+Intensities compared after scaling
+
+gain : sensitivity of the spot finding algorithm
+Poisson distribution sampling : nearBragg
+
+## interview
+- presentation of ourselves
+  - me
+  - the organisation
+  - the global project
+- presentation of her
+- presentation of the internship project
+- skills interview
+  - programming : linux(ssh,...), git(version control), python, c/c++/fortran, HPC
+  - mathematical side :  pde, spherical harmonics,latex
+  - physics side : wave/geometrical optics,  boundary condition pbs, spectral method
+
+
 # 23/02
 scale the highest values to the same as experiment
 d_matrix reciprocal lattice point to detector plane

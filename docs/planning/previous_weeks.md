@@ -1,3 +1,8 @@
+# week 09
+- ireloh
+  - proces simulation data with find_spots and index
+  - postprocess on cluster to reduce image size to transfer 
+
 # week 08
 - ireloh :
   - create an experiment with dials
