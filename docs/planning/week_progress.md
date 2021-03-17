@@ -1,6 +1,7 @@
 # week 10
 ## Monday
   - pattern every 20 slices
+  - [ ] clean code
   - [ ] run simulation 1935-1945 and tilt simulation
   - [ ] excitation errors on zone axis
 
@@ -20,3 +21,4 @@
 ##TODO
 - simulate 10 different thicknesses integrated by integration software
 normalize where the values with zero thickness (kinematic regime)
+- use TDS for the crystal
