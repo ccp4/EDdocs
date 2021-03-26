@@ -1,7 +1,10 @@
+# week 10
+-low prod
+
 # week 09
 - ireloh
   - proces simulation data with find_spots and index
-  - postprocess on cluster to reduce image size to transfer 
+  - postprocess on cluster to reduce image size to transfer
 
 # week 08
 - ireloh :

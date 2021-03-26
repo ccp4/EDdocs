@@ -1,10 +1,14 @@
+# week 10
+## Monday
+-low prod
+
 # week 09
 ## Monday
 - run ireloh2 full orientation (every 20)
 ## Tuesday
 - [x] multislice pattern as pp to minimize data size
 ## Wednesday
-- savecbf : pb with conversion 
+- savecbf : pb with conversion
 ## Thursday
 - attempt process simulation data
 ## Friday   

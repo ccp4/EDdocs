@@ -1,5 +1,34 @@
 # meeting
 
+#workshop 23/03/2021
+vincent & midgley ultramicroscopy 53 1994
+techniques : cRED, RED PEDT SCED EDT ADT MicroED
+Gemmi 2019 1315-1329
+Programs :
+   - ADT3D
+   - EDTED oleynikov
+   - stockholm team
+   - PETS 2
+Excitation error correcting the intensity during integration?
+rocking curve for continuous?single peak rocking curve ? gaussian profile ?
+finalize integration dynamical refinement
+zone axis deep in scale strong dynamical effect important scaling correction
+What is the Rint?
+SIR(direct method works),SHELXT,SuperFLIP
+need to take integrated intensities
+thickness plot!!
+structure factor from model(kinematic)
+derivatives for least square !
+using bloch wave for phasing too?
+??
+selection data :
+  - Rsg:ratio excitation to maximum point(remove high res)
+  - Dsg (difference between excitation error)
+possible to get absolute structure even with light atoms
+Bonding effect !?
+Beam damage  ?
+shape of the crystal!
+
 ##2/03/2021
 projection
 interpolation
@@ -12,6 +41,10 @@ Intensities compared after scaling
 
 gain : sensitivity of the spot finding algorithm
 Poisson distribution sampling : nearBragg
+mosaicity CBED pattern
+EELS plasmon
+refinement giving smaller thickness
+bad exp with FIB
 
 ## interview
 - presentation of ourselves
