@@ -1,3 +1,16 @@
+# week 12  
+- install the setup scripts with jupyter
+- Thermal diffuse scattering
+
+# week 11
+## Monday
+## Tuesday
+- comparison padding 3D
+## Wednesday
+- [x] git branch conflicts
+- padding study 2D relative beam intensities integration
+- artificially reduce potential strength temsim
+
 # week 10
 ## Monday
 -low prod
@@ -25,10 +38,8 @@
 - ireloh :
   - [x] dials ipython
   - [x] use find spots
-
 ## Thursday
 -  [x] ireloh : try to identify miller indices
-
 ## Friday
 -  [x] ireloh : identify miller indices
 

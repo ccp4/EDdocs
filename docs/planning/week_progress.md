@@ -1,32 +1,17 @@
-# week 12  
+# week 13
 ## Monday
+multi2D:
 
+  - [ ] no periodic boundary condition
+  - [ ] integration study(on 3 beam configration)
+  - [ ] elaborate on bonding effect in the multislice 2D
+  - [ ] partial coherency
+  - [ ] inelastic scattering
 
-## Friday
-install the setup scripts with jupyter
-  - [x] test jupyter
-
-
+direct method inversion X-ray
 near bragg rerun dual scattering  
-elaborate on bonding effect in the multislice 2D
-Focus on the Thermal diffuse scattering
-Exploring random shift myself
-
-
-
-
-# week 11
-## Monday
-
-## Tuesday
-- comparison padding 3D
-
-## Wednesday
-- [x] git branch conflicts
-- padding study 2D relative beam intensities integration
-- artificially reduce potential strength temsim
-
-## Friday
+3D multislice
+artificially reduce potential strength temsim
 
 ##TODO
   - pattern every 20 slices
@@ -48,3 +33,6 @@ Exploring random shift myself
 - simulate 10 different thicknesses integrated by integration software
 normalize where the values with zero thickness (kinematic regime)
 - use TDS for the crystal
+
+
+18044

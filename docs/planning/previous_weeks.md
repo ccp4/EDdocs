@@ -1,3 +1,12 @@
+# week 12  
+- install the setup scripts with jupyter
+- Thermal diffuse scattering
+
+# week 11
+- comparison padding 3D
+- git branch conflicts
+- padding study 2D relative beam intensities integration
+
 # week 10
 -low prod
 
