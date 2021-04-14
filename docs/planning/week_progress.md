@@ -1,9 +1,28 @@
+# week 14
+## Monday
+- multi3D
+- TDS ireloh
+
+## Tuesday
+- multi3D
+
+
+## Wednesday
+- Mail to Paul on dataprocessing and refinement for ireloh dataset 2
+- fix the token on jupyter
+- APR
+
+
+metrics on TDS reflection wise comparison of intensity (including kinematic)
+
+
+
 # week 13
 ## Monday
 multi2D:
 
   - [ ] no periodic boundary condition
-  - [ ] integration study(on 3 beam configration)
+  - [ ] integration study(on 3 beam configuration) --Rfactor
   - [ ] elaborate on bonding effect in the multislice 2D
   - [ ] partial coherency
   - [ ] inelastic scattering
@@ -12,6 +31,18 @@ direct method inversion X-ray
 near bragg rerun dual scattering  
 3D multislice
 artificially reduce potential strength temsim
+
+## Tuesday
+- PETS2 ireloh :
+  - rotation axis preknown (cylindrical projection - difference space )
+  - prak analysis(in plane distances and 3D distances)
+
+## Wednesday
+- Bonding in Multislice simulation
+
+## Thursday
+- Multi3D
+
 
 ##TODO
   - pattern every 20 slices

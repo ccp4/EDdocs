@@ -8,6 +8,8 @@
 - [CowleyMoodie1957](/readings/CowleyMoodie1957) : Cowley, J. M., & Moodie, A. F. (1957). The scattering of electrons by atoms and crystals. I. A new theoretical approach. Acta Crystallographica, 10(10), 609–619. [doi](https://doi.org/10.1107/s0365110x57002194) This is the original [paper](/articles/CowleyMoodie1957.pdf) on the multislice method.
 - [oleynikov2007](#oleynikov2007) : Oleynikov, P., Hovmöller, S., & Zou, X. D. (2007). Precession electron diffraction: Observed and calculated intensities. Ultramicroscopy, 107(6–7), 523–533. [doi](https://doi.org/10.1016/j.ultramic.2006.04.032)
 
+- [crystal bonding](/readings/crystal_bonding)
+
 ##ClabbersGrueneAbrahams2017
 {% set clabbersGrueneAbrahams2017='/figures/readings/clabbersGrueneAbrahams2017/' %}
 

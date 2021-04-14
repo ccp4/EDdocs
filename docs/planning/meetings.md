@@ -1,5 +1,26 @@
 # meeting
 
+## 7/04/2020
+- structure prediction
+- material database : choose spacegroup and minimize energy
+- minimize energies optimisation based on crystal structure : nb parameters ?
+- ambiguity solving of powder XD using crystal prediction when indexing too hard
+- 2 level optimization ? electrostatic density prediction
+- fragment approach : 1 order of magnitude cheaper
+- in silico design : Landscape mapping to identifying porous material and likely to obtain in the lab
+- Crystal growth
+
+
+## meeting Christine 30/03/2021
+- presentation of ourselves(organisation,global project, her) : informal, english
+- presentation of the internship project
+- Requirements/Motivation/expectations :PhD physics
+- few questions on skills
+  - programming : linux(ssh,WLS,fedID,Scar), git(version control github), python(Game AI programming), C/C++/Fortran, HPC
+  - mathematical side :  pde, spherical harmonics,latex : heat equation, FEM, Laplace equation,    
+  - physics side : wave scattering/geometrical optics,  boundary condition pbs, spectral method
+
+
 #workshop 23/03/2021
 vincent & midgley ultramicroscopy 53 1994
 techniques : cRED, RED PEDT SCED EDT ADT MicroED
@@ -45,18 +66,6 @@ mosaicity CBED pattern
 EELS plasmon
 refinement giving smaller thickness
 bad exp with FIB
-
-## interview
-- presentation of ourselves
-  - me
-  - the organisation
-  - the global project
-- presentation of her
-- presentation of the internship project
-- skills interview
-  - programming : linux(ssh,...), git(version control), python, c/c++/fortran, HPC
-  - mathematical side :  pde, spherical harmonics,latex
-  - physics side : wave/geometrical optics,  boundary condition pbs, spectral method
 
 
 # 23/02

@@ -116,6 +116,14 @@ See paper summary of [Cowley&Moodie,1957](/readings/papers#CowleyMoodie1957).
 
 ![]({{figs}}slide.png)
 
+### Sampling
+Correct sampling must be used to ensure reasonable conservation of the intensity :
+
+[![]({{figs}}sampling.png)]({{figs}}sampling.png)
+
+
+
+
 
 ### TEMSIM source code
 - [TEMSIM source code walk through](/projects/multislice/temsim).
@@ -138,6 +146,7 @@ Structure | Slices [110] | Coords
 - The number of Fourier components $N\times N$ (where $N=2^{N_F}$) controls the accuracy of the simulation. While $128\times 128$ components seems enough for $50A$ thickness, it must be increased to $512\times 512$ for $200A$ thickness.
 - The real space domain is represented by a supercell $A_0\times B_0$  composed of $N_a\times N_b$ unit cells such that $A_0=N_a a_0$, $N_b=N_b b_0$. The supercell size is increased to increase reciprocal space sampling $dq=1/max(A_0,B_0)$. The angular spacing $d\theta=\lambda dq\approx 1 mrad$ at $200keV$ and $A_0\approx 20A$.
 - Increasing the resolution comes at the cost of a reduced bandwidth $q_{max}=\frac{2}{3}\frac{N}{2}dq$
+
 
 **Dynamical scattering**
 
