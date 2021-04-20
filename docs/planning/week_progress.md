@@ -1,24 +1,20 @@
-# week 14
+# week 15
 ## Monday
-- multi3D
-- TDS ireloh
+- APR
+- jupyter :
+    - Silicon : sampling, rocking
 
 ## Tuesday
-- multi3D
-
-
-## Wednesday
-- Mail to Paul on dataprocessing and refinement for ireloh dataset 2
-- fix the token on jupyter
-- APR
-
-
-metrics on TDS reflection wise comparison of intensity (including kinematic)
+- jupyter :
+    - TDS, partial coherency,
+    - ireloh
+    - multi_2D
+    - blochwave
 
 
 
-# week 13
-## Monday
+##TODO
+
 multi2D:
 
   - [ ] no periodic boundary condition
@@ -27,31 +23,13 @@ multi2D:
   - [ ] partial coherency
   - [ ] inelastic scattering
 
-direct method inversion X-ray
-near bragg rerun dual scattering  
-3D multislice
-artificially reduce potential strength temsim
 
-## Tuesday
-- PETS2 ireloh :
-  - rotation axis preknown (cylindrical projection - difference space )
-  - prak analysis(in plane distances and 3D distances)
-
-## Wednesday
-- Bonding in Multislice simulation
-
-## Thursday
-- Multi3D
-
-
-##TODO
   - pattern every 20 slices
   - [ ] clean code
   - [ ] run simulation 1935-1945 and tilt simulation
   - [ ] excitation errors on zone axis
 
 - multi2D :
-  - [ ] no periodic boundary condition
   - [ ] redo the carbon integration study
 - Bloch wave development : clean and compare to ms2d
 - compare MULTEM with TEMSIM
