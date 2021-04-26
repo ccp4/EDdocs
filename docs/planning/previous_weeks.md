@@ -1,3 +1,13 @@
+#week 15
+jupyter example0 and Silicon
+
+# week 14
+TDS+jupyter
+
+# week 13
+- study bonding
+- multi3D
+
 # week 12  
 - install the setup scripts with jupyter
 - Thermal diffuse scattering

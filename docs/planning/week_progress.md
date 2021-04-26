@@ -1,16 +1,15 @@
-# week 15
+# week 16
 ## Monday
-- APR
-- jupyter :
-    - Silicon : sampling, rocking
 
-## Tuesday
-- jupyter :
-    - TDS, partial coherency,
-    - ireloh
-    - multi_2D
-    - blochwave
+  - glycine
+  - multi_2D
+  - TDS, partial coherency,
+  - blochwave
 
+hk2D to 3D reciprocal space
+mosaicity and rocking
+APR : GDPR , ...
+Jupyter
 
 
 ##TODO

@@ -1,3 +1,19 @@
+# week 15
+## Monday
+- APR
+- jupyter :
+    - Silicon : sampling, rocking
+## Tuesday
+- jupyter :
+    - orienting and padding
+    - resume simu
+## Wednesday
+Jupyter :orienting and padding
+## Thursday
+Jupyter : resume+patterns
+## Friday
+Jupyter : finish orienting and padding
+
 # week 14
 ## Monday
 - multi3D
@@ -14,10 +30,6 @@
 ## Friday
 - jupyter :sampling
   - Silicon for : slice thickness
-
-
-
-metrics on TDS reflection wise comparison of intensity (including kinematic)
 
 
 # week 13
