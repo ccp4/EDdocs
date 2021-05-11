@@ -1,3 +1,27 @@
+#week 18
+- kinda forgot about it but not a week off though
+- APR : GDPR , ...
+
+#week 17
+## Tuesday
+- arbitrary orientation for glycine (ideal padding x supercell)
+
+# week 16
+## Monday
+- jupyter : padding and orient seem wrong
+## Tuesday
+- jupyter :- glycine
+## Wednesday
+- [x] contact Lukas process ireloh
+## Thursday
+- clean rotations Si
+## Friday
+- 111_pad0 vs 111_pad1 gif pattern same display options
+- compare orientation matrix PETS/DIALS/custom
+- hk2D to 3D reciprocal space
+- versioning of notebook/multislice + jupy_guest menv
+- increasing 4-8 times padding on Si100
+
 # week 15
 ## Monday
 - APR

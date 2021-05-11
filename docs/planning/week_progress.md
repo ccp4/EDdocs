@@ -1,15 +1,23 @@
-# week 16
+#week 19
 ## Monday
+- glycine orientation
 
-  - glycine
-  - multi_2D
-  - TDS, partial coherency,
-  - blochwave
+## Tuesday
+- glycine orientation
+    - xyz,pxy need mirroralong 65deg?? (does not depend on unit cell convention)
+    - uvw find rotation axis
 
-hk2D to 3D reciprocal space
+
+- rotation series + dataprocessing
+- extract info from jana compare with multislice
+- compare MULTEM with TEMSIM - Glycine
+
 mosaicity and rocking
-APR : GDPR , ...
-Jupyter
+
+jupy :
+    - multi_2D
+    - TDS, partial coherency,
+    - blochwave
 
 
 ##TODO
@@ -22,7 +30,6 @@ multi2D:
   - [ ] partial coherency
   - [ ] inelastic scattering
 
-
   - pattern every 20 slices
   - [ ] clean code
   - [ ] run simulation 1935-1945 and tilt simulation
@@ -31,7 +38,7 @@ multi2D:
 - multi2D :
   - [ ] redo the carbon integration study
 - Bloch wave development : clean and compare to ms2d
-- compare MULTEM with TEMSIM
+
 - [ ] clean website
 - ireloh :
   - find excitation errors for ireloh
@@ -44,3 +51,4 @@ normalize where the values with zero thickness (kinematic regime)
 
 
 18044
+PETS/JANA hemozoin case : absolute structure determination

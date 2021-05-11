@@ -1,3 +1,12 @@
+#week 18
+jupyter glycine
+
+#week 17
+contact lukas
+
+#week 16
+jupyter glycine
+
 #week 15
 jupyter example0 and Silicon
 
