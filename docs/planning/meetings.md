@@ -12,7 +12,7 @@
 
 
 ## meeting Christine 30/03/2021
-- presentation of ourselves(organisation,global project, her) : informal, english
+- presentation of ourselves(organisation,global project, her) : informal, English
 - presentation of the internship project
 - Requirements/Motivation/expectations :PhD physics
 - few questions on skills

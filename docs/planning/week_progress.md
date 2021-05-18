@@ -1,23 +1,37 @@
-#week 19
+# week 20
 ## Monday
-- glycine orientation
+- Christine meeting
+    - initial assignment : demonstration formulation N=1 analytical solution
 
 ## Tuesday
-- glycine orientation
-    - xyz,pxy need mirroralong 65deg?? (does not depend on unit cell convention)
-    - uvw find rotation axis
+- Christine
+  - install pyscat locally
+  - git tutorial (linux bonus)
+  - physics tuto wave equation and its solutions
+  - assignment
+    - implement flux in compute_f
+  - tests
 
+  - assignment
+    - implement arbitrary distance
+    - implement recursion legendre poly for fast spherical harmonics retreival 
 
-- rotation series + dataprocessing
+- glycine padding study
 - extract info from jana compare with multislice
 - compare MULTEM with TEMSIM - Glycine
-
-mosaicity and rocking
+- mosaicity and rocking
 
 jupy :
     - multi_2D
     - TDS, partial coherency,
     - blochwave
+
+speculation based on physical simulations
+NB vs multislice
+Thickness
+structure solution from numerical simulation data
+
+
 
 
 ##TODO

@@ -1,3 +1,6 @@
+#week 19
+jupyter glycine + pets 
+
 #week 18
 jupyter glycine
 

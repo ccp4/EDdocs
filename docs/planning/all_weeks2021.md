@@ -1,3 +1,33 @@
+#week 19
+## Monday
+- glycine orientation
+## Tuesday
+- glycine orientation
+    - xyz,pxy need mirroralong 65deg?? (does not depend on unit cell convention)
+    - uvw find rotation axis
+## Wednesday
+- glycine orientation checked indices were correct in Pets.show_frame
+- glycine excitation error seems correct now
+## Thursday
+- [x] mupy_utils show unit cell
+- glycine few rotation series + dataprocessing
+## Friday
+- Pets
+    - [x] py library
+    - [x] clean tuto jupy
+### Saturday
+- prepare christine meeting :
+  - Generalities : language, internship primarily important for her.
+    - admin on your side ? Expectation from ENSTA?
+    - Is the organisation clear 2 you, prev meeting?
+    - motivations again (background ccp4/ED )
+  - Technical part  :
+    - WLS(fedID) : install python3(IPython,pip,jupyter), git, ssh
+    - git(github account?) : pyscat release,
+    - pyscat API in Jupyter
+    - Physics/Mathematics  : papers + doc en ligne
+    - Latex/Markdown ??
+
 #week 18
 - kinda forgot about it but not a week off though
 - APR : GDPR , ...
