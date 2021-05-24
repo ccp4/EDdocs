@@ -1,3 +1,24 @@
+# week 20
+## Monday
+- Christine meeting :
+  - math and physics background
+    - initial assignment : demonstration formulation N=1 analytical solution
+## Tuesday
+- Christine meeting:
+  - physics tuto wave equation and its solutions
+    - initial assignment : demonstration formulation N=1 analytical solution
+## Wednesday
+- Christine meeting:
+  - math and physics background
+  - assignment : implement recurrence Legendre poly for fast spherical harmonics on the fly computation
+- pets jupy
+- pets 2reciprocal_space finally fixed !
+## Thursday
+- complete pets jupy(understand why Rz(omega)Rx(alpha))
+- pets + mupy_utils update(Fhkl at Sw)
+## Friday
+- Bloch jupy
+
 #week 19
 ## Monday
 - glycine orientation

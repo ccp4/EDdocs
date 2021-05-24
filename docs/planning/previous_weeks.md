@@ -1,5 +1,14 @@
+#week 20
+internship:
+  - demonstration formulation N=1 analytical solution
+  - implement recurrence Legendre poly for faster spherical harmonics computation
+pets :
+  - conversion 2reciprocal_space fully fixed
+  - kinematic intensities viewer
+  - bloch development and integration into pets library 
+
 #week 19
-jupyter glycine + pets 
+jupyter glycine + pets
 
 #week 18
 jupyter glycine

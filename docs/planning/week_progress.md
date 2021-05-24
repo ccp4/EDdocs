@@ -1,21 +1,30 @@
-# week 20
+# week 21
 ## Monday
-- Christine meeting
-    - initial assignment : demonstration formulation N=1 analytical solution
+- meeting :  git account
+- simulate multislice rocking Glycine
+
 
 ## Tuesday
-- Christine
+meeting : install pyscat, assignment arbitrary distance in linear array
+
+
+## TODO
+### Bloch
+- Test 2-beam rocking curve, thickness dependence  
+- simulate Silicon/Glycine orientations
+- integrate into pets
+- jupyter example
+
+
+### Christine's internship
   - install pyscat locally
-  - git tutorial (linux bonus)
-  - physics tuto wave equation and its solutions
+  - git tutorial
   - assignment
-    - implement flux in compute_f
-  - tests
+    - code architecture
+    <!-- - implement flux in compute_f(optional) -->
+    - implement arbitrary distance in linear array
 
-  - assignment
-    - implement arbitrary distance
-    - implement recursion legendre poly for fast spherical harmonics retreival 
-
+### Glycine
 - glycine padding study
 - extract info from jana compare with multislice
 - compare MULTEM with TEMSIM - Glycine
@@ -31,19 +40,13 @@ NB vs multislice
 Thickness
 structure solution from numerical simulation data
 
-
-
-
-##TODO
-
-multi2D:
-
+### multi2D
   - [ ] no periodic boundary condition
   - [ ] integration study(on 3 beam configuration) --Rfactor
   - [ ] elaborate on bonding effect in the multislice 2D
   - [ ] partial coherency
   - [ ] inelastic scattering
-
+###others
   - pattern every 20 slices
   - [ ] clean code
   - [ ] run simulation 1935-1945 and tilt simulation
@@ -62,7 +65,3 @@ multi2D:
 - simulate 10 different thicknesses integrated by integration software
 normalize where the values with zero thickness (kinematic regime)
 - use TDS for the crystal
-
-
-18044
-PETS/JANA hemozoin case : absolute structure determination
