@@ -37,14 +37,14 @@ Using the boundary conditions that the incident wave is a plane wave solely alon
 
 In [Bloch theory](/readings/Kirkland2010/#bloch-waves) using 2 beams approximation gives the intensity as :
 \begin{equation}
-  I_{dyn-2}(w_g;t,\xi_g) = \left(\frac{\pi t}{\xi_g}\right)^2
-    sinc^2\left(\frac{t}{\xi_g}\sqrt{1+w_g^2}\right)
+  I_{dyn-2}(w_g;t,\xi_{\bb g}) = \left(\frac{\pi t}{\xi_{\bb g}}\right)^2
+    sinc^2\left(\frac{t}{\xi_{\bb g}}\sqrt{1+w_{\bb g}^2}\right)
 \end{equation}
 where :
 
-- $\xi_g=k_0/U_g$ is the Pendellosung thickness (in $A$) with $k_0=1/\lambda$ being the wave number.
-- $w_g=S_g\xi_g$ is the excitation error scaled by $\xi_g$.
-- $U_g=2me/h^2 v_g$ is the form factor Fourier component (in $A^{-2}$).
+- $\xi_{\bb g}=k_0/U_{\bb g}$ is the Pendellosung thickness (in $A$) with $k_0=1/\lambda$ being the wave number.
+- $w_{\bb g}=S_g\xi_g$ is the excitation error scaled by $\xi_g$.
+- $U_{\bb g}=2me/h^2 v_{\bb g}=F_{\bb g}/\cc V_{cell}$ is the form factor Fourier component (in $A^{-2}$).
 
 ### kinematic approximation
 

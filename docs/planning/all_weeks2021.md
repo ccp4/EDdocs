@@ -1,3 +1,25 @@
+# week 21
+## Monday
+- meeting : git account+sph_harm working
+- bloch : Test 2-beam rocking curve, thickness dependence  
+
+## Tuesday
+meeting :
+   - install/test pyscat,
+   - structural diagram
+   - arbitrary distance in linear array
+     - implementation
+     - validation (psi,dpsi continuous at boundary) (N=3, kd=[0,3,5],ka=1,nref=1.1)
+     - test_convergence()
+     - application : N=10, ka=1, kd=5+eps*rand(10),  
+     - show_ff for all eps
+     - show sigma(eps) and compare with sigma(eps=0)
+   - poly in compute_f
+- simulate multislice rocking Glycine
+
+## Wednesday-Friday
+- off
+
 # week 20
 ## Monday
 - Christine meeting :

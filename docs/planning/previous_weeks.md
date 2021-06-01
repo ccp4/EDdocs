@@ -1,3 +1,9 @@
+#week 21
+- internship:
+   - install/test pyscat,
+   - assignement arbitrary distance in linear array
+- blochwave dev and 2-beam test 
+
 #week 20
 internship:
   - demonstration formulation N=1 analytical solution
@@ -5,7 +11,7 @@ internship:
 pets :
   - conversion 2reciprocal_space fully fixed
   - kinematic intensities viewer
-  - bloch development and integration into pets library 
+  - bloch development and integration into pets library
 
 #week 19
 jupyter glycine + pets

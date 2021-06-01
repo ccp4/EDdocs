@@ -1,11 +1,11 @@
-# week 21
+# week 22
 ## Monday
-- meeting :  git account
-- simulate multislice rocking Glycine
-
+- bank holiday
 
 ## Tuesday
-meeting : install pyscat, assignment arbitrary distance in linear array
+- meeting internship :
+- blochwave jupy
+- general architecture 
 
 
 ## TODO
@@ -15,10 +15,9 @@ meeting : install pyscat, assignment arbitrary distance in linear array
 - integrate into pets
 - jupyter example
 
-
 ### Christine's internship
-  - install pyscat locally
-  - git tutorial
+  - [x] install pyscat locally
+  - [x] git tutorial
   - assignment
     - code architecture
     <!-- - implement flux in compute_f(optional) -->
