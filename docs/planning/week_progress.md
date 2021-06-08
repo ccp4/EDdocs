@@ -4,10 +4,9 @@
 - meeting christine
 
 ## Tuesday
-- include mutli in viewers  EDutils.Viewer
+- include multi in viewers  EDutils.Viewer
 - base class for ED simulators
 - blochwave jupy
-
 
 
 ## TODO
