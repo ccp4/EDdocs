@@ -1,8 +1,12 @@
+#week 22
+- adapt pets to EDutils.Viewer
+- internship : new exercise translational addition th
+
 #week 21
 - internship:
    - install/test pyscat,
-   - assignement arbitrary distance in linear array
-- blochwave dev and 2-beam test 
+   - assignment arbitrary distance in linear array
+- blochwave dev and 2-beam test
 
 #week 20
 internship:

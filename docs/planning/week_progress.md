@@ -1,11 +1,13 @@
-# week 22
+# week 23
 ## Monday
-- bank holiday
+- viewers
+- meeting christine
 
 ## Tuesday
-- meeting internship :
+- include mutli in viewers  EDutils.Viewer
+- base class for ED simulators
 - blochwave jupy
-- general architecture 
+
 
 
 ## TODO
@@ -15,13 +17,11 @@
 - integrate into pets
 - jupyter example
 
-### Christine's internship
-  - [x] install pyscat locally
-  - [x] git tutorial
-  - assignment
-    - code architecture
-    <!-- - implement flux in compute_f(optional) -->
-    - implement arbitrary distance in linear array
+### Christine's internship assignments
+- [x] Integrate custom spherical harmonics in compute_f
+- Implement arbitrary distance in linear array and show examples
+- Exercise on using the translation theorem
+
 
 ### Glycine
 - glycine padding study

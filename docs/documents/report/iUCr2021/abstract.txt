@@ -1,0 +1,19 @@
+Over the past few years, macromolecular structures have been successfully solved from Electron diffraction(ED) patterns using standard macromolecular X-ray crystallographic(MX) techniques[1]. This resulted in the emergence of a new field known as microED. MicroED is a very appealing technique as it allows for solving structures from nanocrystals thanks to the very strong electron-atom interaction. This is of great interest especially in protein crystallography where growing good quality macromolecular crystals up to micrometric sizes is often a challenge.
+Besides, ED patterns provide information about the electrostatic potential which is a complementary information to the electron density maps provided by X-ray diffraction patterns. This can allow for example to determine accurately the location of positively charged ions. Although it is still necessary to grow nanocrystals with microED, as opposed to the popular cryo-EM imaging technique, there are evidence that microED should provide higher resolution than cryoEM[2]. On paper, the resolution with microED is in principle sufficient to resolve hydrogen atom positions.
+
+Although microED has proven successful on an number of occurences, theoretical works[3] suggest that dynamical diffraction corrupt the kinematic reflection intensities to the extent that solving macromolecular structures from standard MX techniques should not be possible for crystals larger than a few nanometers thick. In pratice typical nanocrystals are a at least a few tens of nanometers which is an order of magnitude above the kinematic regime. This fact is partly reflected in the large Rfactors commonly found in microED which is usually in the 15-20% range. However, theoretical predictions usually offer much more pessimistic figures[4]. Moreover, even when Rfactor is improved using dynamical refinement technique, ED still fail to compete with Rfactors produced by X-ray techniques. As a result, there is still a great motivation in studying the effect of dynamical diffraction in electron diffraction experiments.
+
+In this work, simulations of ED patterns have been performed on organic crystals with both the multislice algorithm(MS) and the blochwave approach. Comparison with experimental patterns are presented with an attempt to explain the discrepancies between theory and experiment. The differences between the 2 methods are presented with their modelling limitations.
+
+
+
+
+[1]~\cite{ShiNanenga2016,ClabbersGrueneAbrahams2017}.
+
+[2]~\cite{Latychevskaia2019}.
+
+[3]~\cite{GlaeserDowning1993,SubramanianSpence2015}
+
+[4] oleg2015
+
+[5]~\cite{CowleyMoodie1957,Ishizuka2004,Kirkland2019}

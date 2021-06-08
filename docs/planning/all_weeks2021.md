@@ -1,8 +1,27 @@
+# week 22
+## Monday
+- bank holiday
+## Tuesday
+- meeting internship :
+  - fixed convergence_test, checked vectorial Legendre, changed randn to rand
+  - continuity issue partly fixed
+- EDutils development
+## Wednesday
+- register to iUCr25
+- EDutils keybindings
+## Thursday
+- meeting internship : git branch, merge and allowed Christine to push to origin
+- merge viewers into 1 EDutils viewer
+- adapt pets
+## Friday
+- merge viewers into 1 EDutils viewer
+- adapt pets
+
+
 # week 21
 ## Monday
 - meeting : git account+sph_harm working
 - bloch : Test 2-beam rocking curve, thickness dependence  
-
 ## Tuesday
 meeting :
    - install/test pyscat,
@@ -16,7 +35,6 @@ meeting :
      - show sigma(eps) and compare with sigma(eps=0)
    - poly in compute_f
 - simulate multislice rocking Glycine
-
 ## Wednesday-Friday
 - off
 
