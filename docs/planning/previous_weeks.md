@@ -1,3 +1,8 @@
+#week 23
+- update on viewers
+- stfc-cloud
+- internship : kd_p bug in issue#2 and reverted gaunt to sage.all
+
 #week 22
 - adapt pets to EDutils.Viewer
 - internship : new exercise translational addition th

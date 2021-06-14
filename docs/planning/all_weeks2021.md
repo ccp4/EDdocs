@@ -1,3 +1,26 @@
+# week 23
+## Monday
+- viewers
+- meeting christine
+## Tuesday
+- include multi in viewers  EDutils.Viewer
+- base class for ED simulators
+## Wednesday
+- meeting christine
+  - optics.scattering gaunt ok
+  - identified kd_p bug in issue#2
+- viewers : update_frame function
+## Thursday
+- viewers
+  - [x] update d_thick in frame_modes and multi
+  - [x] rotations for each display
+  - [x] pets Rz(omega)Ry(beta)Rx(alpha) (no better)
+  - [x] put show_frames in EDutils
+  - [x] allow in lattice/Sg/Vg/ in show_frames
+## Friday
+- viewers: hold on/off toggle in show_frames + help pets_opts plot
+- stfc-cloud setup and openstack. Complete auto installation and volume access
+
 # week 22
 ## Monday
 - bank holiday

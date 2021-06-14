@@ -1,21 +1,16 @@
-# week 23
+# week 24
 ## Monday
-- viewers
-- meeting christine
-
-## Tuesday
-- include multi in viewers  EDutils.Viewer
-- base class for ED simulators
-- blochwave jupy
+- internship : sage.all bug fix update
+- blochwave jupy :  compare with multislice for Si or graphene
+  - beam_vs_thickness for multislice
+  - multislice clean patterns files finding
+  - hkl click
+- glycine : regenerate .tif with qx,-qy and run pets.unit_cell
+- git alias ...
+- run stfc-cloud
 
 
 ## TODO
-### Bloch
-- Test 2-beam rocking curve, thickness dependence  
-- simulate Silicon/Glycine orientations
-- integrate into pets
-- jupyter example
-
 ### Christine's internship assignments
 - [x] Integrate custom spherical harmonics in compute_f
 - Implement arbitrary distance in linear array and show examples
@@ -27,6 +22,9 @@
 - extract info from jana compare with multislice
 - compare MULTEM with TEMSIM - Glycine
 - mosaicity and rocking
+
+
+import dials experiment
 
 jupy :
     - multi_2D
