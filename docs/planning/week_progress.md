@@ -1,21 +1,22 @@
-# week 24
+# week 25
 ## Monday
-- internship : sage.all bug fix update
-- blochwave jupy :  compare with multislice for Si or graphene
-  - beam_vs_thickness for multislice
+- redo the carbon integration study
+- viewers :
   - multislice clean patterns files finding
+  - keys in separate file
+  - command search
   - hkl click
-- glycine : regenerate .tif with qx,-qy and run pets.unit_cell
-- git alias ...
+- glycine : regenerate .tif with qx,-qy(flipud) and run pets.unit_cell
 - run stfc-cloud
+- git alias ...
 
+- import dials experiment
 
 ## TODO
 ### Christine's internship assignments
-- [x] Integrate custom spherical harmonics in compute_f
-- Implement arbitrary distance in linear array and show examples
-- Exercise on using the translation theorem
-
+- issue#1 Integrate custom spherical harmonics in compute_f
+- issue#2 Implement arbitrary distance in linear array and show examples
+- issue#3 Exercise on using the translation theorem
 
 ### Glycine
 - glycine padding study
@@ -23,8 +24,6 @@
 - compare MULTEM with TEMSIM - Glycine
 - mosaicity and rocking
 
-
-import dials experiment
 
 jupy :
     - multi_2D
@@ -48,9 +47,6 @@ structure solution from numerical simulation data
   - [ ] run simulation 1935-1945 and tilt simulation
   - [ ] excitation errors on zone axis
 
-- multi2D :
-  - [ ] redo the carbon integration study
-- Bloch wave development : clean and compare to ms2d
 
 - [ ] clean website
 - ireloh :

@@ -3,16 +3,15 @@ Besides, ED patterns provide information about the electrostatic potential which
 
 Although microED has proven successful on an number of occurrences, theoretical works[3] suggest that dynamical diffraction corrupt the kinematic reflection intensities to the extent that solving macromolecular structures from standard MX techniques should not be possible for crystals larger than a few nanometres thick. In practice typical nanocrystals are a at least a few tens of nanometres which is an order of magnitude above the kinematic regime. This fact is partly reflected in the large R factors commonly found in microED which is usually in the 15-20% range. However, theoretical predictions usually offer much more pessimistic figures[4]. Moreover, even when Rfactor is improved using dynamical refinement technique, ED still fail to compete with R factors produced by X-ray techniques. As a result, there is still a great motivation in studying the effect of dynamical diffraction in electron diffraction experiments.
 
-In this work, simulations of ED patterns have been performed on organic crystals with both the multislice algorithm(MS) and the blochwave approach. Comparison with experimental patterns are presented with an attempt to explain the discrepancies between theory and experiment. The differences between the 2 methods are presented with their modelling limitations.
+In this work, simulations of ED patterns have been performed on organic crystals with both the multislice algorithm(MS)[5,6] and the blochwave approach[6]. The differences between the 2 methods are presented with their advantages and modelling limitations.
+Comparison with experimental patterns are presented for glycine and IRELOH with a discussion about differences between theory and experiment.
 
 
 
-[1]~\cite{ShiNanenga2016,ClabbersGrueneAbrahams2017}.
-
-[2]~\cite{Latychevskaia2019}.
-
-[3]~\cite{GlaeserDowning1993,SubramanianSpence2015}
-
-[4]~\cite{oleg2015}
-
-[5]~\cite{CowleyMoodie1957,Ishizuka2004,Kirkland2019}
+[1] Nannenga, B. L., & Gonen, T. (2019). The cryo-EM method microcrystal electron diffraction (MicroED). Nature Methods, 16(May), 369–379. https://doi.org/10.1038/s41592-019-0395-x
+[2] Latychevskaia, T., & Abrahams, J. P. (2019). Inelastic scattering and solvent scattering reduce dynamical diffraction in biological crystals. Acta Crystallographica Section B: Structural Science, Crystal Engineering and Materials, 75, 523–531. https://doi.org/10.1107/S2052520619009661
+[3] Glaeser, R. M., & Downing, K. H. (1993). High-resolution electron crystallography of protein molecules Robert. Ultramicroscopy, 52, 478–486.
+[4] Oleynikov, P., Hovmöller, S., & Zou, X. D. (2007). Precession electron diffraction: Observed and calculated intensities. Ultramicroscopy, 107(6–7), 523–533. https://doi.org/10.1016/j.ultramic.2006.04.032
+[5] Cowley, J. M., & Moodie, A. F. (1957). The scattering of electrons by atoms and crystals. I. A new theoretical approach. Acta Crystallographica, 10(10), 609–619. https://doi.org/10.1107/s0365110x57002194
+[6] Kirkland, E. J. (2019). Advanced Computing in Electron Microscopy (Third Edit). Springer.
+[7] Bethe, H. (1928). Theorie der Beugung von Elektronen an Kristallen. Annalen Der Physik, 392(17), 55–129. https://doi.org/10.1002/andp.19283921704

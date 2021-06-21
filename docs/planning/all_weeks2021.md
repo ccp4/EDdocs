@@ -1,3 +1,22 @@
+# week 24
+## Monday
+- internship : sage.all bug fix update
+- EDviewer
+  - [x] complete load_config
+  - [x] multislice on the fly
+## Tuesday
+- blochwave jupy :  compare with multislice for diamond
+## Wednesday
+- transmission function kinematic in random orientation
+## Thursday
+- bike day
+## Friday
+- multislice
+  - [x] _pp_job
+  - [x] multislice interface controls, load multi/xyz_params
+- [x] diamond beam_vs_thickness for multislice/bloch(not quite correct)
+- integrate reflection
+
 # week 23
 ## Monday
 - viewers

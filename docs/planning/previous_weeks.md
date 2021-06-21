@@ -1,3 +1,8 @@
+#week 24
+- internship : sage.all bug fix update
+- diamond blochwave vs multi with/without padding (not right yet)
+- EDviewer : load_config, multislice interface 
+
 #week 23
 - update on viewers
 - stfc-cloud
