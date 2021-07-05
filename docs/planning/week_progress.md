@@ -1,16 +1,15 @@
-# week 25
+# week 27
 ## Monday
-- redo the carbon integration study
-- viewers :
-  - multislice clean patterns files finding
-  - keys in separate file
-  - command search
-  - hkl click
-- glycine : regenerate .tif with qx,-qy(flipud) and run pets.unit_cell
-- run stfc-cloud
-- git alias ...
+- diamond integration (2-beam, 3-beam, zone-axis with/without weak beams)
+- [ ] Glycine generate full exp with Bloch and postprocess
 
 - import dials experiment
+- git alias ...
+
+
+- Iobs vs Icalc, Q-Qplot dynamic thickness vs Kinematic
+different types of configurations
+
 
 ## TODO
 ### Christine's internship assignments
@@ -18,12 +17,16 @@
 - issue#2 Implement arbitrary distance in linear array and show examples
 - issue#3 Exercise on using the translation theorem
 
+### viewers :
+  - command search
+  - multislice clean patterns files finding
+  - hkl click
+
 ### Glycine
 - glycine padding study
 - extract info from jana compare with multislice
 - compare MULTEM with TEMSIM - Glycine
 - mosaicity and rocking
-
 
 jupy :
     - multi_2D
@@ -45,7 +48,6 @@ structure solution from numerical simulation data
   - pattern every 20 slices
   - [ ] clean code
   - [ ] run simulation 1935-1945 and tilt simulation
-  - [ ] excitation errors on zone axis
 
 
 - [ ] clean website

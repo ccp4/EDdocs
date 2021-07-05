@@ -1,3 +1,24 @@
+#week 26
+- off
+
+# week 25
+## Monday
+- glycine :
+  - [x] regenerate .tif with qx,-qy(flipud) and run pets.unit_cell
+##Tuesday
+- [x] run on stfc-cloud
+- [x] glycine re orientation
+## Wednesday
+- viewers :
+    - [x] clean rotate mode
+    - [x] keys in separate file
+## Thursday
+- [x] develop bloch2D
+## Friday
+- check consistency bloch vs multi2D (2beams)
+  - [x] factor 0.97 still necessary after correction of 2D Ug
+  - [x] multislice tilt necessary to get a good match although exact bragg should be met
+
 # week 24
 ## Monday
 - internship : sage.all bug fix update
