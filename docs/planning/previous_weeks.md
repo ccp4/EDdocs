@@ -1,3 +1,11 @@
+#week 27
+- Bloch diamond 2beam,3beam,arbitrary, continuous orientation
+- QQplot, integrated reflections
+- pets processing diamond (zone axis ok but rocking curve wild)
+
+#week 26
+- off
+
 #week 25
 - stfc-cloud
 - EDviewers dev

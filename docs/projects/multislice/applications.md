@@ -63,13 +63,15 @@ sim  | [![]({{ireloh}}ireloh2_0000sim.png)]({{ireloh}}ireloh2_0000sim.png) | [![
 =exp  |  [![]({{ireloh}}ireloh2_0000exp.png)]({{ireloh}}ireloh2_0000exp.png) | [![]({{ireloh}}ireloh2_0100exp.png)]({{ireloh}}ireloh2_0100exp.png) | [![]({{ireloh}}ireloh2_0200exp.png)]({{ireloh}}ireloh2_0200exp.png) | [![]({{ireloh}}ireloh2_0300exp.png)]({{ireloh}}ireloh2_0300exp.png) | [![]({{ireloh}}ireloh2_0400exp.png)]({{ireloh}}ireloh2_0400exp.png) | [![]({{ireloh}}ireloh2_0500exp.png)]({{ireloh}}ireloh2_0500exp.png)
 
 
-### setup
+<!-- ### setup
 
 rep | 10  | 15  | 20
 --- | --- | --- | ---
 pad=1 | [![]({{ireloh}}pad1-rep10log.png)]({{ireloh}}pad1-rep10log.png) |  [![]({{ireloh}}pad1-rep15log.png)]({{ireloh}}pad1-rep15log.png) | [![]({{ireloh}}pad1-rep20log.png)]({{ireloh}}pad1-rep20log.png)
 pad=2 | [![]({{ireloh}}pad2-rep10log.png)]({{ireloh}}pad2-rep10log.png) |  [![]({{ireloh}}pad2-rep15log.png)]({{ireloh}}pad2-rep15log.png) | [![]({{ireloh}}pad2-rep20log.png)]({{ireloh}}pad2-rep20log.png)
-pad=3 | [![]({{ireloh}}pad3-rep10log.png)]({{ireloh}}pad3-rep10log.png) |  [![]({{ireloh}}pad3-rep15log.png)]({{ireloh}}pad3-rep15log.png) | [![]({{ireloh}}pad3-rep20log.png)]({{ireloh}}pad3-rep20log.png)
+pad=3 | [![]({{ireloh}}pad3-rep10log.png)]({{ireloh}}pad3-rep10log.png) |  [![]({{ireloh}}pad3-rep15log.png)]({{ireloh}}pad3-rep15log.png) | [![]({{ireloh}}pad3-rep20log.png)]({{ireloh}}pad3-rep20log.png) -->
+
+
 
 
 <!--

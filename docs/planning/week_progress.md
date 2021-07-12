@@ -1,14 +1,20 @@
-# week 27
+# week 28
 ## Monday
-- diamond integration (2-beam, 3-beam, zone-axis with/without weak beams)
-- [ ] Glycine generate full exp with Bloch and postprocess
+- Glycine/ireloh experiments
+    - [ ] Sw vs theta
+    - [ ] I vs theta at z=100,500,1000
+    - [ ] Iint(z)
+    - [ ] QQplot
 
-- import dials experiment
+- Q-Qplot dynamic(thickness dep) vs Kinematic    
+    - [ ] cross-correlation vs thickness
+- diamond full exp with Bloch
+    - [ ] check xyz in arbitrary configuration
+    - [ ] camel plot (wild even after reducing angular step)
+
+
 - git alias ...
-
-
-- Iobs vs Icalc, Q-Qplot dynamic thickness vs Kinematic
-different types of configurations
+- import dials experiment
 
 
 ## TODO

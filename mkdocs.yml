@@ -32,6 +32,7 @@ nav:
      - 'ED simulations' : 'projects/multislice/applications.md'
      - 'Mulitslice 3D TEMSIM' : 'projects/multislice/temsim.md'
      - 'Mulitslice 2D' : 'projects/multislice/multi2D.md'
+     - 'Bloch' : 'projects/bloch/bloch.md'
      - 'NearBragg' : 'projects/nearBragg/index.md'
      #- 'Wallpapers' : 'projects/wallpapers/index.md'
  - Elements of Theory:

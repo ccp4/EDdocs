@@ -1,3 +1,30 @@
+# week 27
+## Monday
+- diamond/Glycine generate full exp with Bloch and postprocess
+## Tuesday
+- Q-Qplot dynamic thickness vs Kinematic
+    - [x] zone axis and arbitrary diamond
+- diamond full exp with Bloch
+    - [x] findpeaks
+    - [x] unitcell
+- diamond integration/rocking curve
+    - [x] 2 beams
+    - [x] 3 beams
+## wednesday
+- diamond integration/rocking curve
+    - [x] 4 weak beams
+    - [x] 4+2weak beams
+## Thursday
+- Christine's internship : some changes in doc to help arbitrary spheres formulation
+- [x] continuous orientations kinematic excitation error profile random conf
+## Friday
+- Christine's internship : arbitrary spheres formulation
+- diamond integration/rocking curve random conf
+    - [x] rocking show_frame option
+    - [x] Iint(z)
+- Q-Qplot dynamic(thickness dep) vs Kinematic
+    - [x] static, integrated reflections glycine
+
 #week 26
 - off
 
