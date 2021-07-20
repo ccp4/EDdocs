@@ -46,7 +46,7 @@ c) Rocking curve for selected beam at various thicknesses.
 
 
 ## Rocking curves analysis
-Analysing excitation error and rocking curve over a range of angles.
+Analysing excitation error and rocking curve over a range of angles for configuration r1.
 
 a  | b
 -- | --

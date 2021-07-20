@@ -27,15 +27,18 @@ plugins:
 
 nav:
  - Index: 'index.md'
- - Projects:
+ - ED simulations :
      #- 'Overview' : 'projects/index.md'
-     - 'ED simulations' : 'projects/multislice/applications.md'
-     - 'Mulitslice 3D TEMSIM' : 'projects/multislice/temsim.md'
-     - 'Mulitslice 2D' : 'projects/multislice/multi2D.md'
+     # - 'old' : 'projects/simulations/old_simus.md'
+     - 'glycine' : 'projects/simulations/glycine.md'
+     # - 'ireloh' : 'projects/simulations/ireloh.md'
+ - Programs :
+     - 'Multislice 3D TEMSIM' : 'projects/multislice/temsim.md'
+     - 'Multislice 2D' : 'projects/multislice/multi2D.md'
      - 'Bloch' : 'projects/bloch/bloch.md'
      - 'NearBragg' : 'projects/nearBragg/index.md'
      #- 'Wallpapers' : 'projects/wallpapers/index.md'
- - Elements of Theory:
+ - Theory:
      - 'Scattering' : 'projects/scattering.md'
      - 'Dynamical diffraction' : 'projects/dynamical_diffraction.md'
      - 'Multislice' : 'projects/multislice/index.md'

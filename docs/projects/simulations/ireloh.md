@@ -1,8 +1,5 @@
-#ED simulations
+# IRELOH
 
-- [old simus](/projects/multislice/old_simus)
-
-## IRELOH
 {% set ireloh='/figures/multislice/ireloh/' %}
 
 Structure : $P2_12_12_1$

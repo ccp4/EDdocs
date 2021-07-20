@@ -1,3 +1,22 @@
+# week 28
+## Monday
+- Glycine/ireloh experiments
+    - [x] Sw,I vs theta
+## Tuesday
+- pets dynamical diffraction postprocess
+## Wednesday
+- Glycine/ireloh experiments
+    - [x] Iint(z) : identify strong reflections to follow integrate thickness
+    - [x] I vs theta at z=100,500,1000
+##Thursday
+- Glycine/ireloh experiments
+- [x] pets postprocess (strong reflections over full and must be included in hkl)
+- [x] check reflection broadening profile (and max recorded values)
+## Friday
+- Glycine experiments    
+    - [x] weak reflections
+    - [x] rocking curve around important reflections
+
 # week 27
 ## Monday
 - diamond/Glycine generate full exp with Bloch and postprocess

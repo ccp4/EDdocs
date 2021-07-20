@@ -1,3 +1,6 @@
+#week 28
+- simulate glycine with Bloch and compare with pets processing
+
 #week 27
 - Bloch diamond 2beam,3beam,arbitrary, continuous orientation
 - QQplot, integrated reflections

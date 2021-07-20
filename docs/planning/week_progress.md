@@ -1,16 +1,25 @@
-# week 28
+# week 29
 ## Monday
-- Glycine/ireloh experiments
-    - [ ] Sw vs theta
-    - [ ] I vs theta at z=100,500,1000
-    - [ ] Iint(z)
-    - [ ] QQplot
+- pets show_Ihkl
+- found diff in dyn/kin intensities and uvw orientations
+- several entries for same reflection in Fc (fo=sqrt(Idyn))
+- simulated dyn intermediate rotation
 
+## Tuesday
+- glycine :
+    - check dyn
+    - intermediate and integrate rocking curve
+    - check manual integration with/without fitting  
+- ireloh
+    - simulate 100 simus 
+
+- [ ] QQplot
 - Q-Qplot dynamic(thickness dep) vs Kinematic    
     - [ ] cross-correlation vs thickness
-- diamond full exp with Bloch
+- diamond Bloch full exp with pets
     - [ ] check xyz in arbitrary configuration
     - [ ] camel plot (wild even after reducing angular step)
+
 
 
 - git alias ...
