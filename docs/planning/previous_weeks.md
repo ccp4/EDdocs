@@ -1,3 +1,10 @@
+#week 30
+- wallpp library updates and improvements
+
+#week 29
+- glycine Ihkl integration and thick/angle optimization
+- felix/jems blochwave
+
 #week 28
 - simulate glycine with Bloch and compare with pets processing
 

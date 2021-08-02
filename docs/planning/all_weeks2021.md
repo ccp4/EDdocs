@@ -1,3 +1,44 @@
+#week 30
+## Monday
+- literature
+## Tuesday
+- bloch wave cleanup + literature
+## Wednesday
+- christine's internship, bug fixes...
+## Thursday
+- [x] wallpp : clean generation from x,y,f
+## Friday
+- wallpp
+    - [x] crop image in asym unit cell
+    - [x] keep image rgb
+    - [x] compute positions by interpolation from preprocessed data (ish very slow nearest neighbour)
+## Saturday
+- wallpp: [x] orient 2D crystal zone axis
+## Sunday   
+- [x] space groups from website(fun)
+
+# week 29
+## Monday
+- pets show_Ihkl
+- found diff in dyn/kin intensities and uvw orientations
+- several entries for same reflection in Fc (fo=sqrt(Idyn))
+- simulated dyn intermediate rotation
+## Tuesday
+- glycine :
+    - [x] check dyn(from frame 3 every 5 frames hence 30 frames only)
+    - intermediate frames + integrate rocking curve
+## Wednesday
+    - [x] check frame reflections manual integration(profile fitting) vs pets (similar to I, correlation Imax vs Iint similar too)
+    - [x] integration hkl.I vs f(rpl.I) (strong correlation with rpl.I.mean()) but something not trivial is done
+    - [x] bloch minor update
+    - [x] I(z) vs rpl.I(F=frame, solution to different at all thicknesses)
+## Thursday
+    - [x] I(z,u)
+    - check bloch with another code (JEMS,Felix)
+    - [x] convergence test bloch(read Zuo1995)
+## Friday
+    - [x] tried Felix : Blochwave from Rchard Beanland, Warwick (replied)
+
 # week 28
 ## Monday
 - Glycine/ireloh experiments

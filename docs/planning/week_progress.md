@@ -1,17 +1,25 @@
-# week 29
+#week 31
 ## Monday
-- pets show_Ihkl
-- found diff in dyn/kin intensities and uvw orientations
-- several entries for same reflection in Fc (fo=sqrt(Idyn))
-- simulated dyn intermediate rotation
 
-## Tuesday
-- glycine :
-    - check dyn
-    - intermediate and integrate rocking curve
-    - check manual integration with/without fitting  
+
+- unit_tests
+- notebooks :
+    - [ ] multi2D vs bloch(high Nbeams)
+    - [ ] nearBragg
+- python-multem
+- jems
+- Felix on cluster(with intel compiler)
+
+
+
+    - [ ] JEMS compare Ugh and eigen values for 2 beam
+    - [ ] I(z,u,ds) ( integrated path using excitation error)
+    - [ ] check structure factors  
+    - [ ] bloch kinematic figures and integration with pets
+
+
 - ireloh
-    - simulate 100 simus 
+    - simulate 100 simus
 
 - [ ] QQplot
 - Q-Qplot dynamic(thickness dep) vs Kinematic    
@@ -21,6 +29,8 @@
     - [ ] camel plot (wild even after reducing angular step)
 
 
+
+- dummy test case kinematic simulations  (zone axis )
 
 - git alias ...
 - import dials experiment
