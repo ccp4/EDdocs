@@ -1,0 +1,383 @@
+% \NeedsTeXFormat{LaTeX2e}
+% \ProvidesPackage{ThesisCommands}[2016/06/20 ThesisCommands]
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{calc}
+% \DeclareMathOperator{\sgn}{sgn}
+% \newcommand{\expnumber}[2]{{#1}\mathrm{e}{#2}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% General %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Font
+\newcommand{\bm}[1]{\text{\boldmath $#1$\unboldmath}}
+\newcommand{\bb}{\mathbf}
+\newcommand{\cc}{\mathcal}
+\newcommand{\ang}{\mbox{\normalfont\AA}}
+% Operators
+\newcommand{\dP}{\partial}
+\newcommand{\dPx}[1]{\frac{\dP #1}{\dP x_1}}
+\newcommand{\dPy}[1]{\frac{\dP #1}{\dP x_2}}
+\newcommand{\dPz}[1]{\frac{\dP #1}{\dP x_3}}
+\newcommand{\Dxk}[1]{\frac{\dP #1}{\dP x_k}}
+\newcommand{\dPk}[2]{\frac{\dP #2}{\dP #1 }}
+\newcommand{\Dt}[1]{\frac{\dP  #1}{\dP t  }}
+\newcommand{\dt}[1]{\frac{d    #1}{dt     }}
+\newcommand{\dx}[1]{\frac{d    #1}{dx     }}
+\newcommand{\dxTwo}[1]{\frac{d^2 #1}{dx^2   }}
+\newcommand{\dxk}[2]{\frac{d   #1}{d#2    }}
+\newcommand{\grad}{\bm{\nabla}}
+\renewcommand{\div}{\bm{\nabla}\cdot}
+\newcommand{\rot}{\bm{\nabla}\times}
+\newcommand{\jump}[1]{\llbracket {#1} \rrbracket}
+% Sum,Int
+\newcommand{\IntE}{\int_{\Omega_{e}}}
+\newcommand{\IntG}{\int_{\partial\Omega_{e}}}
+\newcommand{\Intg}{\int_{\Gamma}}
+\newcommand{\dG}{d\Gamma}
+\newcommand{\sumD}[1]{\underset{#1}{\sum}}
+\newcommand{\sumUD}[2]{\overset{#1}{\underset{#2}{\sum}}}
+\newcommand{\sumDU}[2]{\overset{#2}{\underset{#1}{\sum}}}
+\newcommand{\intInfty}{\int_{0}^{+\infty} }
+\newcommand{\intInf}{\int_{-\infty}^{+\infty} }
+\newcommand{\intV}{\int\int\int_V}
+\newcommand{\intS}{\int\int_S}
+\newcommand{\sumInf}{\overset{+\infty}{\underset{-\infty}{\sum}}}
+\newcommand{\limInf}[1]{\underset{#1 \rightarrow\infty}{\rightarrow}}
+\newcommand{\Lim}[2]{\underset{#1 \rightarrow {#2}}{lim}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Quantum mechnaics %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\braket}[1]{\langle #1 \rangle}
+\newcommand{\bra}[1]{\langle #1 }
+\newcommand{\ket}[1]{#1 \rangle}
+\newcommand{\matrixElem}[3]{\left\langle #1 | #2 | #3 \right\rangle}
+\newcommand{\matElem}[3]{\matrixElem{#1}{#2}{#3}}
+\newcommand{\Mm}{\begin{array}{c}max\\min \end{array}}
+\newcommand{\hbm}{\frac{\hbar}{m_0}}
+\newcommand{\hbsm}{\frac{\hbar^2}{2m_0}}
+\newcommand{\hbsme}[1]{\frac{\hbar^2}{2m_{#1} }}
+\newcommand{\hbksm}{\frac{\hbar^2k^2}{2m_0 } }
+\newcommand{\hbksme}[1]{\frac{\hbar^2k^2}{2m_{#1} }}
+\newcommand{\smhb}[1]{\frac{2m_0 #1}{\hbar^2}}
+\newcommand{\Vqdim}{\tilde V_0}
+
+
+%Hydrogen
+\newcommand{\emphi}[1]{e^{#1 j\varphi}}
+\newcommand{\cmp}[1]{ \cos#1\varphi}
+\newcommand{\smp}[1]{ \sin#1\varphi}
+\newcommand{\cmt}[1]{ \cos^{#1}\theta}
+\newcommand{\smt}[1]{ \sin^{#1}\theta}
+\newcommand{\cp}{ \cos\varphi}
+\renewcommand{\sp}{ \sin\varphi}
+\newcommand{\ct}{ \cos\theta}
+\newcommand{\st}{ \sin\theta}
+\newcommand{\sqfopi}{\frac{1}{\sqrt{4\pi}}}
+\newcommand{\sqf}[2]{\sqrt{\frac{#1}{#2}}}
+
+%kp Theory
+\newcommand{\Psik}{\Psi_{\bb k}(\bb r)}
+\newcommand{\PsiO}{\Psi^{(0)}}
+\newcommand{\EnO}{\E^{(0)}_n}
+\newcommand{\ukr}{u_{\bb k}(\bb r)}
+\newcommand{\unkr}{u_{n,\bb k}(\bb r)}%^{(n)}
+\newcommand{\unk}{u_{n,\bb k}}
+\newcommand{\Enk}{E_{n,\bb k}}
+\newcommand{\kdotr}{\bb k\cdot\bb r}
+\newcommand{\kdotp}{\bb k\cdot\bb p}
+\newcommand{\conj}{\dagger}
+\newcommand{\tildeR}{\tilde R}
+\newcommand{\tildeRconj}{\tilde R^{\conj}}
+
+% Quantum well
+\newcommand{\kzQ}{k_z}
+\newcommand{\kza}{k}
+\newcommand{\kt}{k_t}
+\newcommand{\kzb}{\kappa}
+\newcommand{\wdt}{w}
+\newcommand{\adt}{a}
+\newcommand{\me}{m_e}
+\newcommand{\mea}{m_w}
+\newcommand{\meb}{m_b}
+\newcommand{\mz}{m_z}
+\newcommand{\mt}{m_t}
+\newcommand{\mza}{m_{z,w}}
+\newcommand{\mzb}{m_{z,b}}
+\newcommand{\mta}{m_{t,w}}
+\newcommand{\mtb}{m_{t,b}}
+\newcommand{\pj}{p_{j,j+1}}
+\newcommand{\kzl}{k_{(j+1)z}l_{j+1}}
+\newcommand{\kzi}{k_{i,z}}
+\newcommand{\krho}{k_{\rho}}
+\newcommand{\krhoDim}{\tilde{\krho}}
+%\newcommand{\kz}{k_{z}}
+%kzj
+\newcommand{\kzHLj}[1]{ k_{#1,z}^{(j)} }
+\newcommand{\kzHHj}{\kzHLj{HH}}
+\newcommand{\kzLHj}{\kzHLj{LH}}
+%A,B
+\newcommand{\ABLHj}[2]{#1_{#2}^{(j)}}
+\newcommand{\AHHj}{\ABLHj{A}{HH}}
+\newcommand{\ALHj}{\ABLHj{A}{LH}}
+\newcommand{\BHHj}{\ABLHj{B}{HH}}
+\newcommand{\BLHj}{\ABLHj{B}{LH}}
+%F
+\newcommand{\FHp}[2]{ \bb F_{#1}^{(j#2)}  }
+\newcommand{\FHHjp}{\FHp{HH}{+}}
+\newcommand{\FLHjp}{\FHp{LH}{+}}
+\newcommand{\FHHjm}{\FHp{HH}{-}}
+\newcommand{\FLHjm}{\FHp{LH}{-}}
+
+\newcommand{\mei}{m_{i}}
+\newcommand{\Rt}{\tilde R}
+\newcommand{\Rtd}{\Rt^{\dagger}}
+%
+\newcommand{\vecHorz}[1]{\left(#1 \right)}
+\newcommand{\vecTwo}[2]{\left[\begin{array}{c} #1 \\ #2 \end{array}\right]}
+\newcommand{\diagTwo}[2]{\left[\begin{array}{cc} #1 & 0 \\ 0 & #2 \end{array}\right]}
+\newcommand{\matTwo}[4]{\left[\begin{array}{cc} #1 & #2 \\ #3 & #4 \end{array}\right]}
+\newcommand{\matFour}[4]{\left[\begin{array}{cccc} #1\\ #2\\ #3\\ #4 \end{array}\right]}
+\newcommand{\mBar}{\bar m}
+\newcommand{\cBar}{\bar c}
+
+%%%%% Gain
+\renewcommand{\k}{\bb k}
+\newcommand{\kpar}{\bb k_{||}}
+\newcommand{\Epar}{E_{||}}
+\newcommand{\rhoif}{\rho(\omega_{fi})}
+\newcommand{\eikr}{e^{j\k\cdot\bb r}}
+\newcommand{\Evar}{\varepsilon}
+\newcommand{\mrme}{\frac{m_r}{m_e}}
+\newcommand{\mrmh}{\frac{m_r}{m_h}}
+
+%\newcommand{\Eint}{\varepsilon}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Electrical modelling %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Poisson solver Dim constants
+\newcommand{\varphiDim}{\tilde\varphi}
+\newcommand{\phiDim}{\tilde\phi}
+\newcommand{\Vdim}{\tilde V}
+\newcommand{\Kf}{\bb K^{\ast}}
+% Rate eq
+\newcommand{\pvDim}{\tilde{p}_v}
+\newcommand{\ncDim}{\tilde{n}_c}
+\newcommand{\JnDim}{\tilde{\bm J}_n}
+\newcommand{\JpDim}{\tilde{\bm J}_p}
+\newcommand{\UnDim}{\tilde{U}_n}
+\newcommand{\UpDim}{\tilde{U}_p}
+\newcommand{\GnDim}{\tilde{G}_n}
+\newcommand{\GpDim}{\tilde{G}_p}
+\newcommand{\VnDim}{\tilde{\phi}_n}
+\newcommand{\VpDim}{\tilde{\phi}_p}
+\newcommand{\td}{d}
+% SemiConductor statistics Dim Constants
+\newcommand{\PsiDim}{\tilde\Psi}
+\newcommand{\FnDim}{\tilde{F}_n}
+\newcommand{\FpDim}{\tilde{F}_p}
+\newcommand{\DnDim}{\tilde{D}_n}
+\newcommand{\DpDim}{\tilde{D}_p}
+\newcommand{\Ek}{\varepsilon}
+\newcommand{\EFp}{E_{F,p}}
+\newcommand{\EFn}{E_{F,n}}
+
+% Rate eq weak formulation
+\newcommand{\Jdrift }{\bb J^{drift}}
+\newcommand{\Jdiff  }{\bb J^{diff}}
+\newcommand{\dJdrift}{\bb dJ^{drift}}
+\newcommand{\dJdiff }{\bb dJ^{diff}}
+\newcommand{\dJdriftP}{\dPk{\phi_{p,k}}{\Jdrift}}
+\newcommand{\dJdiffP }{\dPk{\phi_{p,k}}{\Jdiff }}
+\newcommand{\dJdriftN}{\dPk{\phi_{n,k}}{\Jdrift}}
+\newcommand{\dJdiffN }{\dPk{\phi_{n,k}}{\Jdiff }}
+\newcommand{\dUp}{\dPk{\phi_{p,k}}{\bb U} }
+\newcommand{\dUn}{\dPk{\phi_{n,k}}{\bb U} }
+
+%Lateral rate eq perturb
+\newcommand{\pv}{p_v(x)}
+\newcommand{\nc}{n_c}
+\newcommand{\Gmod}{G}
+\newcommand{\Uss}{\bar\gamma_s}%U_{ss}}
+\newcommand{\gN}{\bar g_0}
+\newcommand{\gs}{\bar g_0}
+\newcommand{\Ux}{U(x)}
+\newcommand{\Iem}{\cc I_m}
+\newcommand{\betaN}{\bar\beta}
+\newcommand{\Ginj}{G_{inj}}
+\newcommand{\Rsp}{R_{sp}}
+\newcommand{\Veff}{V_{eff}}
+\newcommand{\Va}{V_{a}}
+\renewcommand{\SS}[1]{\bar #1}
+\newcommand{\SSpv}{\bar{p}_v(x)}
+\newcommand{\Sss}{S}
+\newcommand{\Nss}{N}
+\newcommand{\Iinj}{I}%\frac{\eta I}{qV_a}}
+\newcommand{\Ldeff}{L_{D,eff}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Optical Modelling  Electromagnetism %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%constant
+\newcommand{\oneHalf}{\frac{1}{2}}
+\newcommand{\eps}{\epsilon}
+\newcommand{\oneEps}{\frac{1}{\eps}}
+\newcommand{\oneMu}{\frac{1}{\mu}}
+\newcommand{\oneEta}{\frac{1}{\eta}}
+\newcommand{\epsInf}{\epsilon_{\infty}}
+\newcommand{\epsI}{\eps''}
+\newcommand{\epsR}{\eps'}
+%Vectors
+% \renewcommand{\r}{\bm{r}}
+\newcommand{\E}{\bm{E}}
+\renewcommand{\H}{\bm{H}}
+\newcommand{\B}{\bm{B}}
+\newcommand{\D}{\bm{D}}
+\newcommand{\J}{\bm{J}}
+\newcommand{\M}{\bm{M}}
+\newcommand{\A}{\bm{A}}
+\newcommand{\F}{\bm{F}}
+\newcommand{\N}{\bm{N}}
+\renewcommand{\L}{\bm{L}}
+%
+\renewcommand{\P}{\bm{P}}
+\newcommand{\U}{\bm{U}}
+\newcommand{\n}{\bm{n}}
+
+%%%% Electromagnetism Dim
+%constant
+\newcommand{\xkDim}{\tilde{x_k}}
+\newcommand{\tDim}{\tilde{t}}
+\newcommand{\epsDim}{\tilde{\eps}}
+\newcommand{\muDim}{\tilde{\mu}}
+\newcommand{\sigmaDim}{\tilde{\sigma}}
+\newcommand{\omegaDim}{\tilde{\omega}}
+\newcommand{\gammaDim}{\tilde{\gamma}}
+\newcommand{\etaDim}{\tilde{\eta}}
+%Vectors
+\newcommand{\Edim}{\tilde{\bm{E}}}
+\newcommand{\Hdim}{\tilde{\bm{H}}}
+\newcommand{\Bdim}{\tilde{\bm{B}}}
+\newcommand{\Ddim}{\tilde{\bm{D}}}
+\newcommand{\Jdim}{\tilde{\bm{J}}}
+\newcommand{\Pdim}{\tilde{\bm{P}}}
+\newcommand{\Mdim}{\tilde{\bm{M}}}
+\newcommand{\Adim}{\tilde{\bm{A}}}
+\newcommand{\Udim}{\tilde{\bm{U}}}
+\newcommand{\xdim}{\tilde{\bm{x}}}
+%Operators
+\newcommand{\DtDim}[1]{\frac{\partial #1}{\partial\tDim}}
+\newcommand{\nablaDim}{\tilde{\bm{\nabla}}}
+\newcommand{\gradDim}{\bm{\nablaDim}}
+\newcommand{\divDim}{\nablaDim\cdot}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% misc
+\newcommand{\spherProp}{\frac{e^{-j\beta r}}{r} }
+
+%%% Electromagnetism Components
+\newcommand{\Ex}{E_1}
+\newcommand{\Ey}{E_2}
+\newcommand{\Ez}{E_3}
+\newcommand{\Hx}{H_1}
+\newcommand{\Hy}{H_2}
+\newcommand{\Hz}{H_3}
+\newcommand{\Dx}[1]{\frac{\partial #1}{\partial x}}
+\newcommand{\Dy}[1]{\frac{\partial #1}{\partial y}}
+\newcommand{\Dz}[1]{\frac{\partial #1}{\partial z}}
+\newcommand{\ex}{\bb e_x}
+\newcommand{\ey}{\bb e_y}
+\newcommand{\ez}{\bb e_z}
+\newcommand{\kx}{k_x}
+\newcommand{\ky}{k_y}
+\newcommand{\kz}{k_z}
+\newcommand{\ku}{k_{\bm u}}
+\newcommand{\Ee}{\cc E_e}
+\newcommand{\Em}{\cc E_m}
+\newcommand{\Eem}{\cc E_{em}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DGTD
+\newcommand{\sumK}{\sumUD{nsd}{k=1}}
+\newcommand{\FF}{\mathbb{F}}
+%\newcommand{\F}{\bm{F}}
+\newcommand{\Fk}{\F_k}
+\newcommand{\Fx}{\F_1}
+\newcommand{\Fy}{\F_2}
+\newcommand{\Fz}{\F_3}
+\newcommand{\Fn}{\bm{F}_{\n}}
+\newcommand{\FNum}{\tilde{\F}_{\n}}
+\renewcommand{\S}{\bm{S}}
+\newcommand{\W}{\bm{W}}
+%\newcommand{\A}{\bm{A}}
+\newcommand{\An}{\A_{\n}}
+\newcommand{\AnM}{\An^-}
+%Discrete DGTD
+\newcommand{\iN}{i\in\llbracket 1,N\rrbracket}
+\newcommand{\jN}{j\in\llbracket 1,N\rrbracket}
+\newcommand{\Li}{L_i}
+\newcommand{\Lj}{L_j}
+\newcommand{\Lk}{L_k}
+\newcommand{\MijE}{M_{ij}^{\Omega_e}}
+\newcommand{\Cijk}{C_{ij,k}^{\Omega_e}}
+\newcommand{\MijG}{\bb M_{ij}^{\Gamma}}
+\newcommand{\FDG}{\cc F^{DG}}
+\newcommand{\Am}{\bb A^-_{\bb n}}
+\newcommand{\Uxt}{\bar{\bb U}}
+%Elt
+\newcommand{\Uelt}{ \bb U^e}
+\newcommand{\Melt}{ \bb M^{\Omega_e}}
+\newcommand{\CxElt}{\bb C_1^{\Omega_e}}
+\newcommand{\CyElt}{\bb C_2^{\Omega_e}}
+\newcommand{\MgElt}{\bb M^{\gamma_e}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Scattering
+\newcommand{\RCS}{\sigma_{3D}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Maths
+%%%%%% Cyl/spherical coordinates
+\newcommand{\sinc}{sinc}
+
+
+
+%%%%%% Cyl/spherical coordinates
+\newcommand{\er}{\bb e_r}
+\newcommand{\etheta}{\bb e_{\theta}}
+\newcommand{\ephi}{\bb e_{\phi}}
+%
+\newcommand{\Er}{E_r}
+\newcommand{\Et}{E_{\phi}}
+\newcommand{\Hr}{H_r}
+\newcommand{\Ht}{H_{\phi}}
+%
+\newcommand{\dPr}{\dP_r}
+\newcommand{\dPp}{\frac{1}{r}\dP_{\phi}}
+\newcommand{\dPrho}{\dP_{\rho}}
+\newcommand{\dPtheta}{\dP_{\theta}}
+\newcommand{\dPphi}{\dP_{\phi}}
+%
+\newcommand{\Utheta}{U_{\theta}}
+\newcommand{\Uphi}{U_{\phi}}
+\newcommand{\Urho}{U_{\rho}}
+\newcommand{\Uphip}{U_{\phi'}}
+
+\newcommand{\Ltheta}{L_{\theta}}
+\newcommand{\Lphi}{L_{\phi}}
+\newcommand{\Ntheta}{N_{\theta}}
+\newcommand{\Nphi}{N_{\phi}}
+%
+\newcommand{\ctheta}{\cos\theta}
+\newcommand{\stheta}{\sin\theta}
+\newcommand{\cphi}{\cos\phi}
+\newcommand{\sphi}{\sin\phi}
+%
+\newcommand{\Jm}{J_m}
+\newcommand{\Nm}{I_m}
+\newcommand{\Km}{K_m}
+\newcommand{\Ym}{Y_m}
+%
+\newcommand{\vecThree}[3]{\left[\begin{array}{c} #1 \\ #2 \\ #3 \end{array}\right]}
+\newcommand{\matThree}[9]{\left[\begin{array}{ccc} #1 & #2 & #3 \\ #4 & #5 & #6 \\ #7 & #8 & #9 \end{array}\right]}
