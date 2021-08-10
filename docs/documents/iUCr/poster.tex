@@ -1,0 +1,348 @@
+\documentclass[a0paper,portrait,fontscale=0.34]{baposter}
+
+\usepackage{relsize}		% For \smaller
+\usepackage{epstopdf}	  % Included EPS files automatically converted to PDF to include with pdflatex
+\usepackage{url}			  % For \url
+\usepackage{multicol}
+\usepackage{amsmath}
+\input{cmds.sty}
+\usepackage{empheq}
+\usepackage{graphicx} % Required for including images
+\usepackage{hyperref}
+\newcommand\widecolourbox[1]{{\setlength\fboxrule{1.5pt}\setlength\fboxsep{11pt}\fcolorbox{red}{eqcolor}{\enspace#1\enspace }}}
+
+\newcommand{\highlight}[1]{\textbf{\color{goodcol}#1\color{fscol}}}
+\newcommand{\negCol}[1]{\textbf{\color{badcol}#1\color{fscol}}}
+
+%%% Global Settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\graphicspath{{pix/}{fig/}}	% Root directory of the pictures
+\tracingstats=2			% Enabled LaTeX logging with conditionals
+
+
+%%% Color Definitions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{goodcol}{RGB}{0,150,0}
+\definecolor{badcol}{RGB}{150,0,0}
+\definecolor{fscol}{RGB}{0,0,0}
+% \definecolor{bgcol}{RGB}{150,200,230}
+\definecolor{bgcol}{RGB}{200,230,250}
+\definecolor{bordercol}{RGB}{23,55,94}
+\definecolor{headercol1}{RGB}{23,55,94}
+\definecolor{headercol2}{RGB}{65,95,150}
+\definecolor{headerfontcol}{RGB}{255,255,255}
+\definecolor{eqcolor}{RGB}{180,230,250}
+% \definecolor{boxcolor}{RGB}{160,210,235}
+\definecolor{boxcolor}{RGB}{220,240,255}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Utility functions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Save space in lists. Use this after the opening of the list %%%%%%%%%%%%%%%%
+\newcommand{\compresslist}{
+	\setlength{\itemsep}{1pt}
+	\setlength{\parskip}{0pt}
+	\setlength{\parsep}{0pt}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Document Start %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\bibliography{library}
+
+\typeout{Poster rendering started}
+
+%%% Setting Background Image %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \background{
+% 	\begin{tikzpicture}[remember picture,overlay]%
+% 	\draw (current page.north west)+(-2em,2em) node[anchor=north west]
+% 	{\includegraphics[height=1.1\textheight]{background}};
+% 	\end{tikzpicture}
+% }
+
+%%% General Poster Settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% Eye Catcher, Title, Authors and University Images %%%%%%%%%%%%%%%%%%%%%%
+\begin{poster}{
+	grid=false,
+	%eyecatcher=false,
+	borderColor=bordercol,
+	headerColorOne=headercol1,
+	headerColorTwo=headercol2,
+	headerFontColor=headerfontcol,
+	% Only simple background color used, no shading, so boxColorTwo isn't necessary
+	boxColorOne=boxcolor,
+	bgColorOne=bgcol,
+	headershape=rectangle,
+	headerfont=\Large\sf\bf,
+	textborder=rectangle,
+	background=plain,
+	headerborder=open,
+	headerheight=0.12\textheight,
+  boxshade=plain
+}
+%%% Eye Cacther %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+	Eye Catcher, empty if option eyecatcher=false - unused
+}
+%%% Title %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\sf\bf
+	Simulation of high energy electron diffraction patterns of organic crystals
+}
+%%% Authors %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+	\vspace{1em} Tarik Ronan Drevon, David Waterman \& Eugene Krissinel\\
+	{\smaller Science and Technology Facility Council, Scientific Computing Department, CCP4}\\
+	{\smaller	tarik.drevon@stfc.ac.uk}
+}
+%%% Logo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+	\setlength\fboxsep{0pt}
+	\setlength\fboxrule{0.75pt}
+	\fbox{
+		\begin{minipage}{14em}
+			\includegraphics[width=14em]{fig/logo/ukri.png}\\
+			\includegraphics[width=7em]{fig/logo/BBSRC_crop.png}
+			\includegraphics[width=7em]{fig/logo/ccp4.png}
+		\end{minipage}
+	}
+}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Poster
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{Contribution}{name=contrib,span=1,column=0,row=0}{
+We provide a comparison of the 2 most popular methods used for simulating electron diffraction(ED),
+namely the multislice(MS) and blochwave(BW).
+
+Dynamical diffraction is described by both methods while
+advantages and limitations of both approaches are highlighted and discussed.
+
+As proof of concept, the multislice method is subsequently used to reproduce a continuous rotation experiment
+based on alpha glycine.
+}
+
+\headerbox{Motivations for ED simulations}{name=intro,span=1,column=0,below=contrib}{
+
+Macromolecular structures can be solved from ED patterns using standard
+macromolecular X-ray crystallographic(MX)
+techniques.%~\cite{ShiNanenga2016}.
+
+ED is attractive as it:
+%
+\begin{itemize}\compresslist
+ \item Enables \highlight{solving structures from nanocrystals} due to the \emph{strong electron-atom interaction}.
+ \item Produces \highlight{high resolution maps} due to the very \emph{small electronic wavelength 0.025$A$@200keV}.
+ \item Resolves \highlight{atomic nucleus positions} through the \emph{electrostatic potential map}. %which is complementary to the electron density from X-ray diffraction.
+\end{itemize}
+
+However, \negCol{Rfactors obtained through ED remain larger than those of X-ray} due to a lack of theoretical understanding of \emph{dynamical diffraction}.
+}
+
+
+\headerbox{Theoretical background}{name=theory,column=0,span=1,below=intro}{
+\begin{center}\textbf{Standard MX pipeline}\end{center}
+\vspace{-2em}
+\begin{center}
+	\includegraphics[width=\linewidth]{MX_t.png}
+\end{center}
+MX is based on the \emph{kinematic theory of diffraction} due to the
+weak interaction between X-rays and the electron density.
+Kinematic theory can not rigorously be applied to ED.
+
+
+\mbox{\hspace{0.3\linewidth}\rule{0.4\linewidth}{1pt}\hspace{0.3\linewidth}}\\
+\vspace{-1em}
+\begin{center}\textbf{Schr$\ddot{o}$dinger fast electron wave equation}\end{center}
+
+In ED, the structure factor is related to the electrostatic potential
+through :
+\begin{empheq}[box=\widecolourbox]{equation*}
+	\frac{\dP\Psi(x,y,z)}{\dP_z} =
+		\Big\{ \frac{i\lambda}{4\pi}\grad^2_{xy} + i\sigma V(x,y,z)\Big\}
+\end{empheq}
+
+
+\mbox{\hspace{0.3\linewidth}\rule{0.4\linewidth}{1pt}\hspace{0.3\linewidth}}\\
+\vspace{-1em}
+\begin{center}\textbf{Particle oriented picture}\end{center}
+\begin{center}
+	\includegraphics[width=0.5\linewidth]{fig/nearBragg/Pcoh_kin_dyn2.png}
+\end{center}
+\vspace{-1em}
+200keV electrons have typical elastic mean free path of 200nm in organic atoms.
+This results in an appreciable probability of multiple scattering in nanocrystals.
+\vspace{1em}
+}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Methods
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{Multislice(MS) method ~\cite{Kirkland2019}}{name=multi,column=1,span=1}{
+
+	The sample is \highlight{sliced in real space} into regular slices $\Delta z$ and the solution is propagated from slice to slice through:
+	$$\Psi(z+\Delta z) = \cc F^{-1}\Bigg\{p(k_x,k_y) \cc F\Big(e^{i\sigma\nu_{\Delta_z}(z)} \Psi(z)\Big) \Bigg\}$$
+
+	% \begin{empheq}[box=\widecolourbox]{equation*}
+	% 	\Psi(z+\Delta z) = \cc F^{-1}\Bigg\{p(k_x,k_y) \cc F\Big(e^{i\sigma\nu_{\Delta_z}(z)} \Psi(z)\Big) \Bigg\}
+	% \end{empheq}
+
+	where the Fresnel propagator $p(k_x,k_y)=e^{-i\pi\lambda\Delta z(k_x^2+k_y^2)}$,
+	$\nu_{\Delta_z}=\int_z^{z+\Delta z}V(x,y,z^{'})dz^{'}$ is the projected potential.
+	\vspace{0.65em}\\
+	\begin{tabular}{@{}c@{ }c@{ }c@{ }}
+		\includegraphics[width=0.49\linewidth]{fig/multislice/multi2D/multi2D_Q.png}&
+		\includegraphics[width=0.49\linewidth]{fig/multislice/multi2D/multi2D_Z.png}\\
+        \smaller a) Typical $\Psi(x,z)$ & \smaller b) Strong beams intensities
+  \end{tabular}
+
+	\vspace{0.5em}
+	\begin{itemize}\compresslist
+	 \item The Discrete Fourier Transform $\cc F$ provides \highlight{fast and efficient $N\log N$ time complexity}.% with beam number $N$.
+	 \item \negCol{Padding and large transverse super cells} necessary for non zone-axis orientations.
+	 \item Possiblity to model \highlight{solvent,inelastic scattering, disorder, partial coherency...}.
+	\end{itemize}
+
+Padded simulation for a IRELOH  : % found in continuous rotation experiment:
+
+	\begin{tabular}{@{}c@{ }c@{ }c@{ }}
+		\includegraphics[width=0.49\linewidth]{fig/multislice/ireloh/multislice_ireloh_xy.png}&
+		\includegraphics[width=0.49\linewidth]{fig/bloch/bloch_Iz.png}\\
+      \smaller a) real space setup & \smaller b) typical diffraction pattern
+  \end{tabular}
+\vspace{0.25em}
+}
+
+\headerbox{Blochwave(BW) approach~\cite{Zuo1995}}{name=bloch,column=2,span=1}{
+	% The sample is assumed to be an infinite periodic crystal.
+	The wave function is \highlight{solved in reciprocal space} by finding the
+	eigen values $\gamma_j$ and eigen vectors $C_{j,\bb G}$:
+	$$S_{\bb G}C_{j,\bb G} + \sum_{\bb G^{'}}\frac{U_{\bb G-\bb G^{'}}}{2k_0} C_{j,\bb G^{'}} = \gamma_jC_{j,\bb G}$$
+
+	% \begin{empheq}[box=\widecolourbox]{equation*}
+	% 	S_{\bb G}C_{j,\bb G} + \sum_{\bb G^{'}}\frac{U_{\bb G-\bb G^{'}}}{2k_0} C_{j,\bb G^{'}} = \gamma_jC_{j,\bb G}
+	% \end{empheq}
+
+	The diffracted intensities of the strong beams $\bb G$ (small excitation
+	error $S_{\bb G}$) are computed for any thickness sample $H$ with
+	$I_{\bb G}=|\bb C\bb e^{2i\pi\boldsymbol{\gamma_j}H}\bb C^{-1}|^2$.
+
+	\begin{tabular}{@{}c@{ }c@{ }c@{ }}
+		\includegraphics[width=0.49\linewidth]{fig/bloch/bloch_Sw.png}&
+		\includegraphics[width=0.49\linewidth]{fig/bloch/bloch_Iz.png}\\
+      \smaller a) $S_{\bb G}$ and potential $U_{\bb G}$ & \smaller b) Strong beams intensities $I_{\bb G}$
+  \end{tabular}
+
+	\vspace{0.5em}
+	\begin{itemize}\compresslist
+	 \item Diagonalization \negCol{time complexity scales as $N^3$} but \highlight{only strongest beams need be included}.
+	 \item \highlight{Random orientations of any lattice} can be simulated.
+	 \item Inelastic scattering can be modelled but \negCol{not solvent scattering, disorder and defects}.
+	\end{itemize}
+
+
+ Rocking curves for diamond in different configurations :
+
+	\begin{tabular}{@{}c@{ }c@{ }c@{ }}
+		\includegraphics[width=0.49\linewidth]{fig/bloch/diamond_rock2.png}&
+		\includegraphics[width=0.49\linewidth]{fig/bloch/diamond_rock1.png}\\
+      \smaller a) 3 beam setup & \smaller b) arbitrary orientation
+  \end{tabular}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Results
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{Application to alpha-glycine}{name=glycine,column=1,span=2,below=multi}{
+
+\begin{multicols}{2}
+
+	Experimental continuous rotation electron diffraction dataset of alpha-glycine 
+	% \vspace{0.5em}
+
+	\begin{tabular}{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }}
+		\includegraphics[width=0.33\linewidth]{fig/glycine/_009.png}&
+		\includegraphics[width=0.33\linewidth]{fig/glycine/_014.png}&
+		\includegraphics[width=0.33\linewidth]{fig/glycine/_020.png}\\
+			 a) frame 10 & \smaller b) frame 15 & \smaller c) frame 21
+	\end{tabular}
+
+	\vspace{1em}
+	Simulated frames using multislice. Padding was used to simulate
+	the experimental orientations as retrieved by data processing
+	software PETS2(\url{http://pets.fzu.cz/})
+
+	\begin{tabular}{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }}
+		\includegraphics[width=0.33\linewidth]{fig/multislice/glycine/glycine_test10.png}&
+		\includegraphics[width=0.33\linewidth]{fig/multislice/glycine/glycine_test15.png}&
+		\includegraphics[width=0.33\linewidth]{fig/multislice/glycine/glycine_test21.png}\\
+			 a) frame 10 & \smaller b) frame 15 & \smaller c) frame 21
+	\end{tabular}
+
+\vspace{1em}
+The main reflections are correctly predicted, although the patterns need to be rotated
+in the plane of the figure to get an exact match.
+
+Excitation errors ($-\log_{10}(S_{\bb G})$) of main beams over frames [1-30] and
+simulated rocking curve of main reflection (0,0,2):
+
+\begin{tabular}{@{}c@{ }c@{ }c@{ }c@{ }c@{ }}
+	\hspace{1.5em}
+	\includegraphics[width=0.4\linewidth]{fig/glycine/glycine_theta_Sw.png}&
+	\includegraphics[width=0.4\linewidth]{fig/glycine/glycine_ref_beams5.png}\\
+		 \smaller a) Excitation error & \smaller b) Rocking curve for (0,0,2)
+\end{tabular}
+
+\vspace{1em}
+Experimental intensities :
+
+\begin{tabular}{@{}c@{ }c@{ }c@{ }c@{ }c@{ }}
+	\hspace{1.5em}
+	\includegraphics[width=0.4\linewidth]{fig/glycine/glycine_Iframe.png}&
+	\includegraphics[width=0.4\linewidth]{fig/glycine/glycine_Ihkl.png}\\
+		\smaller a) Experimental intensities & \smaller b) Distribution with resolution
+\end{tabular}
+
+% \vspace{1em}
+\end{multicols}
+
+\vspace{0.3em}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% ref, ack
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{References}{name=references,column=0,span=2,above=bottom}{
+\smaller																  % Make the whole text smaller
+\vspace{-0.4em} 												  % Save some space at the beginning
+% \bibliographystyle{alpha}	 								% Use plain style
+\renewcommand{\section}[2]{\vskip 0.05em}	% Omit "References" title
+\input{refs.bbl}
+}
+\headerbox{Acknowledgements}{name=acknowledgements,span=1,column=2, above=bottom}{
+% \smaller						% Make the whole text smaller
+% \vspace{0.1em}			% Save some space at the beginning
+This research was supported by BBSRC grant 4576434 WP4. The supports are gratefully acknowledged.
+}
+\end{poster}
+\end{document}
