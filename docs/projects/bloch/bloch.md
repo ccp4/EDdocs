@@ -68,3 +68,13 @@ b) Integrated dynamical intensities vs integrated kinematic intensities for a se
 [![]({{figs}}r1_beams0.svg)]({{figs}}r1_beams0.svg)  | [![]({{figs}}r1_beams1.svg)]({{figs}}r1_beams1.svg)  | [![]({{figs}}r1_beams2.svg)]({{figs}}r1_beams2.svg)  | [![]({{figs}}r1_beams3.svg)]({{figs}}r1_beams3.svg)
 
 Thickness dependent rocking curves for selected beams.
+
+
+## Felix
+Running on [scarf](https://www.scarf.rl.ac.uk/modules/intel.html) :
+```
+module load intel/20.0.0
+module load intel/mpi/20.0.0 (module load mpi)
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH":/apps/intel/2013_sp1.1.106/composer_xe_2013_sp1.1.106/mkl/lib/intel64/"
+mpirun -np 4 felix.INT64Nifort.d
+```

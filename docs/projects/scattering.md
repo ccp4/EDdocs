@@ -77,8 +77,8 @@ X-ray  | Electron
 The real space potential may be useful and computed from analytical inverse Fourier transform of the fitted atomic form factors :
 \begin{equation}
   V_a(r) =
-    2\pi^2a_0e\sum_{i=1}^{3}\frac{a_i}{r}e^{2\pi r\sqrt{b_i}}+         
-    2\pi^{5/2}a_0e\sum_{i=1}^{3}c_id_i^{-/2}e^{-\pi^2r^2/d_i}
+    2\pi^2a_0e\sum_{i=1}^{3}\frac{a_i}{r}e^{-2\pi r\sqrt{b_i}}+         
+    2\pi^{5/2}a_0e\sum_{i=1}^{3}c_id_i^{-3/2}e^{-\pi^2r^2/d_i}
 \end{equation}
 
 The projected potential along a given Cartesian axis $z$ may then be approximated by :

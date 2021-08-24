@@ -1,3 +1,13 @@
+#week 33
+- iUCr conf
+- pyscat approximations 
+
+#week 32
+- pyscat, iUCr poster
+
+#week 31
+- questaal, bloch2d, pyscat, felix
+
 #week 30
 - wallpp library updates and improvements
 

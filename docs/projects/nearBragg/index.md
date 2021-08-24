@@ -1,13 +1,71 @@
-# Near Bragg
-
+# MultiScat
 {% set figs='/figures/nearBragg/' %}
 
+## Formulation
+
+
+
+### Primary scattering from direct beam
+Scattering from direct beam at pixel $p$ from atom $j$ :
+\begin{equation}
+  F_j(\bb u_p) = f_j(\theta_{p})e^{2\pi jk_0\big(z_j+R_{jp}\big)}
+\end{equation}
+
+The intensity at pixel $l$ is then :
+\begin{equation}
+  I(\bb u_p) = \Bigg|\sum_{j=1}^{N} F_j(\bb u_p) \Bigg|^2
+\end{equation}
+
+The amount of power scattered by atom $j$ is $\sigma_jI_0=f_j^2I_0$ which has to
+be taken off the power of the incident beam $I_0$.
+
+### Secondary scattering
+Scattering from atom $i$ due to scattering by atom $j$ :
+\begin{equation}
+  F_{ji}(\bb u_l) = f_j(\theta_{ij})e^{2j\pi k_0\big(z_j+r_{ij}\big)}
+     f_i(\theta_{p}-\theta_{ij})e^{2\pi jk_0R_{jp}}
+\end{equation}
+
+\begin{eqnarray}
+  I(\bb u_p)
+  &=&\Bigg|\sum_{j=1}^{N}\Bigg(\tilde F_j(\bb u_p) +
+    \sum_{i\neq j}^{N} F_{ij}(\bb u_p) \Bigg)\Bigg|^2 \\
+  &=&\Bigg|\sum_{j=1}^{N}e^{2\pi jk_0z_j}\Bigg(
+    f_j(\theta_{p})e^{2\pi jk_0R_{jp}} + \sum_{i\neq j}^{N} f_j(\theta_{ij}) f_i(\theta_{p}-\theta_{ij})e^{2j\pi k_0R_{ip}}\Bigg)\Bigg|^2 \\    
+\end{eqnarray}
+
+Similarly to scattering from direct beam, secondary scattering should reduce the
+amplitude of primary scattering by the amount scattered b
+
+### Path length estimate
+The path length may be computed with the following increasing level of approximations:
+\begin{eqnarray}
+R_{ij}
+      &\underset{Greens}{=}& \sqrt{\left(x-x_0\right)^2+\left(z-z_0\right)^2} \\
+       &\underset{Fresnel}{\approx}&     \left(z_0-z\right) + \frac{\left(x-x_0\right)^2}{2\left(z_0-z\right)} \\
+       &\underset{Fraunhofer}{\approx}&  \left(z_0-z\right) + \frac{x_0^2}{2\left(z_0-z\right)} - \frac{xx_0}{\left(z_0-z\right)}  \\
+\end{eqnarray}
+
+Note that the path length from the source the to atom is $z$ for planar illumination.
+
+
+
+\begin{eqnarray}
+R_{il}
+      &\underset{Greens}{=}& \sqrt{\left(x_i-x_l\right)^2+\left(z_i-z_l\right)^2} \\
+       &\underset{Fraunhofer}{\approx}&  \left(z_l-z_i\right) + \frac{x_l^2}{2\left(z_l-z_i\right)} - \frac{x_ix_l}{\left(z_l-z_i\right)}  \\
+\end{eqnarray}
+
+
+
+
+
+
+## NearBragg James Holton
 An [algorithm](https://bl831.als.lbl.gov/~jamesh/nearBragg/) computing the interference patterns of an assembly of scatterers based
 on their path difference to a detector.
 
 Source file format : x,y,z, O,B,P
-
-## Holton
 
 ### Parameters
 
@@ -72,29 +130,7 @@ pattern | Intensity
 ------- | ---------
 [<img src="{{figs}}comparisonHoltonPattern.svg" width="350" /> ]({{figs}}comparisonHoltonPattern.svg) | [<img src="{{figs}}comparisonHolton.svg" width="350" /> ]({{figs}}comparisonHolton.svg)
 
-### Path length estimate
-The path length may be computed with the following increasing level of approximations:
-
-\begin{eqnarray}
-R_{ij}
-      &\underset{Greens}{=}& \sqrt{\left(x-x_0\right)^2+\left(z-z_0\right)^2} \\
-       &\underset{Fresnel}{\approx}&     \left(z_0-z\right) + \frac{\left(x-x_0\right)^2}{2\left(z_0-z\right)} \\
-       &\underset{Fraunhofer}{\approx}&  \left(z_0-z\right) + \frac{x_0^2}{2\left(z_0-z\right)} - \frac{xx_0}{\left(z_0-z\right)}  \\
-\end{eqnarray}
-
-Note that the path length from the source the to atom is $z$ for planar illumination.
-
-\begin{equation}
-I_l = \Big|\sum_{i=1}^{N} f(\theta_{il})e^{jkR_{il}} \Big|^2
-\end{equation}
 
 comparison | error
 ---------- | ---------
 [<img src="{{figs}}path_length.svg" width="350" /> ]({{figs}}path_length.svg) | [<img src="{{figs}}path_length_diff.svg" width="350" /> ]({{figs}}path_length_diff.svg)
-
-
-\begin{eqnarray}
-R_{il}
-      &\underset{Greens}{=}& \sqrt{\left(x_i-x_l\right)^2+\left(z_i-z_l\right)^2} \\
-       &\underset{Fraunhofer}{\approx}&  \left(z_l-z_i\right) + \frac{x_l^2}{2\left(z_l-z_i\right)} - \frac{x_ix_l}{\left(z_l-z_i\right)}  \\
-\end{eqnarray}

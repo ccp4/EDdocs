@@ -1,3 +1,59 @@
+#week 33
+## Monday
+- day1 iUCr
+- [x] pycat_approx test with more spheres
+  - show approx limits with (kd/ka,ka),regimes coupled/forward coupling/uncoupled, for kp=1.1,1.01,1.001, same with (kp,ka)
+## Tuesday
+- day2 iUCr
+- [x] pyscat: Using forward coupled and uncoupled regions,show limits with N->30, ka=10/20,kp=1.01,1.001
+## Wednesday
+- day3 iUCr
+- [x] pyscat : relative error error in cp translated to ff, relative error of selected peaks
+## Thursday
+- day4 iUCr
+- [x] pyscat : Set up test with MS
+## Friday  
+- day4 iUCr
+- [x] pyscat : Fixed calibration with MS(N=1) (Vz was actually wrong and clarified the relativistic effect) and tried example $keV=50, a0=1A(ka=11), V_0=2kV(kp=1.02),kd=60,N=2-10$
+- corrected christine's report
+
+#week 32
+## Monday
+- [x] Christine's internship last week meeting
+- [x] started iUCr poster using templates
+## Tuesday
+- [x] iUCr poster completed
+## Wednesday
+- [x] idea on nearbragg dev (incident spherical wave on pyScatSpheres)
+## Thursday
+- [x] pyscat : plot Bp/e(jkdp) + analytical solution to hkl1
+## Friday
+- [x] pyscat check continuity (approximate solution working now)
+
+#week 31
+## Monday
+- [x] questaal tuto + plot(DOS and bdns)
+- [x] multi2D vs bloch(high Nbeams does not help)
+- [x] bloch2D continuous rotation
+## Tuesday
+- [x] bloch2D : show 17 plane groups diffraction patterns vs kinematic
+## Wednesday
+- [x] check Felix code : (check structure factors : differences ...)
+## Thursday
+- Felix :
+    - [x] code check atomic coordinates (diff but sf are close now)
+    - [x] doc main aspects (LACBED pixels weird/loop on pixels?)
+    - [x] Felix on scarf(quite faster with ifort and mpirun -np4)
+- pyscat : found possible pb with polar_mesh and spherical harmonics($\phi=3\pi/2$ for y<0)
+## Friday
+- pyscat :
+  - fixed mesh result in plane wave correct over whole mesh
+  - implemented incident angle. Tested for single sphere (err>1e-3 for l>8)
+  - wrote formulation and incident angle analytical solution
+  - check assembling
+## weekend
+- pyscat : fixed and converged !!!
+
 #week 30
 ## Monday
 - literature
