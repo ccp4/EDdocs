@@ -1,3 +1,33 @@
+# week 35
+## Monday
+- off
+## Tuesday
+- off
+## Wednesday
+- recaps on opto
+## Thursday
+- compute multislice 2,3 level scattering approximation (full expansion with N=3)
+## Friday
+- definition of dynamical scattering probabilities from cross section
+##Sunday
+- paper pyscat
+
+## week 34
+### Monday
+- [x] pyscat :
+    - worked on collision picture (feels wrong due to coherent decay)
+    - scattering cross section of array of scatterers(N*sigma for kp=1.001)
+## Tuesday
+- [x] pyscat :
+  - [x] direct beam scattering multislice  collision(somehow seems linear but weak scattering regime even at 500A with V0=20keV )
+  - demonstrate validity of multislice
+  - phase shift for well, Couloumb and Yukawa
+  - understand PRISM method
+  - read again cowley and moodie
+## Wednesday
+- [x] Christine's presentation
+- started writing article
+
 #week 33
 ## Monday
 - day1 iUCr

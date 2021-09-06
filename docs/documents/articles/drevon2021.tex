@@ -1,0 +1,603 @@
+%%%%necessary for acta crystallographica
+
+\section{Introduction}
+
+\subsection{Motivation}
+Since the first experimental demonstration of electron diffraction in 1928,
+theory of dynamical diffraction has been developed~\cite{Bethe1928,CowleyBook}.
+Besides, multiple scattering~\cite{Korringa1947,Kohn1954,Korringa1994,Dederichs1971}
+has also extensively been studied in solid state physics over the 20th century.
+In fact, even at very high electron energies commonly used in modern transmission electron
+microscopes, the electron-atom interaction is very strong and the the kinematic
+theory of diffraction is not theoretically valid for crystals thicker than a
+few nm\cite{GlaeserDowning1993,SubramanianSpence2015}. In practice, crystal
+growth cannot be controlled to such a degree of accuracy and nano-crystals
+of organic compounds are usually on the order of tens to hundreads of nanometers.
+This is known as a challenging aspect of high energy electron diffraction (HEED) as it
+should significantly complicate the structure determination process.
+However, successfull structure determination based on the standard kinematic
+theory used in X-ray diffraction have regularly been demonstrated over the
+past 10 years\cite{Nannenga2014,Nannenga2019} suggesting that dynamical diffraction may
+not affect the diffraction intensities as much as the theory suggests.
+Although, dynamical refinement based structure determination~\cite{Palatinus2013} usually
+leads to better intensity predictions~\cite{Gemmi2019b}, the agreement
+between theory and experiment is still significantly worse than those obtained
+for X-rays~\cite{Oleynikov2007}. It is therefore crucial to develop more
+accurate models of electron diffraction by crystals.
+
+\subsection{state of the art}
+The multislice(MS)~\cite{CowleyMoodie1957} and Blochwave(BW)~\cite{Bethe1928}
+approaches are the most popular methods for simulating scattering of high energy
+electrons in crystals.
+The MS is particularly well suited for solving large structures as it involves
+successive convolutions which can be very efficiently computed with the Fast
+Fourier Transform(FFT)~\cite{Ishizuka1977}. To avoid aliasing transverse periodic
+boundary conditions must be met which is only possible for orthorombic
+structures in zone axis orientations. Although small beam tilt can also be
+used~\cite{Ishizuka1982,ChenDyck1997}, simluations with arbitrary orientations
+must be performed by simulating a full crystal with added zero padding. This
+can quickly become computationnally challenging.
+
+On the other hand, BW method can simulate small structures in any arbitrary
+orientations. Although some efficient implementation~\cite{Zuo1995} can simulate
+moderately large structures, BW cannot be applied to large structures due to
+the unfavorable scaling behaviour of the matrix diagonalization involved.
+Non periodic structures, defects and solvent scattering cannot be modelled either.
+
+Both approach can handle coherent inelastic scattering through the use of
+a imaginary part of the potential. This however does not account for the
+loss of coherency induced by inelastic scattering which may have dramatic
+impact on the dynamical diffraction~\cite{Latychevskaia2019}.
+
+
+\subsection{Contribution and outline}
+
+The purpose of this paper is to propose an alternative real space approach
+to the scattering of fast electrons by light-atom structures based on
+the T-matrix formalism.
+The T-matrix has been extensively applied to various areas of physics including
+electromagnetics~\cite{Hamid1990,Hamid1990_b,Eremin1995}, optics~\cite{Moine2005}
+and acoustics~\cite{Silva2012,Godin2011}.
+Although not computationnally competitive with multislice
+for large systems, this approach provides an exact solution to Schr{"\o}dinger's
+equation for an assemble of spherically symmetric effective atomic potentials in
+the independent atom model(IAM).
+An intuitive understanding of multiple scattering in the forward scattering
+approximation is presented and compared with existing intepretations.
+The validity of the forward scattering approximation and the phase grating
+approximation used by multislice are then discussed.
+Conclusions are drawn and extensions of this approach to account for incoherent
+inelastic scattering are outlined.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Theory
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Theory}
+
+The problem of the scattering of fast electrons by an assembly of atoms is
+found by solving Schr\"{o}odinger's equation :
+%
+\begin{equation}\label{eq:schro}
+  \left[-\frac{\hbar^2}{2m_e}\grad_{\bb r}^2 - eV(\bb r) \right] \Psi = E\Psi
+\end{equation}
+%
+where $\hbar$ is plank's constant, $m_e$ the mass of the electron,
+$e$ the elementary charge, $V(\bb r)$ is the spatially varying electrostatic
+potential created by the atoms and $E$ the energy of the incident electrons.
+The wave function is sought as a sum of an incident wave $\Psi^{(i)}$
+and a scattered wave $\Psi^{(s)}$.
+
+\subsection{T-matrix formulation}
+
+\begin{figure}
+  \centering
+  \includegraphics[height=0.3\textheight]{figures/Tmatrix.png}
+\caption{The problem solved by the T-matrix}\label{fig:Tmatrix}
+\end{figure}
+
+In its standard form, the T-matrix solves for the case where the electrostatic
+potential is uniform constant inside non overlapping spheres and the
+incident wave is described by a plane wave of wavenumber $k_0$.
+The setup shown in figure~\ref{fig:Tmatrix}.
+The formulation is well established and the theory is outlined for the purpose
+of introducing the forward multiple scattering approximation picture.
+
+in each domain are given by the solutions to the Helmholtz equation
+in spherical coordinates :
+%
+\begin{eqnarray*}
+  \grad_{\bb r_p}^2\Psi + k_p^2 \Psi &=& 0\\
+  k_p &=& k_0\sqrt{1+\frac{V_p}{E}}\\
+  k_0 &=& \sqrt{\frac{2m_eE}{\hbar^2}}\\
+\end{eqnarray*}
+%
+where $V_p\ge 0$ is the constant attractive potential inside sphere
+$p$ of radius $a_p$ centered at $\bb d_p$.
+The scattered wave function inside and outside of sphere $p$ can
+then be expressed as :
+%
+\begin{eqnarray*}
+  \Psi_p^{(in )}(\bb r_p) &=& \sum_{l=0}^{\infty}j_l(k_pr_p)\sum_{m=-l}^{m=l}a_{p;lm}Y_l^m(\theta_p,\phi_p)\\
+  \Psi_p^{(out)}(\bb r_p) &=& \sum_{l=0}^{\infty}\hl(k_0r_p)\sum_{m=-l}^{m=l}b_{p;lm}Y_l^m(\theta_p,\phi_p)\\
+\end{eqnarray*}
+%
+where $p=1..N$, $E$, $k_0=2\pi/\lambda$ are the energy and wave number of the incident wave,
+$k_p$, $V_p$ the wave number and constant potential inside the sphere,
+$j_l$ and $\hl$ are the spherical Bessel and Hankel functions of the first
+kind, $Y_l^m$ are the spherical harmonics or order $l$ and azimuthal order $m$.
+Note that these equations are expressed in the reference frame of each
+sphere $p$ hence the use of variable $\bb r_p$.
+
+The unknown coefficients $a_{p;lm}$, $b_{p;lm}$ are found by imposing the
+continuity of the wave function and its radial derivative at the surface of each
+sphere $p$ :
+%
+\begin{eqnarray*}
+      \Big(\sum_{q=1}^N \Psi_q^{(out)}+\Psi^{(i)}\Big)\big|_{r_p=a_p}
+  &=& \Big(\Psi_p^{(in)}\Big)\big|_{r_p=a_p} \\
+      \dP_{r_p}\Big(\sum_{q=1}^N \Psi_q^{(out)}+\Psi^{(i)}\Big)\big|_{r_p=a_p}
+  &=& \dP_{r_p}\Big(\Psi_p^{(in)}\Big)\big|_{r_p=a_p} \\
+\end{eqnarray*}
+%
+where $f^{(i)}$ is the incident electron wavefunction and $a_p$ the
+radius of sphere $p$.
+
+Using the orthogonality of the spherical harmonics
+% $\int_{\Omega} Y_{l}^{m}Y_{l'}^{m'*}d\Omega=\delta_{l,l'}\delta_{m,m'}$,
+the following linear system yields the unknown coefficients :
+%
+\begin{eqnarray}
+  a_{p;lm} &=& u_{p;l}c_{lm} + u_{p;l}\sum_{q\neq p}^{N} \nonumber\\
+    &&~~\sum_{\nu=0}^{\infty}\sum_{\mu=-\nu}^{\mu=\nu}
+      a_{\nu,\mu;l,m}^{(out-in)}(\bb d_{pq})b_{q;\nu\mu}\label{eq:aplm}\\
+      % a_{\nu,\mu;l,m}^{(out-in)}(d_{pq},\theta_{pq},\phi_{pq})b_{q;\nu\mu}\\
+  b_{p;lm} &=& v_{p;l}c_{lm} + v_{p;l} \sum_{q\neq p}^{N}\nonumber\\
+    &&~~\sum_{\nu=0}^{\infty}\sum_{\mu=-\nu}^{\mu=\nu}
+      a_{\nu,\mu;l,m}^{(out-in)}(\bb d_{pq})b_{q;\nu\mu}\label{eq:bplm}\\\nonumber
+\end{eqnarray}
+%
+where the translational addition theorem\cite{Dufva2008} has been
+used to express the field scattered by sphere $q$ in the reference
+frame of sphere $p$ that is $f_q^{(out)}(\bb r_p)$.
+This operation involves the coupling coefficients
+% $a_{\nu,\mu;l,m}^{(out-in)}(d_{pq},\theta_{pq},\phi_{pq})$
+$a_{\nu,\mu;l,m}^{(out-in)}(\bb d_{pq})$
+where $\bb d_{pq}=\bb d_q-\bb d_p$.
+%
+% \begin{eqnarray*}
+%   d_{pq}  &=& ||\bb d_q-\bb d_p|| \\
+%   \theta_{pq} &=& \arccos\left(\frac{z_q-z_p}{d_{pq} }\right)\\
+%   \phi_{pq}   &=& \arctan\left(\frac{y_q-y_p}{x_q-x_p}\right)\\
+% \end{eqnarray*}
+%
+
+The coefficient $c_{lm}$ are related to the incident wave.
+In the case of a plane wave $e^{j\bb k_0\cdot\bb r}$, $j=\sqrt{-1}$,
+the addition theorem is used to expand the plane wave on
+the family basis os Spherical Bessel soluions :
+\begin{eqnarray*}
+  c_{lm}  &=& 4\pi j^l Y_l^{m*}\left(\alpha_i,\phi_a\right)e^{jk_0d_p\zeta_p}\\
+  \zeta_p     &=& \sin(\Theta_p)\sin(\Phi_p)\sin(\alpha_i)+
+                \cos(\Theta_p)\cos(\alpha_i)\\
+\end{eqnarray*}
+%
+where $d_p,\Theta_p,\Phi_p$ being the spherical coordinates of the
+centre of sphere $p$ in the global coordinate system,
+$0\le\alpha_i\le\pi$ is the angle of incidence with respect to
+the $\bb e_z$ axis, $\phi_i=\pi/2$ since the propagation is in the $(y,z)$
+plane and $k_0d_p\zeta_p$ is the phase factor at sphere $p$.
+The different notations as illustrated on figure~\ref{fig:Tmatrix}.
+
+The coefficients $u_{p;l}$ and $v_{p;l}$ are expressed as :
+\begin{eqnarray*}
+  u_{p;l} &=& \frac{h_l^{'}(k_0a_p)j_l(k_0a_p) - h_l(k_0a_p)j_l(k_0a_p)^{'}}
+    {j_l(k_pa_p)h_l^{'}(k_0a_p)-n_pj_l^{'}(k_pad_p)h_l(k_0a_p)} \\
+  v_{p;l} &=& \frac{n_pj_l^{'}(k_pa_p)j_l(k_0a_p) - j_l(k_pa_p)j_l^{'}(k_0a_p)}
+    {j_l(k_pa_p)h_l^{'}(k_0a_p)-n_pj_l^{'}(k_pa_p)h_l(k_0a_p)} \\
+\end{eqnarray*}
+%
+where $z_l^{'}=\dP_{\rho}z_l(\rho)$.
+
+Equations~(\ref{eq:aplm},\ref{eq:bplm}) can be written in a matrix notation :
+%
+\begin{equation}\label{eq:Tsystem}
+  \big(\bb I - \bb T \big)\bb A = \bb L
+\end{equation}
+%
+where
+$\bb I$ is the identity matrix,
+$\bb A$ is the unknown vector coefficients,
+$\bb L$ the incident wave right hand side and
+$\bb T$ is the cross-coupling matrix.
+
+
+\subsection{Far field and scattering cross section}
+In electron crystallography, the diffraction pattern of particular
+interest which is recorded in the far field. Using the asymptotic
+behaviour $\hl(k_0r_p)\approx (-j)^{l+1}\frac{e^{jk_0rp}}{k_0r_p}$
+and since $\theta_p=\theta$,$\phi_p=\phi$
+the far field scattering amplitude $f_p(\theta,\phi)$ from sphere $p$ can
+be written as :
+%
+\begin{equation}\label{eq:fp_theta}
+  f_p(\theta,\phi) = \sum_{l=0}^{\infty}\sum_{m=-l}^{l} (-j)^{l+1}b_{p;lm}Y_l^m(\theta,\phi)
+\end{equation}
+%
+The total scattering amplitude is the sum of the contribution from all
+individual spheres.
+Since in the far field, $r_p\approx r-d_p\cos(\theta-\Theta_p)$ :
+%
+\begin{equation}\label{eq:f_theta}
+  f(\theta,\phi) = \sum_{p=1}^{N} f_p(\theta,\phi)e^{-jk_0d_p\cos(\theta-\Theta_p)}
+\end{equation}
+%
+
+The normalized differential scattering cross section is defined as :
+%
+\begin{equation}\label{eq:sigma}
+  \frac{\sigma(\theta,\phi)}{\pi a_p^2}
+  = \frac{4\pi r^2}{\pi a_p^2}
+    \norm{\frac{\Psi^{(s)}(r,\theta,\phi)|}{\Psi^{(i)}(r,\theta,\phi)}}^2
+  = \frac{4\bigl|f(\theta,\phi)\bigr|^2}{\left(k_0a_p\right)^2}
+\end{equation}
+%
+where we have used
+$\Psi^{(s)}(r,\theta,\phi) \underset{r\rightarrow\infty}\approx \frac{e^{jk_0r}}{k_0r}f(\theta,\phi)$.
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Forward Multiple Scattering
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Forward scattering and multiple scattering approximations}
+%
+Expression~\eqref{eq:Tsystem} is a convenient way to write the system as it
+readily identifies $\bb L$ as the solution to the uncoupled problem.
+Indeed,
+$a_{p;lm}=c_{lm}u_{p;l}$,
+$b_{p;lm}=c_{lm}v_{p;l}$
+are them well known analytical solutions of Mie scattering by a soft sphere.
+Therefore $\bb L$ represents the kinematic approximation to the solution
+also known in quantum mechanics scattering theory as the first Born
+approximation.
+
+The cross-coupling matrix $\bb T$ accounts for multiple scattering effects.
+If $\bb A$ is written $\bb A=\left(..a_{p;lm},b_{p;lm}...\right)^T$
+$\square^T$ denoting transposition, then $\bb T$ is block diagonal :
+%
+\begin{equation*}
+  \bb T =\left[
+    \begin{array}{cccc}
+      \bb 0      & ..~\bb T_{1q}~.. & ..~\bb T_{1p}~.. & \bb T_{1N}\\
+      \bb T_{q1} & ..~\bb 0     ~.. & ..~\bb T_{qp}~.. & \bb T_{qN}\\
+      \bb T_{p1} & ..~\bb T_{pq}~.. & ..~\bb 0     ~.. & \bb T_{pN}\\
+      \bb T_{N1} & ..~\bb T_{Nq}~.. & ..~\bb T_{Np}~.. & \bb 0     \\
+    \end{array}\right]
+\end{equation*}
+%
+where $\bb T_{pq}$ represents the scattering from sphere $p$ due to the
+scattering from sphere $q$. If the problem is fully coupled, the scattering
+from sphere $p$ affects scattering from sphere $q$ and vice versa which
+therefore requires inversion of the system.
+
+As detailed further down below, backscattering can be neglected for very
+fast electrons known as forward scattering approximation. This results
+in $\bb T$ begin lower triangular if the spheres are sorted in ascending
+order along $\bb e_z$. Inversion is therefore no longer necessary and
+calculations can be performed sequentially.
+
+\begin{figure}
+  \centering
+  \includegraphics[height=0.2\textheight]{figures/qdot2_approxCrop.png}
+\caption{Two-level forward scattering approximation using the T-matrix approach.
+Neglecting backscattering, scattering from the second scatterer located at
+distance $kd$ from the first scatterer can be approximated by the sum of
+1) the kinematic scattering to the incident beam and
+2) the secondary scattering in response to the kinematic scattering from
+the first scatterer. }\label{fig:qdot2_approx}
+\end{figure}
+
+
+Since $\bb A_0=\bb L$ represents single scattering, we can establish that
+$\bb A_1=\bb T\bb A_0$ accounts for secondary scattering.
+Similarly, outward scattering ampltiudes rom sphere $p$ can be written :
+%
+\begin{eqnarray}
+  b_{p;lm} &=&
+      b_{p;lm}^{(0)} + \sum_{q,z_q<z_p}T_{qp}b_{q;lm}^{(0)}  \label{eq:multiple_scattering}\\
+    &&~+T_{pq}\sum_{q,z_q<z_p}T_{qr}\sum_{r,z_r<z_q}b_{r;lm}^{(0)} + ..\nonumber
+\end{eqnarray}
+%
+where the first term accounts for kinematic scattering, the second term for
+secondary scattering, the third term three time scattering and so on.
+This is a similar development to the Korringa-Kohn-Rostoker (KKR) theory of
+multiple scattering~\cite{Korringa1947,Kohn1954,Korringa1994}.
+The forward multiple scattering approximation in the case of 2 scatterers
+is illustrated in figure~\ref{fig:qdot2_approx}.
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Multislice
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Multiple scattering in multislice}
+In multislice, the forward scattering approximation is used and the
+potential discretized in slices which are propagated from one slice to
+the other using Fresnel propagator.
+A multiple scattering interpretation by the multislice has been
+proposed~\cite{ColweyModdie1957} which, although analgous to the
+one presented above, differs in that it is stated in reciprocal space.
+The expression for the scattering ampltiude $f(h,k)$ of beam $h,k$ is :
+%
+\begin{widetext}
+% \begin{equation*}
+\begin{eqnarray*}
+  f(h,k) &\propto&
+    \sum_{l}\sum_{h_1}\sum_{k_1}\sum_{l_1}..\sum_{h_{N-1}}\sum_{k_{N-1}}\sum_{l_{N-1}}
+    Q_{h_1,k_1,l_1}..Q_{h_{N-1},k_{N-1},l_{N-1}}\\
+  &&~~Q\Bigl(h-\sum_{n}^{N-1}h_n,k-\sum_{n}^{N-1}k_n,l-\sum_{n}^{N-1}l_n\Bigr)
+  e^{-2\pi j\bigl(H\zeta - \Delta z\sum_{n=1}^{N-1}\zeta_n\bigr)}
+% \end{equation*}
+\end{eqnarray*}
+\end{widetext}
+%
+where $h=\sum_{n=1}^N h_n$,$k=\sum_{n=1}^N k_n$,
+$H=N\Delta z$ is the total thickness of the sample made of $N$ slices
+of thickness $\Delta z$,
+$Q_{h,k,l}=-j/\Delta z\delta_{h,k}e^{-2j\pi l_n z_n/c} + \sigma F_{h,k,l}$,
+$F_{h,k,l}$ is the structure factor,
+$\sigma=2\pi m_eh/\lambda$ the interaction parameter,
+$\zeta$ the excitation error of beam $(h,l)$ and
+$\zeta_n$ is the excitation error of beam
+$\left(\sum_{r=1}^{n} h_r,\sum_{r=1}^n l_r\right)$,
+and the excitation error is defined as :
+%
+\begin{equation*}
+  \zeta = \frac{1}{2K}\Bigl(\frac{h}{a^2} + \frac{k}{b^2}\Bigr) - \frac{l}{c}
+\end{equation*}
+%
+where $a$, $b$ and $c$ are the lattice constants of the crystal and
+$K=1/\lambda$ the wave number.
+This expression is the longitudinal distance of beam $(h,k,l)$ to
+the Ewald paraboloid which is a very close to the Ewald sphere
+for large wave vector. This is shown in figure~\ref{fig:MS_scattering}a.
+
+% \lipsum
+The From being scattered $n$ times
+written only for beams in the zero order Laue zone (ZOLZ) is :
+
+
+\begin{figure}
+\begin{tabular}{c@{}c@{ }}
+  \figsplit{0.23}{figs/readings/cowley/parabola.eps}&
+  \figsplit{0.23}{figs/readings/cowley/scat3_1.eps}\\
+  a) & b)
+\end{tabular}
+\caption{Multiple scattering in multislice.
+a) Distance $\zeta^{(MS)}$ to the Ewald paraboloid(solid curve) as approximated by
+multislice and distance $\zeta^{(BW)}$ to the Ewald sphere(dashed curve) known as the
+excitation error in the blochwave theory. Point P is the projection of
+reciprocal point $(u_n,w_n)$ onto the Ewald paraboloid.
+b) Multiple scattering in reciprocal space for $N=3$ slices located at $z_1, z_2, z_3$.
+The beam is scattered by $h_1,0$, then $h_2,0$ and then $h_N,0$ which results in an
+overall contribution to reflection $h$.
+The open blue circles show the subsequent excitation errors $\zeta^{(i)}$.
+}\label{fig:MS_scattering}
+\end{figure}
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Numerical results
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Application and Results}
+
+Although very efficient open source implementations are available for
+electromagnetics~\cite{celes2017,pygmm2020}, an implementation suited for
+solving Schr\"{o}dinger's equation has been made available~\cite{pyscat}.
+
+\begin{figure}
+\begin{tabular}{c@{}c@{ }}
+  \figsplit{0.24}{figures/addth_error.png}&
+  \figsplit{0.24}{figures/Tmatrix_cv.png}\\
+  a) & b)
+\end{tabular}
+\caption{
+a) Error between $\hl Y_{lm}$ for $l=4$ and $m=2$ computed at the origin and
+using the translational addition theorem $\bb d_p = (0,3,5)$ with $\nu_{max}=10$.
+The circle represent spheres of radius 1. Color axis in logscale.
+b) Continuity error at the sphere boundaries in the T-matrix with increasing
+order. For this example $N=4$ and $ka_{max}=4$.
+}\label{fig:TmatrixError}
+\end{figure}
+
+In practice, the sums over the order $l$ has to be truncated to a integer.
+A good rule to obtain accurate results is to take $l_{max}$ a few integer
+above the maximum value of $ka$. Indeed, the spherical Bessel functions of
+order $l$ have enough ripples to capture the periodicity of the incident wave
+in the vicinity of the sphere. Moreover, the translational addition theorem
+provides an approximation of the spherical Hankel functions with decreasing
+accuracy from the center at which it is written similarly to a Taylor's expansion.
+This is illustrated in Figure~\ref{fig:TmatrixError}a where the error between
+$\hl Y_{lm}$ for $l=4$ and $m=2$ computed at the origin and using the
+translational addition theorem with $\bb d_p = (0,3,5)$ and $\nu_{max}=10$ is
+displayed in logscale.
+This criteria for selecting $l_max$ is further confirmed by evaluating the
+continuity of the wave functions at the spheres boundary as shown in
+figure~\ref{fig:TmatrixError}b for $N=4$ and $ka_{max}=4$.
+This can also be used to validate the correctness of the implementation
+since it can be seen that machine accuracy can be reached with increasing the order.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Validity
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Validity of forward scattering and phase grating approximation for light atoms}
+
+\begin{figure}
+  % \centering
+  \hspace{-1em}
+  \begin{tabular}{c@{}c@{ }}
+    \figsplit{0.24}{figures/qdotSphereSingle_shells_pot1.eps}&
+    \figsplit{0.24}{figures/qdotSphereSingle_shells_fka1.eps}\\
+    a) & b)
+  \end{tabular}
+\caption{
+a) Electrostatic potential created by an atom of carbone. The dashed line
+shows the Coulomb potential usually used in the IAM using fitted
+parameteres from \cite{Kirkland2019}. The red solid line shows the best
+fit using a single screened coulomb potential whereas the blue solid line
+the  best fit using a regular Coulomb potential with offset.
+The blue patches show a multi-shell approximation model which can be used
+to represent the potential using a T-matrix approach.
+b) Scattering amplitude in the Born approximation for the multi-shell model
+with increasing truncation radius. Although the potential is very small
+at large radius, a value of $ka_{max}=325$ is necessary to account properly
+for the angular spread of the scattering.
+}\label{fig:IAM}
+\end{figure}
+
+In the case of very fast electrons typically used in transmission electron
+microscopes $E=50-300keV$. Inclusion of relativistic effects result in
+$\lambda=0.025\AA@200keV$ which will be assumed from now on unless stated
+otherwise.
+In the IAM, the potential is the sum of the Coulomb potential created
+by the charge of the nucleus and the electron cloud. It can be approximated
+with a sum of screened Coulomb potential and Gaussian terms ~\cite{Kirkland2019}.
+For typical light atoms such as commonly found in organic compounds, a single
+screend Coulomb potential term can be a pretty good approximation as shown in
+figure~\ref{fig:IAM}a. The solution to Schrodinger's equation in such a
+potential can only be solved perturbatively~\cite{Muller1965} and is beyond the
+scope of this document. However, orders of magnitude for $k_p$ and $ka_p$
+can be estimated by a multi-shell representation as shown in figure~\ref{fig:IAM}a.
+Although the range of the potential is theoretically infinite, it can
+reliably be truncated to radius $ka$ by using the Born approximation.
+In figure~\ref{fig:IAM}b the multi-shell scattering amplitudes are shown for
+increasing values of truncation radius. A satisfactory agreement with the
+electron diffraction scattering factors is obtained for normalized raidus
+as large as $ka=350$ to account for the proper low angle representation
+although the potential is very small at such a radius.
+As it was seen above, such a large radius would be quite hard to simulate with
+the T-matrix due to the large orders to be included. However, it can be
+argued that in the interest of the multiple scattering interpretation
+presented in this paper, appreciable multiple scattering
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Application of Multiple scattering
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Multiple scattering approximations}
+
+\begin{figure}
+\begin{tabular}{c@{}c@{ }}
+  \figsplit{0.24}{figures/qdotSphereArray1_log_ska.pdf}&
+  \figsplit{0.24}{figures/qdotSphereArray1_n0_fka.pdf}\\
+  a) & b)
+\end{tabular}
+\caption{
+a) Normalized scattering cross section in $\sigma$ in $\log$for a few values
+of $k_p$ over a range of normalized radius $ka$.
+b) Scattering amplitude for a few normalized radius $ka$ and potential
+strength $k_p$.
+}\label{fig:TmatrixSingle}
+\end{figure}
+
+
+It is noted that in the weak scattering regime $kp-1\ll 1$ and not too large spheres $ka$, the shape of the diffraction pattern is identical to the Born approximation. Only the amplitude of the scattering cross section increases with radius.
+
+\begin{figure}
+  \centering
+    % \begin{subfigure}
+    \includegraphics[height=0.35\textheight]{figures/qdotSphereArray2approx_kakp_forward.png}
+  \caption{$(ka,k_p)$ map(color axis in logscale) of the error of $b_{p;lm}$
+using the forward scattering approximation.
+The blue dot correspond to the location of the spherical shells of Carbone
+atom at $E=200keV$.}\label{fig:TmatrixApproxForward}
+\end{figure}
+  % \end{subfigure}
+
+
+Both the uncoupled and forward scattering approximation work better with increasing distances $kd$ since scattering from the spheres reduces with distance. It is therefore less likely to affect scattering from the other spheres.
+The low values of $k_p$ result in overall good approximation of both the uncoupled and forward scattering approximation. This is an anticipated result since for weak potentials, the kinematic approximation is more valid.
+The uncoupled approximation improves with small radii since Small $ka$ result in small scattering cross section,
+On the other hand the forward scattering approximation improves with larger values of $ka$ since backward scattering is less likely for large $ka$.
+
+\begin{figure}
+  \centering
+    \includegraphics[height=0.35\textheight]{figures/qdotSphereArrayNapprox_err_kp2.pdf}
+  \caption{$\log_{10}err(b_{p;lm})$ the scattering amplitudes coefficients
+  with increasing number of spheres for a few normalised radius $ka$
+  using $k_p=1.01$.
+}\label{fig:TmatrixApproxErr}
+\end{figure}
+
+
+\begin{figure}
+  \centering
+    \includegraphics[height=0.35\textheight]{figures/qdot_vs_multi.eps}
+  \caption{Comparison of multislice and Tmatrix for increasing number of
+  spheres $N$. $keV=50$, $ka=11$, $kd=3ka$, $k_p=1.001$.
+}\label{fig:MSvsTmatrix}
+\end{figure}
+
+% \begin{figure}
+% \begin{tabular}{c@{}c@{ }}
+%   \figsplit{0.24}{figures/qdotSphereArray2approx_kakp_forward.png}&
+%   \figsplit{0.24}{figures/qdotSphereArrayNapprox_err_kp2.pdf}\\
+%   a) & b)
+% \end{tabular}
+% \caption{
+% a)
+% b)
+% }\label{fig:TmatrixApprox}
+% \end{figure}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Conclusion and Perspective
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusion}
+
+An alternative approach based on the T-matrix has been applied to the
+scattering of fast electrons by light-atom structures.
+The validity of important approximations used in multislice has been
+discussed and a multiple scattering approximation framework has been proposed
+and compared to other existing interpretations.
+
+Although the spherically symmetric effective potential does not accurately
+model the potential used in atoms, it was shown that the multiple scattering
+interpretation should equally apply to the more accurate case of a screened
+Coulomb potential. A possible inclusion of such a potential could be performed
+by using a family of basis functions consistent with the exisiting variational
+based solutions of the Schrodinger's equation in a Yukawa potential.
+The main ultimate limitation of both this approach and the traditional
+multislice lies in the use of the independent atom model which by definition
+ignores the effect of bonding which may be relevant for structure determination
+of organic structures. However, it is still an open question whether such bonding
+play an important role in HEED.
+
+The advantage of a multiple scattering approximation approach is that it offers
+both the possibility of a massively parallel computation of dynamical diffraction
+while including incoherent inelastic scattering with a stochastic approach.
+It is indeed strongly anticipated that inelastic scattering has a dramatic
+mitigation effect of dynamical diffraction even when energy filters are used.

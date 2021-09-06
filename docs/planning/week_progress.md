@@ -1,13 +1,29 @@
-## week 34
-### Monday
-- [x] pyscat :
-    - collision picture (feels wrong due to coherent decay)
-    - scattering cross section of array of scatterers(N*sigma for kp=1.001)
-
+# week 36
+## Monday
+# week 35
+## Monday
+- off
 ## Tuesday
-- [x] pyscat :
-  - validity range multislice
-  - direct beam scattering multislice  collision
+- off
+## Wednesday
+- recaps on opto
+## Thursday
+- compute multislice 2,3 level scattering approximation (full expansion with N=3)
+## Friday
+- definition of dynamical scattering probabilities from cross section
+##Sunday
+
+
+- valid approx :
+  - $cpl*exp(p_l\cos\theta)$ varying nb spheres for single,double,triple,total scattering
+  - multislice vs T-matrix
+- cross section
+    - compute 2,3,4,5 multiple scattering approximations (until it is close enough to bp_forward)
+    - plot multiple scattering probabilities
+    - plot multiple scattering Fi
+
+
+paper :
 
 
 ### Pyscat

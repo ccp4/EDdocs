@@ -1,0 +1,59 @@
+\documentclass[a4paper,10pt]{report}
+\newcommand{\path}{/home/tarik/Documents/git/mygit/_Latex/}
+\input{\path StdPack.tex}
+\usepackage{\path cmds}
+\usepackage{tcolorbox}
+\tcbuselibrary{theorems}
+\newcommand{\boxred}[1]{\tcboxmath[colframe=red]{#1}}
+\newcommand{\boxblue}[1]{\tcboxmath[colframe=blue]{#1}}
+
+
+\graphicspath{{figures/}}
+\begin{document}
+
+\begin{eqnarray*}
+  U(h)\propto
+      & & F_{0,0}\Bigg[
+        \boxred{ F_{0,0}F_{h  ,0}\expj{z_3\zeta}}+..+
+        \boxblue{F_{i,  0}F_{h-i,0}\expj{z_2\zeta_1^{(i  )}+z_3(\zeta-\zeta_1^{(i  )})}} +..+
+        \boxred{ F_{h,0}F_{0  ,0}\expj{z_2\zeta}}
+        \Bigg] \\
+      &+& F_{i,0}\Bigg[
+        \boxblue{F_{0,0  }F_{h-i,0}\expj{z_1\zeta_1^{(i  )}+z_3(\zeta-\zeta_1^{(i  )})}} +..+
+        \boxblue{F_{h-i,0}F_{0  ,0}\expj{z_1\zeta_1^{(h-i)}+z_3(\zeta-\zeta_1^{(h-i)})}}
+        \Bigg] +.. \\
+      &+& F_{h-i,0}\Bigg[
+        \boxblue{F_{0,0}F_{i,0}\expj{z_1\zeta_1^{(h-i)}+z_2(\zeta-\zeta_1^{(h-i)})}} +..+
+        \boxblue{F_{i,0}F_{0,0}\expj{z_1\zeta_1^{(i  )}+z_2(\zeta-\zeta_1^{(i  )})}}
+        \Bigg] +.. \\
+      &+& F_{h,0}\Bigg[
+        \boxred{F_{0,0}^2\expj{z_1\zeta}}
+        + F_{j,0}F_{-j,0}\expj{z_1\zeta_1^{(h+j)}+z_2(\zeta-\zeta_1^{(h+j)})} + ..
+        \Bigg]\\
+    = & & \boxred{F_{0,0}^2F_{h,0}\Bigg[\expj{z_3\zeta}+\expj{z_2\zeta}+\expj{z_1\zeta}\Bigg]}\\
+      &+& \boxblue{F_{0,0}\Bigg[
+        \sum_{i\neq 0,h} F_{i,0}F_{h-i} \Big\{
+          \expj{z_2\zeta_1^{(i)}+z_3(\zeta-\zeta_1^{(i)})}
+          \expj{z_1\zeta_1^{(i)}+z_3(\zeta-\zeta_1^{(i)})}
+          \expj{z_1\zeta_1^{(i)}+z_2(\zeta-\zeta_1^{(i)})}
+        \Big\}\Bigg]}\\
+      &+& \Bigg[
+        \sum_{i\neq 0,h}\sum_{j\neq 0,h-i}F_{i,0}F_{j,0}F_{h-i-j,0}
+           \expj{ z_1\zeta_1^{(i)}+z_2(\zeta_2^{(i+j)}-\zeta_1^{(i)})+z_3(\zeta-\zeta_2^{(i+j)})}\\
+        && +F_{h,0}\sum_{j\neq 0}F_{j,0}F_{-j,0}\expj{z_1\zeta_1^{(h+j)}+z_2(\zeta-\zeta_1^{(h+j)})}
+          \Bigg]\\
+    = & & \boxred{F_{0,0}^2F_{h,0}\sum_m\expj{z_m\zeta} }\\
+      &+& \boxblue{F_{0,0}\Bigg[
+        \sum_{i\neq 0,h} F_{i,0}F_{h-i} \sum_m\sum_{n>m}\expj{z_m\zeta_1^{(i)}+z_n(\zeta-\zeta_1^{(i)})}
+        \Bigg]}\\
+      &+& ..
+\end{eqnarray*}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% End Document
+% \bibliographystyle{ieeetr}
+% \bibliography{\path library}
+%\addcontentsline{toc}{section}{Bibliography}
+\end{document}

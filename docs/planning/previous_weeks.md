@@ -1,6 +1,12 @@
+#week 35
+- paper pyscat
+- understood cowley1957
+#week 34
+- pyscat collision approach
+
 #week 33
 - iUCr conf
-- pyscat approximations 
+- pyscat approximations
 
 #week 32
 - pyscat, iUCr poster
