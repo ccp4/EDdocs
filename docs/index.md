@@ -16,10 +16,11 @@ Contribute to the CCP4 Advanced integrated approaches to macromolecular structur
 - [ ] Identify corrections opportunities at the scaling stage in DIALS
 
 ## Resources
-- [main report](/documents/report/report.pdf)
-- [latest slides](/documents/2021-01-13.pdf)
-- [iUCr abstract](/documents/iUCr2021/abstract.txt)
+- [latest slides](/documents/presentations/2021-01-13.pdf)
 - [iUCr poster](/documents/iUCr2021/poster.pdf)
+- [pyscat article](/documents/articles/drevon2021.pdf)
+<!-- - [main report](/documents/report/report.pdf) -->
+<!-- - [iUCr abstract](/documents/iUCr2021/abstract.txt) -->
 
 ### jupyter notebook
 Login and run examples on [jupyter](http://badb.rc-harwell.ac.uk:8888/?token=d833dd4e672d23bf3075baf9f20ed960bc30df2d0270c095):

@@ -1,0 +1,33 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Appendix
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+\section{Coupling coefficients}
+
+The coupling coefficients involve the translational addition theorem
+coefficients :
+%
+\begin{widetext}
+\begin{equation*}
+  a_{\nu,\mu;l,m}^{(out-in)}(d_{pq},\theta_{pq},\phi_{pq})
+    = 4\pi\sum_{q=|l-\nu|}^{l+\nu}
+       (-j)^{l-\nu-q}h_q^{(1)}(kd_{pq}) Y_q^{m-\mu}(\theta_{pq},\phi_{pq})
+       (-1)^m \cc G(l,\nu,q, m,-\mu,\mu-m))
+\end{equation*}
+\end{widetext}
+%
+where :
+%
+\begin{equation*}
+  \cc G(l_1,l_2,l_3,m_1,m_2,m_3) =
+  \int_{\Omega}Y_{l_1}^{m_1}Y_{l_2}^{m_2}Y_{l_3}^{m_3}d\Omega
+\end{equation*}
+%
+are the Gaunt coefficients
+% (https://doc.sagemath.org/html/en/reference/functions/sage/functions/wigner.html)
+and we have used :
+%
+\begin{equation*}
+  \int_{\Omega}Y_{l}^{m}Y_{\nu}^{\mu*}Y_{q}^{m-\mu~*}d\Omega =
+(-1)^{\mu-m-\mu}\int_{\Omega}Y_{l}^{m}Y_{\nu}^{-\mu}Y_{q}^{-m+\mu}d\Omega
+\end{equation*}
