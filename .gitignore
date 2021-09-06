@@ -15,4 +15,6 @@ docs/documents/report/eqs/
 *.toc
 *.blg
 *.eps
+*.pdf_tex
+*-eps-converted-to.pdf
 **/figures/**/*.pdf
