@@ -1,29 +1,19 @@
 # week 36
 ## Monday
-# week 35
-## Monday
-- off
-## Tuesday
-- off
-## Wednesday
-- recaps on opto
-## Thursday
-- compute multislice 2,3 level scattering approximation (full expansion with N=3)
-## Friday
-- definition of dynamical scattering probabilities from cross section
-##Sunday
+- article
+- compute 2,3,4,5 multiple scattering approximations (until it is close enough to bp_forward)
 
-
-- valid approx :
-  - $cpl*exp(p_l\cos\theta)$ varying nb spheres for single,double,triple,total scattering
-  - multislice vs T-matrix
-- cross section
-    - compute 2,3,4,5 multiple scattering approximations (until it is close enough to bp_forward)
-    - plot multiple scattering probabilities
-    - plot multiple scattering Fi
-
-
-paper :
+### paper
+- Plot :
+  - [ ] fig1 : problem setup
+  - [ ] fig5 : add  a)fit+axR,axV and b)Born
+  - [ ] fig6 : forward and phase grating f
+  - [ ] fig7 : add carbone points
+  - [ ] fig8 : forward,uncoupled, 2 and 3 level?
+  - [ ] fig9 : multislice vs T-matrix
+  - [ ] fig10 : valid approx $cpl*exp(p_l\cos\theta)$ varying nb spheres for single,double,triple,total scattering
+  - [ ] multiple scattering probabilities
+  - [ ] plot multiple scattering Fi
 
 
 ### Pyscat
