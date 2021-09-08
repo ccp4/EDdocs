@@ -1,15 +1,10 @@
 # meeting
 
-## 7/04/2020
-- structure prediction
-- material database : choose spacegroup and minimize energy
-- minimize energies optimisation based on crystal structure : nb parameters ?
-- ambiguity solving of powder XD using crystal prediction when indexing too hard
-- 2 level optimization ? electrostatic density prediction
-- fragment approach : 1 order of magnitude cheaper
-- in silico design : Landscape mapping to identifying porous material and likely to obtain in the lab
-- Crystal growth
-
+## Tamir 07/09/2021
+- share good data
+- Publish processing microED data with dials
+- small molecule datasets
+- cetaD detector : Tamir thinks it is very good
 
 ## meeting Christine 30/03/2021
 - presentation of ourselves(organisation,global project, her) : informal, English
@@ -20,8 +15,7 @@
   - mathematical side :  pde, spherical harmonics,latex : heat equation, FEM, Laplace equation,    
   - physics side : wave scattering/geometrical optics,  boundary condition pbs, spectral method
 
-
-#workshop 23/03/2021
+## Workshop 23/03/2021
 vincent & midgley ultramicroscopy 53 1994
 techniques : cRED, RED PEDT SCED EDT ADT MicroED
 Gemmi 2019 1315-1329
@@ -136,18 +130,13 @@ libtbx.pip install
 
 
 ## Quantum computer for chemistry 2/06
-papers :
-
 - lloyd science 273
 - Qphase estimatation algo LLoyd
 - Eiegen solver Peruzzo nat commun 5
-
-Hamiltonian :
-
+### Hamiltonian :
 - for molecules vs DFT
 - second quantisation integrals
 - H2 Dimer McArdle RMP92
-
 
 ##week 20 APR with SLM
 - proteindiffraction.org
@@ -196,3 +185,14 @@ deliverables :
 - Compute path length map for each atoms
 - account for inelastic scattering through loss of intensity
 - Focus on region of interest [ROI](/misc/Time_complexity_estimates_ED_sim.docx)
+
+
+## 07/04/2020
+- structure prediction
+- material database : choose spacegroup and minimize energy
+- minimize energies optimisation based on crystal structure : nb parameters ?
+- ambiguity solving of powder XD using crystal prediction when indexing too hard
+- 2 level optimization ? electrostatic density prediction
+- fragment approach : 1 order of magnitude cheaper
+- in silico design : Landscape mapping to identifying porous material and likely to obtain in the lab
+- Crystal growth

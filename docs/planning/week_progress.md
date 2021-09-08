@@ -2,18 +2,25 @@
 ## Monday
 - article
 - compute 2,3,4,5 multiple scattering approximations (until it is close enough to bp_forward)
+## Tuesday
+- Tamir
+- article
+## Wednesday
+- article fig5,fig1
 
 ### paper
 - Plot :
-  - [ ] fig1 : problem setup
-  - [ ] fig5 : add  a)fit+axR,axV and b)Born
-  - [ ] fig6 : forward and phase grating f
-  - [ ] fig7 : add carbone points
-  - [ ] fig8 : forward,uncoupled, 2 and 3 level?
-  - [ ] fig9 : multislice vs T-matrix
-  - [ ] fig10 : valid approx $cpl*exp(p_l\cos\theta)$ varying nb spheres for single,double,triple,total scattering
-  - [ ] multiple scattering probabilities
-  - [ ] plot multiple scattering Fi
+  - [x] fig1 : problem setup
+  - [x] fig5a) : fit+ax-A,ax-kV
+  - [x] figab : add carbone points on sigma
+  - [x] fig6b) : Born+MS
+  - [ ] fig7 : fonts + sum(err(cp)) instead of f2
+  - [ ] fig8a : error with 2,3,4,5 multiple at 2sets of params
+  - [ ] fig8b : $cpl*exp(p_l\cos\theta)$ varying nb spheres for single,double,triple,total scattering
+
+  - [ ] fig9a : multislice vs T-matrix
+  - [ ] fig10a : multiple scattering probabilities
+  - [ ] fig10b : plot multiple scattering Fi
 
 
 ### Pyscat
