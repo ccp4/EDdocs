@@ -1,26 +1,30 @@
 # week 36
 ## Monday
 - article
-- compute 2,3,4,5 multiple scattering approximations (until it is close enough to bp_forward)
 ## Tuesday
 - Tamir
 - article
 ## Wednesday
 - article fig5,fig1
+## Thursday
+- article fig8,9
+## Friday
+- compute 2,3,4,5 multiple scattering approximations (until it is close enough to bp_forward)
 
 ### paper
 - Plot :
-  - [x] fig1 : problem setup
-  - [x] fig5a) : fit+ax-A,ax-kV
-  - [x] figab : add carbone points on sigma
-  - [x] fig6b) : Born+MS
-  - [ ] fig7 : fonts + sum(err(cp)) instead of f2
-  - [ ] fig8a : error with 2,3,4,5 multiple at 2sets of params
-  - [ ] fig8b : $cpl*exp(p_l\cos\theta)$ varying nb spheres for single,double,triple,total scattering
-
-  - [ ] fig9a : multislice vs T-matrix
-  - [ ] fig10a : multiple scattering probabilities
-  - [ ] fig10b : plot multiple scattering Fi
+  - [x] fig1    : problem setup
+  - [x] fig5a   : fit+ax-A,ax-kV
+  - [ ] fig5b   : fonts
+  - [x] figa    : add carbone points on sigma
+  - [x] fig6b   : Born+MS
+  - [x] fig7ab  : fonts + sum(err(cp)) instead of f2
+  - [x] fig7cd  : bp and ff at selected
+  - [ ] fig8a   : error with 2,3,4,5 multiple at 2sets of params
+  - [x] fig8b   : error bp for nscat=1..n ka=30,N=10,kp=1.001
+  - [x] fig9a   : multiple scattering probabilities
+  - [x] fig9b   : plot multiple scattering Fi
+  <!-- - [ ] fig10   : multislice vs T-matrix -->
 
 
 ### Pyscat

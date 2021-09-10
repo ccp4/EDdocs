@@ -1,5 +1,11 @@
 # meeting
 
+## Alistair ED 09/09/2021
+- energies necessary for micrometer sizes crystals
+- why microm X-ray, bridging the gap inelastic/elsatic scales almost linearly 
+- what instruments? what energies achievable?
+- detector issues
+
 ## Tamir 07/09/2021
 - share good data
 - Publish processing microED data with dials

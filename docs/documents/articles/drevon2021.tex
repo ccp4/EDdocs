@@ -1,5 +1,5 @@
 %%%%necessary for acta crystallographica
-
+\newcommand{\figsca}{0.45}
 \section{Introduction}
 
 \subsection{Motivation}
@@ -107,9 +107,9 @@ and a scattered wave $\Psi^{(s)}$.
 
 \subsection{T-matrix formulation}
 
-\begin{figure}
+\begin{figure}[h!]
   \centering
-  \includegraphics[height=0.35\textheight]{figures/Tmatrix.png}
+  \includegraphics[height=\figsca\textheight]{figures/Tmatrix.png}
 \caption{The problem solved by the T-matrix}\label{fig:Tmatrix}
 \end{figure}
 
@@ -273,9 +273,9 @@ $\Psi^{(s)}(r,\theta,\phi) \underset{r\rightarrow\infty}\approx \frac{e^{jk_0r}}
 %%%% Forward Multiple Scattering
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Forward scattering and multiple scattering approximations}
-%
-\subsection{T-matrix}
+\section{Real space forward multiple scattering picture}
+
+\subsection{T-matrix forward multiple scattering approximations}
 Expression~\eqref{eq:Tsystem} is a convenient way to write the system as it
 readily identifies $\bb L$ as the solution to the uncoupled problem.
 Indeed,
@@ -306,21 +306,18 @@ As detailed further down below, backscattering can be neglected for very
 fast electrons which is known as forward scattering approximation. This results
 in $\bb T$ begin lower triangular if the spheres are sorted in ascending
 order along $\bb e_z$. Inversion is therefore no longer necessary and
-calculations can be performed sequentially.
+calculations can be performed sequentially one atom after the other.
 
-\begin{figure}
+\begin{figure}[h!]
   \centering
   \includegraphics[height=0.2\textheight]{figures/qdot2_approxCrop.png}
-\caption{Two-level forward scattering approximation using the T-matrix approach.
+\captionof{figure}{Two-level forward scattering approximation using the T-matrix approach.
 Neglecting backscattering, scattering from the second scatterer located at
 distance $kd$ from the first scatterer can be approximated by the sum of
 1) the kinematic scattering to the incident beam and
 2) the secondary scattering in response to the kinematic scattering from
-the first scatterer. }\label{fig:qdot2_approx}
+the first scatterer.}\label{fig:qdot2_approx}
 \end{figure}
-
-
-
 
 
 Since $\bb A_0=\bb L$ represents single scattering, we can establish that
@@ -337,11 +334,71 @@ where the first term accounts for kinematic scattering, the second term for
 secondary scattering, the third term three time scattering and so on.
 This is a similar development to the Korringa-Kohn-Rostoker (KKR) theory of
 multiple scattering~\cite{Korringa1947,Kohn1954,Korringa1994}.
-The forward multiple scattering approximation in the case of 2 scatterers
-is illustrated in figure~\ref{fig:qdot2_approx}.
+This forward multiple scattering picture in the case of a 2 body problem is
+illustrated in figure~\ref{fig:qdot2_approx}.
+From a compuational point of view,~\eqref{eq:multiple_scattering} may offer an
+advantage over the full forward scattering approximation if only a few n-time
+scattering terms are necessary. Indeed, since each term in the expansion depend
+on precomputed coefficients $b_{p;lm}^{(0)}$, the $b_{p;lm}^{(n)}$ coefficients
+for the n-time scattering term can be massively parallelized for each atom.
+
+
+\subsection{Scattering probabilties}
+
+The probabilily of an electron to be scattered elastically $n$ times can be
+estimated classically from ballistic arguments using a continuous model of matter.
+It can be established~\cite{Egerton2011d} that the probabilty of an electron to
+be elastically scattered $n$ times after passing through an amorphous sample of
+thickness $z$ follows a Poisson distribution statistics
+$P_e^n=\frac{1}{n!}(z/l_e)^ne^{-z/l_e}$
+where $l_e$ is the elastic mean free path.
+
+We may use the scattering cross section to define the probability of an electron
+being scattered. If $S$ is the area over which the specimen is illuminated and
+$z$ the thickness of the specimen, the incident plane wave can be normalized by
+$|A|^2=1/Sz$. The flow of electrons per unit time per unit area~\cite{Vainshtein1964}
+is then $J_0=\hbar k_0/m |A|^2=v_0/Sz$ where $v_0$ is the speed of the incident
+electron and $J_0 S$ is the number of electron illuminating the specimen per second.
+Besides, by definition $J_0\sigma$ is the number of electrons scattered per second
+and it takes $\Delta t=z/v_0$ for an electron to go through the specimen,
+so that $\sigma J_0z/v_0$ is the probability of an electron to be scattered.
+Therefore :
+%
+\begin{equation*}
+  P_{scat}=\frac{\sigma}{S}
+\end{equation*}
+%
+where $S$ can be seen as the surface illuminated in selected area electron
+diffraction (SAED). When performing a multislice simulation, $S$ is the area of
+the simulated domain (transverse super cell if performing a periodic simulation).
+
+Let's define $f_n$ the scattering amplitudes obtained by computing scattering
+from the wave being scattered $n$ times. It can readily be established that :
+%
+\begin{eqnarray}
+    f(\theta) &=& \sum_{n=1}^N f_n(\theta)  \nonumber\\
+    \sigma    &=& \sum_{n=1}^N \sigma_n     \nonumber\\
+    \sigma_n  &=& \lvert f_n\rvert^{2} + 2\Re\sum_{m>n}^N f_nf_m^{*}\label{eq:sigma_n}\\\nonumber
+\end{eqnarray}
+%
+where $P_n=\sigma_n/S$ can be defined as the probability of an electron to be
+scattered $n$ times. Since contributions from multiple scattering terms should
+normally be in ascending order, this definition ensures that the probability of
+scattering of order $n$ increases as soon as the corresponding term $m$-times
+scattering start contributing to the scattering amplitudes.
+
+The probability of an electron to not being scattered is naturally $P_{coh}=1-P_{scat}$.
+For an very large number $N$ of scatterers regularly spaced by distance
+$dz$, using the average cross section $\sigma_a=\sigma/N$, the average scattering
+probability to be scattered over distance $dz$ would be
+$P(dz)=\sigma_a\rho dz=dz/l_e$ where $\rho=1/Sdz$ is the density since since $Sdz$
+contains only one scatterer and $l_e=1/\sigma_a\rho$ is the mean free path.
+This is consistent with~\cite{Latychevskaia2019}.
+
+
 
 \subsection{First Born approximation and kinematic scattering}
-Assuming normal incidence $\theta_i=0$ so that $e_p=e^{jk_0d_p\cos\Theta_p}$
+Assuming normal incidence $\theta_i=0$ so that $e_p=e^{jk_0d_p}$
 and noting that the Ewald sphere can be represented by
 $\bb q = K\left(\sin\theta\cos\phi,\sin\theta\sin\phi,1-\cos\theta\right)$
 in transfer vector momentum space,
@@ -361,6 +418,9 @@ Note that the kinematic approximatio is nothing less than the first first Born
 approximation applied to the whole assembly of atoms. It will be seen further
 down below that it is possible for the first Born approximation to hold at the
 scatterer level while being invalid at the assembly level.
+
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -395,19 +455,16 @@ one presented above, differs in that it is stated in reciprocal space.
 The expression for the scattering ampltiude $f(h,k)$ of beam $h,k$ is
 proportional to the following expression :
 %
-\begin{widetext}
-% \begin{equation*}
-\begin{eqnarray}
+\begin{align}
   f(h,k) \propto
-    \sum_{l}\sum_{h_1}\sum_{k_1}\sum_{l_1}..\sum_{h_{N-1}}\sum_{k_{N-1}}
-  &&\sum_{l_{N-1}} Q_{h_1,k_1,l_1}..Q_{h_{N-1},k_{N-1},l_{N-1}}\nonumber\\
-  &&Q\Bigl(h-\sum_{n}^{N-1}h_n,k-\sum_{n}^{N-1}k_n,l-\sum_{n}^{N-1}l_n\Bigr)
-    e^{-2\pi j\bigl(H\zeta - \Delta z\sum_{n=1}^{N-1}\zeta_n\bigr)}\label{eq:fhk_multi}
-% \end{equation*}
-\end{eqnarray}
-\end{widetext}
+    &\sum_{l}\sum_{h_1}\sum_{k_1}\sum_{l_1}..
+      \sum_{h_{N-1}}\sum_{k_{N-1}}\sum_{l_{N-1}}Q_{h_1,k_1,l_1}..\nonumber\\
+    &Q_{h_{N-1},k_{N-1},l_{N-1}}Q\Bigl(h-h_u,k-k_v,l-l_w\Bigr)   \nonumber\\
+    &~~~~~~e^{-2\pi j\bigl(H\zeta - \Delta z\sum_{n=1}^{N-1}\zeta_n\bigr)}\label{eq:fhk_multi}
+\end{align}
 %
 where $h=\sum_{n=1}^N h_n$, $k=\sum_{n=1}^N k_n$,
+$h_u=\sum_{n=1}^{N-1} h_n$, $k_v=\sum_{n=1}^{N-1} k_n$, $l_w=\sum_{n=1}^{N-1} l_n$,
 $H=N\Delta z$ is the total thickness of the sample,
 $N$ the number of slices of thickness $\Delta z$,
 $Q_{h,k,l}=-j/\Delta z\delta_{h,k}e^{-2j\pi l_n z_n/c} + \sigma F_{h,k,l}$,
@@ -439,7 +496,7 @@ There are $N$ terms involving $Q_{0,0,0}^{N-1}$ depending on which slice
 the single scattering event took place.
 There are $N(N-1)/2$ terms involving $Q_{0,0,0}^{N-2}$ depending on which
 pair of slices are considered the two level scattering process and so on.
-This multiple scattering picture is illustrated in 2D in~\ref{fig:MS_scattering}
+This multiple scattering picture is illustrated in 2D in figure~\ref{fig:MS_scattering}
 for a case with $N=3$ and using only beams in the zero order Laue zone (ZOLZ)
 $l_i=0$.
 
@@ -488,7 +545,7 @@ solving Schr{\"o}dinger's equation has been made available~\cite{pyscat}.
 
 \begin{figure}[h!]
   \centering
-  \subfloat[]{\includegraphics[height=0.25\textwidth]{figures/addth_error.png}\label{fig:TmatrixError1}}
+  \subfloat[]{\includegraphics[height=0.27\textwidth]{figures/addth_error.png}\label{fig:TmatrixError1}}
   \subfloat[]{\includegraphics[height=0.25\textwidth]{figures/Tmatrix_cv.png}\label{fig:TmatrixError2}}
 \caption{
 a) Error between $\hl Y_{lm}$ for $l=4$ and $m=2$ computed at the origin and
@@ -513,7 +570,7 @@ translational addition theorem with $\bb d_p = (0,3,5)$ and $\nu_{max}=10$ is
 displayed in logscale. This allows for distances between spheres to be arbitrarily large.
 The criteria for selecting $l_{max}$ is best evaluated by assessing the
 continuity of the wave functions at the sphere boundaries as shown in
-figure~\ref{fig:TmatrixError}b for $N=4$ and $ka_{max}=4$.
+figure~\ref{fig:TmatrixError} for $N=4$ and $ka_{max}=4$.
 This is also used to validate the correctness of the implementation
 since it can be seen that machine accuracy can be reached when increasing
 the order.
@@ -537,10 +594,10 @@ otherwise.
 
 \begin{figure}[h!]
   \centering
-  \subfloat[]{\includegraphics[height=0.39\textwidth]{figures/qdotSphereSingle_shells_pot1.eps}
+  \subfloat[]{\includegraphics[height=\figsca\textwidth]{figures/qdotSphereSingle_shells_pot1.eps}
   \label{fig:IAMa}}\\
-  \vspace{-2em}
-  \subfloat[]{\includegraphics[height=0.35\textwidth]{figures/qdotSphereSingle_shells_fka1.eps}
+  \vspace{-1.1em}
+  \subfloat[]{\includegraphics[height=\figsca\textwidth]{figures/qdotSphereSingle_shells_fka1.eps}
   \label{fig:IAMb}}
 \caption{
 a) Electrostatic potential created by an atom of carbone with
@@ -575,9 +632,9 @@ although the potential is very small at such radius.
 
 \begin{figure}[h!]
   \centering
-  \subfloat[]{\includegraphics[height=0.35\textwidth]{figures/TmatrixSingleS.eps}\label{fig:TmatrixSingleS}}\\
-  \vspace{-2em}
-  \subfloat[]{\includegraphics[height=0.35\textwidth]{figures/TmatrixSingleF.eps}\label{fig:TmatrixSingleF}}\\
+  \subfloat[]{\includegraphics[height=\figsca\textwidth]{figures/TmatrixSingleS.eps}\label{fig:TmatrixSingleS}}\\
+  \vspace{-1.1em}
+  \subfloat[]{\includegraphics[height=\figsca\textwidth]{figures/TmatrixSingleF.eps}\label{fig:TmatrixSingleF}}\\
 \caption{
 a) Total scattering cross section $\sigma$ at $200keV$ for a few
 values of $n_p$ over a range of normalized radius $ka$. The dark blue
@@ -607,24 +664,67 @@ The phase grating approximation provide some improvement at low angles.
 
 \begin{figure}[h!]
   \centering
-  \subfloat[]{\includegraphics[height=0.3\textwidth]{figures/qdotSphereArray2approx_kakp_uncoupled.png}\label{fig:TmatrixApproxKinematic}}
-  \subfloat[]{\includegraphics[height=0.3\textwidth]{figures/qdotSphereArray2approx_kakp_forward.png}\label{fig:TmatrixApproxForward}}
+  \subfloat[]{\includegraphics[height=0.26\textwidth]{figures/qdotSphereArray2approx_kakp_uncoupled.png}\label{fig:TmatrixApproxKinematic}}
+  \subfloat[]{\includegraphics[height=0.26\textwidth]{figures/qdotSphereArray2approx_kakp_forward.png}\label{fig:TmatrixApproxForward}}
 \caption{$(ka,k_p)$ map(color axis in logscale) of the error of $b_{p;lm}$
 for a 2 scatterer system using the
 a) Kinematic scattering approximation.
 b) Forward scattering approximation.
 The blue dot correspond to the location of the spherical shells of Carbone
-atom at $E=200keV$.}%\label{fig:TmatrixApproxForward}
+atom at $E=200keV$.}
 \end{figure}
+
 Figure~\ref{fig:TmatrixApproxKinematic} and ~\ref{fig:TmatrixApproxForward} show
-the error in a $(ka,n_p)$ map of on the coefficients $\sum_{p;l,m}err(b_{p;l,m})$ by using
-the kinematic and forward approximations for a 2 scatterer system with $kd=3ka$.
+for a 2 body problem the error in a $(ka,n_p)$ map in computing the coefficients
+$err(b_{p;l,m})=\sum_{p;l,m} \lvert b_{p;l,m} - b_{p;l,m}^{approx} \rvert)$
+as a result of using the kinematic and forward approximations respectively.
+For this case an value of $kd=3ka$ is used which should represent inter-atomic distances.
 Overall it is very clear that the forward scattering approximation is very accurate
 over all range of parameter sets for carbone which is expected since there is very
 little back backscattering beyond $90^{\circ}$. On the other hand the kinematic
-approximation does not appear quite as good even for only 2 scatterers.
+approximation does not appear quite as good even for this mere 2 dody problem.
 
 
+\begin{figure}[h!]
+  \centering
+  \subfloat[]{\includegraphics[height=\figsca\textwidth]{figures/qdotSphereArray2approx_kakp_bp.eps}\label{fig:TmatrixApprox_bp}}\\
+  \vspace{-1.1em}
+  \subfloat[]{\includegraphics[height=\figsca\textwidth]{figures/qdotSphereArray2approx_kakp_ff.eps}\label{fig:TmatrixApprox_ff}}
+\caption{
+a) Complex space scattering coefficients $b_{p;l,m}$ for a 2 body problem for
+$n_p=1.01$, $kd=3ka$ with increasing radius $ka$.
+Only the coefficients for sphere $p=2$ and $m=0$ are shown.
+The coefficients were computed from full T-matrix (open circles), the forward
+scattering approximation (squares) and the kinematic approximation (diamonds).
+b) Comparison of far field scattering amplitudes for $N=2$, $ka=30$, $n_p=1.01$,
+$kd=2ka$ using full T-matrix (solid blue), forward approximation(green dashed)
+and kinematic approximation (red dashed-dotted).}
+\end{figure}
+
+Figure~\ref{fig:TmatrixApprox_bp} shows the scattering coefficients $b_{p;l,m}$
+in complex space for a this 2 body problem where $n_p=1.01$, $kd=3ka$
+while increasing radius $ka$ (up to $ka=15$) for a selected set of orders $l$.
+Only the coefficients for sphere $p=2$ are shown since it is the mostly affected
+sphere by the approximations. Only $m=0$ coefficients are used since under
+planar illumination this configuration has azimuthal symmetry.
+The coefficients are computed using the full T-matrix, the forward
+scattering approximation and the kinematic approximation. In order to get this
+spiralling galaxy picture, the coefficients where divided by the phase factor at
+sphere $p$, i.e. $b_{p;lm}e^{jkd}$. The arms of the galaxy are rotated by $\pi/2$
+from one order to the other as a result of the $j^l$ factor in the spherical expansion
+of the incident plane wave. All the coefficients increase with $ka$ as a result of
+the increasing scattering cross section with $ka$. For a given $ka$, the strongest
+is contributing orders are around $l=ka$ as a direct manifestation of the convergence
+behaviour presented above. It can be observed that the kinematic approximation
+error increases with the radius while the forward approximation is very accurate
+across all radius.
+Figure~\ref{fig:TmatrixApprox_ff} shows a comparison of the computed far field
+scattering amplitudes for $N=2$, $ka=30$, $n_p=1.01$,$kd=2ka$ using the full
+T-matrix, the forward approximation and the kinematic approximation. The peaks and
+valleys are both due to the single scattering profile of the constant sphere and
+the interferometric path length $e^{jkd}$. It is already possible to notice
+that the coupled problem as a slight average effect ove the kinematic pattern, a
+well known feature of dynamical diffraction.
 
 
 
@@ -640,12 +740,12 @@ approach.
 
 \begin{figure}[h!]
   \centering
-  \subfloat[]{\includegraphics[height=0.35\textwidth]{figures/qdotSphereArray2approx_kakp_forward.png}\label{fig:TmatrixApproxSecondary}}\\
-  \vspace{-2em}
-  \subfloat[]{\includegraphics[height=0.35\textwidth]{figures/qdotSphereArrayNapprox_err_kp2.pdf}\label{fig:TmatrixApproxErr}}
+  \subfloat[]{\includegraphics[height=\figsca\textwidth]{figures/dummy.eps}\label{fig:TmatrixApproxSecondary}}\\
+  \vspace{-1.1em}
+  \subfloat[]{\includegraphics[height=\figsca\textwidth]{figures/qdotSphereArray2approx_kakp_err_kp3.eps}\label{fig:TmatrixApproxErr}}
 \caption{
-a)$\log_{10}err(b_{p;lm})$ the scattering amplitudes coefficients with
-increasing number of spheres for a few normalised radius $ka$ using $k_p=1.01$.
+a) Scattering amplitudes coefficients error with increasing number of spheres
+for a few normalised radius $ka$ using $k_p=1.01$.
 }%\label{fig:TmatrixApproxErr}
 \end{figure}
 
@@ -654,43 +754,47 @@ increasing distances $kd$ since scattering from the spheres reduces with distanc
 The low values of $k_p$ result in overall good approximation of both the uncoupled and forward scattering approximation. This is an anticipated result since for weak potentials, the kinematic approximation is more valid.
 The uncoupled approximation improves with small radii since Small $ka$ result in small scattering cross section,
 On the other hand the forward scattering approximation improves with larger values of $ka$ since backward scattering is less likely for large $ka$.
-\loremlines{15}
-
-\begin{figure}[h!]
-  \centering
-  \subfloat[]{\includegraphics[height=0.35\textwidth]{figures/qdot_vs_multi.eps}\label{fig:MSvsTmatrix2}}\\
-  \vspace{-2em}
-  \subfloat[]{\includegraphics[height=0.35\textwidth]{figures/qdot_vs_multi.eps}\label{fig:MSvsTmatrix10}}
-\caption{Comparison of multislice and Tmatrix
-$keV=50$, $ka=11$, $kd=3ka$, $k_p=1.001$.
-a)$N=2$ spheres,
-b)$N=10$ spheres.
-}%\label{fig:MSvsTmatrix}
-\end{figure}
-
-Figure~\ref{fig:MSvsTmatrix2} and~\ref{fig:MSvsTmatrix10} shows a comparison between running a multislice
-and the T-matrix. Since multislice assumes periodic boundary conditions in the
-each slice, very large padding was used to simulate the effect of the crystal.
-The projected potential can be readily calculated for a constant potential sphere
-as $V_{p;z}(\rho) = 2V_p\sqrt{a^2-\left(\rho-\rho_p\right)^2}$
-where $\rho$ and $\rho_p$
-are the polar radius in the $(x,y)$ plane of the slices.
-\loremlines{10}
 
 
 \begin{figure}[h!]
   \centering
-  \subfloat[]{\includegraphics[height=0.35\textwidth]{figures/dummy.eps}\label{fig:sigma_N}}\\
-  \vspace{-2em}
-  \subfloat[]{\includegraphics[height=0.35\textwidth]{figures/dummy.eps}\label{fig:f_n}}
+  \subfloat[]{\includegraphics[height=\figsca\textwidth]{figures/Tmatrix_Pn.eps}\label{fig:Tmatrix_Pn}}\\
+  \vspace{-1.1em}
+  \subfloat[]{\includegraphics[height=\figsca\textwidth]{figures/Tmatrix_fn.eps}\label{fig:Tmatrix_fn}}
   \caption{
-a) Scattering probabilities
-b) n times scattering amplitudes
+a) Scattering probabilities $P_n$ (dashed lines), total probabilty of scattering
+$P_{scat}$ (black solid) and the probabilty of dynamical scattering
+$\sum_{n>1}P_n$ (blue solid).
+Probabilties have been integrated over angular distribution.
+b) scattering amplitudes for $f_n$ associated with $n$ times scattering. The total
+scattering ampltiude $f=\sum_n f_n $ is shown in solid black.
 }%\label{fig:10}
 \end{figure}
 
 
-\loremlines{20}
+
+
+% \begin{figure}[h!]
+%   \centering
+%   \subfloat[]{\includegraphics[height=0.35\textwidth]{figures/qdot_vs_multi.eps}\label{fig:MSvsTmatrix2}}\\
+%   \vspace{-1.1em}
+%   \subfloat[]{\includegraphics[height=0.35\textwidth]{figures/qdot_vs_multi.eps}\label{fig:MSvsTmatrix10}}
+% \caption{Comparison of multislice and Tmatrix
+% $keV=50$, $ka=11$, $kd=3ka$, $k_p=1.001$.
+% a)$N=2$ spheres,
+% b)$N=10$ spheres.
+% }%\label{fig:MSvsTmatrix}
+% \end{figure}
+%
+% Figure~\ref{fig:MSvsTmatrix2} and~\ref{fig:MSvsTmatrix10} shows a comparison between running a multislice
+% and the T-matrix. Since multislice assumes periodic boundary conditions in the
+% each slice, very large padding was used to simulate the effect of the crystal.
+% The projected potential can be readily calculated for a constant potential sphere
+% as $V_{p;z}(\rho) = 2V_p\sqrt{a^2-\left(\rho-\rho_p\right)^2}$
+% where $\rho$ and $\rho_p$
+% are the polar radius in the $(x,y)$ plane of the slices.
+%
+% \loremlines{20}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
