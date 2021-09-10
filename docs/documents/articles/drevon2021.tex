@@ -245,10 +245,10 @@ be written as :
 %
 The total scattering amplitude is the sum of the contribution from all
 individual spheres.
-Since in the far field, $r_p\approx r-\bb r\cdot\bb d_p$ :
+Since in the far field, $r_p\approx r-\bb d_p\cdot\bb e_r$ :
 %
 \begin{equation}\label{eq:f_theta}
-  f(\theta,\phi) = \sum_{p=1}^{N} f_p(\theta,\phi)e^{-jk_0\bb r\cdot\bb d_p}
+  f(\theta,\phi) = \sum_{p=1}^{N} f_p(\theta,\phi)e^{-jk_0\bb e_r\cdot\bb d_p}
 \end{equation}
 %
 
@@ -325,9 +325,10 @@ $\bb A_1=\bb T\bb A_0$ accounts for secondary scattering.
 Similarly, outward scattering ampltiudes from sphere $p$ can be written :
 %
 \begin{eqnarray}
-  b_{p;lm} &=&
-      b_{p;lm}^{(0)} + \sum_{q,z_q<z_p}T_{pq}b_{q;lm}^{(0)}  \label{eq:multiple_scattering}\\
-    &&~+T_{pq}\sum_{q,z_q<z_p}T_{qr}\sum_{r,z_r<z_q}b_{r;lm}^{(0)} + ..\nonumber
+  \bb b_{p} &=&
+      \bb b_{p}^{(0)} + \sum_{q,z_q<z_p}\bb T_{pq}\bb b_{q}^{(0)}  \nonumber\\
+    &&~+\bb T_{pq}\sum_{q,z_q<z_p}\bb T_{qr}\sum_{r,z_r<z_q}\bb b_{r}^{(0)} + ..\nonumber\\
+    &=& \sum_{n=0} \bb T^n \bb b_p^{(0)} = \sum_{n=1}\bb b_p^{(n)}  \label{eq:multiple_scattering}
 \end{eqnarray}
 %
 where the first term accounts for kinematic scattering, the second term for
@@ -378,7 +379,7 @@ from the wave being scattered $n$ times. It can readily be established that :
 \begin{eqnarray}
     f(\theta) &=& \sum_{n=1}^N f_n(\theta)  \nonumber\\
     \sigma    &=& \sum_{n=1}^N \sigma_n     \nonumber\\
-    \sigma_n  &=& \lvert f_n\rvert^{2} + 2\Re\sum_{m>n}^N f_nf_m^{*}\label{eq:sigma_n}\\\nonumber
+    \sigma_n  &=& \lvert f_n\rvert^{2} + 2\Re f_n\sum_{m>n}^Nf_m^{*}\label{eq:sigma_n}\\\nonumber
 \end{eqnarray}
 %
 where $P_n=\sigma_n/S$ can be defined as the probability of an electron to be
@@ -683,6 +684,13 @@ Overall it is very clear that the forward scattering approximation is very accur
 over all range of parameter sets for carbone which is expected since there is very
 little back backscattering beyond $90^{\circ}$. On the other hand the kinematic
 approximation does not appear quite as good even for this mere 2 dody problem.
+Although not shown here, both the kinematic and forward scattering approximation
+tend to work slightly better with increasing distances $kd$ since coupling between the
+the spheres is reduced.
+ It is therefore less likely to affect scattering from the other spheres.
+The low values of $n_p$ result in overall good approximation of both the uncoupled and forward scattering approximation. This is an anticipated result since for weak potentials, the kinematic approximation is more valid.
+The uncoupled approximation improves with small radii since Small $ka$ result in small scattering cross section,
+On the other hand the forward scattering approximation improves with larger values of $ka$ since backward scattering is less likely for large $ka$.
 
 
 \begin{figure}[h!]
@@ -718,6 +726,7 @@ is contributing orders are around $l=ka$ as a direct manifestation of the conver
 behaviour presented above. It can be observed that the kinematic approximation
 error increases with the radius while the forward approximation is very accurate
 across all radius.
+
 Figure~\ref{fig:TmatrixApprox_ff} shows a comparison of the computed far field
 scattering amplitudes for $N=2$, $ka=30$, $n_p=1.01$,$kd=2ka$ using the full
 T-matrix, the forward approximation and the kinematic approximation. The peaks and
@@ -730,30 +739,49 @@ well known feature of dynamical diffraction.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Application of Multiple scattering
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Successive multiple scattering approximations}
 
 Finally, we consider an array of $N$ identical scatterers regularly spaced by
 $kd=3ka$ under normal illumination and consider the successive multiple scattering
-approach.
+approach. This is an extreme channelling case where dynamical scattering is
+anticipated to be strong.
 
 \begin{figure}[h!]
   \centering
-  \subfloat[]{\includegraphics[height=\figsca\textwidth]{figures/dummy.eps}\label{fig:TmatrixApproxSecondary}}\\
+  \subfloat[]{\includegraphics[height=\figsca\textwidth]{figures/TmatrixApproxErr.eps}\label{fig:TmatrixApproxErr}}
   \vspace{-1.1em}
-  \subfloat[]{\includegraphics[height=\figsca\textwidth]{figures/qdotSphereArray2approx_kakp_err_kp3.eps}\label{fig:TmatrixApproxErr}}
+  \subfloat[]{\includegraphics[height=\figsca\textwidth]{figures/TmatrixApproxErr_n.eps}\label{fig:TmatrixApproxErr_n}}\\
 \caption{
-a) Scattering amplitudes coefficients error with increasing number of spheres
-for a few normalised radius $ka$ using $k_p=1.01$.
+a) Error on the scattering amplitudes coefficients with increasing number of spheres
+$N$ for $ka=7$, $n_p=1.001$, $kdka=3$. The forward (squares), kinematic(diamonds)
+and secondary (triangles) approximations are shown as well as the successive
+$n$ times multiple scattering approximations (colored dashed lines).
+b) Error on the scattering amplitudes coefficients with increasing successive
+approximations for $ka=7$, $kdka=3$ and $N=100$ spheres while varying $n_p$.
 }%\label{fig:TmatrixApproxErr}
 \end{figure}
 
-Both the kinematic and forward scattering approximation work slightly better with
-increasing distances $kd$ since scattering from the spheres reduces with distance. It is therefore less likely to affect scattering from the other spheres.
-The low values of $k_p$ result in overall good approximation of both the uncoupled and forward scattering approximation. This is an anticipated result since for weak potentials, the kinematic approximation is more valid.
-The uncoupled approximation improves with small radii since Small $ka$ result in small scattering cross section,
-On the other hand the forward scattering approximation improves with larger values of $ka$ since backward scattering is less likely for large $ka$.
+Figure~\ref{fig:TmatrixApproxErr} and~\ref{fig:TmatrixApproxErr_n} show the
+evolution of the error on scattering amplitude coefficients for an increasing
+number of spheres while also varying the number of successive approximations.
+for a fixed parameter set $ka=7$, $kdka=3$.
+The forward scattering approximation becomes worse and worse for increasing
+numbers of spheres as a result of accumulated errors. This is limitation of
+a forward scheme such as the one performed by multislice which is only accurate
+up to a certain simulated thickness.
+Overall the successive approximation schemes naturally converge to the forward
+approximation for sufficiently large $n$. However, more orders need to be included
+as the number of spheres (or thickness) increases. This is similar to other
+multiple scattering approaches. For example, in the case of a 2 beam
+configuration, it was shown~\cite{ref:CowleyMoodie1957} that the scattered
+beam could be expressed using expansion~\ref{eq:fhk_multi} considering only
+the scattering terms of the the primary beam $n=1,3,5..$. The famous 2-beam
+analytical scattering expression is obtained as the sum of the infinite series.
+
 
 
 \begin{figure}[h!]
@@ -762,16 +790,33 @@ On the other hand the forward scattering approximation improves with larger valu
   \vspace{-1.1em}
   \subfloat[]{\includegraphics[height=\figsca\textwidth]{figures/Tmatrix_fn.eps}\label{fig:Tmatrix_fn}}
   \caption{
-a) Scattering probabilities $P_n$ (dashed lines), total probabilty of scattering
-$P_{scat}$ (black solid) and the probabilty of dynamical scattering
-$\sum_{n>1}P_n$ (blue solid).
-Probabilties have been integrated over angular distribution.
-b) scattering amplitudes for $f_n$ associated with $n$ times scattering. The total
-scattering ampltiude $f=\sum_n f_n $ is shown in solid black.
+a) Scattering probabilities (dashed colored lines) of $n$ times scattering,
+kinematic(cyan solid line), dynamic scattering(blue solid line) and
+total scattering (black solid) probabilties.
+The total scattering  probabilty following the Poisson distribution using the average
+scattering cross section is shown as dashed-dotted line.
+Probabilties have been integrated over angular distribution. Values were $ka=7$,
+$n_p=1.01$, $ka=3kd$.
+b) scattering amplitudes $f_n$ associated with $n$ times scattering for $ka=7$,
+$n_p=1.01$ and $N=15$. The total scattering ampltiude $f=\sum_n f_n $ is shown
+in solid black.
 }%\label{fig:10}
 \end{figure}
 
+Figure~\ref{fig:Tmatrix_Pn} shows the scattering probabilities of $n$ times scattering
+for $ka=7$,$n_p=1.01$, $ka=3kd$ with increasing $N$.
+The dynamic scattering probabily $P_{dyn}=\sum_{n>1}P_n$ and the kinematic
+probability as well as the total scattering probabilties are shown.
+It seems that all multiple scattering terms increase with number of spheres in
+contrast to the ballistic picture of the Poisson distribution~\cite{} also shown
+as dashed-dotted lines using the average scattering cross section.
+The main reason for this is that the ballistic picture ignores the effect
+of interference which drastically affects the overall scattering process.  
 
+Figure~\ref{fig:Tmatrix_fn} shows the scattering amplitudes $f_n$ associated with
+$n$ times scattering for $ka=7$, $n_p=1.01$ and $N=15$. The scattering amplitudes
+have similar shapes which mostly contrbitutes to constructive interference although
+sligth peak misalgnements can be seen.
 
 
 % \begin{figure}[h!]
@@ -797,10 +842,16 @@ scattering ampltiude $f=\sum_n f_n $ is shown in solid black.
 % \loremlines{20}
 
 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Conclusion and Perspective
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
