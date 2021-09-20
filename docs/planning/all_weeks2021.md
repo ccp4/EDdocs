@@ -1,3 +1,31 @@
+#week 37
+## Monday
+- manuscript draft completed
+## Tuesday
+- literature on multiple scattering in crystals
+  - [x] application in copper (+Mermin)
+## Wednesday
+- [x] celullar seitz-wigner methods(point matching method)
+## Thursday
+- mrp analytics
+## Friday
+- [x] mermin chap11
+- [x] andersen1975
+
+# week 36
+## Monday
+- article
+## Tuesday
+- Tamir
+- article
+## Wednesday
+- article fig5,fig1
+## Thursday
+- article fig8,9
+## Friday
+- compute 2,3,4,5 multiple scattering approximations (until it is close enough to bp_forward)
+- article completed
+
 # week 35
 ## Monday
 - off

@@ -1,20 +1,14 @@
-# week 36
-## Monday
-- article
-## Tuesday
-- Tamir
-- article
-## Wednesday
-- article fig5,fig1
-## Thursday
-- article fig8,9
-## Friday
-- compute 2,3,4,5 multiple scattering approximations (until it is close enough to bp_forward)
+# week 38
+
+- [ ] GF in full potential
+
+Overview : molecules collisions with electron
+
 
 ### paper
 - Plot :
   - [x] fig1    : problem setup
-  - [x] fig4b   : fonts
+  - [ ] fig4b   : fonts
   - [x] fig5a   : fit+ax-A,ax-kV
   - [ ] fig5b   : fonts
   - [x] figa    : add carbone points on sigma

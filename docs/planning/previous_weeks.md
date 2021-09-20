@@ -1,6 +1,13 @@
+#week37
+- additional literature on multiple scattering (kkr,apw/lapw/apw+lo)
+
+#week 36
+- paper completed
+
 #week 35
 - paper pyscat
 - understood cowley1957
+
 #week 34
 - pyscat collision approach
 
