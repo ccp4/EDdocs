@@ -1,8 +1,16 @@
 # meeting
 
+## Alistair ED 07/10/2021
+- same  sample : insuline or small peptide
+- dynamic vs kinematic
+- thickness 100,500,1000nm
+- loss of signal to noise
+- energy sweet spot (1MeV)
+- simulate microED validate
+
 ## Alistair ED 09/09/2021
 - energies necessary for micrometer sizes crystals
-- why microm X-ray, bridging the gap inelastic/elsatic scales almost linearly 
+- why microm X-ray, bridging the gap inelastic/elsatic scales almost linearly
 - what instruments? what energies achievable?
 - detector issues
 
@@ -20,6 +28,11 @@
   - programming : linux(ssh,WLS,fedID,Scar), git(version control github), python(Game AI programming), C/C++/Fortran, HPC
   - mathematical side :  pde, spherical harmonics,latex : heat equation, FEM, Laplace equation,    
   - physics side : wave scattering/geometrical optics,  boundary condition pbs, spectral method
+
+### Christine's internship assignments
+  - issue#1 Integrate custom spherical harmonics in compute_f
+  - issue#2 Implement arbitrary distance in linear array and show examples
+  - issue#3 Exercise on using the translation theorem
 
 ## Workshop 23/03/2021
 vincent & midgley ultramicroscopy 53 1994

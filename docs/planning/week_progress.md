@@ -1,9 +1,41 @@
-# week 38
+#week 43
+##Monday
+## Tuesday
+- felix vs bloch :
+  - eigen vec/intensities
 
+
+
+## TODO
+### misc
+- [ ] felix run comparison GaAs
+- [ ] python-multem
+- [ ] use wallpp for bloch_vs_multi in cmm 2beams case
+- [ ] wallpp for cbs
+
+- unit_tests
+- notebooks :
+    - [ ] multi2D vs bloch
+    - [ ] nearBragg
+- [ ] I(z,u,ds) ( integrated path using excitation error)
+- [ ] check structure factors  
+- [ ] bloch kinematic figures and integration with pets
+- [ ] charge flip
 - [ ] GF in full potential
+- [ ] questaal/pySCF
+- [ ] van der waals
+- [ ] many-body : Hartree-Fock, Thomas-Fermi, Lindhard, Bohm  
 
-Overview : molecules collisions with electron
+- diamond Bloch full exp with pets
+    - [ ] check xyz in arbitrary configuration
+    - [ ] camel plot (wild even after reducing angular step)
+- dummy test case kinematic simulations  (zone axis )
 
+- finish the complete dataset with stepped continuous rotation
+- publish the code
+
+- git alias ...
+- import dials experiment
 
 ### paper
 - Plot :
@@ -21,56 +53,16 @@ Overview : molecules collisions with electron
   - [x] fig9b   : plot multiple scattering Fi
   <!-- - [ ] fig10   : multislice vs T-matrix -->
 
-
 ### Pyscat
 - [ ] pyscat : Study validity range for multislice (put bw limit back into the pb)
 - [ ] python-fortran binding for a_ln to (1000 atoms => 100nm)
 - [ ] solve radial equation screened potential numerically
 - [ ] Scattering cross section of a regular array up to N=10
 
-- [ ] felix run comparison GaAs
-- [ ] python-multem
-- [ ] use wallpp for bloch_vs_multi in cmm 2beams case
-- [ ] wallpp for cbs
-
-- unit_tests
-- notebooks :
-    - [ ] multi2D vs bloch
-    - [ ] nearBragg
-- [ ] I(z,u,ds) ( integrated path using excitation error)
-- [ ] check structure factors  
-- [ ] bloch kinematic figures and integration with pets
-
-- diamond Bloch full exp with pets
-    - [ ] check xyz in arbitrary configuration
-    - [ ] camel plot (wild even after reducing angular step)
-- dummy test case kinematic simulations  (zone axis )
-
-- finish the complete dataset with stepped continuous rotation
-- publish the code
-
-- git alias ...
-- import dials experiment
-
-
-
-### Jose
-- lukas : dials doing similar to pets!! running jana from dials processing
-- form factor saha
-- good quality data with tamir gonen
-
-
-
-## TODO
-### Christine's internship assignments
-- issue#1 Integrate custom spherical harmonics in compute_f
-- issue#2 Implement arbitrary distance in linear array and show examples
-- issue#3 Exercise on using the translation theorem
-
 ### viewers :
-  - command search
-  - multislice clean patterns files finding
-  - hkl click
+- command search
+- multislice clean patterns files finding
+- hkl click
 
 ### Glycine
 - glycine padding study
@@ -94,11 +86,11 @@ structure solution from numerical simulation data
   - [ ] elaborate on bonding effect in the multislice 2D
   - [ ] partial coherency
   - [ ] inelastic scattering
+
 ###others
   - pattern every 20 slices
   - [ ] clean code
   - [ ] run simulation 1935-1945 and tilt simulation
-
 
 - [ ] clean website
 - ireloh :
@@ -109,3 +101,8 @@ structure solution from numerical simulation data
 - simulate 10 different thicknesses integrated by integration software
 normalize where the values with zero thickness (kinematic regime)
 - use TDS for the crystal
+
+### Jose
+- lukas : dials doing similar to pets!! running jana from dials processing
+- form factor saha
+- good quality data with tamir gonen

@@ -1,3 +1,40 @@
+#week 42
+## Monday
+- felix vs bloch Scattering factor and atoms
+## Tuesday
+- felix vs bloch Structure factor : (isotropic broadening changes scattering and different constant factor factors)
+## Wednesday
+- felix vs bloch :
+  - Excitation error (wrong sign)
+  - matrix : (pi*2 factor was off)
+  - eigen vals : ok
+  - conductivity script + literature tau + recap
+## Thursday
+- viaScience qmeca
+## Friday
+- viaScience qmeca
+
+# week 41
+## Monday
+## Tuesday
+- calculator :
+    - comparative computational scale
+    - memory requirement for protein 10x10x10
+- crambin 1ejg
+
+# week40
+- literature review
+
+# week 38
+## Monday
+- [x] git collaborative paper
+- [x] TAAM
+- [x] DFT-CBED
+- [x] inelastic scattering
+## Tuesday
+- [x] iUCr2021 check confs defects
+- [x] Fermi surface java viewer
+
 #week 37
 ## Monday
 - manuscript draft completed

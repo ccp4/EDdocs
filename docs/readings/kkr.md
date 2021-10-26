@@ -104,9 +104,3 @@ a   | b   | c
 
 
 ## Reviews
-### Andersen1975
-
-- linear APW : combines APW and OPW(pseudo-potential)
-- LMTO : combines kkr, cellular and tight-binding
-
-transition-metals fermi surfaces 0.01Ry to measured values

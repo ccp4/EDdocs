@@ -1,3 +1,12 @@
+#week41
+- viascience QED, QM and Thermo
+
+# week40
+- literature review
+
+#week38
+- literature review
+
 #week37
 - additional literature on multiple scattering (kkr,apw/lapw/apw+lo)
 
