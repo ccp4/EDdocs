@@ -1,9 +1,9 @@
-#week 43
-##Monday
+#week 44
+## Monday
+- cbs manim
 ## Tuesday
-- felix vs bloch :
-  - eigen vec/intensities
-
+- simulate glycine
+- compare multislice and bloch
 
 
 ## TODO
@@ -23,7 +23,6 @@
 - [ ] charge flip
 - [ ] GF in full potential
 - [ ] questaal/pySCF
-- [ ] van der waals
 - [ ] many-body : Hartree-Fock, Thomas-Fermi, Lindhard, Bohm  
 
 - diamond Bloch full exp with pets

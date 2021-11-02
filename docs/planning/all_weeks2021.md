@@ -1,3 +1,15 @@
+#week 43
+##Monday
+## Tuesday
+- [x] felix vs bloch intensities
+- [x]python dm3 reader
+## Wednesday
+- cbs
+## Thursday
+- cbs
+## Friday
+- cbs video practising with obs software
+
 #week 42
 ## Monday
 - felix vs bloch Scattering factor and atoms

@@ -1,3 +1,10 @@
+#week 43
+- felix vs bloch ok now
+- cbs and manim 
+
+#week 42
+- felix vs bloch
+
 #week41
 - viascience QED, QM and Thermo
 
