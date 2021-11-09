@@ -1,3 +1,14 @@
+#week 44
+## Monday
+- cbs manim
+## Tuesday
+- clean felix code check
+- pets recap
+- bloch convergence
+- simulate glycine
+## Wed=Fri
+- cbs presentation progress up to gE
+
 #week 43
 ##Monday
 ## Tuesday

@@ -1,4 +1,21 @@
 # meeting
+## Lukas palatinus : Dials for jana2006
+- Rfactor :
+  - not inelastic scattering
+  - not bonding simulating
+  - blochwave with defects and solvent
+- refinement small thickness :
+  - dataset of known thickness : incoherently diffracting domains (along thickness)
+  - partial coherency
+  - inelastic JPA
+- intensities :
+  - reflection leaking over the whole range ? filter
+  - reflection not in frame but in simu
+  - scaling for dyn(sum=1 or mosaicity !!) vs kin (scaling+lorentz)
+  - 15-20 simus per degrees
+  - smoothing necessary for alpha,beta,omega curve (usually just nice continuous)
+- CBED
+- sigmas need be accurate and determination depends on detector
 
 ## Alistair ED 07/10/2021
 - same  sample : insuline or small peptide

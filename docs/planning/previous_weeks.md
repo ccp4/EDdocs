@@ -1,6 +1,11 @@
+#week 44
+- bloch convergence
+- glycine simu
+- manim cbs 
+
 #week 43
 - felix vs bloch ok now
-- cbs and manim 
+- cbs and manim
 
 #week 42
 - felix vs bloch

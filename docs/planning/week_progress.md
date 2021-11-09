@@ -1,9 +1,9 @@
-#week 44
+#week 45
 ## Monday
-- cbs manim
+- cbs
 ## Tuesday
-- simulate glycine
 - compare multislice and bloch
+- tex corrections
 
 
 ## TODO
