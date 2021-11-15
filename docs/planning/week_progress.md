@@ -1,9 +1,10 @@
-#week 45
+#week 46
 ## Monday
-- cbs
+- tex corrections
 ## Tuesday
 - compare multislice and bloch
-- tex corrections
+
+
 
 
 ## TODO

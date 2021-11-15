@@ -1,3 +1,17 @@
+#week 45
+## Monday
+- cbs
+## Tuesday
+- cbs
+## Wednesday
+- dials2pets
+- APR
+- Trainings
+## Thursday
+- regenerate zero background tiffs diamond
+##Friday
+- cbs
+
 #week 44
 ## Monday
 - cbs manim

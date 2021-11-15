@@ -1,7 +1,11 @@
+#week 45
+- dials2pets
+- cbs
+
 #week 44
 - bloch convergence
 - glycine simu
-- manim cbs 
+- manim cbs
 
 #week 43
 - felix vs bloch ok now
