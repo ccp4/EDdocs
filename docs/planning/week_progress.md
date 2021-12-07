@@ -1,15 +1,18 @@
-#week 46
+#week 49
 ## Monday
-- tex corrections
-## Tuesday
-- compare multislice and bloch
+- cbs
+## Tuesday  
 
 
+- ED felix
+- ED gui
+- dxtbx tiff ED format process diamond with/without background
+- pytest
 
 
 ## TODO
 ### misc
-- [ ] felix run comparison GaAs
+- [x] felix run comparison GaAs
 - [ ] python-multem
 - [ ] use wallpp for bloch_vs_multi in cmm 2beams case
 - [ ] wallpp for cbs

@@ -1,3 +1,25 @@
+#week 48
+- cbs
+
+#week 47
+## Monday
+- documenting ED source codes
+## Tuesday
+- documenting ED source codes
+- continuous rotation
+## Wednesday
+- ccp4-ed
+## Thursday
+- cbs
+
+#week 46
+## Monday
+- tex corrections
+## Tuesday
+- compare multislice and bloch
+## Wed-Fri
+- cbs presentation  
+
 #week 45
 ## Monday
 - cbs
@@ -9,7 +31,7 @@
 - Trainings
 ## Thursday
 - regenerate zero background tiffs diamond
-##Friday
+## Friday
 - cbs
 
 #week 44

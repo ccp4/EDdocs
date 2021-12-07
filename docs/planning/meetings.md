@@ -1,4 +1,30 @@
 # meeting
+
+## nanED 30/11/2021
+- Kolb (mainz) on  defects :
+  - lattice 3D point defects produce satellite reflections at forbidden reflections
+  - stacking faults :
+    - every second row as diffuse line if stacking fault is b/2
+    - 3 rows as diffuse line if stacking row b/4
+  - line defects, dislocations...
+    - diffuse planes
+  - software DISCUS
+  diffuse scattering and defects structure simulations
+- JPA
+  - protein structures
+    - 3 possible(helix,sheets and loops) torsion angles (N amino-acids => 3^N-1) but only very few folds exist (Levinthal paradox)
+    - all 2000-10000 proteins folds are known (pdb examples with 3D structure)
+    - proteins assemble in domains to form  a functional structure
+    - conformations used to understand the movement of the protein related to its function
+  - ED
+    - single particle cryo-EM
+     - exp phasing necessary when there is no initial model for MR (alpha fold)
+     - shift focus => single molecule nano-beam ED instead of crystals (how is this helping against alpha fold)
+     - better than cryo-EM cause signal-noise ratio better
+     - room temperature graphene liquid cell helps against radiation damage
+- Hongyi : structure-based drug discovery by 3D-ED
+  - outline
+
 ## Lukas palatinus : Dials for jana2006
 - Rfactor :
   - not inelastic scattering
