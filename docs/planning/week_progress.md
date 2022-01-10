@@ -1,16 +1,25 @@
-#week 49
+# week 02
 ## Monday
-- cbs
-## Tuesday  
+- ED pytest 5h :
+  - python3 -m pytest to ensure correct python3 installation used
+  - run multiple tests in multiple folders
+  - skip test
+  - save refs and compare to outputs
+  - html reports with extra links
+- pyscat : Corrections 2h
+- FELIX 1h
 
-
-- ED felix
-- ED gui
-- dxtbx tiff ED format process diamond with/without background
-- pytest
-
+## Tuesday
+- [ ] pytest :
+  - add decorator for image and comparison with ref
 
 ## TODO
+### priority
+- [ ] pyscat corrections
+- [ ] Felix code adapted to CED
+- [ ] document the code
+### minor
+- [ ] update displayStandards to matplotlib 3.5
 ### misc
 - [x] felix run comparison GaAs
 - [ ] python-multem

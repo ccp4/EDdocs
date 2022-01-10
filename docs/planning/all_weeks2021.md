@@ -1,3 +1,21 @@
+#week51-52
+- off
+
+# week 50
+## Monday
+- dxtbx tiff ED format process diamond with/without background
+- pytest
+- ED gui
+- ED felix
+## Tuesday
+- ED presentation
+
+# week 49
+## Monday
+- cbs
+## Tuesday-Friday
+- export_pets commit
+
 #week 48
 - cbs
 
