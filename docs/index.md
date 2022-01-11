@@ -18,7 +18,7 @@ Contribute to the CCP4 Advanced integrated approaches to macromolecular structur
 ## Resources
 - [iUCr poster](/documents/iUCr2021/poster.pdf)
 - [pyscat article](/documents/articles/elsarticle-template.pdf)
-- [tests report](/figures/test_report.html)
+- [tests report](http://rcccp4s004.rc-harwell.ac.uk:8010/report.html)
 <!-- - [latest slides](/documents/presentations/2021-01-13.pdf) -->
 <!-- - [main report](/documents/report/report.pdf) -->
 <!-- - [iUCr abstract](/documents/iUCr2021/abstract.txt) -->
