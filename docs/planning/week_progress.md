@@ -6,12 +6,17 @@
   - skip test
   - save refs and compare to outputs
   - html reports with extra links
-- pyscat : Corrections 2h
-- FELIX 1h
 
 ## Tuesday
-- [ ] pytest :
-  - add decorator for image and comparison with ref
+- pyscat : Corrections 0.5h
+- pytest :
+    - add decorator for image and comparison with ref
+    - added felix test
+- FELIX 1h
+
+## Wednesday
+
+
 
 ## TODO
 ### priority
