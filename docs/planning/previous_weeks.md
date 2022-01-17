@@ -1,2 +1,6 @@
 #week 01
-- sick 
+- sick
+#week 02
+- pytests
+- felix git dev
+- TDutils 

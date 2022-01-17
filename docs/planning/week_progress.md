@@ -1,30 +1,32 @@
-# week 02
+#week 03
 ## Monday
-- ED pytest 5h :
-  - python3 -m pytest to ensure correct python3 installation used
-  - run multiple tests in multiple folders
-  - skip test
-  - save refs and compare to outputs
-  - html reports with extra links
-
-## Tuesday
-- pyscat : Corrections 0.5h
-- pytest :
-    - add decorator for image and comparison with ref
-    - added felix test
-- FELIX 1h
-
-## Wednesday
+- Felix:
+    - [ ] adapt cif file for wrapper
+    - [ ] adapt to continuousED
+- pytest:
+    - [ ] multislice
+    - [ ] viewers
+- animation
+    - [ ] bw_vs_pw process difference
 
 
 
 ## TODO
 ### priority
-- [ ] pyscat corrections
 - [ ] Felix code adapted to CED
-- [ ] document the code
+- [ ] document and test+cov the code
+- [ ] pyscat corrections
 ### minor
-- [ ] update displayStandards to matplotlib 3.5
+- [ ] plane wave isoE vs blochwave
+- TDutils :
+    - adapt to matplotlib 3.5
+    - document
+- pytest
+    - jupyter notebook example with all features
+    - be able to run the test (convet tests from jupy tests)
+    - put the examples in the documentation too
+    - pytest-sugar
+
 ### misc
 - [x] felix run comparison GaAs
 - [ ] python-multem
@@ -53,22 +55,6 @@
 
 - git alias ...
 - import dials experiment
-
-### paper
-- Plot :
-  - [x] fig1    : problem setup
-  - [ ] fig4b   : fonts
-  - [x] fig5a   : fit+ax-A,ax-kV
-  - [ ] fig5b   : fonts
-  - [x] figa    : add carbone points on sigma
-  - [x] fig6b   : Born+MS
-  - [x] fig7ab  : fonts + sum(err(cp)) instead of f2
-  - [x] fig7cd  : bp and ff at selected
-  - [x] fig8a   : error with 2,3,4,5 multiple at 2sets of params
-  - [x] fig8b   : error bp for nscat=1..n ka=30,N=10,kp=1.001
-  - [x] fig9a   : multiple scattering probabilities
-  - [x] fig9b   : plot multiple scattering Fi
-  <!-- - [ ] fig10   : multislice vs T-matrix -->
 
 ### Pyscat
 - [ ] pyscat : Study validity range for multislice (put bw limit back into the pb)

@@ -10,6 +10,23 @@
     - [ ] Compare multislice with N-beam Bloch, nearBragg
 
 
+### paper
+- Plot :
+  - [x] fig1    : problem setup
+  - [ ] fig4b   : fonts
+  - [x] fig5a   : fit+ax-A,ax-kV
+  - [ ] fig5b   : fonts
+  - [x] figa    : add carbone points on sigma
+  - [x] fig6b   : Born+MS
+  - [x] fig7ab  : fonts + sum(err(cp)) instead of f2
+  - [x] fig7cd  : bp and ff at selected
+  - [x] fig8a   : error with 2,3,4,5 multiple at 2sets of params
+  - [x] fig8b   : error bp for nscat=1..n ka=30,N=10,kp=1.001
+  - [x] fig9a   : multiple scattering probabilities
+  - [x] fig9b   : plot multiple scattering Fi
+  <!-- - [ ] fig10   : multislice vs T-matrix -->
+
+
 # Secondary   
 ## Codes
 - Multislice :
