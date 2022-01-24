@@ -1,14 +1,19 @@
-#week 03
+#week 04
 ## Monday
-- Felix:
-    - [ ] adapt cif file for wrapper
-    - [ ] adapt to continuousED
+
+Glycine :
+- Rkin(keV) for diff thickness (100,1000,200) non zone axis
+- Rkin(keV) for different orientations at reasonable thickness
+- I(z) mean,min,max intensity discrepancy over z  (given orientation and sweet keV)
+
 - pytest:
+    - [ ] wallpp
     - [ ] multislice
     - [ ] viewers
-- animation
-    - [ ] bw_vs_pw process difference
-
+- Felix:
+    - [ ] adapt cif file for wrapper
+    - [ ] adapt to continuousED and CBED
+    - [ ] CBED and continuous ED line
 
 
 ## TODO

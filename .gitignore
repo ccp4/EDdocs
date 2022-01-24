@@ -18,3 +18,5 @@ docs/documents/report/eqs/
 *.pdf_tex
 *-eps-converted-to.pdf
 **/figures/**/*.pdf
+
+docs/documents/keV_poster

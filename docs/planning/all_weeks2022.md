@@ -39,3 +39,28 @@
 - pytest:
     - [x] fix felix running with crontab( relative path to blochwave)
     - [x] bloch code coverage (on serv7 too)
+
+#week 03
+## Monday
+- [x] pytest:fixed serv7 python3 bug again (dont update ptest from ccp4-ED)
+- presentation:
+    - [x] bw_vs_pw process difference
+    - [x] CBED and continuous ED line
+## Tuesday
+- Slide/poster for gwyndaff
+## Wednesday
+- Slide for gwyndaff
+##Thursday
+- freecad :
+    - addons and libraries(CAD part library still not working )
+    - yt tutorials
+    - spreadsheet variables
+    - compilation attempt (tries fixing pyqt mess but just used v0.19)
+    - sections tech drawing nice
+    - scripting a feature and a plugin (fcgears in .FreeCAD/Mod/)
+    - doxygen and dev instructions
+    - parts-library working now
+- 3D printing:
+    - Start of with mega S or creative ender3
+## Friday
+- multi vs bloch 2D

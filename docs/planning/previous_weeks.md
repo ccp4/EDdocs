@@ -3,4 +3,8 @@
 #week 02
 - pytests
 - felix git dev
-- TDutils 
+- TDutils
+#week03
+- pytest
+- gwyndaff slide
+- freeCAD
