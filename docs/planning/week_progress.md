@@ -4,7 +4,7 @@
 Glycine :
 - Rkin(keV) for diff thickness (100,1000,200) non zone axis
 - Rkin(keV) for different orientations at reasonable thickness
-- I(z) mean,min,max intensity discrepancy over z  (given orientation and sweet keV)
+- I(z) mean,min,max intensity discrepancy over z (given orientation and sweet keV)
 
 - pytest:
     - [ ] wallpp
@@ -15,6 +15,9 @@ Glycine :
     - [ ] adapt to continuousED and CBED
     - [ ] CBED and continuous ED line
 
+card
+genin
+pay tax
 
 ## TODO
 ### priority
