@@ -15,9 +15,6 @@ Glycine :
     - [ ] adapt to continuousED and CBED
     - [ ] CBED and continuous ED line
 
-card
-genin
-pay tax
 
 ## TODO
 ### priority
