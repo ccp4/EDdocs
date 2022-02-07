@@ -64,3 +64,19 @@
     - Start of with mega S or creative ender3
 ## Friday
 - multi vs bloch 2D
+
+
+#week 04
+## Monday
+- bw presentation
+
+#week 05
+## Monday
+## Tuesday
+## Wednesday
+- abstract BCA2022
+- pyscat fig1-6 corrections
+## Thursday
+- tests
+## Friday
+- setup and tests EDutils on serv6

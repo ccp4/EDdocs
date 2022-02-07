@@ -8,3 +8,9 @@
 - pytest
 - gwyndaff slide
 - freeCAD
+#week04
+- blochwave presentation
+#week 05
+- ptests
+- BCA2022 abstract
+- pyscat corrections

@@ -1,5 +1,11 @@
-#week 04
+# week 06
 ## Monday
+- pytest 
+- extend gui :
+  - add info
+  - menus
+  - simulation specific dialog box
+
 
 Glycine :
 - Rkin(keV) for diff thickness (100,1000,200) non zone axis
@@ -9,7 +15,7 @@ Glycine :
 - pytest:
     - [ ] wallpp
     - [ ] multislice
-    - [ ] viewers
+    - [ ] extend the gui
 - Felix:
     - [ ] adapt cif file for wrapper
     - [ ] adapt to continuousED and CBED

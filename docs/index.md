@@ -1,5 +1,8 @@
 # CCP4-ED
 
+{% set serv='http://ccp4serv6.rc-harwell.ac.uk' %}
+
+
 ## Goals
 Contribute to the CCP4 Advanced integrated approaches to macromolecular structure determination.
 
@@ -17,14 +20,19 @@ Contribute to the CCP4 Advanced integrated approaches to macromolecular structur
 
 ## Resources
 - [iUCr poster](/documents/iUCr2021/poster.pdf)
-- [pyscat article](/documents/articles/elsarticle-template.pdf)
-- [bloch_tools presentation](/documents/bloch_tools.mp4)
 - [BCA abstract](/documents/BCA2022/abstract.txt) and [image](/documents/BCA2022/BCA_slide.jpg)
-- [tests report](http://rcccp4s004.rc-harwell.ac.uk:8010/report.html)
-- [code coverage](http://rcccp4s004.rc-harwell.ac.uk:8011/index.html)
+
 <!-- - [latest slides](/documents/presentations/2021-01-13.pdf) -->
 <!-- - [main report](/documents/report/report.pdf) -->
 <!-- - [iUCr abstract](/documents/iUCr2021/abstract.txt) -->
+
+## ED tools
+- [bloch_tools presentation](/documents/bloch_tools.mp4)
+- [full report]({{serv}}:8010/report.html) summary
+- [documentation]({{serv}}:8001)
+
+<!-- - [tests report]({{serv}}:8010/report.html)
+- [code coverage]({{serv}}:8011/index.html) -->
 
 <!-- ### jupyter notebook
 Login and run examples on [jupyter](http://badb.rc-harwell.ac.uk:8888/?token=d833dd4e672d23bf3075baf9f20ed960bc30df2d0270c095):
@@ -36,5 +44,6 @@ Login and run examples on [jupyter](http://badb.rc-harwell.ac.uk:8888/?token=d83
 
 ## pyscat
 - pyScatSpheres available now ! see [package](https://pypi.org/project/pyScatSpheres/) and [documentation](https://pyscatspheres.readthedocs.io/en/latest/).
+- [pyscat article](/documents/articles/elsarticle-template.pdf)
 
 ### News
