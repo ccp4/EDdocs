@@ -46,6 +46,13 @@ a  | b
 a) Distribution of experimental integrated reflections as function of resolution.
 b) Average experimental integrated intensity.
 
+a  | b
+-- | --
+[![]({{figs}}dyngo_beams.svg)]({{figs}}dyngo_beams.svg) |   [![]({{figs}}FoFc.svg)]({{figs}}FoFc.svg)
+
+a) beams used for dynamical refinement.
+b) Fo vs Fc after dynamical refinement. 
+
 
 ## Bloch wave simulations
 a  | b  | c  |  d

@@ -1,9 +1,24 @@
-# week 06
+#week 07  
 ## Monday
-- pytest 
-- extend gui :
+- paper corrections
+- pandas  
+## Tuesday
+- js uigrid
+- prepare meeting :
+  - run jupyter
+  - run gui
+
+## 07
+- [ ] glycine examples to zenodo
+- [ ] blochwave wrapper package
+  - [ ] serve documentation
+- [ ] multislice wrapper
+- [ ] amend the key finding paragraph
+
+
+extend gui :
   - add info
-  - menus
+  - menus : file(open,save as,close),tool(toggle mode,settings), about(help, shortcuts, bloch simu, multislice simu)
   - simulation specific dialog box
 
 

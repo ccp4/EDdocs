@@ -14,3 +14,7 @@
 - ptests
 - BCA2022 abstract
 - pyscat corrections
+#week
+- bloch coverage
+- EDutils tests
+- js gui 

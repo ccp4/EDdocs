@@ -16,6 +16,7 @@ cd
 
 ##ED tests
 ssh $serv "mkdir bin"
+sudo apt-get install pandoc
 pip3 install pytest pytest-html pytest-cov tarikDrevonUtils
 scp EDtests.sh EDtest_tab.sh ptest.sh ccp4tab.sh $serv:bin
 printf "

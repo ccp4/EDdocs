@@ -80,3 +80,16 @@
 - tests
 ## Friday
 - setup and tests EDutils on serv6
+
+# week 06
+## Monday
+- pytest
+  - bloch increase coverage tests to 95%
+## Tuesday
+- add EDutils tests
+## Wednesday
+- gui exploration (Qt sounds good with beampy lib)
+## Thursday
+- js django tuto a
+## Friday
+- gui js dev
