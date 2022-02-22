@@ -1,14 +1,12 @@
-#week 07  
+#week 08
 ## Monday
-- paper corrections
-- pandas  
-## Tuesday
-- js uigrid
-- prepare meeting :
-  - run jupyter
-  - run gui
+- publish cbs quantum mechanics of crystals
+- angularJS  
+##Tuesday
+- angularJS  easyaccount
 
-## 07
+
+## for the 07/03/2022
 - [ ] glycine examples to zenodo
 - [ ] blochwave wrapper package
   - [ ] serve documentation
@@ -16,6 +14,7 @@
 - [ ] amend the key finding paragraph
 
 
+## other
 extend gui :
   - add info
   - menus : file(open,save as,close),tool(toggle mode,settings), about(help, shortcuts, bloch simu, multislice simu)

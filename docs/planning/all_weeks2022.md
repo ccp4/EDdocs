@@ -93,3 +93,19 @@
 - js django tuto a
 ## Friday
 - gui js dev
+
+#week 07  
+## Monday
+- paper corrections
+- pandas  
+## Tuesday
+- js uigrid
+- prepare meeting :
+  - run jupyter
+  - run gui
+## Wednesday
+- angularJS
+## Thursday
+- angularJS
+## Friday
+- angularJS

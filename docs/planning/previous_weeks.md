@@ -14,7 +14,9 @@
 - ptests
 - BCA2022 abstract
 - pyscat corrections
-#week
+#week 06
 - bloch coverage
 - EDutils tests
-- js gui 
+- js gui
+#week 07
+- angularJS easyaccount
