@@ -20,3 +20,9 @@
 - js gui
 #week 07
 - angularJS easyaccount
+#week 08
+- angularJS easyaccount
+#week 09
+-off
+#week 10
+- off

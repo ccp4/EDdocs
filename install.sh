@@ -6,7 +6,7 @@ scp .bash_aliases $serv:
 # ccp4 docs on machine
 ssh $serv
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-pip install mkdocs  pymdown-extensions python-markdown-math markdown-meta-extension
+pip install mkdocs pymdown-extensions python-markdown-math markdown-meta-extension
 
 #ED(gcc and g++ need be installed)
 scp ~/.ssh/id_rsa_git $serv:.ssh
@@ -17,7 +17,7 @@ cd
 ##ED tests
 ssh $serv "mkdir bin"
 sudo apt-get install pandoc
-pip3 install pytest pytest-html pytest-cov tarikDrevonUtils
+pip install IPython wheel pytest pytest-html pytest-cov tarikDrevonUtils
 scp EDtests.sh EDtest_tab.sh ptest.sh ccp4tab.sh $serv:bin
 printf "
 */60 * * * * /home/lii26466/bin/ccp4tab.sh\n

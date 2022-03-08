@@ -109,3 +109,20 @@
 - angularJS
 ## Friday
 - angularJS
+
+#week 08
+## Monday
+- publish cbs quantum mechanics of crystals
+- angularJS  
+##Tuesday
+- angularJS  easyaccount
+## Wednesday
+- angularJS  easyaccount
+## Thursday
+- angularJS  easyaccount
+
+#week 09
+-off
+
+#week 10
+- off

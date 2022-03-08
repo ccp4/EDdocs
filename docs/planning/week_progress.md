@@ -1,17 +1,12 @@
-#week 08
-## Monday
-- publish cbs quantum mechanics of crystals
-- angularJS  
-##Tuesday
-- angularJS  easyaccount
-
+# week 10
+- report
 
 ## for the 07/03/2022
-- [ ] glycine examples to zenodo
 - [ ] blochwave wrapper package
   - [ ] serve documentation
 - [ ] multislice wrapper
-- [ ] amend the key finding paragraph
+- [ ] glycine examples to zenodo
+- [ ] amend the key findings paragraph
 
 
 ## other
