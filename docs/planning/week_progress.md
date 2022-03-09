@@ -1,34 +1,43 @@
 # week 10
+##Monday
 - report
+##Tuesday
+- report
+## Wednesday
+- write to takanori
+
 
 ## for the 07/03/2022
-- [ ] blochwave wrapper package
-  - [ ] serve documentation
-- [ ] multislice wrapper
+- [x] amend the key findings paragraph
+- [x] blochwave wrapper package
+- [x] multislice wrapper
 - [ ] glycine examples to zenodo
-- [ ] amend the key findings paragraph
 
 
 ## other
-extend gui :
-  - add info
-  - menus : file(open,save as,close),tool(toggle mode,settings), about(help, shortcuts, bloch simu, multislice simu)
-  - simulation specific dialog box
+#### Bug fix  
+- fix viewer boxes
+- index hkl to viewer (no gui)
 
+### gui
+- add info
+- menus : file(open,save as,close),tool(toggle mode,settings),about(help, shortcuts, bloch simu, multislice simu)
+- simulation specific dialog box
 
-Glycine :
+### Glycine
 - Rkin(keV) for diff thickness (100,1000,200) non zone axis
 - Rkin(keV) for different orientations at reasonable thickness
 - I(z) mean,min,max intensity discrepancy over z (given orientation and sweet keV)
 
-- pytest:
-    - [ ] wallpp
-    - [ ] multislice
-    - [ ] extend the gui
-- Felix:
-    - [ ] adapt cif file for wrapper
-    - [ ] adapt to continuousED and CBED
-    - [ ] CBED and continuous ED line
+### pytest:
+- [ ] wallpp
+- [ ] multislice
+- [ ] extend the gui
+### Felix:
+- [ ] adapt cif file for wrapper
+- [ ] adapt to continuousED and CBED
+- [ ] CBED and continuous ED line
+
 
 
 ## TODO
