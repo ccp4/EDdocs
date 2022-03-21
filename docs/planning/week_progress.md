@@ -1,18 +1,11 @@
-# week 10
-##Monday
-- report
-##Tuesday
-- report
-## Wednesday
-- write to takanori
+#week 12
+## Monday
+- qcc presentation
+- check glycine reflections
 
 
 ## for the 07/03/2022
-- [x] amend the key findings paragraph
-- [x] blochwave wrapper package
-- [x] multislice wrapper
 - [ ] glycine examples to zenodo
-
 
 ## other
 #### Bug fix  

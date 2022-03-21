@@ -124,5 +124,28 @@
 #week 09
 -off
 
-#week 10
+# week 10
+##Monday
+- report
+##Tuesday
+- report
+## Wednesday
+- write to takanori
+- jupyter on binder
+## Thursday
 - off
+## Friday
+- off
+
+# week 11
+## Monday
+- pyscat paper
+## Tuesday
+- off
+## Wednesday
+- takanori found bug
+## Thursday
+- submit after color change
+- check glycine reflections
+## Friday
+- online solver
