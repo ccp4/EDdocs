@@ -20,3 +20,4 @@ docs/documents/report/eqs/
 **/figures/**/*.pdf
 
 docs/documents/keV_poster
+*.~*

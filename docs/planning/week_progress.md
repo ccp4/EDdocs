@@ -1,8 +1,7 @@
-#week 12
+#week 14
 ## Monday
-- qcc presentation
-- check glycine reflections
-
+- BCA2022 conference  
+- edly  
 
 ## for the 07/03/2022
 - [ ] glycine examples to zenodo

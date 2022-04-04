@@ -149,3 +149,19 @@
 - check glycine reflections
 ## Friday
 - online solver
+
+#week 12
+## Monday
+- qcc presentation
+- check glycine reflections
+## Tuesday
+- refinement glycine
+## Wednesday-Friday
+- glycine tiff
+
+
+#week 13
+## Monday
+- edly
+## Tuesday-Friday
+- edly

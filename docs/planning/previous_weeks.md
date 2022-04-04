@@ -29,3 +29,7 @@
 #week 11
 - paper final figures
 - blochwave takanori found bug
+#week12
+- glycine reflections and tiffs
+#week 13
+- edly
