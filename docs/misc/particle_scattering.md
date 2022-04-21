@@ -1,4 +1,37 @@
 # Particle scattering
+
+## eq
+<!--
+\begin{equation}
+  \Big[\grad_r^2 + k_0^2n_p^2\Big]\Psi=0
+\end{equation} -->
+
+<!-- \begin{equation}
+  k_0^2=2m E/\hbar^2
+\end{equation}
+
+\begin{equation}
+  n_p^2=1+\frac{V}{E}
+\end{equation} -->
+
+<!-- \begin{equation}
+  \Psi_p(\bb r_p) = \sum_l b_{pl} G_{pl}(\bb r_p)
+\end{equation} -->
+
+
+<!-- \begin{equation}
+  \big(\bb I - \bb T \big)\bb U = \bb L
+\end{equation} -->
+
+
+<!-- \begin{equation}
+  \bb b_p = \bb b_p^{(0)} + \bb T b_p^{(0)} + \bb T^2 b_p^{(0)} + ... + \bb T^n b_p^{(0)}
+\end{equation} -->
+
+<!-- \begin{equation}
+  I =  \Big| \sum_n f_n \Big| ^2
+\end{equation} -->
+
 ## Coulomb scattering
 
 Historically, it has been studied by

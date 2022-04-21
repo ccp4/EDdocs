@@ -1,25 +1,12 @@
-#week 14
+#week 16
 ## Monday
-- BCA2022 conference  
-- edly  
+- edly
+## Tuesday
+- edly
+## Wednesday
+- edly
+## Thursday
 
-## for the 07/03/2022
-- [ ] glycine examples to zenodo
-
-## other
-#### Bug fix  
-- fix viewer boxes
-- index hkl to viewer (no gui)
-
-### gui
-- add info
-- menus : file(open,save as,close),tool(toggle mode,settings),about(help, shortcuts, bloch simu, multislice simu)
-- simulation specific dialog box
-
-### Glycine
-- Rkin(keV) for diff thickness (100,1000,200) non zone axis
-- Rkin(keV) for different orientations at reasonable thickness
-- I(z) mean,min,max intensity discrepancy over z (given orientation and sweet keV)
 
 ### pytest:
 - [ ] wallpp

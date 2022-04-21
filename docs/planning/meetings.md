@@ -2,7 +2,14 @@
 ## BCA2022
 - Tmatrix&2022
 
-
+## adam qcc diffraction methods 7/04/2022
+hamiltonian done by Energy term(magnetic fields) applied to the quantum system
+Cooling to get to minimum, turn T slowly down to get through barrier ?
+quantum annealing -> turn on tunnelling
+quantum fluctuation turned off ? with the extra bias term ...
+linear algebra as quadratic terms in the optimization problem?
+nb qbits? 3-4 per reflection
+Due to noise several measurements are necessary but can be fast
 
 ## nanED 30/11/2021
 - Kolb (mainz) on  defects :
