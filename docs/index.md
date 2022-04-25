@@ -46,6 +46,7 @@ Login and run examples on [jupyter](http://badb.rc-harwell.ac.uk:8888/?token=d83
 ## pyscat
 - pyScatSpheres available now ! see [package](https://pypi.org/project/pyScatSpheres/) and [documentation](https://pyscatspheres.readthedocs.io/en/latest/).
 - [pyscat article](/documents/articles/pyscat.pdf)
+- [iUCr preprint](/documents/articles/iUCr_drevon2022.pdf)
 - [Intern Quach Christine report](/documents/report_CQ_2021.pdf)
 
 ### News

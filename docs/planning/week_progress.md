@@ -1,17 +1,12 @@
-#week 16
+#week 17
 ## Monday
 - edly
-## Tuesday
-- edly
-## Wednesday
-- edly
-## Thursday
-
 
 ### pytest:
 - [ ] wallpp
 - [ ] multislice
 - [ ] extend the gui
+
 ### Felix:
 - [ ] adapt cif file for wrapper
 - [ ] adapt to continuousED and CBED
@@ -99,11 +94,6 @@ structure solution from numerical simulation data
   - [ ] inelastic scattering
 
 ###others
-  - pattern every 20 slices
-  - [ ] clean code
-  - [ ] run simulation 1935-1945 and tilt simulation
-
-- [ ] clean website
 - ireloh :
   - find excitation errors for ireloh
   - zone axis image
