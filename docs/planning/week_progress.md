@@ -1,6 +1,9 @@
-#week 17
-## Monday
+#week 18
+## Monday  
+- bank holiday
+## Tuesday  
 - edly
+
 
 ### pytest:
 - [ ] wallpp
@@ -11,8 +14,6 @@
 - [ ] adapt cif file for wrapper
 - [ ] adapt to continuousED and CBED
 - [ ] CBED and continuous ED line
-
-
 
 ## TODO
 ### priority

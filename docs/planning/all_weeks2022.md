@@ -182,3 +182,7 @@
 - edly
 ## Friday
 - edly
+
+#week 17
+- edly
+- stgeoire
