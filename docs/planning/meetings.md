@@ -1,6 +1,24 @@
 # meeting
+##18/05/22 Richard Waite
+- coh vs incoh(large for H) cross section
+
+## kyle 4/05/2022
+- symmetry determination from ED?
+
 ## BCA2022
 - Tmatrix&2022
+
+## adam qcc diffraction methods 9/05/2022
+- triplet rule converging towards 0 with SA.
+- difference QA vs AQC
+- Dwave number of qbits
+- qbit : semi-definite programming!  
+- QA : shortcuts may be taken by the physical nature of superposition
+- Quantum Fourier transform (QFT) Dan Brown
+- grover search to find out structure from QFT
+- HHL algorithm for LA
+- CCP-Q
+- VQE =>
 
 ## adam qcc diffraction methods 7/04/2022
 hamiltonian done by Energy term(magnetic fields) applied to the quantum system

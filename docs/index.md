@@ -30,7 +30,7 @@ Contribute to the CCP4 Advanced integrated approaches to macromolecular structur
 - [bloch_tools presentation](/documents/bloch_tools.mp4)
 - [full report]({{serv}}:8010/report.html) summary
 - [documentation]({{serv}}:8001)
-- [felix walk-through](/documents/felix)
+- [felix walk-through](documents/felix)
 
 <!-- - [tests report]({{serv}}:8010/report.html)
 - [code coverage]({{serv}}:8011/index.html) -->

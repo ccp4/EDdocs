@@ -1,11 +1,14 @@
-#week 18
-## Monday  
-- bank holiday
-## Tuesday  
+# week 21
+## Monday
 - edly
+- mails
+## Tuesday
+
+#week 22-23
+- off
 
 
-### pytest:
+### pytest
 - [ ] wallpp
 - [ ] multislice
 - [ ] extend the gui

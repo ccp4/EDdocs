@@ -39,3 +39,9 @@
 - edly
 #week 17
 - edly
+#week 18
+- qa
+#week 19
+- qc
+#week 20
+- edly

@@ -186,3 +186,36 @@
 #week 17
 - edly
 - stgeoire
+
+#week 18
+## Monday  
+- bank holiday
+## Tuesday  
+- edly
+- spot finding AI
+- qa
+
+#week 19
+## Monday
+- edly
+- qcc meeting
+## Tuesday
+- live edly
+- QC (EQV, grover search,CCP-Q)
+## Wednesday-Friday
+- QC
+
+# week 20
+## Monday
+- edly live
+- QC
+## Tuesday
+- edly
+## Wednesday
+- edly
+## Thursday
+- edly
+## Friday
+- edly
+## Saturday
+-edly
