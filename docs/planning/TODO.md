@@ -1,3 +1,5 @@
+
+
 # Prority
 - Readings  :
     - [ ] review on simulating protein ED
@@ -13,9 +15,9 @@
 ### paper
 - Plot :
   - [x] fig1    : problem setup
-  - [ ] fig4b   : fonts
+  - [x] fig4b   : fonts
   - [x] fig5a   : fit+ax-A,ax-kV
-  - [ ] fig5b   : fonts
+  - [x] fig5b   : fonts
   - [x] figa    : add carbone points on sigma
   - [x] fig6b   : Born+MS
   - [x] fig7ab  : fonts + sum(err(cp)) instead of f2

@@ -1,4 +1,16 @@
 # meeting
+##25/5/22 Richard Beanland
+- continuousED
+- ask garib refinement software
+- non linear least squares in Felix
+- data from : tin gruene(albait), rigaku(optimizing the path), eldico()
+- which frame excitation error is zero for a given rotation axis
+- python into felix with (felix refactoring)
+- dials : pets like rocking curve output  
+- thickness dependent frame
+- shared memory for structure factors
+- automate scripts
+
 ##18/05/22 Richard Waite
 - coh vs incoh(large for H) cross section
 

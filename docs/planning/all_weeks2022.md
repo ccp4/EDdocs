@@ -210,12 +210,22 @@
 - edly live
 - QC
 ## Tuesday
-- edly
+- edly : Usernames and bug fixes
 ## Wednesday
-- edly
+- edly : bug fixes
 ## Thursday
-- edly
+- edly : bug fixes
 ## Friday
-- edly
+- edly : Felix
 ## Saturday
--edly
+- edly : Gemmi
+
+# week 21
+## Monday
+- edly
+- mails
+## Tuesday
+- qc : vqe
+
+#week 22-23
+- off

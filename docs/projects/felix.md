@@ -197,6 +197,25 @@ SUBROUTINE read_cif(IErr)
   RBasisAtomPosition(ind,3)= z
 ```
 
+### Read symmetries from cif
+```C
+//read_cif_mod.f90
+SUBROUTINE read_cif(IErr)
+! count how many symmetry elements
+  f1 = char_('_symmetry_equiv_pos_as_xyz', name)
+  ISymCount=ISymCount+1
+  IF(loop_ .NEQV. .TRUE.) EXIT
+
+  f1 = char_('_symmetry_equiv_pos_as_xyz', name)
+  DO ind=1,ITHREE
+    Ipos= SCAN(name, "zZ")
+    IF(name(Ipos-2:Ipos-2)=="-") IFRACminus=-1
+    RSymVec(ISymCount,ind)=IFRACminus*REAL(Inum)/REAL(Idenom)
+    RSymMat(ISymCount, ind,2)=IoneI
+
+```
+
+
 ### Construct all coordinates
 ```C
 SUBROUTINE UniqueAtomPositions(IErr)
@@ -270,7 +289,21 @@ DO ind = 1,INhkl
 ```
 
 ## Misc
-### read
+### read cif file
+```C
+//read_cif_file_mod.f90
+f1 = char_('_chemical_formula_sum', name)
+f1 = numb_('_cell_angle_alpha', cela, siga)
+f1 = numb_('_symmetry_Int_tables_number',numb,sx)
+!get atomic number
+!coordinates of the basis
+f2 = numb_('_atom_site_fract_x', x, sx)
+! count how many symmetry elements
+f1 = char_('_symmetry_equiv_pos_as_xyz', name)
+```
+
+
+### read inp file
 variables read from felix.inp into `RIndependentVariable`:
 ```C
 //read_files_mod.f90
@@ -279,6 +312,7 @@ ILine= ILine+1; READ(IChInp,'(27X,I15.1)',ERR=20,END=30) IPixelCount
 //felix/refinementcontrol_mod.f90:        
 RConvergenceAngle = RIndependentVariable(ind)
 ```
+
 ### set parameters
 ```C
 //felix/setup_reflections_mod.f90:      

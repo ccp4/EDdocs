@@ -1,12 +1,11 @@
-# week 21
+#week 24
 ## Monday
-- edly
-- mails
-## Tuesday
+- dyn refinement cluster
+- quantum optics 4h
 
-#week 22-23
-- off
-
+### qc
+- understand reconfigurable optical circuits
+- VQE recap
 
 ### pytest
 - [ ] wallpp
