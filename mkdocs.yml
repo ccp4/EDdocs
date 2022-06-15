@@ -43,14 +43,16 @@ nav:
      - 'Scattering' : 'projects/scattering.md'
      - 'Dynamical diffraction' : 'projects/dynamical_diffraction.md'
      - 'Multislice' : 'projects/multislice/index.md'
- - Literature:
+ - Books:
      - 'Electron Crystallography, Zou, 2011' : 'readings/zou2011.md'
      # - 'Advanced TEM, Zuo, Spence, 2017' : 'readings/Spence2017.md'
      - 'chronology' : 'readings/chrono.md'
      - 'Advanced computing in EM, Kirkland, 2010' : 'readings/Kirkland2010.md'
-     - 'Papers' : 'readings/papers.md'
+ - Literature:
+     - 'ED Papers' : 'readings/papers.md'
      - 'Multislice Literature' : 'readings/multislice.md'
      - 'Inelastic scattering' : 'readings/inelastic_scattering.md'
+     - 'Quantum computing' : 'readings/qc.md'
      # - 'Misc' : 'readings/misc_papers.md'
      # - 'CowleyMoodie1957' : 'readings/CowleyMoodie1957.md'
      # - 'inverse scattering problem' : 'readings/inverse_scattering.md'
