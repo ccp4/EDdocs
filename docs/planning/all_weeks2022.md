@@ -229,3 +229,12 @@
 
 #week 22-23
 - off
+#week 24
+
+## Monday
+- dyn refinement cluster
+- quantum optics 4h
+## Tuesday- Thrusday
+- qc and qoptics
+## Friday
+- setting cluster

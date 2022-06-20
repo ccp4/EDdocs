@@ -1,7 +1,6 @@
-#week 24
+#week 25
 ## Monday
-- dyn refinement cluster
-- quantum optics 4h
+- complete cluster and run jobs
 
 ### qc
 - understand reconfigurable optical circuits

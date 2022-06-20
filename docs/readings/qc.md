@@ -46,18 +46,8 @@ Algorithm for finding the eigenvalue of an operator using a variational approach
 
 ### Questions
 
-I understand that the VQE computes the expectation value of a Hamiltonian operator (or Rayleigh Ritz quotient) according to the standard variational Ritz method. The trial states are prepared by the reconfigurable circuit by assigning values to phase shifters according to some parameters fed by a classical optimizer.
-Similar to QPE, the computational quantum advantage boils down to the representation of the quantum state, which for a $n$ q-bit system may be represented in a superposition of $2^n$ basis states. A classical computer working on the $2^n$ amplitude coefficients need $O\bigl((2^n)$ floating operations to evaluate an expectation value. On the other hand, the quantum processor directly operates on the q-bit state for which $O(1/p^2)$ repeated measurements are necessary to get an expectation value with precision $p$.
-Considering that the minimizer scales linearly with the number of parameters (Nelder-Mead requiring $N+1$ evaluations at each update step), the overall quantum complexity is $O\bigl(n^r M |h^2|p^{-2}\bigr)$ in the quantum case against $O\bigl(M(2^n)^(1+r)\bigr)$ for classical case.
-I wonder if $n$ is the actual number of q-bit?  The prototype works with 2-qbit but 6 parameters are being optimized. I can see from the circuit that the number of physical gates should scale linearly with the number of qbits provided that 4 phase shifters are used per qbit, in which case the number of parameters should also scale linearly with the number of qbits.
-This brings me to some questions with respect to the parametrization of the state :
-- In the supplementary information, the proposed mapping uses 6 parameters to represent a 2 q-bit state. Do you know (or have references about) how this parametrization evolve for a 3,4,5 q-bit system represented by 8,16,32 amplitudes respectively?
-- The coupled cluster is mentioned in the paper and references as a special ansatz intractable classically. Is this ansatz somehow used and related to this mapping ?
-- 6 parameters are mapped to 8 physical components, the phase shifters, among which 2 are used to account for the tensor product of Pauli operatiors (in the supplementary information $\phi_5,\phi_6$ are set to $\pi$ to actually represent the identity operator). Do you know how the mapping changes for the different tensor products $\sigma_i$ and $\sigma_i\otimes\sigma_j$ ? Would higher order tensor products require more channels and phase shifters ?
 
-
-<!-- Optionally, it would help me to have the correct picture of how the expectation value of the tensor product of Pauli operators is obtained? My understanding is that each waveguide has a photon detector and the combined detections gives the overall state of the photon pair after passing through the processor. I wonder if this measured state already encode the expectation  ? The expectation value as the mean of a set of measurements.
-
+<!--
 ### Formulation and implementation
 - Following section Applications to k-sparse Hamiltonians
 - The phase shifters are used to parametrize both the input state and the tensor product and the mapping is described in the supplementary information. The values $\phi_5,\phi_6$ are set to $\pi$ to represent the identity operator. Do you know what the values are for the different tensor products $\sigma_i$ and $\sigma_i\otimes\sigma_j$ ? -->

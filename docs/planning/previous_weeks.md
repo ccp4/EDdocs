@@ -49,3 +49,6 @@
 - edly,qc,mails
 #week 22-23
 - off
+#week 24
+- dyn refine
+- qc qoptics
