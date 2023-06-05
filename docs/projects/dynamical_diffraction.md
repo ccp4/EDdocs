@@ -4,6 +4,23 @@
 
 
 ## Bloch wave
+
+<!-- The wave function:
+
+\begin{equation}
+  \Psi_{\bb k}(\bb r) = e^{2i\pi\bb k\cdot\bb r}\sum_{\bb G}c_{\bb G} e^{2i\pi\bb G\cdot\bb r}
+\end{equation}
+
+\begin{equation}
+  S_{\bb G}C_{j,\bb G} + \sum_{\bb G^{'}}\frac{V_{\bb G-\bb G^{'}}}{2k_0} C_{j,\bb G^{'}} &=& \gamma_jC_{j,\bb G}
+\end{equation} -->
+
+\begin{equation}
+  I_{\bb G}(z_{thick}) = \left| \bigl(\bb C\bb e^{2i\pi\boldsymbol{\gamma_j}z_{thick}}\bb C^{-1} \bigr)_{\bb G} \right|^2
+\end{equation}
+
+
+### additional details
 Assumptions :
 
 - Elastic scattering : $E$ is constant at the incident electron energy.
@@ -29,8 +46,24 @@ Using the boundary conditions that the incident wave is a plane wave solely alon
  is the scattering matrix.
  The far field diffraction pattern is then obtained from standard Fourier transform since it corresponds to propagation in free space. As a result $S_{\bb G0}^2$ can readily be identified as the diffraction intensity of beam $\bb G$.  
 
+### Geometry documentation
 
+Vectors can be expressed in various referential :
 
+- $lab$ : laboratory cartesian frame where $x$ along rotation axis and $-z$ along beam   
+- $car$ : crystal cartesian frame    where $x$ along $\bb a_1$ or $\bb b_1$ and $(x,y)$ is the same plane as $(\bb a_1,\bb a_2)$ or $(\bb b_1,\bb b_2)$.
+- $lat$ : lattice frame              where $(\bb a_1,\bb a_2,\bb a_3)$, may be non orthogonal
+- $rec$ : reciprocal lattice frame   where $(\bb b_1,\bb b_2,\bb b_3)$, may be non orthogonal
+
+Relationship :
+
+- $\bb u_{lab}=\bb A_{car}\bb u_{car}$
+- $\bb u_{rec}=\bb A_{rec}^{-1}\bb u_{car}=(h,k,l)$
+- $\bb u_{car}=\bb A_{lat} (u,v,w)$
+
+Pets provides $\alpha$,$\beta$ angles and the orientation matrix $\bb A_{UB}$ so that $\bb R=\bb R_x(\alpha)\cdot\bb R_y(\beta)\cdot\bb A_{UB}$ and $\bb g_{lab}=\bb R\cdot\bb (h,k,l)$.
+
+Pets provides the zone axis beam orientation as $\bb K_{lat} = (u,v,w)$ so that in the laboratory frame we should have $\bb K_{lab}=\bb R\cdot\bb A^{-1}_{rec}\bb A_{lat}\cdot\bb K_{lat}=(0,0,-1)$
 
 ## Applications
 ### 2-beam configuration

@@ -37,7 +37,9 @@ nav:
      - 'Multislice 3D TEMSIM' : 'projects/multislice/temsim.md'
      - 'Multislice 2D' : 'projects/multislice/multi2D.md'
      - 'Bloch' : 'projects/bloch/bloch.md'
-     - 'NearBragg' : 'projects/nearBragg/index.md'
+     - 'Felix' : 'projects/felix.md'
+     - 'Dyngo' : 'projects/dyngo.md'
+     # - 'NearBragg' : 'projects/nearBragg/index.md'
      #- 'Wallpapers' : 'projects/wallpapers/index.md'
  - Theory:
      - 'Scattering' : 'projects/scattering.md'
@@ -68,4 +70,4 @@ nav:
  - Misc:
      - 'Commands' : 'misc/useful.md'
      - 'Python' : 'misc/python.md'
-     #- 'Scattering particles' : 'misc/particle_scattering.md'
+     - 'Scattering particles' : 'misc/particle_scattering.md'

@@ -1,4 +1,81 @@
 # meeting
+## 27.04.22 : Matthews Foulkes ML for solving Schrodinger's equation
+how do you train it ?
+variational principle for the loss function
+algorithmic differentiation for the backward propagation(gradient descent)
+statistical estimate of the loss function
+
+Compared with early ansatz ?
+Coupled cluster,Hartree-Fock
+
+problem: Pauli principle
+antisymmetric function for the neural network like a Slater determinant
+more flexible than Hartree orbitals
+
+build a vector of functions for each atom and build a determinant
+from them used to evaluate the loss function with a markov chain ! ?
+
+
+Ground state and excited states ? Relativistic effects?
+Compared to the exact ? What method gives the exact ?!?! in even small atoms?
+
+Energy scale QC hard ??
+Represent the wave function ?????
+
+Quantum phase transition applications !
+Kuangdai Leng 
+
+## SCD sustaniability 5/12/2022
+### python killing the planet :
+- table of popular programming languages
+- advantages of python : support
+- normalized energy usage : fortran/C++/C but Rust !
+- python and c : comparison between cpython, cython and the others,numba with njit
+- python implementations/interpreters
+
+## Beanland 14/07/2022
+
+## Eugene
+- ccp4 work package : refinement
+- 4 year before it becomes open end and possibility to apply for grants myself ...
+- ED for proteins : ion local charges etc...
+- magnetic field for spin resolved information
+- water orientation in proteins
+- ED failed crystallization : contact Courtney Lendon
+
+
+## stefano 8/07
+- datasets at thickness
+
+## 29/06 beanland
+- Calculation surface normal : Silicon thin sheet
+- variable thickness made things worse
+- best thicknesses across
+- pets-python-felix pipeline cluster : felix with 500 cores
+    - input beam profile and beam orientations
+- speed-up square images
+- beam orientation
+- revive woundis : diffraction contrast dislocations.
+  - feed beam from a block to the other
+  - pyOpenGL
+
+
+## 29/6/22 David mcDonough
+### neural networks
+- ML activation function (minima non linear real surface?)
+- too many parameters => overfitting
+- different images from kernel (real )
+- critical but skilled
+- k-nearest neighbors
+- Bayesian approach
+- provides uncertainty
+- physical chemistry : openSource RDKit cheminformatics and ML
+- CNN space description (optimising parameter choice) ? low dimensionality reduction
+- PDE solving ?
+- tpot machine learning architecture gives the architecture but not learning has not been done ????
+- choosing architecture : best architectures (competition and ML leaderboard)
+- ref : deep learning goodfellow, O'reilly scikit ML
+
 ##25/5/22 Richard Beanland
 - continuousED
 - ask garib refinement software

@@ -121,6 +121,13 @@ SUBROUTINE BlochCoefficientCalculation
             RFullWaveIntensity(1:INoOfLacbedPatterns)
 ```
 ### Excitation error
+Formula used :
+$r_{k,1} = -g/2$,
+$r_{k,3} = \sqrt{k^2-rk_1^2}$,
+$K_{p,1} = \bb K_{tilt}\cdot\bb g/||g||$,
+$K_{p,3} = \sqrt{k^2-Kp_1^2})$,
+$RdevPara=-sign(2\bb g\cdot\bb K_{tilt} + g^2) g\sqrt{2(k^2-\bb r_k\cdot\bb K_p)}/k$
+
 ```c
 //bloch_mod.f90
 SUBROUTINE BlochCoefficientCalculation

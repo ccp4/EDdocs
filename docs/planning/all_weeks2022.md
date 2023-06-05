@@ -229,12 +229,28 @@
 
 #week 22-23
 - off
-#week 24
 
+#week 24
 ## Monday
 - dyn refinement cluster
 - quantum optics 4h
-## Tuesday- Thrusday
+## Tuesday- Thursday
 - qc and qoptics
 ## Friday
 - setting cluster
+
+#week 25
+## Monday
+- complete cluster and run jobs
+
+#week 26-28
+- mur
+#week 29-30
+- treuil
+
+
+# week 41
+- adapt pytest launch only when changesm
+- update website
+- update bloch for Dyngo
+    - run Dyngo with GaAs

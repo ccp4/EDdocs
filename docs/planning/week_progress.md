@@ -1,6 +1,51 @@
-#week 25
-## Monday
-- complete cluster and run jobs
+#week 22
+## Friday
+<!-- - import dataset -->
+- tests and code coverage stfc-cloud
+- add link to changelog in ccp4-ed/website
+
+## TODO
+- thickness dependent Rfactor
+- get tests for frontend/backend edly with github actions
+- put tests for blochwave on same server as edly + github actions
+- proper install guide of edly locally
+- code coverage link on edly
+- ML Schrodinger M Folkes
+- PWT Archie Howie
+
+1 : more simulated datasets
+2 : feed it to the ccp4 pipeline (including dials pipeline)
+3 : think how the sim data can be used for training ML for scaling
+
+### Dyngo
+- run Dyngo with Glycine
+    - [x] check excitation errors :
+      - [x] setup test for comparison
+      - [x] values are different even with u=-latvec.dot(uvw)
+      - [x] redo equivalence demo for Rx(alpha).Ry(beta) and uvw
+      - [x] started comparing gcart
+      - [x] excitation errors are very close from bw and dyngo (latvec.T.dot(uvw) was necessary)
+      - [x] Sg*2k/sqrt(1+gi/K) makes a significant difference
+      - [x] use this Sg
+      - [x] check Felix excitation error(looks ridiculous)
+      - [x] fixed gi/K into gn/Knorm makes a significant difference
+    - [x] compare matrix
+    - [x] check structure factor :
+      - [x] Ug = U/(sqrt(1+gi)sqrt(1+gj))
+      - [x] check prefactor
+    - [x] include all necessary beams with corresponding flag
+    - [x] check intensities (factor inside the exponent)
+        - [x] fix all allint negative int
+    - [ ] understand scale from pets
+    - [ ] sweep thickness
+    - [ ] comparison  
+
+
+### Website
+- COOT
+- release v5 + tests
+- traffic analysis
+- export data
 
 ### qc
 - understand reconfigurable optical circuits
@@ -16,11 +61,11 @@
 - [ ] adapt to continuousED and CBED
 - [ ] CBED and continuous ED line
 
-## TODO
 ### priority
 - [ ] Felix code adapted to CED
 - [ ] document and test+cov the code
 - [ ] pyscat corrections
+
 ### minor
 - [ ] plane wave isoE vs blochwave
 - TDutils :
