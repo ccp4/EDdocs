@@ -31,6 +31,7 @@ Contribute to the CCP4 Advanced integrated approaches to macromolecular structur
 - [full report]({{serv}}:8010/report.html) summary
 - [documentation]({{serv}}:8001)
 - [felix walk-through](projects/felix)
+- [edly changelog](projects/edly)
 
 <!-- - [tests report]({{serv}}:8010/report.html)
 - [code coverage]({{serv}}:8011/index.html) -->

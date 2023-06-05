@@ -39,6 +39,7 @@ nav:
      - 'Bloch' : 'projects/bloch/bloch.md'
      - 'Felix' : 'projects/felix.md'
      - 'Dyngo' : 'projects/dyngo.md'
+     - 'Edly'  : 'projects/edly.md'
      # - 'NearBragg' : 'projects/nearBragg/index.md'
      #- 'Wallpapers' : 'projects/wallpapers/index.md'
  - Theory:
