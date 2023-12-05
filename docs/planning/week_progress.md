@@ -1,21 +1,81 @@
-#week 22
+- ED
+  - [x] adapt to external Sw using UBmatrix
+  - [ ] uvw given as miller indices in the crystal frame
+  - [ ] test for dials,pets,xds
+  - [x] rock curve
+- edly bug
+  - [x] issue#61
+  - selenium test + install on remote
+- mail palat
+- run the nanobragg code
+
+- edtools overview
+- sfac check against edtools
+- show intensities redistribution by properly calculating the kinematic intensities.
+- redo the orientation check script between dyngo and ccp4ED
+- sigma/a^2
+
+### dips
+- [x] more finely sliced
+- [x] larger angles
+- [x] larger thicknesses
+- [x] check weird simu
+- [x] other molecules
+
+# week 32
+- [ ] prepare process script biotin
+- [x] get simulated frames in the viewer
+- [x] fix the path error message when importing (change_path best option so far)
+- [x] improve memory and speed by reading structure factor from file
+- [ ] Run the full high res simu and save frames for 5 different thicks
+
+# week 29
+## Thursday
+- interesting read on observation of Anderson localization using photonic crystals
+- Interesting fabrication of photonic crystal using (REVERSIBLE) photorefractive effect to change the refractive index of a material
+- FELIX
+- Silicon on edly
+- T-matrix at high energy and phase shift stuffs
+- plot 2D HEED bloch wave inside the crystal !!!
+- python lib compute coulomb phase shifts
+
+# week 23
 ## Friday
-<!-- - import dataset -->
-- tests and code coverage stfc-cloud
-- add link to changelog in ccp4-ed/website
+- FovsFc reflections
+- Silicon run
+- solve ith felix
+- run on clusters
+- produce rocking curves for all reflections
+- server :
+  - virtual screen for selenium
+- tests :
+  - select_reflection
+  - zenodo
+  - Rfactor
+  - other coverage elements
+
+## Thursday
+- beanland meeting
 
 ## TODO
-- thickness dependent Rfactor
-- get tests for frontend/backend edly with github actions
-- put tests for blochwave on same server as edly + github actions
+- thoroughly test edly :
 - proper install guide of edly locally
-- code coverage link on edly
+- tests and code coverage stfc-cloud
+- occasional bugs
+- fix pets import
+- COOT
+- revive felix solver option
 - ML Schrodinger M Folkes
 - PWT Archie Howie
 
 1 : more simulated datasets
 2 : feed it to the ccp4 pipeline (including dials pipeline)
 3 : think how the sim data can be used for training ML for scaling
+
+
+
+
+
 
 ### Dyngo
 - run Dyngo with Glycine

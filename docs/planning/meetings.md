@@ -1,4 +1,29 @@
 # meeting
+
+## jerome Jackson 3/11/12
+- G related to g + Vg 
+- increase the scattering strength
+- revisit with mean free path
+- inelastic/elastic happen concurrently
+- comparison is not possible
+
+##CCP4 dev meeting
+### ccp4em
+- fastAPI, reactjs, google-ui : run locally(browser), image viewer
+### testing ccp4 cloud
+- selenium headless
+- 2cco,6oc4,5v6e
+## alpha fold
+- mesh taxonomy, LLM, what are vector embedding (dim1 and dim2)?
+- jmateosgarcia@deepmind.com
+
+## BSC Southampton 2023
+Electron diffraction has gained popularity over the past few years as an alternative way to X-ray diffraction for  molecular structure determination.
+This technique leverages the strength of the electron-atom Coulomb  interaction enabling experiments to be carried out using nano crystals at low radiation dose. This is of great interest for biological samples and in particular macromolecules which are sensitive to radiation damage and can be hard to grow to large enough dimensions traditionally necessary for X-ray diffraction.
+By adapting the X-ray density atomic form factors to electrostatic potential through the Mott-Bethe formula, it has been demonstrated that structures can be solved from electron diffraction experiments using the standard kinematic approximation. However, the predicted intensities and resulting Rfactors tend to be significantly worse than those obtained from X-ray experiments. It has in fact been established both theoretically and experimentally that the kinematic approximation is too crude and should be replaced by rigorous dynamical diffraction theory.
+For small molecules, it has been shown that taking into account dynamical effects not only consistently improves Rfactors but also allows to resolve information such as hydrogen positions, absolute structure determination and local charges which are otherwise not typically accessible through standard X-ray diffraction experiments.
+Although techniques and software targeted at small molecules have been well developed, both theoretical and computational work is still required to tackle macromolecular crystals. The presence of defects, solvent scattering and inelastic scattering significantly complicate the coherent dynamical diffraction picture while the very large unit cells and number of atoms in macromolecular crystals make it a computational challenge.  
+
 ## 27.04.22 : Matthews Foulkes ML for solving Schrodinger's equation
 how do you train it ?
 variational principle for the loss function
@@ -23,7 +48,7 @@ Energy scale QC hard ??
 Represent the wave function ?????
 
 Quantum phase transition applications !
-Kuangdai Leng 
+Kuangdai Leng
 
 ## SCD sustaniability 5/12/2022
 ### python killing the planet :
