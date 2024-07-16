@@ -77,7 +77,7 @@ where :
 
 - $\xi_{\bb g}=k_0/U_{\bb g}$ is the Pendellosung thickness (in $A$) with $k_0=1/\lambda$ being the wave number.
 - $w_{\bb g}=S_g\xi_g$ is the excitation error scaled by $\xi_g$.
-- $U_{\bb g}=2me/h^2 v_{\bb g}=F_{\bb g}/\cc V_{cell}$ is the form factor Fourier component (in $A^{-2}$).
+- $U_{\bb g}=2me/h^2 v_{\bb g}=F_{\bb g}/\pi\cc V_{cell}$ is the form factor Fourier component (in $A^{-2}$).
 
 ### kinematic approximation
 
@@ -87,7 +87,7 @@ The intensity of a Bragg spot can be established as :
 \end{equation}
 where :
 
-- $S_g$ is the excitation error which is another notation for $q=\sin\theta/\lambda$.
+- $S_g$ is the excitation error.
 - $t$ is the thickness.
 - $\sigma$ the interaction parameter (in $rad/kVA$).
 - $v_g$ the Fourier components (in $V$).
