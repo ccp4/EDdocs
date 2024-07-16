@@ -4,6 +4,7 @@ docs/articles
 docs/projects/multislice/figures/ireloh/gif
 docs/projects/multislice/figures/ireloh/*sim.png
 docs/projects/multislice/figures/ireloh/*exp.png
+.env
 
 reports/
 dials/
