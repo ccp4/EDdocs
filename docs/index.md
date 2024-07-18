@@ -6,7 +6,32 @@
 ## Goals
 Contribute to the CCP4 Advanced integrated approaches to macromolecular structure determination.
 
-## WP4 BBSRC grant
+## installations 
+### installing blochwave
+To install blochwave in developer mode do :
+
+```
+git clone https://github.com/ccp4/electron-diffraction
+./install.sh
+```
+
+### running the jupyter-notebooks ED-studies
+This will clone the ED_studies repo and, create a virtual environement and launch jupyterlab
+```
+git clone https://github.com/ccp4/ED_studies
+./install.sh
+source .env/bin/activate
+jupyter-lab
+```
+
+### installing and running edly
+```
+git clone https://github.com/ccp4/edly
+./install.sh
+./serve
+```
+
+<!-- ## WP4 BBSRC grant
 - [ ] Use and develop electron diffraction simulation tools including
     - [x] Dynamical diffraction
     - [ ] inelastic scattering
@@ -16,7 +41,7 @@ Contribute to the CCP4 Advanced integrated approaches to macromolecular structur
     - [ ] Thermal diffuse scattering
 - [ ] Simulate multiple scattering in macromolecular crystals
     - [ ] glycine
-- [ ] Identify corrections opportunities at the scaling stage in DIALS
+- [ ] Identify corrections opportunities at the scaling stage in DIALS -->
 
 ## Resources
 - [iUCr poster](/documents/iUCr2021/poster.pdf)
