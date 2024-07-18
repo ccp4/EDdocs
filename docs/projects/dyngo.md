@@ -1,8 +1,49 @@
 # Dyngo
 
+## input and output files eldyn
+
+### input
+Here is an example of an `eldyn` input file.
+It contains the structure factors for a list of reflections and all the necessary information to comupte the geometry of the setup  
+```
+int iedt thr 8   		                
+
+Zone# 79 			                      
+Noncentrosymmetric         0	      
+Refinement I 			                  
+    0.039100    0.088330   -0.012310
+    0.124890   -0.026130    0.004950
+    0.004770   -0.041210   -0.029570
+    0.025100  848.000000    0.000000    1.000000    0.010000    0.100000    0.600000   48 	                
+ 1.000000-0.640800-0.296020 33.90000-0.977000 1.000000						
+264.0878 920.9828 0.000000 0.000000                        1000					
+ 0.000000 0.000000                                          00					
+   0   0  -1    0.00000E+00    0.00000E+00   -0.11059E-04   -0.16293E-05    6    0.21940E-01
+   ...
+```
+
+here are the parameters explanation :
+```
+# calculation mode using 8 threads
+#
+# unimportant zone axis info
+# centrosymmetric flag
+# refinement type
+# orientation matrix as 3x3
+# wavelength,scale,omega,maxstrong,stronselectionlimit,outputmaxsgmax,outputprefactor,phisteps
+# scale,thickness,xnorm,ynorm,refkeys
+# corrections for alpha,beta,phi
+### list of reflections containing for each line :
+#h,k,l,int,sigma,A,B,flag,last number seems to be unused
+```
+
+### output
+```
+#Rfactor
+### list of reflections flagged as output containing
+# h,k,l,int,all_SF_derivatives
+```
 ## code walk through
-
-
 
 ### body
 ```fortran
