@@ -6,7 +6,7 @@
 ## Goals
 Contribute to the CCP4 Advanced integrated approaches to macromolecular structure determination.
 
-## installations 
+## installations
 ### installing blochwave
 To install blochwave in developer mode do :
 
@@ -14,6 +14,8 @@ To install blochwave in developer mode do :
 git clone https://github.com/ccp4/electron-diffraction
 ./install.sh
 ```
+
+in `src/user.mk` make sure `OPT64NGNU` is selected to compile with gfortran
 
 ### running the jupyter-notebooks ED-studies
 This will clone the ED_studies repo and, create a virtual environement and launch jupyterlab

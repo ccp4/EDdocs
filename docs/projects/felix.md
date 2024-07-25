@@ -1,6 +1,153 @@
 # Felix
 
-## Flow
+## elasticluster
+Felix makes sense to be run on the clusters as it is fortran mpi parallelized.
+Here is described how to setup and start a cluster with elasticluster.
+`elasticluster` is a framework to setup a cluster similar to `starcluster`.
+
+It must be installed from source on the machines which will create the clusters.
+```
+cd elasticluster
+git clone https://github.com/elasticluster/elasticluster.git src
+cd src
+pip install -e .
+```
+
+Then it must be configured as followed in the docs. The configuration files are used to placed in `.elasticluster/config.d` and define :
+
+- the cloud which is `openstack` at stfc
+- the login credentials to the nodes which essentially defines the ssh keys used to access the nodes
+- the cluster setup which uses `ansible` to automate the nodes setup and `slurm` as the grid engine.
+- the cluster section which defines different cluster templates for specific clusters which will be used with the command `elasticluster startcluster <cluster_template> `. THe templates can be seen with `elasticluster list-templates`
+
+It is important to source the openstack login credentials `source CCP4-ED-openrc.sh` before using elasticluster.  
+
+
+
+**cloud section**
+```
+[cloud/openstack]
+provider=openstack
+```
+
+**login**
+It is simpler to create the key pairs from the stfcloud openstack interface and place them into your .ssh folder :
+
+```
+[login/<user_id>]
+image_user=<username>
+image_sudo=True
+user_key_name=test1 #name of the key pair
+user_key_private=~/.ssh/test1.pem #key pair private
+user_key_public=~/.ssh/test1.pub #publickey
+```
+
+**setup**
+```
+[setup/gridengine-sl7]
+provider=ansible
+frontend_groups=gridengine_master,ganglia_master
+compute_groups=gridengine_worker,ganglia_monitor
+lcompute_groups=gridengine_worker,ganglia_monitor
+# install NIS/YP to manage cluster users
+global_var_multiuser_cluster=yes
+# ansible requires python2, which is default on SL7
+global_var_ansible_python_interpreter=/usr/bin/python
+# allow reboot
+global_allow_reboot=yes
+# for Ganglia, selinux needs to be disabled
+disable_selinux=yes
+
+[setup/gridengine-ubuntu]
+provider=ansible
+frontend_groups=gridengine_master,ganglia_master
+compute_groups=gridengine_worker,ganglia_monitor
+# install NIS/YP to manage cluster users
+global_var_multiuser_cluster=yes
+global_var_ansible_python_interpreter=/usr/bin/python2.7
+# for Ganglia, selinux needs to be disabled
+disable_selinux=yes
+
+[setup/slurm-sl7]
+provider=ansible
+frontend_groups=slurm_master,ganglia_master,ganglia_monitor
+compute_groups=slurm_worker,ganglia_monitor
+# install NIS/YP to manage cluster users
+global_var_multiuser_cluster=yes
+# ansible requires python2, which is default on SL7
+global_var_ansible_python_interpreter=/usr/bin/python
+# allow reboot
+global_allow_reboot=yes
+# for Ganglia, selinux needs to be disabled
+disable_selinux=yes
+
+[setup/slurm-ubuntu]
+provider=ansible
+frontend_groups=slurm_master,ganglia_master,ganglia_monitor
+compute_groups=slurm_worker,ganglia_monitor
+# install NIS/YP to manage cluster users
+global_var_multiuser_cluster=yes
+# ansible requires python2, which is default on SL7
+global_var_ansible_python_interpreter=/usr/bin/python2.7
+# allow reboot
+global_allow_reboot=yes
+# for Ganglia, selinux needs to be disabled
+disable_selinux=yes
+```
+
+**cluster**
+```
+[cluster/ccp4cluster]
+cloud=openstack
+login=<user_id>
+setup=gridengine-sl7
+frontend_nodes=1
+compute_nodes=2
+ssh_to=frontend
+network_ids=b283fd53-a801-403a-8b6d-e6590d429774
+image_id=93b61781-e8ab-4f3d-8c16-2bacef60c623
+
+[cluster/ccp4cluster/frontend]
+flavor=l3.tiny
+security_group=default
+
+[cluster/ccp4cluster/compute]
+security_group=default
+flavor=l3.tiny
+```
+
+## installation and compilation
+
+#### dependencies
+general compilers and libraries
+`sudo apt-get install gfortran mpi libopenmpi-dev libblas-dev liblapack-dev`
+
+fft library
+```
+mkdir fftw
+cd fftw
+wget http://www.fftw.org/fftw-3.3.9.tar.gz
+tar -xvzf fftw-3.3.9.tar.gz
+cd fftw-3.3.9
+./configure --enable-shared
+make
+sudo make install
+```
+
+### compilation
+getting the continousED repo
+```
+git@github.com:WarwickMicroscopy/Felix.git  
+git checkout cRED
+```
+
+change the compiler in `src/user.mk` to gfortran `PLATFORM=OPT64NGNU`.
+
+now the simple `make` should work.
+
+### running an example
+## code walkthrough
+### Flow
 
 ```C
 //felixrefine.f90
@@ -29,8 +176,8 @@ SELECT CASE(IRefineMethodFLAG)
   CASE(1) CALL SimplexRefinement
 ```
 
-## Simulation
-### Parallelization
+### Simulation
+#### Parallelization
 ```C
 //felix/felixrefine.f90:  
 /* MPI initialization*/
@@ -45,7 +192,7 @@ CALL message(LS,"total number of MPI ranks ", p, ", screen messages via rank", m
 ILocalPixelCountMin= (IPixelTotal*(my_rank)/p)+1
 ILocalPixelCountMax= (IPixelTotal*(my_rank+1)/p)
 ```
-### Simulate
+#### Simulate
 ```C
 //refinement_control.f90
 SUBROUTINE Simulate(IErr)
@@ -76,8 +223,8 @@ DO ind = 1,INoOfLacbedPatterns
 <!-- ############################################################################
   #### BLOCH
 ############################################################################-->
-## Bloch calculation
-### def
+### Bloch calculation
+#### def
 - `CUgSgMatrix` : matrix to diagonalize
 - `CEigenValues,CEigenVectors` : eigen values  and eigen vectors  
 - `RIndividualReflections` : intensities
@@ -85,7 +232,7 @@ DO ind = 1,INoOfLacbedPatterns
 - `IPixelCount`: number of pixel defined by user
 <!-- - `RDevPara` : $-(2G\cdot\tilde K + G^2\bigr)\sqrt{2(4\pi^2K^2-K_{0}K_{k}^{'})}G/(2\pi K)$ -->
 
-### main
+#### main
 ```C
 //bloch_mod.f90
 SUBROUTINE BlochCoefficientCalculation
@@ -120,7 +267,7 @@ SUBROUTINE BlochCoefficientCalculation
             (IPixelNumber-IFirstPixelToCalculate)+1) = &
             RFullWaveIntensity(1:INoOfLacbedPatterns)
 ```
-### Excitation error
+#### Excitation error
 Formula used :
 $r_{k,1} = -g/2$,
 $r_{k,3} = \sqrt{k^2-rk_1^2}$,
@@ -138,7 +285,7 @@ SUBROUTINE BlochCoefficientCalculation
   // ! the diagonal elements (sumD)
 ```
 
-### intensity
+#### intensity
 ```C
 SUBROUTINE CreateWaveFunctions
   CAlphaWeightingCoefficients = MATMUL(CInvertedEigenVectors,CPsi0)
@@ -150,7 +297,7 @@ SUBROUTINE CreateWaveFunctions
      RFullWaveIntensity(IStrongBeamList(hnd))=RWaveIntensity(hnd)
 ```
 
-### Strong/weak beam determination
+#### Strong/weak beam determination
 ```c
 SUBROUTINE StrongAndWeakBeamsDetermination
   RMaxSg = 0.005
@@ -165,8 +312,8 @@ SUBROUTINE StrongAndWeakBeamsDetermination
   CALL message(LXL,dbg7,"Weak Beam List",IWeakBeamList)
 ```
 
-## Structure factor
-### Pool of reflections
+### Structure factor
+#### Pool of reflections
 ```C
 //setup_reflections_mod.f90
 SUBROUTINE HKLMake(RTol, IErr)   
@@ -177,7 +324,7 @@ SUBROUTINE HKLMake(RTol, IErr)
           Rhkl(knd,:)=REAL((/ Ih,Ik,Il /),RKIND)
 ```
 
-### G vectors and miller indices
+#### G vectors and miller indices
 ```C
 //crstallography_mod.f90
 SUBROUTINE gVectors(IErr)
@@ -192,7 +339,7 @@ SUBROUTINE gVectors(IErr)
       RgMatrix(ind,jnd,:)= RgPool(ind,:)-RgPool(jnd,:)
 ```
 
-### Read Coordinates from cif
+#### Read Coordinates from cif
 ```C
 //read_cif_mod.f90
 SUBROUTINE read_cif(IErr)
@@ -204,7 +351,7 @@ SUBROUTINE read_cif(IErr)
   RBasisAtomPosition(ind,3)= z
 ```
 
-### Read symmetries from cif
+#### Read symmetries from cif
 ```C
 //read_cif_mod.f90
 SUBROUTINE read_cif(IErr)
@@ -223,7 +370,7 @@ SUBROUTINE read_cif(IErr)
 ```
 
 
-### Construct all coordinates
+#### Construct all coordinates
 ```C
 SUBROUTINE UniqueAtomPositions(IErr)
   //apply symmetry elements to generate all equivalent positions
@@ -242,7 +389,7 @@ SUBROUTINE UniqueAtomPositions(IErr)
 ```
 
 
-### Compute structure factor
+#### Compute structure factor
 ```C
 //felixrefine.f90
 RRelativisticCorrection = ONE/SQRT( ONE - (RElectronVelocity/RSpeedOfLight)**2 )
@@ -286,7 +433,7 @@ FUNCTION Kirkland(Rg)
 
 ```
 
-### Write StructureFactors
+#### Write StructureFactors
 ```C
 //write_output_mod.f90
 WRITE(filename,*) "StructureFactors.txt"
@@ -295,8 +442,8 @@ DO ind = 1,INhkl
           RgPool(ind,1),RgPool(ind,2),CUgMat(ind,1)
 ```
 
-## Misc
-### read cif file
+### Misc
+#### read cif file
 ```C
 //read_cif_file_mod.f90
 f1 = char_('_chemical_formula_sum', name)
@@ -310,7 +457,7 @@ f1 = char_('_symmetry_equiv_pos_as_xyz', name)
 ```
 
 
-### read inp file
+#### read inp file
 variables read from felix.inp into `RIndependentVariable`:
 ```C
 //read_files_mod.f90
@@ -342,7 +489,7 @@ RNormDirM = RNormDirM/SQRT(DOT_PRODUCT(RNormDirM,RNormDirM))
 RDeltaK = TWOPI*RConvergenceAngle/REAL(IPixelCount,RKIND)
 ```
 
-### refinement
+#### refinement
 ```C
 //felixrefine.f90
 IF(ISimFLAG.EQ.0) THEN
@@ -351,7 +498,7 @@ IF(ISimFLAG.EQ.0) THEN
   INoOfVariables = jnd-1
 ```
 
-### Debug
+#### Debug
 In felix.inp, IWriteFLAG can be assigned different INTEGER values to affect which  messages are printed.
 The digit of the INTEGER affects the minimum priority of the message printed:
  0 = LS,   2 = LM,   4 = LL,   8 = LXL   
@@ -361,4 +508,4 @@ The digit of the INTEGER affects the minimum priority of the message printed:
 
 
 
-### Read experimental images (DM3)
+#### Read experimental images (DM3)
