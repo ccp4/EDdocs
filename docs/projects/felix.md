@@ -5,6 +5,7 @@ Felix makes sense to be run on the clusters as it is fortran mpi parallelized.
 Here is described how to setup and start a cluster with elasticluster.
 `elasticluster` is a framework to setup a cluster similar to `starcluster`.
 
+### installation
 It must be installed from source on the machines which will create the clusters.
 ```
 cd elasticluster
@@ -13,6 +14,7 @@ cd src
 pip install -e .
 ```
 
+### configuration
 Then it must be configured as followed in the docs. The configuration files are used to placed in `.elasticluster/config.d` and define :
 
 - the cloud which is `openstack` at stfc
@@ -44,20 +46,6 @@ user_key_public=~/.ssh/test1.pub #publickey
 
 **setup**
 ```
-[setup/gridengine-sl7]
-provider=ansible
-frontend_groups=gridengine_master,ganglia_master
-compute_groups=gridengine_worker,ganglia_monitor
-lcompute_groups=gridengine_worker,ganglia_monitor
-# install NIS/YP to manage cluster users
-global_var_multiuser_cluster=yes
-# ansible requires python2, which is default on SL7
-global_var_ansible_python_interpreter=/usr/bin/python
-# allow reboot
-global_allow_reboot=yes
-# for Ganglia, selinux needs to be disabled
-disable_selinux=yes
-
 [setup/gridengine-ubuntu]
 provider=ansible
 frontend_groups=gridengine_master,ganglia_master
@@ -65,19 +53,6 @@ compute_groups=gridengine_worker,ganglia_monitor
 # install NIS/YP to manage cluster users
 global_var_multiuser_cluster=yes
 global_var_ansible_python_interpreter=/usr/bin/python2.7
-# for Ganglia, selinux needs to be disabled
-disable_selinux=yes
-
-[setup/slurm-sl7]
-provider=ansible
-frontend_groups=slurm_master,ganglia_master,ganglia_monitor
-compute_groups=slurm_worker,ganglia_monitor
-# install NIS/YP to manage cluster users
-global_var_multiuser_cluster=yes
-# ansible requires python2, which is default on SL7
-global_var_ansible_python_interpreter=/usr/bin/python
-# allow reboot
-global_allow_reboot=yes
 # for Ganglia, selinux needs to be disabled
 disable_selinux=yes
 
@@ -115,6 +90,18 @@ security_group=default
 security_group=default
 flavor=l3.tiny
 ```
+
+### starting a cluster
+a cluster can now be started with :
+
+`elasticluster  ccp4cluster -n <cluster_name>`
+
+and to run an ansible playbook to install things on each nodes :
+
+`elasticluster setup <cluster_name> -- --playbook.yaml`
+
+a playbook  looks like :
+
 
 ## installation and compilation
 
