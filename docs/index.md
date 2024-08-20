@@ -78,3 +78,4 @@ Login and run examples on [jupyter](http://badb.rc-harwell.ac.uk:8888/?token=d83
 - [Intern Quach Christine report](/documents/report_CQ_2021.pdf)
 
 ### News
+- 20/08/2024 - Marko becomes a contributor. 
