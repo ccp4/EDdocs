@@ -1,6 +1,6 @@
 # Felix
 
-## elasticluster
+## Elasticluster
 Felix makes sense to be run on the clusters as it is fortran mpi parallelized.
 Here is described how to setup and start a cluster with elasticluster.
 `elasticluster` is a framework to setup a cluster similar to `starcluster`.
@@ -98,12 +98,39 @@ a cluster can now be started with :
 
 and to run an ansible playbook to install things on each nodes :
 
-`elasticluster setup <cluster_name> -- --playbook.yaml`
+<!-- `elasticluster setup <cluster_name> -- --playbook.yaml` -->
+```
+ansible-playbook --private-key=<path_to_key> --inventory=~/.elasticluster/storage/<cluster>.inventory --become --become-user=root playbooks/play.yml
+```
 
 a playbook  looks like :
 
+```
+- name: description of the task
+  tags:
+        - after
+        - ccp4
+  hosts: slurm_master, slurm_worker #workers
 
-## installation and compilation
+  vars:
+      - remote_user: 'lii26466'
+
+  tasks:
+           - name: install dependencies
+             apt:
+                    name:
+                     - libopenmpi-dev
+                    state: latest
+
+            - name: add user to sudoers
+              lineinfile:
+                     path: /etc/sudoers.d/cloud
+                     line: ' {{ remote_user }}  ALL=(ALL)       NOPASSWD: ALL'
+                     state: present
+```
+
+
+## Felix installation and compilation
 
 #### dependencies
 general compilers and libraries
